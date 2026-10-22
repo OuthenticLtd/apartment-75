@@ -12746,7 +12746,7 @@
 ],
 "material": "potted_plant_02_leaves",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_02_leaves\", name=\"cycles\", address=0x00000248BF5601E0>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_02_leaves\", name=\"cycles\", address=0x000001B3D20141E0>",
 "polyhaven_id": "potted_plant_02",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_02",
 "polyhaven_licence": "CC0",
@@ -12791,7 +12791,7 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_dirt.003\", name=\"cycles\", address=0x00000248BF50B5A0>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_dirt.003\", name=\"cycles\", address=0x000001B3D1FCB5A0>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -12814,7 +12814,7 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_dirt.004\", name=\"cycles\", address=0x00000248BF50AEE0>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_dirt.004\", name=\"cycles\", address=0x000001B3D1FCAEE0>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -12837,7 +12837,7 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_dirt.005\", name=\"cycles\", address=0x00000248BF50A820>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_dirt.005\", name=\"cycles\", address=0x000001B3D1FCA820>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -12860,8 +12860,8 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_ground.003\", name=\"cycles\", address=0x00000248BF50A160>",
-"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_ground.003\", name=\"cycles_visibility\", address=0x00000248BF509FE0>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_ground.003\", name=\"cycles\", address=0x000001B3D1FCA160>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_ground.003\", name=\"cycles_visibility\", address=0x000001B3D1FC9FE0>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -12884,8 +12884,8 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_ground.004\", name=\"cycles\", address=0x00000248BF5097A0>",
-"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_ground.004\", name=\"cycles_visibility\", address=0x00000248BF509620>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_ground.004\", name=\"cycles\", address=0x000001B3D1FC97A0>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_ground.004\", name=\"cycles_visibility\", address=0x000001B3D1FC9620>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -12908,8 +12908,8 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_ground.005\", name=\"cycles\", address=0x00000248BF508DE0>",
-"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_ground.005\", name=\"cycles_visibility\", address=0x00000248BF508C60>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_ground.005\", name=\"cycles\", address=0x000001B3D1FC8DE0>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_ground.005\", name=\"cycles_visibility\", address=0x000001B3D1FC8C60>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -12932,7 +12932,7 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_plant.003\", name=\"cycles\", address=0x00000248BF508420>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_plant.003\", name=\"cycles\", address=0x000001B3D1FC8420>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -12955,7 +12955,7 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_plant.004\", name=\"cycles\", address=0x00000248BF4F7360>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_plant.004\", name=\"cycles\", address=0x000001B3D1FB7360>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -12978,7 +12978,7 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_plant.005\", name=\"cycles\", address=0x00000248BF4F65E0>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_plant.005\", name=\"cycles\", address=0x000001B3D1FB65E0>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -13001,8 +13001,8 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_pot.003\", name=\"cycles\", address=0x00000248BF4F56E0>",
-"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_pot.003\", name=\"cycles_visibility\", address=0x00000248BF4F5620>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_pot.003\", name=\"cycles\", address=0x000001B3D1FB56E0>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_pot.003\", name=\"cycles_visibility\", address=0x000001B3D1FB5620>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -13025,8 +13025,8 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_pot.004\", name=\"cycles\", address=0x00000248BF4F4660>",
-"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_pot.004\", name=\"cycles_visibility\", address=0x00000248BF4F4720>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_pot.004\", name=\"cycles\", address=0x000001B3D1FB4660>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_pot.004\", name=\"cycles_visibility\", address=0x000001B3D1FB4720>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -13049,8 +13049,8 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_pot.005\", name=\"cycles\", address=0x00000248BF4EF2A0>",
-"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_pot.005\", name=\"cycles_visibility\", address=0x00000248BF4EF1E0>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_pot.005\", name=\"cycles\", address=0x000001B3D1FB32A0>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_pot.005\", name=\"cycles_visibility\", address=0x000001B3D1FB31E0>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -18128,7 +18128,7 @@
 1.67,
 0.86
 ],
-"material": "Carcass",
+"material": "Kitchen upper warm white",
 "props": {
 "cutaway_hide": false
 }
@@ -18299,7 +18299,7 @@
 1.05,
 0.86
 ],
-"material": "Oak light",
+"material": "Kitchen upper warm white",
 "props": {
 "cab_pivot": "CAB_Vanity_pullout_front"
 }
@@ -19013,7 +19013,7 @@
 1.67,
 0.86
 ],
-"material": "Carcass",
+"material": "Kitchen upper warm white",
 "props": {
 "cutaway_hide": false
 }
@@ -19719,7 +19719,7 @@
 1.05,
 0.86
 ],
-"material": "Oak light",
+"material": "Kitchen upper warm white",
 "props": {
 "cutaway_hide": false,
 "cab_pivot": "CAB_Washer_front"
