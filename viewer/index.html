@@ -109,7 +109,7 @@ function go(v) {
 // look-around: drag moves the picture with the finger (like Street View); pinch / wheel / two fingers = walk
 const ptrs = new Map(); let pinch0 = null;
 function walk(dist, side = 0) { const f = new THREE.Vector3(-Math.sin(yaw), 0, -Math.cos(yaw)), r = new THREE.Vector3(Math.cos(yaw), 0, -Math.sin(yaw)); camera.position.addScaledVector(f, dist).addScaledVector(r, side); }
-canvas.addEventListener("pointerdown", (e) => { if (!lookMode) return; ptrs.set(e.pointerId, [e.clientX, e.clientY]); canvas.setPointerCapture(e.pointerId); if (ptrs.size === 2) { const [a, b] = [...ptrs.values()]; pinch0 = { d: Math.hypot(a[0] - b[0], a[1] - b[1]), y: (a[1] + b[1]) / 2 }; } });
+canvas.addEventListener("pointerdown", (e) => { if (!lookMode) return; ptrs.set(e.pointerId, [e.clientX, e.clientY]); try { canvas.setPointerCapture(e.pointerId); } catch (_) {} if (ptrs.size === 2) { const [a, b] = [...ptrs.values()]; pinch0 = { d: Math.hypot(a[0] - b[0], a[1] - b[1]), y: (a[1] + b[1]) / 2 }; } });
 canvas.addEventListener("pointermove", (e) => {
   if (!lookMode || !ptrs.has(e.pointerId)) return;
   const p = ptrs.get(e.pointerId), dx = e.clientX - p[0], dy = e.clientY - p[1]; ptrs.set(e.pointerId, [e.clientX, e.clientY]);
