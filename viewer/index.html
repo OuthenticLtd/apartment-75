@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Апартамент 75 – 3D</title>
+<style>
+  :root { --bg:#f4f1ec; --ink:#2b2724; --mute:#7a726a; --card:#ffffffee; --acc:#b0703f; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#1d1b19; --ink:#efe9e2; --mute:#a79f96; --card:#2a2724ee; } }
+  html, body { margin:0; height:100%; background:var(--bg); color:var(--ink); font:14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; overflow:hidden; }
+  #c { position:fixed; inset:0; width:100%; height:100%; touch-action:none; display:block; }
+  .bar { position:fixed; left:8px; right:8px; top:8px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; pointer-events:none; }
+  .bar > * { pointer-events:auto; }
+  button, a.btn { background:var(--card); color:var(--ink); border:1px solid #0002; border-radius:10px; padding:7px 10px; font:inherit; cursor:pointer; text-decoration:none; backdrop-filter:blur(6px); }
+  button.on { background:var(--acc); color:#fff; }
+  #info { position:fixed; left:8px; bottom:8px; right:8px; background:var(--card); border-radius:10px; padding:8px 10px; font-size:12.5px; color:var(--mute); backdrop-filter:blur(6px); }
+  #info b { color:var(--ink); }
+  #load { position:fixed; inset:0; display:grid; place-items:center; font-size:15px; color:var(--mute); }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="load">Зареждане на модела… <span id="pct"></span></div>
+<div class="bar">
+  <a class="btn" href="../">← Начало</a>
+  <button data-view="all">Общ изглед</button>
+  <button data-view="kitchen">Кухня</button>
+  <button data-view="living">Дневна</button>
+  <button data-view="bedroom">Спалня</button>
+  <button data-view="bath">Баня</button>
+  <button data-view="hall">Антре</button>
+  <button id="ceil">Таван</button>
+  <button id="openall">Отвори всички</button>
+  <button id="closeall">Затвори всички</button>
+  <button id="measure">📏 Измерване</button>
+</div>
+<div id="info">Докоснете врата или чекмедже, за да се отвори/затвори. Влачене – въртене, два пръста – мащаб/преместване.</div>
+<script type="module">
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
+import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
+
+const canvas = document.getElementById("c");
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.0;
+const scene = new THREE.Scene(); scene.background = new THREE.Color(getComputedStyle(document.body).backgroundColor);
+const pmrem = new THREE.PMREMGenerator(renderer); scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+scene.add(new THREE.HemisphereLight(0xffffff, 0x8a7f73, 0.6));
+const sun = new THREE.DirectionalLight(0xfff2e0, 1.2); sun.position.set(2, 9, 6); scene.add(sun);
+const camera = new THREE.PerspectiveCamera(50, 1, 0.05, 200);
+const controls = new OrbitControls(camera, canvas); controls.enableDamping = true;
+
+// Blender (x right, y facade, z up) -> glTF (x, z, -y). Views use Blender coords.
+const B = (x, y, z) => new THREE.Vector3(x, z, -y);
+const VIEWS = {
+  all:     { eye: B(3.3, 0.6, 13.5), at: B(3.3, 3.3, 0) },
+  kitchen: { eye: B(2.6, 1.95, 1.75), at: B(0.7, 0.45, 0.95) },
+  living:  { eye: B(2.6, 3.0, 1.6),  at: B(0.6, 5.6, 0.8) },
+  bedroom: { eye: B(3.9, 2.7, 1.6),  at: B(6.4, 4.2, 0.9) },
+  bath:    { eye: B(4.95, 0.35, 1.6), at: B(6.2, 1.3, 0.9) },
+  hall:    { eye: B(4.1, 2.2, 1.6),  at: B(4.1, 0.0, 1.0) },
+};
+function go(v) { const V = VIEWS[v]; camera.position.copy(V.eye); controls.target.copy(V.at); controls.update(); }
+
+const pivots = [], ceilings = [];
+let model;
+const draco = new DRACOLoader(); draco.setDecoderPath("https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/libs/draco/gltf/");
+const loader = new GLTFLoader(); loader.setDRACOLoader(draco);
+loader.load("model.glb", (g) => {
+  model = g.scene; scene.add(model);
+  model.traverse((o) => {
+    const u = o.userData || {};
+    if (u.cab_kind) {
+      o.userData.closed = (u.cab_kind === "rot") ? o.rotation.toArray().slice(0, 3) : o.position.toArray();
+      o.userData.t = 0; o.userData.dir = 0; pivots.push(o);
+    }
+    if (/^(Ceiling|Bal_slab_ceiling)/.test(o.name)) ceilings.push(o);
+    if (o.isMesh) { o.material.side = THREE.FrontSide; }
+  });
+  ceilings.forEach(c => c.visible = false);
+  window._dbg = { scene, camera, model, pivots, THREE, renderer, controls };
+  document.getElementById("load").remove(); go("all");
+}, (e) => { if (e.total) document.getElementById("pct").textContent = Math.round(e.loaded / e.total * 100) + "%"; },
+   (err) => { document.getElementById("load").textContent = "Грешка при зареждане: " + err; });
+
+// Blender axis/sign -> three.js: blender (x,y,z) -> three (x, z, -y)
+function applyPivot(p) {
+  const u = p.userData, k = u.t * u.t * (3 - 2 * u.t), a = u.cab_amount * k, ax = u.cab_axis;
+  if (u.cab_kind === "rot") {
+    const r = new THREE.Euler().fromArray(u.closed);
+    const q = new THREE.Quaternion().setFromEuler(r);
+    const axis = ax === 0 ? new THREE.Vector3(1, 0, 0) : ax === 1 ? new THREE.Vector3(0, 0, -1) : new THREE.Vector3(0, 1, 0);
+    const qa = new THREE.Quaternion().setFromAxisAngle(axis, a);
+    p.quaternion.copy(qa.multiply(q));
+  } else {
+    const base = new THREE.Vector3().fromArray(u.closed);
+    const d = ax === 0 ? new THREE.Vector3(a, 0, 0) : ax === 1 ? new THREE.Vector3(0, 0, -a) : new THREE.Vector3(0, a, 0);
+    // movement is in world axes; convert into the pivot parent's space
+    const parent = p.parent; const w0 = parent.localToWorld(base.clone()); const w1 = w0.clone().add(d);
+    p.position.copy(parent.worldToLocal(w1));
+  }
+}
+function toggle(p, open) { p.userData.dir = (open === undefined ? (p.userData.dir > 0 || p.userData.t > 0.5 ? -1 : 1) : (open ? 1 : -1)); }
+document.getElementById("openall").onclick = () => pivots.forEach(p => toggle(p, true));
+document.getElementById("closeall").onclick = () => pivots.forEach(p => toggle(p, false));
+document.querySelectorAll("[data-view]").forEach(b => b.onclick = () => go(b.dataset.view));
+document.getElementById("ceil").onclick = (e) => { const v = !ceilings[0]?.visible; ceilings.forEach(c => c.visible = v); e.target.classList.toggle("on", v); };
+
+// tap / click (ignore drags)
+const ray = new THREE.Raycaster(), ndc = new THREE.Vector2(); let down = null, measuring = false, mPts = [], mLine = null, mLabel = null;
+document.getElementById("measure").onclick = (e) => { measuring = !measuring; e.target.classList.toggle("on", measuring); mPts = []; if (mLine) { scene.remove(mLine); mLine = null; } info(measuring ? "Измерване: докоснете две точки." : "Докоснете врата или чекмедже, за да се отвори/затвори."); };
+function info(t) { document.getElementById("info").innerHTML = t; }
+canvas.addEventListener("pointerdown", (e) => { down = [e.clientX, e.clientY]; });
+canvas.addEventListener("pointerup", (e) => {
+  if (!down || Math.hypot(e.clientX - down[0], e.clientY - down[1]) > 6 || !model) return;
+  ndc.set(e.clientX / innerWidth * 2 - 1, -(e.clientY / innerHeight) * 2 + 1); ray.setFromCamera(ndc, camera);
+  const hits = ray.intersectObject(model, true).filter(h => h.object.visible);
+  if (!hits.length) return;
+  if (measuring) {
+    mPts.push(hits[0].point.clone());
+    if (mPts.length === 2) {
+      if (mLine) scene.remove(mLine);
+      mLine = new THREE.Line(new THREE.BufferGeometry().setFromPoints(mPts), new THREE.LineBasicMaterial({ color: 0xd04020, depthTest: false }));
+      mLine.renderOrder = 9; scene.add(mLine);
+      const d = mPts[0].distanceTo(mPts[1]); const dx = Math.abs(mPts[0].x - mPts[1].x), dy = Math.abs(mPts[0].z - mPts[1].z), dz = Math.abs(mPts[0].y - mPts[1].y);
+      info(`<b>${(d * 100).toFixed(1)} см</b> &nbsp; (по X ${(dx*100).toFixed(1)} · по Y ${(dy*100).toFixed(1)} · височина ${(dz*100).toFixed(1)} см)`); mPts = [];
+    } else info("Измерване: втора точка…");
+    return;
+  }
+  let o = hits[0].object;
+  while (o && !o.userData.cab_kind) o = o.parent;
+  if (o) { toggle(o); info(`<b>${o.userData.cab_label || o.name.replace("CAB_", "")}</b>`); }
+  else { let n = hits[0].object; info(`<b>${n.name}</b>`); }
+});
+
+function resize() { const w = innerWidth, h = innerHeight; renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix(); }
+addEventListener("resize", resize); resize();
+let last = performance.now();
+renderer.setAnimationLoop((now) => {
+  const dt = Math.min(0.05, (now - last) / 1000); last = now;
+  for (const p of pivots) { const u = p.userData; if (u.dir) { u.t = Math.min(1, Math.max(0, u.t + u.dir * dt / 0.35)); applyPivot(p); if (u.t === 0 || u.t === 1) u.dir = 0; } }
+  controls.update(); renderer.render(scene, camera);
+});
+</script>
+</body>
+</html>

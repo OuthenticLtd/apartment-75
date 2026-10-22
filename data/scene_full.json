@@ -1,0 +1,14185 @@
+{
+"objects": [
+{
+"name": "AC_bed_indoor",
+"collection": "Bedroom",
+"min": [
+3.621,
+2.44,
+2.27
+],
+"max": [
+4.4,
+2.625,
+2.53
+],
+"material": "Furniture white matte",
+"props": {
+"spec": "Gree PULAR 9k indoor GWH09AGBXB/I (multi), 779x260x185 mm"
+}
+},
+{
+"name": "AC_bed_supply",
+"collection": "Bedroom",
+"min": [
+4.46,
+2.44,
+2.33
+],
+"max": [
+4.54,
+2.447,
+2.41
+],
+"material": "Switch plate white",
+"props": {}
+},
+{
+"name": "AC_bed_vent",
+"collection": "Bedroom",
+"min": [
+3.66,
+2.625,
+2.28
+],
+"max": [
+4.36,
+2.63,
+2.31
+],
+"material": "Shadow gap",
+"props": {}
+},
+{
+"name": "AC_bracket",
+"collection": "Balcony",
+"min": [
+6.082,
+5.82,
+1.66
+],
+"max": [
+6.5,
+6.679,
+1.7
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "AC_grille",
+"collection": "Balcony",
+"min": [
+6.092,
+5.88,
+1.76
+],
+"max": [
+6.102,
+6.38,
+2.24
+],
+"material": "Shadow gap",
+"props": {}
+},
+{
+"name": "AC_indoor",
+"collection": "Living",
+"min": [
+3.154,
+1.438,
+2.235
+],
+"max": [
+3.35,
+2.263,
+2.528
+],
+"material": "Furniture white matte",
+"props": {
+"function": "AC indoor unit, multi-split on circuit AC (C20); supply behind; condensate to the balcony",
+"spec": "Gree PULAR 12k indoor GWH12AGCXB/I (multi), 825x293x196 mm"
+}
+},
+{
+"name": "AC_indoor_vent",
+"collection": "Living",
+"min": [
+3.149,
+1.48,
+2.25
+],
+"max": [
+3.154,
+2.22,
+2.28
+],
+"material": "Shadow gap",
+"props": {}
+},
+{
+"name": "AC_isolator",
+"collection": "Balcony",
+"min": [
+6.493,
+5.76,
+1.36
+],
+"max": [
+6.5,
+5.84,
+1.44
+],
+"material": "Switch plate white",
+"props": {
+"function": "IP65 isolator for the outdoor unit"
+}
+},
+{
+"name": "AC_outdoor",
+"collection": "Balcony",
+"min": [
+6.102,
+5.8,
+1.7
+],
+"max": [
+6.48,
+6.699,
+2.296
+],
+"material": "AC unit white",
+"props": {
+"spec": "Gree multi-split outdoor GWHD(18)NK6LOO, 5.3 kW, 2 rooms, 899x596x378 mm, 43 kg; C20 circuit",
+"note": "air outlet toward the railing, not onto the seat"
+}
+},
+{
+"name": "AisleDown0_trim",
+"collection": "Lighting",
+"min": [
+1.825,
+1.195,
+2.596
+],
+"max": [
+1.905,
+1.275,
+2.6
+],
+"material": "Spot trim",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "AisleDown1_trim",
+"collection": "Lighting",
+"min": [
+1.825,
+2.395,
+2.596
+],
+"max": [
+1.905,
+2.475,
+2.6
+],
+"material": "Spot trim",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Amber_bottle0",
+"collection": "Bathroom",
+"min": [
+5.062,
+1.522,
+0.92
+],
+"max": [
+5.118,
+1.578,
+1.08
+],
+"material": "Amber glass",
+"props": {}
+},
+{
+"name": "Amber_bottle1",
+"collection": "Bathroom",
+"min": [
+5.132,
+1.522,
+0.92
+],
+"max": [
+5.188,
+1.578,
+1.08
+],
+"material": "Amber glass",
+"props": {}
+},
+{
+"name": "ArtSofa1_frame",
+"collection": "Living",
+"min": [
+0.0,
+4.105,
+1.06
+],
+"max": [
+0.025,
+4.735,
+1.99
+],
+"material": "Oak solid",
+"props": {
+"cutaway_hide": true,
+"spec": "IKEA R\u00d6DALM frame 61x91 oak effect + BILD poster 50x70"
+}
+},
+{
+"name": "ArtSofa1_mat",
+"collection": "Living",
+"min": [
+0.025,
+4.13,
+1.085
+],
+"max": [
+0.026,
+4.71,
+1.965
+],
+"material": "Art mat paper",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "ArtSofa1_print",
+"collection": "Living",
+"min": [
+0.026,
+4.185,
+1.175
+],
+"max": [
+0.027,
+4.655,
+1.875
+],
+"material": "Art terracotta",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "ArtSofa2_frame",
+"collection": "Living",
+"min": [
+0.0,
+4.935,
+1.06
+],
+"max": [
+0.025,
+5.565,
+1.99
+],
+"material": "Oak solid",
+"props": {
+"cutaway_hide": true,
+"spec": "IKEA R\u00d6DALM frame 61x91 oak effect + BILD poster 50x70"
+}
+},
+{
+"name": "ArtSofa2_mat",
+"collection": "Living",
+"min": [
+0.025,
+4.96,
+1.085
+],
+"max": [
+0.026,
+5.54,
+1.965
+],
+"material": "Art mat paper",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "ArtSofa2_print",
+"collection": "Living",
+"min": [
+0.026,
+5.015,
+1.175
+],
+"max": [
+0.027,
+5.485,
+1.875
+],
+"material": "Art sand",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Bal_frame_a",
+"collection": "Openings",
+"min": [
+3.47,
+5.7,
+0.0
+],
+"max": [
+3.54,
+5.76,
+2.38
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "Bal_frame_b",
+"collection": "Openings",
+"min": [
+3.47,
+6.44,
+0.0
+],
+"max": [
+3.54,
+6.5,
+2.38
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "Bal_frame_bot",
+"collection": "Openings",
+"min": [
+3.47,
+5.7,
+0.0
+],
+"max": [
+3.54,
+6.5,
+0.05
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "Bal_frame_t",
+"collection": "Openings",
+"min": [
+3.47,
+5.7,
+2.32
+],
+"max": [
+3.54,
+6.5,
+2.38
+],
+"material": "Aluminium anthracite",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Bal_handle",
+"collection": "Openings",
+"min": [
+3.43,
+5.78,
+1.0
+],
+"max": [
+3.47,
+5.8,
+1.14
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "Bal_pane",
+"collection": "Openings",
+"min": [
+3.5,
+5.76,
+0.05
+],
+"max": [
+3.51,
+6.44,
+2.32
+],
+"material": "Glass",
+"props": {}
+},
+{
+"name": "Bal_rail_base",
+"collection": "Openings",
+"min": [
+3.65,
+6.84,
+-0.02
+],
+"max": [
+6.5,
+6.89,
+0.05
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "Bal_rail_glass",
+"collection": "Openings",
+"min": [
+3.65,
+6.86,
+0.05
+],
+"max": [
+6.5,
+6.875,
+1.05
+],
+"material": "Glass",
+"props": {}
+},
+{
+"name": "Bal_rail_post0",
+"collection": "Openings",
+"min": [
+3.65,
+6.85,
+0.0
+],
+"max": [
+3.69,
+6.89,
+1.05
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "Bal_rail_post1",
+"collection": "Openings",
+"min": [
+4.6,
+6.85,
+0.0
+],
+"max": [
+4.64,
+6.89,
+1.05
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "Bal_rail_post2",
+"collection": "Openings",
+"min": [
+5.55,
+6.85,
+0.0
+],
+"max": [
+5.59,
+6.89,
+1.05
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "Bal_rail_post3",
+"collection": "Openings",
+"min": [
+6.46,
+6.85,
+0.0
+],
+"max": [
+6.5,
+6.89,
+1.05
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "Bal_rail_top",
+"collection": "Openings",
+"min": [
+3.65,
+6.84,
+1.05
+],
+"max": [
+6.5,
+6.89,
+1.09
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "Bal_slab_ceiling",
+"collection": "Shell",
+"min": [
+3.35,
+5.69,
+2.6
+],
+"max": [
+6.9,
+6.99,
+2.85
+],
+"material": "Facade render",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Bal_slab_floor",
+"collection": "Shell",
+"min": [
+3.35,
+5.69,
+-0.25
+],
+"max": [
+6.9,
+6.99,
+-0.02
+],
+"material": "Facade render",
+"props": {}
+},
+{
+"name": "Bal_socket_ip44",
+"collection": "Balcony",
+"min": [
+6.493,
+5.96,
+0.36
+],
+"max": [
+6.5,
+6.04,
+0.44
+],
+"material": "Switch plate white",
+"props": {
+"function": "IP44 socket, switched (string lights)"
+}
+},
+{
+"name": "Bal_switch",
+"collection": "Living",
+"min": [
+3.343,
+5.57,
+1.01
+],
+"max": [
+3.35,
+5.65,
+1.09
+],
+"material": "Switch plate white",
+"props": {
+"function": "2-gang: balcony wall light / balcony socket"
+}
+},
+{
+"name": "Bal_wall_R",
+"collection": "Shell",
+"min": [
+6.5,
+5.69,
+0.0
+],
+"max": [
+6.9,
+6.99,
+2.6
+],
+"material": "Facade render",
+"props": {}
+},
+{
+"name": "Balcony_candle",
+"collection": "Balcony",
+"min": [
+5.405,
+6.015,
+0.715
+],
+"max": [
+5.455,
+6.065,
+0.785
+],
+"material": "Candle wax",
+"props": {}
+},
+{
+"name": "Balcony_decking",
+"collection": "Balcony",
+"min": [
+3.653,
+5.693,
+-0.02
+],
+"max": [
+6.497,
+6.84,
+0.0
+],
+"material": "RUNNEN dark grey",
+"props": {}
+},
+{
+"name": "Balcony_lantern",
+"collection": "Balcony",
+"min": [
+5.376,
+5.978,
+0.708
+],
+"max": [
+5.484,
+6.102,
+0.912
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Balcony_wall_light",
+"collection": "Balcony",
+"min": [
+6.32,
+5.69,
+1.85
+],
+"max": [
+6.36,
+5.79,
+2.0
+],
+"material": "Black metal",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Bath_bin",
+"collection": "Bathroom",
+"min": [
+5.74,
+0.02,
+0.0
+],
+"max": [
+5.92,
+0.2,
+0.28
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Bath_brush",
+"collection": "Bathroom",
+"min": [
+6.33,
+0.64,
+0.0
+],
+"max": [
+6.43,
+0.74,
+0.38
+],
+"material": "Ceramic white gloss",
+"props": {}
+},
+{
+"name": "Bath_door_hook",
+"collection": "Bathroom",
+"min": [
+4.91,
+0.6,
+1.58
+],
+"max": [
+4.93,
+0.62,
+1.62
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Bath_fan",
+"collection": "Bathroom",
+"min": [
+6.22,
+0.32,
+2.585
+],
+"max": [
+6.38,
+0.48,
+2.6
+],
+"material": "Switch plate white",
+"props": {
+"function": "extract fan 60 m3/h, non-return flap, run-on timer + humidistat, on the bath light switch"
+}
+},
+{
+"name": "Bath_floor",
+"collection": "Bathroom",
+"min": [
+4.89,
+0.0,
+-0.02
+],
+"max": [
+6.65,
+1.68,
+0.0
+],
+"material": "Tile floor Town Antracite 60x60",
+"props": {}
+},
+{
+"name": "Bath_floor_door",
+"collection": "Bathroom",
+"min": [
+4.77,
+0.15,
+-0.02
+],
+"max": [
+4.89,
+0.97,
+0.0
+],
+"material": "Tile floor Town Antracite 60x60",
+"props": {}
+},
+{
+"name": "Bath_hook0",
+"collection": "Bathroom",
+"min": [
+6.55,
+0.7,
+1.6
+],
+"max": [
+6.57,
+0.74,
+1.62
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Bath_mat",
+"collection": "Bathroom",
+"min": [
+5.8,
+0.85,
+0.0
+],
+"max": [
+6.4,
+1.25,
+0.012
+],
+"material": "Linen sage",
+"props": {}
+},
+{
+"name": "Bath_socket_ip44",
+"collection": "Bathroom",
+"min": [
+4.89,
+1.41,
+1.26
+],
+"max": [
+4.897,
+1.49,
+1.34
+],
+"material": "Switch plate white",
+"props": {}
+},
+{
+"name": "Bath_tile_B",
+"collection": "Bathroom",
+"min": [
+4.89,
+0.0,
+0.0
+],
+"max": [
+6.65,
+0.01,
+2.6
+],
+"material": "Tile wall XZ 60x120",
+"props": {}
+},
+{
+"name": "Bath_tile_L1",
+"collection": "Bathroom",
+"min": [
+4.89,
+0.0,
+0.0
+],
+"max": [
+4.9,
+0.25,
+2.6
+],
+"material": "Tile wall YZ 60x120",
+"props": {}
+},
+{
+"name": "Bath_tile_L2",
+"collection": "Bathroom",
+"min": [
+4.89,
+0.95,
+0.0
+],
+"max": [
+4.9,
+1.68,
+2.6
+],
+"material": "Tile wall YZ 60x120",
+"props": {}
+},
+{
+"name": "Bath_tile_L3",
+"collection": "Bathroom",
+"min": [
+4.89,
+0.25,
+2.0
+],
+"max": [
+4.9,
+0.95,
+2.6
+],
+"material": "Tile wall YZ 60x120",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Bath_tile_R",
+"collection": "Bathroom",
+"min": [
+6.64,
+0.0,
+0.0
+],
+"max": [
+6.65,
+1.68,
+2.6
+],
+"material": "Tile wall YZ 60x120",
+"props": {}
+},
+{
+"name": "Bath_tile_T",
+"collection": "Bathroom",
+"min": [
+4.89,
+1.67,
+0.0
+],
+"max": [
+6.65,
+1.68,
+2.6
+],
+"material": "Tile wall XZ 60x120",
+"props": {}
+},
+{
+"name": "Bath_towel_hook",
+"collection": "Bathroom",
+"min": [
+6.531,
+0.71,
+1.08
+],
+"max": [
+6.63,
+0.74,
+1.6
+],
+"material": "Linen oat",
+"props": {}
+},
+{
+"name": "BathDoor_leaf",
+"collection": "Openings",
+"min": [
+4.81,
+0.97,
+0.005
+],
+"max": [
+4.85,
+1.79,
+2.04
+],
+"material": "Door white",
+"props": {
+"spec": "frameless pocket door 82x205 (e.g. Eclisse Syntesis / Scrigno Essential), clear width ~80; partition is non-load-bearing - VERIFY on site"
+}
+},
+{
+"name": "BathDoor_pull",
+"collection": "Bathroom",
+"min": [
+4.808,
+0.975,
+0.95
+],
+"max": [
+4.852,
+0.99,
+1.15
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "BathSpot0_trim",
+"collection": "Lighting",
+"min": [
+5.278,
+0.51,
+2.596
+],
+"max": [
+5.358,
+0.59,
+2.6
+],
+"material": "Spot trim",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BathSpot1_trim",
+"collection": "Lighting",
+"min": [
+5.278,
+1.23,
+2.596
+],
+"max": [
+5.358,
+1.31,
+2.6
+],
+"material": "Spot trim",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BathSpot2_trim",
+"collection": "Lighting",
+"min": [
+5.91,
+1.23,
+2.596
+],
+"max": [
+5.99,
+1.31,
+2.6
+],
+"material": "Spot trim",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_back",
+"collection": "Living",
+"min": [
+0.0,
+5.96,
+0.0
+],
+"max": [
+0.02,
+6.65,
+2.6
+],
+"material": "Limewash plaster",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_base",
+"collection": "Living",
+"min": [
+0.02,
+6.003,
+0.0
+],
+"max": [
+0.35,
+6.607,
+0.4
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "BC_book_0.43_5.930",
+"collection": "Styling",
+"min": [
+0.05,
+6.029,
+0.43
+],
+"max": [
+0.27,
+6.051,
+0.695
+],
+"material": "Book cover 2",
+"props": {}
+},
+{
+"name": "BC_book_0.43_5.957",
+"collection": "Styling",
+"min": [
+0.05,
+6.052,
+0.43
+],
+"max": [
+0.27,
+6.084,
+0.719
+],
+"material": "Book cover 3",
+"props": {}
+},
+{
+"name": "BC_book_0.43_5.996",
+"collection": "Styling",
+"min": [
+0.05,
+6.086,
+0.43
+],
+"max": [
+0.27,
+6.108,
+0.682
+],
+"material": "Book cover 0",
+"props": {}
+},
+{
+"name": "BC_book_0.43_6.023",
+"collection": "Styling",
+"min": [
+0.05,
+6.11,
+0.43
+],
+"max": [
+0.27,
+6.134,
+0.687
+],
+"material": "Book cover 0",
+"props": {}
+},
+{
+"name": "BC_book_0.43_6.054",
+"collection": "Styling",
+"min": [
+0.05,
+6.136,
+0.43
+],
+"max": [
+0.27,
+6.167,
+0.659
+],
+"material": "Book cover 1",
+"props": {}
+},
+{
+"name": "BC_book_0.43_6.092",
+"collection": "Styling",
+"min": [
+0.05,
+6.169,
+0.43
+],
+"max": [
+0.27,
+6.195,
+0.72
+],
+"material": "Book cover 3",
+"props": {}
+},
+{
+"name": "BC_book_0.43_6.124",
+"collection": "Styling",
+"min": [
+0.05,
+6.197,
+0.43
+],
+"max": [
+0.27,
+6.222,
+0.717
+],
+"material": "Book cover 4",
+"props": {}
+},
+{
+"name": "BC_book_0.43_6.156",
+"collection": "Styling",
+"min": [
+0.05,
+6.224,
+0.43
+],
+"max": [
+0.27,
+6.254,
+0.692
+],
+"material": "Book cover 2",
+"props": {}
+},
+{
+"name": "BC_book_0.43_6.193",
+"collection": "Styling",
+"min": [
+0.05,
+6.256,
+0.43
+],
+"max": [
+0.27,
+6.277,
+0.705
+],
+"material": "Book cover 0",
+"props": {}
+},
+{
+"name": "BC_book_0.43_6.220",
+"collection": "Styling",
+"min": [
+0.05,
+6.279,
+0.43
+],
+"max": [
+0.27,
+6.305,
+0.684
+],
+"material": "Book cover 2",
+"props": {}
+},
+{
+"name": "BC_book_0.43_6.252",
+"collection": "Styling",
+"min": [
+0.05,
+6.306,
+0.43
+],
+"max": [
+0.27,
+6.333,
+0.655
+],
+"material": "Book cover 0",
+"props": {}
+},
+{
+"name": "BC_book_0.43_6.284",
+"collection": "Styling",
+"min": [
+0.05,
+6.335,
+0.43
+],
+"max": [
+0.27,
+6.367,
+0.659
+],
+"material": "Book cover 1",
+"props": {}
+},
+{
+"name": "BC_book_0.43_6.324",
+"collection": "Styling",
+"min": [
+0.05,
+6.369,
+0.43
+],
+"max": [
+0.27,
+6.398,
+0.704
+],
+"material": "Book cover 4",
+"props": {}
+},
+{
+"name": "BC_book_0.43_6.360",
+"collection": "Styling",
+"min": [
+0.05,
+6.4,
+0.43
+],
+"max": [
+0.27,
+6.421,
+0.678
+],
+"material": "Book cover 3",
+"props": {}
+},
+{
+"name": "BC_book_0.43_6.386",
+"collection": "Styling",
+"min": [
+0.05,
+6.423,
+0.43
+],
+"max": [
+0.27,
+6.447,
+0.652
+],
+"material": "Book cover 4",
+"props": {}
+},
+{
+"name": "BC_book_0.43_6.416",
+"collection": "Styling",
+"min": [
+0.05,
+6.449,
+0.43
+],
+"max": [
+0.27,
+6.472,
+0.716
+],
+"material": "Book cover 4",
+"props": {}
+},
+{
+"name": "BC_book_0.43_6.446",
+"collection": "Styling",
+"min": [
+0.05,
+6.474,
+0.43
+],
+"max": [
+0.27,
+6.498,
+0.679
+],
+"material": "Book cover 2",
+"props": {}
+},
+{
+"name": "BC_book_0.43_6.475",
+"collection": "Styling",
+"min": [
+0.05,
+6.499,
+0.43
+],
+"max": [
+0.27,
+6.531,
+0.653
+],
+"material": "Book cover 3",
+"props": {}
+},
+{
+"name": "BC_book_0.43_6.514",
+"collection": "Styling",
+"min": [
+0.05,
+6.533,
+0.43
+],
+"max": [
+0.27,
+6.56,
+0.684
+],
+"material": "Book cover 4",
+"props": {}
+},
+{
+"name": "BC_book_0.43_6.547",
+"collection": "Styling",
+"min": [
+0.05,
+6.561,
+0.43
+],
+"max": [
+0.27,
+6.589,
+0.665
+],
+"material": "Book cover 4",
+"props": {}
+},
+{
+"name": "BC_book_0.83_5.930",
+"collection": "Styling",
+"min": [
+0.05,
+6.029,
+0.83
+],
+"max": [
+0.27,
+6.051,
+1.054
+],
+"material": "Book cover 2",
+"props": {}
+},
+{
+"name": "BC_book_0.83_5.957",
+"collection": "Styling",
+"min": [
+0.05,
+6.053,
+0.83
+],
+"max": [
+0.27,
+6.077,
+1.088
+],
+"material": "Book cover 2",
+"props": {}
+},
+{
+"name": "BC_book_0.83_5.987",
+"collection": "Styling",
+"min": [
+0.05,
+6.079,
+0.83
+],
+"max": [
+0.27,
+6.099,
+1.045
+],
+"material": "Book cover 1",
+"props": {}
+},
+{
+"name": "BC_book_0.83_6.013",
+"collection": "Styling",
+"min": [
+0.05,
+6.101,
+0.83
+],
+"max": [
+0.27,
+6.126,
+1.095
+],
+"material": "Book cover 4",
+"props": {}
+},
+{
+"name": "BC_book_0.83_6.044",
+"collection": "Styling",
+"min": [
+0.05,
+6.127,
+0.83
+],
+"max": [
+0.27,
+6.153,
+1.119
+],
+"material": "Book cover 4",
+"props": {}
+},
+{
+"name": "BC_book_0.83_6.075",
+"collection": "Styling",
+"min": [
+0.05,
+6.154,
+0.83
+],
+"max": [
+0.27,
+6.187,
+1.079
+],
+"material": "Book cover 3",
+"props": {}
+},
+{
+"name": "BC_book_0.83_6.115",
+"collection": "Styling",
+"min": [
+0.05,
+6.189,
+0.83
+],
+"max": [
+0.27,
+6.222,
+1.06
+],
+"material": "Book cover 4",
+"props": {}
+},
+{
+"name": "BC_book_0.83_6.156",
+"collection": "Styling",
+"min": [
+0.05,
+6.224,
+0.83
+],
+"max": [
+0.27,
+6.25,
+1.073
+],
+"material": "Book cover 3",
+"props": {}
+},
+{
+"name": "BC_book_0.83_6.188",
+"collection": "Styling",
+"min": [
+0.05,
+6.252,
+0.83
+],
+"max": [
+0.27,
+6.284,
+1.044
+],
+"material": "Book cover 2",
+"props": {}
+},
+{
+"name": "BC_book_0.83_6.227",
+"collection": "Styling",
+"min": [
+0.05,
+6.285,
+0.83
+],
+"max": [
+0.27,
+6.305,
+1.06
+],
+"material": "Book cover 3",
+"props": {}
+},
+{
+"name": "BC_book_0.83_6.252",
+"collection": "Styling",
+"min": [
+0.05,
+6.307,
+0.83
+],
+"max": [
+0.27,
+6.339,
+1.092
+],
+"material": "Book cover 1",
+"props": {}
+},
+{
+"name": "BC_book_0.83_6.291",
+"collection": "Styling",
+"min": [
+0.05,
+6.341,
+0.83
+],
+"max": [
+0.27,
+6.371,
+1.078
+],
+"material": "Book cover 2",
+"props": {}
+},
+{
+"name": "BC_book_1.21_5.930",
+"collection": "Styling",
+"min": [
+0.05,
+6.029,
+1.21
+],
+"max": [
+0.27,
+6.063,
+1.462
+],
+"material": "Book cover 3",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.21_5.971",
+"collection": "Styling",
+"min": [
+0.05,
+6.065,
+1.21
+],
+"max": [
+0.27,
+6.098,
+1.492
+],
+"material": "Book cover 2",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.21_6.012",
+"collection": "Styling",
+"min": [
+0.05,
+6.1,
+1.21
+],
+"max": [
+0.27,
+6.133,
+1.468
+],
+"material": "Book cover 3",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.21_6.052",
+"collection": "Styling",
+"min": [
+0.05,
+6.134,
+1.21
+],
+"max": [
+0.27,
+6.162,
+1.488
+],
+"material": "Book cover 2",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.21_6.087",
+"collection": "Styling",
+"min": [
+0.05,
+6.164,
+1.21
+],
+"max": [
+0.27,
+6.191,
+1.442
+],
+"material": "Book cover 0",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.21_6.120",
+"collection": "Styling",
+"min": [
+0.05,
+6.193,
+1.21
+],
+"max": [
+0.27,
+6.223,
+1.496
+],
+"material": "Book cover 0",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.21_6.157",
+"collection": "Styling",
+"min": [
+0.05,
+6.225,
+1.21
+],
+"max": [
+0.27,
+6.253,
+1.472
+],
+"material": "Book cover 4",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.21_6.191",
+"collection": "Styling",
+"min": [
+0.05,
+6.254,
+1.21
+],
+"max": [
+0.27,
+6.277,
+1.452
+],
+"material": "Book cover 1",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.21_6.220",
+"collection": "Styling",
+"min": [
+0.05,
+6.279,
+1.21
+],
+"max": [
+0.27,
+6.3,
+1.452
+],
+"material": "Book cover 1",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.21_6.247",
+"collection": "Styling",
+"min": [
+0.05,
+6.302,
+1.21
+],
+"max": [
+0.27,
+6.331,
+1.483
+],
+"material": "Book cover 0",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.21_6.282",
+"collection": "Styling",
+"min": [
+0.05,
+6.333,
+1.21
+],
+"max": [
+0.27,
+6.362,
+1.43
+],
+"material": "Book cover 4",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.21_6.318",
+"collection": "Styling",
+"min": [
+0.05,
+6.364,
+1.21
+],
+"max": [
+0.27,
+6.389,
+1.491
+],
+"material": "Book cover 4",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.21_6.349",
+"collection": "Styling",
+"min": [
+0.05,
+6.39,
+1.21
+],
+"max": [
+0.27,
+6.412,
+1.489
+],
+"material": "Book cover 1",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.21_6.376",
+"collection": "Styling",
+"min": [
+0.05,
+6.414,
+1.21
+],
+"max": [
+0.27,
+6.445,
+1.468
+],
+"material": "Book cover 4",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.21_6.414",
+"collection": "Styling",
+"min": [
+0.05,
+6.446,
+1.21
+],
+"max": [
+0.27,
+6.478,
+1.421
+],
+"material": "Book cover 3",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.21_6.452",
+"collection": "Styling",
+"min": [
+0.05,
+6.479,
+1.21
+],
+"max": [
+0.27,
+6.505,
+1.465
+],
+"material": "Book cover 1",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.21_6.483",
+"collection": "Styling",
+"min": [
+0.05,
+6.506,
+1.21
+],
+"max": [
+0.27,
+6.54,
+1.468
+],
+"material": "Book cover 0",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.21_6.525",
+"collection": "Styling",
+"min": [
+0.05,
+6.542,
+1.21
+],
+"max": [
+0.27,
+6.567,
+1.445
+],
+"material": "Book cover 2",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.59_5.930",
+"collection": "Styling",
+"min": [
+0.05,
+6.029,
+1.59
+],
+"max": [
+0.27,
+6.06,
+1.839
+],
+"material": "Book cover 4",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.59_5.968",
+"collection": "Styling",
+"min": [
+0.05,
+6.062,
+1.59
+],
+"max": [
+0.27,
+6.09,
+1.805
+],
+"material": "Book cover 4",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.59_6.002",
+"collection": "Styling",
+"min": [
+0.05,
+6.091,
+1.59
+],
+"max": [
+0.27,
+6.125,
+1.825
+],
+"material": "Book cover 4",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.59_6.044",
+"collection": "Styling",
+"min": [
+0.05,
+6.127,
+1.59
+],
+"max": [
+0.27,
+6.158,
+1.815
+],
+"material": "Book cover 4",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.59_6.081",
+"collection": "Styling",
+"min": [
+0.05,
+6.16,
+1.59
+],
+"max": [
+0.27,
+6.194,
+1.828
+],
+"material": "Book cover 2",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.59_6.123",
+"collection": "Styling",
+"min": [
+0.05,
+6.195,
+1.59
+],
+"max": [
+0.27,
+6.216,
+1.806
+],
+"material": "Book cover 0",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.59_6.149",
+"collection": "Styling",
+"min": [
+0.05,
+6.218,
+1.59
+],
+"max": [
+0.27,
+6.245,
+1.876
+],
+"material": "Book cover 3",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.59_6.182",
+"collection": "Styling",
+"min": [
+0.05,
+6.246,
+1.59
+],
+"max": [
+0.27,
+6.273,
+1.831
+],
+"material": "Book cover 3",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.59_6.215",
+"collection": "Styling",
+"min": [
+0.05,
+6.275,
+1.59
+],
+"max": [
+0.27,
+6.298,
+1.804
+],
+"material": "Book cover 3",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.59_6.243",
+"collection": "Styling",
+"min": [
+0.05,
+6.299,
+1.59
+],
+"max": [
+0.27,
+6.322,
+1.856
+],
+"material": "Book cover 3",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_book_1.59_6.272",
+"collection": "Styling",
+"min": [
+0.05,
+6.324,
+1.59
+],
+"max": [
+0.27,
+6.35,
+1.819
+],
+"material": "Book cover 3",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_drawer0",
+"collection": "Living",
+"min": [
+0.33,
+6.005,
+0.012
+],
+"max": [
+0.35,
+6.605,
+0.198
+],
+"material": "Oak solid",
+"props": {
+"cab_pivot": "CAB_BC_drawer0"
+}
+},
+{
+"name": "BC_drawer1",
+"collection": "Living",
+"min": [
+0.33,
+6.005,
+0.207
+],
+"max": [
+0.35,
+6.605,
+0.398
+],
+"material": "Oak solid",
+"props": {
+"cab_pivot": "CAB_BC_drawer1"
+}
+},
+{
+"name": "BC_frame",
+"collection": "Living",
+"min": [
+0.35,
+5.96,
+0.0
+],
+"max": [
+0.39,
+6.65,
+2.6
+],
+"material": "Limewash plaster",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_led_L",
+"collection": "Living",
+"min": [
+0.27,
+6.007,
+0.42
+],
+"max": [
+0.29,
+6.016,
+2.04
+],
+"material": "LED warm",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_led_R",
+"collection": "Living",
+"min": [
+0.27,
+6.594,
+0.42
+],
+"max": [
+0.29,
+6.603,
+2.04
+],
+"material": "LED warm",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_shelf0.8",
+"collection": "Living",
+"min": [
+0.02,
+6.003,
+0.8
+],
+"max": [
+0.35,
+6.607,
+0.83
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "BC_shelf1.18",
+"collection": "Living",
+"min": [
+0.02,
+6.003,
+1.18
+],
+"max": [
+0.35,
+6.607,
+1.21
+],
+"material": "Oak solid",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_shelf1.56",
+"collection": "Living",
+"min": [
+0.02,
+6.003,
+1.56
+],
+"max": [
+0.35,
+6.607,
+1.59
+],
+"material": "Oak solid",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_sideL",
+"collection": "Living",
+"min": [
+0.0,
+5.96,
+0.0
+],
+"max": [
+0.35,
+6.003,
+2.6
+],
+"material": "Limewash plaster",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_sideR",
+"collection": "Living",
+"min": [
+0.0,
+6.607,
+0.0
+],
+"max": [
+0.35,
+6.65,
+2.6
+],
+"material": "Limewash plaster",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_top",
+"collection": "Living",
+"min": [
+0.0,
+6.003,
+2.05
+],
+"max": [
+0.35,
+6.607,
+2.6
+],
+"material": "Limewash plaster",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BC_vase_0.83",
+"collection": "Styling",
+"min": [
+0.09,
+6.426,
+0.83
+],
+"max": [
+0.23,
+6.547,
+1.01
+],
+"material": "Stoneware terracotta",
+"props": {}
+},
+{
+"name": "BC_vase_1.59",
+"collection": "Styling",
+"min": [
+0.09,
+6.426,
+1.62
+],
+"max": [
+0.23,
+6.547,
+1.74
+],
+"material": "Ceramic sage",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Bed_headboard",
+"collection": "Bedroom",
+"min": [
+6.58,
+3.137,
+0.0
+],
+"max": [
+6.62,
+4.737,
+0.9
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Bed_ns_wardrobe",
+"collection": "Bedroom",
+"min": [
+6.23,
+2.535,
+0.47
+],
+"max": [
+6.625,
+3.087,
+0.555
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Bed_ns_window",
+"collection": "Bedroom",
+"min": [
+6.23,
+4.787,
+0.47
+],
+"max": [
+6.625,
+5.34,
+0.555
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Bed_platform",
+"collection": "Bedroom",
+"min": [
+4.58,
+3.137,
+0.03
+],
+"max": [
+6.58,
+4.737,
+0.31
+],
+"material": "Oak solid",
+"props": {
+"note": "lift-up storage base, gas struts, ~0.7 m3"
+}
+},
+{
+"name": "Bed_platform_plinth",
+"collection": "Bedroom",
+"min": [
+4.65,
+3.217,
+0.0
+],
+"max": [
+6.5,
+4.657,
+0.03
+],
+"material": "Shadow gap",
+"props": {}
+},
+{
+"name": "Bed_sheet_top",
+"collection": "Bedroom",
+"min": [
+6.008,
+3.126,
+0.499
+],
+"max": [
+6.51,
+4.748,
+0.541
+],
+"material": "Linen white",
+"props": {
+"cab_pivot": "CAB_Bed_slats"
+}
+},
+{
+"name": "Bed_slats",
+"collection": "Bedroom",
+"min": [
+4.61,
+3.167,
+0.29
+],
+"max": [
+6.55,
+4.707,
+0.31
+],
+"material": "Oak light",
+"props": {
+"cab_pivot": "CAB_Bed_slats"
+}
+},
+{
+"name": "Bed_socket0",
+"collection": "Bedroom",
+"min": [
+6.618,
+2.6,
+0.62
+],
+"max": [
+6.625,
+2.75,
+0.7
+],
+"material": "Switch plate white",
+"props": {}
+},
+{
+"name": "Bed_socket1",
+"collection": "Bedroom",
+"min": [
+6.618,
+5.15,
+0.62
+],
+"max": [
+6.625,
+5.3,
+0.7
+],
+"material": "Switch plate white",
+"props": {}
+},
+{
+"name": "Bed_switch0",
+"collection": "Bedroom",
+"min": [
+6.618,
+2.92,
+0.62
+],
+"max": [
+6.625,
+3.07,
+0.7
+],
+"material": "Switch plate white",
+"props": {
+"function": "2-gang: reading lamp + ceiling light INTERMEDIATE (cross) switch"
+}
+},
+{
+"name": "Bed_switch1",
+"collection": "Bedroom",
+"min": [
+6.618,
+4.8,
+0.62
+],
+"max": [
+6.625,
+4.95,
+0.7
+],
+"material": "Switch plate white",
+"props": {
+"function": "2-gang: reading lamp + ceiling light 2-way"
+}
+},
+{
+"name": "Bed_wall_panel",
+"collection": "Bedroom",
+"min": [
+6.625,
+2.535,
+0.0
+],
+"max": [
+6.65,
+5.34,
+1.55
+],
+"material": "Oak solid",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BedBalDoor_fB",
+"collection": "Openings",
+"min": [
+3.87,
+5.5,
+0.0
+],
+"max": [
+4.67,
+5.57,
+0.05
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "BedBalDoor_fL",
+"collection": "Openings",
+"min": [
+3.87,
+5.5,
+0.0
+],
+"max": [
+3.93,
+5.57,
+2.38
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "BedBalDoor_fR",
+"collection": "Openings",
+"min": [
+4.61,
+5.5,
+0.0
+],
+"max": [
+4.67,
+5.57,
+2.38
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "BedBalDoor_fT",
+"collection": "Openings",
+"min": [
+3.87,
+5.5,
+2.32
+],
+"max": [
+4.67,
+5.57,
+2.38
+],
+"material": "Aluminium anthracite",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BedBalDoor_handle",
+"collection": "Openings",
+"min": [
+4.59,
+5.46,
+1.0
+],
+"max": [
+4.61,
+5.5,
+1.14
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "BedBalDoor_pane0",
+"collection": "Openings",
+"min": [
+3.93,
+5.53,
+0.05
+],
+"max": [
+4.61,
+5.54,
+2.32
+],
+"material": "Glass",
+"props": {}
+},
+{
+"name": "BedCurtain_sheer_L",
+"collection": "Bedroom",
+"min": [
+3.479,
+5.259,
+0.01
+],
+"max": [
+3.861,
+5.343,
+2.57
+],
+"material": "Sheer curtain",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BedCurtain_track",
+"collection": "Bedroom",
+"min": [
+3.47,
+5.22,
+2.57
+],
+"max": [
+6.2,
+5.34,
+2.6
+],
+"material": "Ceiling paint",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BedDoor_ca2.33a",
+"collection": "Openings",
+"min": [
+3.53,
+2.317,
+0.0
+],
+"max": [
+3.6,
+2.333,
+2.07
+],
+"material": "Door white",
+"props": {}
+},
+{
+"name": "BedDoor_ca2.33b",
+"collection": "Openings",
+"min": [
+4.4,
+2.317,
+0.0
+],
+"max": [
+4.47,
+2.333,
+2.07
+],
+"material": "Door white",
+"props": {}
+},
+{
+"name": "BedDoor_ca2.33t",
+"collection": "Openings",
+"min": [
+3.53,
+2.317,
+2.0
+],
+"max": [
+4.47,
+2.333,
+2.07
+],
+"material": "Door white",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BedDoor_ca2.44a",
+"collection": "Openings",
+"min": [
+3.53,
+2.437,
+0.0
+],
+"max": [
+3.6,
+2.453,
+2.07
+],
+"material": "Door white",
+"props": {}
+},
+{
+"name": "BedDoor_ca2.44b",
+"collection": "Openings",
+"min": [
+4.4,
+2.437,
+0.0
+],
+"max": [
+4.47,
+2.453,
+2.07
+],
+"material": "Door white",
+"props": {}
+},
+{
+"name": "BedDoor_ca2.44t",
+"collection": "Openings",
+"min": [
+3.53,
+2.437,
+2.0
+],
+"max": [
+4.47,
+2.453,
+2.07
+],
+"material": "Door white",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BedDoor_handle",
+"collection": "Openings",
+"min": [
+3.596,
+3.059,
+1.03
+],
+"max": [
+3.661,
+3.124,
+1.05
+],
+"material": "Brushed steel",
+"props": {}
+},
+{
+"name": "BedDoor_handle2",
+"collection": "Openings",
+"min": [
+3.696,
+3.051,
+1.03
+],
+"max": [
+3.761,
+3.116,
+1.05
+],
+"material": "Brushed steel",
+"props": {}
+},
+{
+"name": "BedDoor_leaf",
+"collection": "Openings",
+"min": [
+3.6,
+2.418,
+0.015
+],
+"max": [
+3.706,
+3.179,
+1.995
+],
+"material": "Door white",
+"props": {}
+},
+{
+"name": "Bedroom_socket_door",
+"collection": "Bedroom",
+"min": [
+4.6,
+2.44,
+1.01
+],
+"max": [
+4.68,
+2.447,
+1.09
+],
+"material": "Switch plate white",
+"props": {}
+},
+{
+"name": "Bedroom_switch",
+"collection": "Bedroom",
+"min": [
+4.5,
+2.44,
+1.01
+],
+"max": [
+4.58,
+2.447,
+1.09
+],
+"material": "Switch plate white",
+"props": {
+"function": "ceiling pendant 2-way (door) + niche/bridge LEDs"
+}
+},
+{
+"name": "BedWin_fB",
+"collection": "Openings",
+"min": [
+4.67,
+5.5,
+0.0
+],
+"max": [
+6.18,
+5.57,
+0.05
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "BedWin_fL",
+"collection": "Openings",
+"min": [
+4.67,
+5.5,
+0.0
+],
+"max": [
+4.73,
+5.57,
+2.38
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "BedWin_fR",
+"collection": "Openings",
+"min": [
+6.12,
+5.5,
+0.0
+],
+"max": [
+6.18,
+5.57,
+2.38
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "BedWin_fT",
+"collection": "Openings",
+"min": [
+4.67,
+5.5,
+2.32
+],
+"max": [
+6.18,
+5.57,
+2.38
+],
+"material": "Aluminium anthracite",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BedWin_mul5.43",
+"collection": "Openings",
+"min": [
+5.4,
+5.5,
+0.0
+],
+"max": [
+5.46,
+5.57,
+2.38
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "BedWin_pane0",
+"collection": "Openings",
+"min": [
+4.73,
+5.53,
+0.05
+],
+"max": [
+5.4,
+5.54,
+2.32
+],
+"material": "Glass",
+"props": {}
+},
+{
+"name": "BedWin_pane2",
+"collection": "Openings",
+"min": [
+5.46,
+5.53,
+0.05
+],
+"max": [
+6.12,
+5.54,
+2.32
+],
+"material": "Glass",
+"props": {}
+},
+{
+"name": "Blind_door_cassette",
+"collection": "Bedroom",
+"min": [
+3.82,
+5.28,
+2.4
+],
+"max": [
+4.72,
+5.34,
+2.46
+],
+"material": "Furniture white matte",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Blind_door_fabric",
+"collection": "Bedroom",
+"min": [
+3.82,
+5.335,
+2.1
+],
+"max": [
+4.72,
+5.338,
+2.4
+],
+"material": "Blind blackout grey-brown",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Blind_living_door",
+"collection": "Living",
+"min": [
+0.32,
+6.6,
+2.0
+],
+"max": [
+1.22,
+6.63,
+2.3
+],
+"material": "Blind blackout grey-brown",
+"props": {}
+},
+{
+"name": "Blind_window_cassette",
+"collection": "Bedroom",
+"min": [
+4.725,
+5.39,
+2.31
+],
+"max": [
+6.195,
+5.45,
+2.367
+],
+"material": "Furniture white matte",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Blind_window_fabric",
+"collection": "Bedroom",
+"min": [
+4.725,
+5.445,
+2.02
+],
+"max": [
+6.125,
+5.448,
+2.31
+],
+"material": "Blind blackout grey-brown",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Boiler",
+"collection": "Bathroom",
+"min": [
+6.37,
+0.03,
+2.05
+],
+"max": [
+6.65,
+0.8,
+2.56
+],
+"material": "Furniture white matte",
+"props": {
+"spec": "Ariston VELIS PRO 50 EU, multi-position flat 50 L (45 L), mounted horizontally; in BG e.g. Technomarket ~319 EUR (+ install). Dedicated B16 circuit, safety valve to the WC stack",
+"note": "also feeds the kitchen: insulated hot-water pipe ~6 m via the corridor ceiling/floor"
+}
+},
+{
+"name": "Bottle0",
+"collection": "Bathroom",
+"min": [
+6.55,
+1.42,
+1.22
+],
+"max": [
+6.61,
+1.48,
+1.42
+],
+"material": "Bottle0",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Bottle1",
+"collection": "Bathroom",
+"min": [
+6.55,
+1.5,
+1.22
+],
+"max": [
+6.61,
+1.56,
+1.42
+],
+"material": "Bottle1",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Bottle2",
+"collection": "Bathroom",
+"min": [
+6.55,
+1.57,
+1.22
+],
+"max": [
+6.61,
+1.63,
+1.42
+],
+"material": "Bottle2",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "BW_bridge_carc",
+"collection": "Bedroom",
+"min": [
+6.32,
+3.087,
+1.55
+],
+"max": [
+6.65,
+4.787,
+2.6
+],
+"material": "Carcass",
+"props": {}
+},
+{
+"name": "BW_bridge_door0",
+"collection": "Bedroom",
+"min": [
+6.3,
+3.089,
+1.552
+],
+"max": [
+6.32,
+3.652,
+2.598
+],
+"material": "Wardrobe warm white",
+"props": {
+"cab_pivot": "CAB_BW_bridge_door0"
+}
+},
+{
+"name": "BW_bridge_door1",
+"collection": "Bedroom",
+"min": [
+6.3,
+3.656,
+1.552
+],
+"max": [
+6.32,
+4.218,
+2.598
+],
+"material": "Wardrobe warm white",
+"props": {
+"cab_pivot": "CAB_BW_bridge_door1"
+}
+},
+{
+"name": "BW_bridge_door2",
+"collection": "Bedroom",
+"min": [
+6.3,
+4.222,
+1.552
+],
+"max": [
+6.32,
+4.785,
+2.598
+],
+"material": "Wardrobe warm white",
+"props": {
+"cab_pivot": "CAB_BW_bridge_door2"
+}
+},
+{
+"name": "BW_bridge_led",
+"collection": "Bedroom",
+"min": [
+6.6,
+3.117,
+1.546
+],
+"max": [
+6.62,
+4.757,
+1.55
+],
+"material": "LED shelf warm",
+"props": {}
+},
+{
+"name": "BW_bridge_lip",
+"collection": "Bedroom",
+"min": [
+6.585,
+3.09,
+1.53
+],
+"max": [
+6.6,
+4.785,
+1.55
+],
+"material": "Carcass",
+"props": {}
+},
+{
+"name": "BW_t0_door0",
+"collection": "Bedroom",
+"min": [
+6.23,
+2.537,
+1.402
+],
+"max": [
+6.25,
+3.085,
+1.748
+],
+"material": "Oak solid",
+"props": {
+"cab_pivot": "CAB_BW_t0_door0"
+}
+},
+{
+"name": "BW_t0_door1",
+"collection": "Bedroom",
+"min": [
+6.23,
+2.537,
+1.752
+],
+"max": [
+6.25,
+3.085,
+2.598
+],
+"material": "Oak solid",
+"props": {
+"cab_pivot": "CAB_BW_t0_door1"
+}
+},
+{
+"name": "BW_t0_drawer",
+"collection": "Bedroom",
+"min": [
+6.23,
+2.535,
+0.08
+],
+"max": [
+6.625,
+3.087,
+0.47
+],
+"material": "Oak solid",
+"props": {
+"cab_pivot": "CAB_BW_t0_drawer"
+}
+},
+{
+"name": "BW_t0_drawer_gap",
+"collection": "Bedroom",
+"min": [
+6.228,
+2.555,
+0.26
+],
+"max": [
+6.23,
+3.067,
+0.262
+],
+"material": "Shadow gap",
+"props": {
+"cab_pivot": "CAB_BW_t0_drawer"
+}
+},
+{
+"name": "BW_t0_niche_back",
+"collection": "Bedroom",
+"min": [
+6.25,
+2.535,
+0.555
+],
+"max": [
+6.625,
+2.555,
+1.4
+],
+"material": "Oak light",
+"props": {}
+},
+{
+"name": "BW_t0_niche_led",
+"collection": "Bedroom",
+"min": [
+6.27,
+3.027,
+1.395
+],
+"max": [
+6.61,
+3.047,
+1.4
+],
+"material": "LED shelf warm",
+"props": {}
+},
+{
+"name": "BW_t0_plinth",
+"collection": "Bedroom",
+"min": [
+6.25,
+2.555,
+0.0
+],
+"max": [
+6.625,
+3.067,
+0.08
+],
+"material": "Shadow gap",
+"props": {}
+},
+{
+"name": "BW_t0_top",
+"collection": "Bedroom",
+"min": [
+6.25,
+2.535,
+1.4
+],
+"max": [
+6.625,
+3.087,
+2.6
+],
+"material": "Carcass",
+"props": {}
+},
+{
+"name": "BW_t1_door0",
+"collection": "Bedroom",
+"min": [
+6.23,
+4.789,
+1.402
+],
+"max": [
+6.25,
+5.338,
+1.748
+],
+"material": "Oak solid",
+"props": {
+"cab_pivot": "CAB_BW_t1_door0"
+}
+},
+{
+"name": "BW_t1_door1",
+"collection": "Bedroom",
+"min": [
+6.23,
+4.789,
+1.752
+],
+"max": [
+6.25,
+5.338,
+2.598
+],
+"material": "Oak solid",
+"props": {
+"cab_pivot": "CAB_BW_t1_door1"
+}
+},
+{
+"name": "BW_t1_drawer",
+"collection": "Bedroom",
+"min": [
+6.23,
+4.787,
+0.08
+],
+"max": [
+6.625,
+5.34,
+0.47
+],
+"material": "Oak solid",
+"props": {
+"cab_pivot": "CAB_BW_t1_drawer"
+}
+},
+{
+"name": "BW_t1_drawer_gap",
+"collection": "Bedroom",
+"min": [
+6.228,
+4.807,
+0.26
+],
+"max": [
+6.23,
+5.32,
+0.262
+],
+"material": "Shadow gap",
+"props": {
+"cab_pivot": "CAB_BW_t1_drawer"
+}
+},
+{
+"name": "BW_t1_niche_back",
+"collection": "Bedroom",
+"min": [
+6.25,
+5.32,
+0.555
+],
+"max": [
+6.625,
+5.34,
+1.4
+],
+"material": "Oak light",
+"props": {}
+},
+{
+"name": "BW_t1_niche_led",
+"collection": "Bedroom",
+"min": [
+6.27,
+4.827,
+1.395
+],
+"max": [
+6.61,
+4.847,
+1.4
+],
+"material": "LED shelf warm",
+"props": {}
+},
+{
+"name": "BW_t1_plinth",
+"collection": "Bedroom",
+"min": [
+6.25,
+4.807,
+0.0
+],
+"max": [
+6.625,
+5.32,
+0.08
+],
+"material": "Shadow gap",
+"props": {}
+},
+{
+"name": "BW_t1_top",
+"collection": "Bedroom",
+"min": [
+6.25,
+4.787,
+1.4
+],
+"max": [
+6.625,
+5.34,
+2.6
+],
+"material": "Carcass",
+"props": {}
+},
+{
+"name": "Ceiling",
+"collection": "Shell",
+"min": [
+-0.25,
+-0.25,
+2.6
+],
+"max": [
+3.65,
+6.9,
+2.65
+],
+"material": "Ceiling paint",
+"props": {}
+},
+{
+"name": "Ceiling_2",
+"collection": "Shell",
+"min": [
+3.35,
+-0.25,
+2.6
+],
+"max": [
+6.9,
+5.69,
+2.65
+],
+"material": "Ceiling paint",
+"props": {}
+},
+{
+"name": "Coffee_leg0",
+"collection": "Living",
+"min": [
+1.338,
+4.163,
+0.0
+],
+"max": [
+1.382,
+4.207,
+0.34
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Coffee_leg1",
+"collection": "Living",
+"min": [
+1.858,
+4.163,
+0.0
+],
+"max": [
+1.902,
+4.207,
+0.34
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Coffee_leg2",
+"collection": "Living",
+"min": [
+1.338,
+5.463,
+0.0
+],
+"max": [
+1.382,
+5.507,
+0.34
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Coffee_leg3",
+"collection": "Living",
+"min": [
+1.858,
+5.463,
+0.0
+],
+"max": [
+1.902,
+5.507,
+0.34
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Coffee_top",
+"collection": "Living",
+"min": [
+1.32,
+4.135,
+0.34
+],
+"max": [
+1.92,
+5.535,
+0.37
+],
+"material": "Oak solid",
+"props": {
+"spec": "IKEA LISTERBY coffee table oak veneer 140x60 h37"
+}
+},
+{
+"name": "CT_book0",
+"collection": "Styling",
+"min": [
+1.448,
+4.5,
+0.37
+],
+"max": [
+1.772,
+4.77,
+0.405
+],
+"material": "CT book 0",
+"props": {}
+},
+{
+"name": "CT_book1",
+"collection": "Styling",
+"min": [
+1.514,
+4.572,
+0.435
+],
+"max": [
+1.826,
+4.828,
+0.465
+],
+"material": "CT book 1",
+"props": {}
+},
+{
+"name": "CT_bowl",
+"collection": "Styling",
+"min": [
+1.515,
+4.97,
+0.37
+],
+"max": [
+1.765,
+5.22,
+0.43
+],
+"material": "Stoneware terracotta",
+"props": {}
+},
+{
+"name": "CT_budvase",
+"collection": "Styling",
+"min": [
+1.572,
+4.702,
+0.47
+],
+"max": [
+1.628,
+4.758,
+0.59
+],
+"material": "Ceramic matte",
+"props": {}
+},
+{
+"name": "Curtain_cove_led",
+"collection": "Living",
+"min": [
+0.4,
+6.6,
+2.588
+],
+"max": [
+3.33,
+6.62,
+2.595
+],
+"material": "LED warm",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Curtain_R",
+"collection": "Living",
+"min": [
+3.009,
+6.511,
+0.01
+],
+"max": [
+3.33,
+6.609,
+2.57
+],
+"material": null,
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Curtain_track",
+"collection": "Living",
+"min": [
+0.4,
+6.52,
+2.57
+],
+"max": [
+3.35,
+6.6,
+2.6
+],
+"material": "Ceiling paint",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Cutting_board",
+"collection": "Decor",
+"min": [
+0.03,
+0.04,
+0.9
+],
+"max": [
+0.48,
+0.06,
+1.25
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_backrail",
+"collection": "Living",
+"min": [
+0.19,
+3.37,
+0.76
+],
+"max": [
+0.61,
+3.42,
+0.8
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_backrail.001",
+"collection": "Living",
+"min": [
+0.71,
+1.7,
+0.76
+],
+"max": [
+1.13,
+1.75,
+0.8
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_backrail.002",
+"collection": "Living",
+"min": [
+0.71,
+3.37,
+0.76
+],
+"max": [
+1.13,
+3.42,
+0.8
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_leg",
+"collection": "Living",
+"min": [
+0.204,
+3.014,
+-0.005
+],
+"max": [
+0.236,
+3.046,
+0.435
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_leg.001",
+"collection": "Living",
+"min": [
+0.564,
+3.014,
+-0.005
+],
+"max": [
+0.596,
+3.046,
+0.435
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_leg.002",
+"collection": "Living",
+"min": [
+0.204,
+3.354,
+-0.005
+],
+"max": [
+0.236,
+3.386,
+0.435
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_leg.003",
+"collection": "Living",
+"min": [
+0.564,
+3.354,
+-0.005
+],
+"max": [
+0.596,
+3.386,
+0.435
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_leg.004",
+"collection": "Living",
+"min": [
+1.084,
+2.074,
+-0.005
+],
+"max": [
+1.116,
+2.106,
+0.435
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_leg.005",
+"collection": "Living",
+"min": [
+0.724,
+2.074,
+-0.005
+],
+"max": [
+0.756,
+2.106,
+0.435
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_leg.006",
+"collection": "Living",
+"min": [
+1.084,
+1.734,
+-0.005
+],
+"max": [
+1.116,
+1.766,
+0.435
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_leg.007",
+"collection": "Living",
+"min": [
+0.724,
+1.734,
+-0.005
+],
+"max": [
+0.756,
+1.766,
+0.435
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_leg.008",
+"collection": "Living",
+"min": [
+0.724,
+3.014,
+-0.005
+],
+"max": [
+0.756,
+3.046,
+0.435
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_leg.009",
+"collection": "Living",
+"min": [
+1.084,
+3.014,
+-0.005
+],
+"max": [
+1.116,
+3.046,
+0.435
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_leg.010",
+"collection": "Living",
+"min": [
+0.724,
+3.354,
+-0.005
+],
+"max": [
+0.756,
+3.386,
+0.435
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_leg.011",
+"collection": "Living",
+"min": [
+1.084,
+3.354,
+-0.005
+],
+"max": [
+1.116,
+3.386,
+0.435
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_seat",
+"collection": "Living",
+"min": [
+0.18,
+2.99,
+0.43
+],
+"max": [
+0.62,
+3.41,
+0.46
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_seat.001",
+"collection": "Living",
+"min": [
+0.7,
+1.71,
+0.43
+],
+"max": [
+1.14,
+2.13,
+0.46
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_seat.002",
+"collection": "Living",
+"min": [
+0.7,
+2.99,
+0.43
+],
+"max": [
+1.14,
+3.41,
+0.46
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_spindle",
+"collection": "Living",
+"min": [
+0.232,
+3.382,
+0.46
+],
+"max": [
+0.248,
+3.398,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_spindle.001",
+"collection": "Living",
+"min": [
+0.312,
+3.382,
+0.46
+],
+"max": [
+0.328,
+3.398,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_spindle.002",
+"collection": "Living",
+"min": [
+0.392,
+3.382,
+0.46
+],
+"max": [
+0.408,
+3.398,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_spindle.003",
+"collection": "Living",
+"min": [
+0.472,
+3.382,
+0.46
+],
+"max": [
+0.488,
+3.398,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_spindle.004",
+"collection": "Living",
+"min": [
+0.552,
+3.382,
+0.46
+],
+"max": [
+0.568,
+3.398,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_spindle.005",
+"collection": "Living",
+"min": [
+1.072,
+1.722,
+0.46
+],
+"max": [
+1.088,
+1.738,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_spindle.006",
+"collection": "Living",
+"min": [
+0.992,
+1.722,
+0.46
+],
+"max": [
+1.008,
+1.738,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_spindle.007",
+"collection": "Living",
+"min": [
+0.912,
+1.722,
+0.46
+],
+"max": [
+0.928,
+1.738,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_spindle.008",
+"collection": "Living",
+"min": [
+0.832,
+1.722,
+0.46
+],
+"max": [
+0.848,
+1.738,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_spindle.009",
+"collection": "Living",
+"min": [
+0.752,
+1.722,
+0.46
+],
+"max": [
+0.768,
+1.738,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_spindle.010",
+"collection": "Living",
+"min": [
+0.752,
+3.382,
+0.46
+],
+"max": [
+0.768,
+3.398,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_spindle.011",
+"collection": "Living",
+"min": [
+0.832,
+3.382,
+0.46
+],
+"max": [
+0.848,
+3.398,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_spindle.012",
+"collection": "Living",
+"min": [
+0.912,
+3.382,
+0.46
+],
+"max": [
+0.928,
+3.398,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_spindle.013",
+"collection": "Living",
+"min": [
+0.992,
+3.382,
+0.46
+],
+"max": [
+1.008,
+3.398,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_E_spindle.014",
+"collection": "Living",
+"min": [
+1.072,
+3.382,
+0.46
+],
+"max": [
+1.088,
+3.398,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_S_backrail",
+"collection": "Living",
+"min": [
+0.19,
+1.7,
+0.76
+],
+"max": [
+0.61,
+1.75,
+0.8
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_S_leg",
+"collection": "Living",
+"min": [
+0.564,
+2.074,
+-0.005
+],
+"max": [
+0.596,
+2.106,
+0.435
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_S_leg.001",
+"collection": "Living",
+"min": [
+0.204,
+2.074,
+-0.005
+],
+"max": [
+0.236,
+2.106,
+0.435
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_S_leg.002",
+"collection": "Living",
+"min": [
+0.564,
+1.734,
+-0.005
+],
+"max": [
+0.596,
+1.766,
+0.435
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_S_leg.003",
+"collection": "Living",
+"min": [
+0.204,
+1.734,
+-0.005
+],
+"max": [
+0.236,
+1.766,
+0.435
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_S_seat",
+"collection": "Living",
+"min": [
+0.18,
+1.71,
+0.43
+],
+"max": [
+0.62,
+2.13,
+0.46
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_S_spindle",
+"collection": "Living",
+"min": [
+0.552,
+1.722,
+0.46
+],
+"max": [
+0.568,
+1.738,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_S_spindle.001",
+"collection": "Living",
+"min": [
+0.472,
+1.722,
+0.46
+],
+"max": [
+0.488,
+1.738,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_S_spindle.002",
+"collection": "Living",
+"min": [
+0.392,
+1.722,
+0.46
+],
+"max": [
+0.408,
+1.738,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_S_spindle.003",
+"collection": "Living",
+"min": [
+0.312,
+1.722,
+0.46
+],
+"max": [
+0.328,
+1.738,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "DChair_S_spindle.004",
+"collection": "Living",
+"min": [
+0.232,
+1.722,
+0.46
+],
+"max": [
+0.248,
+1.738,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Desk_drawer",
+"collection": "Bedroom",
+"min": [
+3.47,
+3.45,
+0.64
+],
+"max": [
+3.75,
+4.35,
+0.73
+],
+"material": "Oak light",
+"props": {
+"cab_pivot": "CAB_Desk_drawer"
+}
+},
+{
+"name": "Desk_drawer_gap",
+"collection": "Bedroom",
+"min": [
+3.75,
+3.47,
+0.7
+],
+"max": [
+3.755,
+4.33,
+0.705
+],
+"material": "Shadow gap",
+"props": {
+"cab_pivot": "CAB_Desk_drawer"
+}
+},
+{
+"name": "Desk_grommet",
+"collection": "Living",
+"min": [
+3.2,
+3.83,
+0.74
+],
+"max": [
+3.26,
+3.89,
+0.742
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Desk_lamp_base",
+"collection": "Bedroom",
+"min": [
+3.48,
+3.48,
+0.76
+],
+"max": [
+3.6,
+3.6,
+0.775
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Desk_lamp_pole",
+"collection": "Bedroom",
+"min": [
+3.534,
+3.534,
+0.77
+],
+"max": [
+3.546,
+3.546,
+1.13
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Desk_lamp_shade",
+"collection": "Bedroom",
+"min": [
+3.48,
+3.398,
+1.023
+],
+"max": [
+3.68,
+3.582,
+1.217
+],
+"material": "Pendant shade",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Desk_socket",
+"collection": "Living",
+"min": [
+3.298,
+2.95,
+0.82
+],
+"max": [
+3.308,
+3.13,
+0.9
+],
+"material": "Black matte",
+"props": {}
+},
+{
+"name": "Desk_stool_leg0",
+"collection": "Bedroom",
+"min": [
+3.608,
+3.986,
+0.01
+],
+"max": [
+3.632,
+4.01,
+0.37
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Desk_stool_leg1",
+"collection": "Bedroom",
+"min": [
+3.524,
+3.839,
+0.01
+],
+"max": [
+3.548,
+3.863,
+0.37
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Desk_stool_leg2",
+"collection": "Bedroom",
+"min": [
+3.692,
+3.839,
+0.01
+],
+"max": [
+3.716,
+3.863,
+0.37
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Desk_stool_seat",
+"collection": "Bedroom",
+"min": [
+3.47,
+3.75,
+0.35
+],
+"max": [
+3.77,
+4.05,
+0.45
+],
+"material": "Boucle cream",
+"props": {}
+},
+{
+"name": "Desk_top",
+"collection": "Bedroom",
+"min": [
+3.47,
+3.4,
+0.73
+],
+"max": [
+3.77,
+4.4,
+0.76
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Dining_apron_N",
+"collection": "Living",
+"min": [
+0.08,
+2.89,
+0.65
+],
+"max": [
+1.16,
+2.91,
+0.72
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Dining_apron_S",
+"collection": "Living",
+"min": [
+0.08,
+2.21,
+0.65
+],
+"max": [
+1.16,
+2.23,
+0.72
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Dining_leg0",
+"collection": "Living",
+"min": [
+0.055,
+2.195,
+0.0
+],
+"max": [
+0.105,
+2.245,
+0.72
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Dining_leg1",
+"collection": "Living",
+"min": [
+1.135,
+2.195,
+0.0
+],
+"max": [
+1.185,
+2.245,
+0.72
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Dining_leg2",
+"collection": "Living",
+"min": [
+0.055,
+2.875,
+0.0
+],
+"max": [
+0.105,
+2.925,
+0.72
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Dining_leg3",
+"collection": "Living",
+"min": [
+1.135,
+2.875,
+0.0
+],
+"max": [
+1.185,
+2.925,
+0.72
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Dining_socket",
+"collection": "Living",
+"min": [
+0.0,
+1.9,
+0.26
+],
+"max": [
+0.007,
+1.98,
+0.34
+],
+"material": "Switch plate white",
+"props": {}
+},
+{
+"name": "Dining_top",
+"collection": "Living",
+"min": [
+0.02,
+2.16,
+0.72
+],
+"max": [
+1.22,
+2.96,
+0.75
+],
+"material": "Oak solid",
+"props": {
+"spec": "JYSK AABENRAA dining table 120x80 h75, oak-pattern top, black legs"
+}
+},
+{
+"name": "Dining_vase",
+"collection": "Styling",
+"min": [
+0.365,
+2.605,
+0.75
+],
+"max": [
+0.475,
+2.715,
+0.99
+],
+"material": "Ceramic sage",
+"props": {}
+},
+{
+"name": "Door_bell",
+"collection": "Corridor",
+"min": [
+3.51,
+-0.257,
+1.36
+],
+"max": [
+3.59,
+-0.25,
+1.44
+],
+"material": "Switch plate white",
+"props": {
+"function": "bell push outside the entrance, chime via intercom"
+}
+},
+{
+"name": "Door_casing_a",
+"collection": "Openings",
+"min": [
+3.335,
+1.33,
+0.0
+],
+"max": [
+3.35,
+1.4,
+2.07
+],
+"material": "Door white",
+"props": {}
+},
+{
+"name": "Door_casing_b",
+"collection": "Openings",
+"min": [
+3.335,
+2.3,
+0.0
+],
+"max": [
+3.35,
+2.37,
+2.07
+],
+"material": "Door white",
+"props": {}
+},
+{
+"name": "Door_casing_t",
+"collection": "Openings",
+"min": [
+3.335,
+1.33,
+2.0
+],
+"max": [
+3.35,
+2.37,
+2.07
+],
+"material": "Door white",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Door_handle",
+"collection": "Openings",
+"min": [
+3.28,
+2.16,
+1.03
+],
+"max": [
+3.335,
+2.3,
+1.05
+],
+"material": "Brushed steel",
+"props": {}
+},
+{
+"name": "Door_leaf",
+"collection": "Openings",
+"min": [
+3.39,
+1.42,
+0.0
+],
+"max": [
+3.43,
+2.28,
+1.99
+],
+"material": "Door white",
+"props": {}
+},
+{
+"name": "Doormat",
+"collection": "Corridor",
+"min": [
+3.8,
+0.05,
+0.0
+],
+"max": [
+4.62,
+0.55,
+0.01
+],
+"material": "Coir doormat",
+"props": {}
+},
+{
+"name": "Dresser_socket",
+"collection": "Living",
+"min": [
+3.47,
+3.42,
+0.86
+],
+"max": [
+3.477,
+3.57,
+0.94
+],
+"material": "Switch plate white",
+"props": {}
+},
+{
+"name": "Dresser_tray",
+"collection": "Styling",
+"min": [
+3.47,
+3.62,
+0.76
+],
+"max": [
+3.72,
+3.87,
+0.77
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Dresser_vase",
+"collection": "Styling",
+"min": [
+3.525,
+4.245,
+0.76
+],
+"max": [
+3.635,
+4.355,
+0.94
+],
+"material": "Ceramic sand",
+"props": {}
+},
+{
+"name": "Dried_leaf0_2_-1",
+"collection": "Styling",
+"min": [
+3.574,
+4.327,
+1.057
+],
+"max": [
+3.621,
+4.344,
+1.095
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf0_2_1",
+"collection": "Styling",
+"min": [
+3.576,
+4.322,
+1.056
+],
+"max": [
+3.619,
+4.349,
+1.095
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf0_3_-1",
+"collection": "Styling",
+"min": [
+3.581,
+4.349,
+1.101
+],
+"max": [
+3.631,
+4.359,
+1.139
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf0_3_1",
+"collection": "Styling",
+"min": [
+3.589,
+4.335,
+1.099
+],
+"max": [
+3.623,
+4.372,
+1.141
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf0_4_-1",
+"collection": "Styling",
+"min": [
+3.591,
+4.367,
+1.168
+],
+"max": [
+3.638,
+4.376,
+1.199
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf0_4_1",
+"collection": "Styling",
+"min": [
+3.596,
+4.355,
+1.164
+],
+"max": [
+3.633,
+4.388,
+1.203
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf0_5_-1",
+"collection": "Styling",
+"min": [
+3.598,
+4.381,
+1.273
+],
+"max": [
+3.648,
+4.398,
+1.312
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf0_5_1",
+"collection": "Styling",
+"min": [
+3.606,
+4.374,
+1.28
+],
+"max": [
+3.64,
+4.404,
+1.305
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf0_6_-1",
+"collection": "Styling",
+"min": [
+3.609,
+4.4,
+1.329
+],
+"max": [
+3.655,
+4.414,
+1.356
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf0_6_1",
+"collection": "Styling",
+"min": [
+3.615,
+4.389,
+1.324
+],
+"max": [
+3.648,
+4.426,
+1.361
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf1_2_-1",
+"collection": "Styling",
+"min": [
+3.563,
+4.318,
+1.05
+],
+"max": [
+3.608,
+4.324,
+1.076
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf1_2_1",
+"collection": "Styling",
+"min": [
+3.563,
+4.309,
+1.043
+],
+"max": [
+3.607,
+4.333,
+1.083
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf1_3_-1",
+"collection": "Styling",
+"min": [
+3.563,
+4.329,
+1.093
+],
+"max": [
+3.613,
+4.334,
+1.133
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf1_3_1",
+"collection": "Styling",
+"min": [
+3.568,
+4.32,
+1.1
+],
+"max": [
+3.608,
+4.343,
+1.126
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf1_4_-1",
+"collection": "Styling",
+"min": [
+3.565,
+4.341,
+1.163
+],
+"max": [
+3.616,
+4.343,
+1.206
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf1_4_1",
+"collection": "Styling",
+"min": [
+3.57,
+4.329,
+1.166
+],
+"max": [
+3.611,
+4.356,
+1.203
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf1_5_-1",
+"collection": "Styling",
+"min": [
+3.569,
+4.346,
+1.207
+],
+"max": [
+3.617,
+4.359,
+1.241
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf1_5_1",
+"collection": "Styling",
+"min": [
+3.572,
+4.338,
+1.212
+],
+"max": [
+3.614,
+4.368,
+1.236
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf1_6_-1",
+"collection": "Styling",
+"min": [
+3.573,
+4.361,
+1.348
+],
+"max": [
+3.618,
+4.365,
+1.374
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf1_6_1",
+"collection": "Styling",
+"min": [
+3.575,
+4.35,
+1.349
+],
+"max": [
+3.617,
+4.376,
+1.373
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf2_2_-1",
+"collection": "Styling",
+"min": [
+3.53,
+4.265,
+1.032
+],
+"max": [
+3.556,
+4.308,
+1.072
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf2_2_1",
+"collection": "Styling",
+"min": [
+3.539,
+4.263,
+1.037
+],
+"max": [
+3.546,
+4.31,
+1.066
+],
+"material": "Eucalyptus leaf",
+"props": {}
+},
+{
+"name": "Dried_leaf2_3_-1",
+"collection": "Styling",
+"min": [
+3.511,
+4.261,
+1.102
+],
+"max": [
+3.538,
+4.298,
+1.126
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf2_3_1",
+"collection": "Styling",
+"min": [
+3.522,
+4.257,
+1.101
+],
+"max": [
+3.527,
+4.302,
+1.127
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf2_4_-1",
+"collection": "Styling",
+"min": [
+3.493,
+4.255,
+1.196
+],
+"max": [
+3.519,
+4.292,
+1.221
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf2_4_1",
+"collection": "Styling",
+"min": [
+3.501,
+4.249,
+1.192
+],
+"max": [
+3.511,
+4.297,
+1.224
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf2_5_-1",
+"collection": "Styling",
+"min": [
+3.475,
+4.244,
+1.235
+],
+"max": [
+3.499,
+4.288,
+1.276
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf2_5_1",
+"collection": "Styling",
+"min": [
+3.482,
+4.244,
+1.243
+],
+"max": [
+3.493,
+4.289,
+1.269
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf2_6_-1",
+"collection": "Styling",
+"min": [
+3.456,
+4.237,
+1.308
+],
+"max": [
+3.481,
+4.282,
+1.345
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf2_6_1",
+"collection": "Styling",
+"min": [
+3.463,
+4.235,
+1.307
+],
+"max": [
+3.475,
+4.284,
+1.345
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf3_2_-1",
+"collection": "Styling",
+"min": [
+3.563,
+4.281,
+1.046
+],
+"max": [
+3.567,
+4.33,
+1.085
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf3_2_1",
+"collection": "Styling",
+"min": [
+3.548,
+4.287,
+1.045
+],
+"max": [
+3.582,
+4.324,
+1.086
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf3_3_-1",
+"collection": "Styling",
+"min": [
+3.553,
+4.283,
+1.119
+],
+"max": [
+3.563,
+4.333,
+1.159
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf3_3_1",
+"collection": "Styling",
+"min": [
+3.543,
+4.29,
+1.127
+],
+"max": [
+3.573,
+4.327,
+1.151
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf3_4_-1",
+"collection": "Styling",
+"min": [
+3.544,
+4.287,
+1.198
+],
+"max": [
+3.557,
+4.335,
+1.235
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf3_4_1",
+"collection": "Styling",
+"min": [
+3.533,
+4.292,
+1.204
+],
+"max": [
+3.568,
+4.331,
+1.229
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf3_5_-1",
+"collection": "Styling",
+"min": [
+3.54,
+4.29,
+1.211
+],
+"max": [
+3.546,
+4.338,
+1.242
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf3_5_1",
+"collection": "Styling",
+"min": [
+3.526,
+4.296,
+1.211
+],
+"max": [
+3.561,
+4.332,
+1.242
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf3_6_-1",
+"collection": "Styling",
+"min": [
+3.533,
+4.292,
+1.32
+],
+"max": [
+3.538,
+4.342,
+1.363
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Dried_leaf3_6_1",
+"collection": "Styling",
+"min": [
+3.522,
+4.299,
+1.328
+],
+"max": [
+3.55,
+4.335,
+1.355
+],
+"material": "Eucalyptus leaf",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Drying_rack",
+"collection": "Bedroom",
+"min": [
+3.48,
+2.5,
+0.0
+],
+"max": [
+3.53,
+3.0,
+1.1
+],
+"material": "Brushed steel",
+"props": {
+"spec": "folding clothes airer, stored behind the door, used on the balcony"
+}
+},
+{
+"name": "Duvet",
+"collection": "Bedroom",
+"min": [
+4.526,
+3.072,
+0.358
+],
+"max": [
+6.061,
+4.801,
+0.584
+],
+"material": "Linen oat",
+"props": {
+"cab_pivot": "CAB_Bed_slats"
+}
+},
+{
+"name": "Duvet_fold",
+"collection": "Bedroom",
+"min": [
+5.809,
+3.075,
+0.56
+],
+"max": [
+6.061,
+4.799,
+0.621
+],
+"material": "Linen oat",
+"props": {
+"cab_pivot": "CAB_Bed_slats"
+}
+},
+{
+"name": "Elec_board",
+"collection": "Corridor",
+"min": [
+3.47,
+1.08,
+1.45
+],
+"max": [
+3.48,
+1.38,
+1.85
+],
+"material": "Switch plate white",
+"props": {
+"function": "consumer board 2x12 modules, flush; main 3x25 A, SPD type 2, RCDs 30 mA"
+}
+},
+{
+"name": "EntrDoor_ca0.01a",
+"collection": "Openings",
+"min": [
+3.65,
+0.0,
+0.0
+],
+"max": [
+3.72,
+0.016,
+2.17
+],
+"material": "Door white",
+"props": {}
+},
+{
+"name": "EntrDoor_ca0.01b",
+"collection": "Openings",
+"min": [
+4.72,
+0.0,
+0.0
+],
+"max": [
+4.79,
+0.016,
+2.17
+],
+"material": "Door white",
+"props": {}
+},
+{
+"name": "EntrDoor_ca0.01t",
+"collection": "Openings",
+"min": [
+3.65,
+0.0,
+2.1
+],
+"max": [
+4.79,
+0.016,
+2.17
+],
+"material": "Door white",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "EntrDoor_frame_L",
+"collection": "Openings",
+"min": [
+3.72,
+-0.12,
+0.0
+],
+"max": [
+3.74,
+-0.02,
+2.1
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "EntrDoor_frame_R",
+"collection": "Openings",
+"min": [
+4.7,
+-0.12,
+0.0
+],
+"max": [
+4.72,
+-0.02,
+2.1
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "EntrDoor_frame_T",
+"collection": "Openings",
+"min": [
+3.72,
+-0.12,
+2.08
+],
+"max": [
+4.72,
+-0.02,
+2.1
+],
+"material": "Aluminium anthracite",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "EntrDoor_handle",
+"collection": "Openings",
+"min": [
+3.8,
+-0.04,
+1.02
+],
+"max": [
+3.94,
+0.02,
+1.04
+],
+"material": "Brushed steel",
+"props": {}
+},
+{
+"name": "EntrDoor_leaf",
+"collection": "Openings",
+"min": [
+3.74,
+-0.1,
+0.005
+],
+"max": [
+4.7,
+-0.04,
+2.08
+],
+"material": "Entrance door walnut",
+"props": {}
+},
+{
+"name": "Floor",
+"collection": "Shell",
+"min": [
+0.0,
+0.0,
+-0.02
+],
+"max": [
+3.35,
+6.65,
+0.0
+],
+"material": "Vinyl SPC oak (floor)",
+"props": {}
+},
+{
+"name": "Floor_bed",
+"collection": "Shell",
+"min": [
+3.47,
+2.44,
+-0.02
+],
+"max": [
+6.65,
+5.34,
+0.0
+],
+"material": "Vinyl SPC oak (floor)",
+"props": {}
+},
+{
+"name": "Floor_door_bal",
+"collection": "Shell",
+"min": [
+3.87,
+5.34,
+-0.02
+],
+"max": [
+4.67,
+5.69,
+0.0
+],
+"material": "Vinyl SPC oak (floor)",
+"props": {}
+},
+{
+"name": "Floor_door_bed",
+"collection": "Shell",
+"min": [
+3.6,
+2.33,
+-0.02
+],
+"max": [
+4.4,
+2.44,
+0.0
+],
+"material": "Vinyl SPC oak (floor)",
+"props": {}
+},
+{
+"name": "Floor_doorsills",
+"collection": "Shell",
+"min": [
+3.35,
+1.4,
+-0.02
+],
+"max": [
+3.47,
+2.3,
+0.0
+],
+"material": "Vinyl SPC oak (floor)",
+"props": {}
+},
+{
+"name": "Floor_niche",
+"collection": "Shell",
+"min": [
+4.89,
+1.92,
+-0.02
+],
+"max": [
+6.65,
+2.44,
+0.0
+],
+"material": "Vinyl SPC oak (floor)",
+"props": {}
+},
+{
+"name": "Floor_tile_door_bath",
+"collection": "Shell",
+"min": [
+4.77,
+0.15,
+-0.02
+],
+"max": [
+4.89,
+0.97,
+0.001
+],
+"material": "Tile floor Town Antracite 60x60",
+"props": {}
+},
+{
+"name": "Floor_vinyl_corridor",
+"collection": "Shell",
+"min": [
+3.47,
+0.0,
+-0.02
+],
+"max": [
+4.77,
+2.33,
+0.001
+],
+"material": "Vinyl SPC oak (floor)",
+"props": {}
+},
+{
+"name": "Floor_vinyl_door_entry",
+"collection": "Shell",
+"min": [
+3.72,
+-0.25,
+-0.02
+],
+"max": [
+4.72,
+0.0,
+0.001
+],
+"material": "Vinyl SPC oak (floor)",
+"props": {}
+},
+{
+"name": "Floor_vinyl_kitchen",
+"collection": "Shell",
+"min": [
+0.0,
+0.0,
+-0.02
+],
+"max": [
+3.35,
+1.4,
+0.001
+],
+"material": "Vinyl SPC oak (floor)",
+"props": {}
+},
+{
+"name": "FloorLamp_arm",
+"collection": "Living",
+"min": [
+1.17,
+6.37,
+1.356
+],
+"max": [
+1.31,
+6.49,
+1.597
+],
+"material": "Dark grey metal",
+"props": {}
+},
+{
+"name": "FloorLamp_base",
+"collection": "Living",
+"min": [
+1.16,
+6.34,
+0.0
+],
+"max": [
+1.44,
+6.62,
+0.018
+],
+"material": "Dark grey metal",
+"props": {}
+},
+{
+"name": "FloorLamp_pole",
+"collection": "Living",
+"min": [
+1.288,
+6.468,
+0.0
+],
+"max": [
+1.312,
+6.492,
+1.366
+],
+"material": "Dark grey metal",
+"props": {
+"spec": "IKEA HEKTAR floor lamp, dark grey, h181"
+}
+},
+{
+"name": "FloorLamp_shade",
+"collection": "Living",
+"min": [
+0.943,
+6.172,
+1.347
+],
+"max": [
+1.41,
+6.58,
+1.829
+],
+"material": "Pendant shade",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Glz_frame_bot",
+"collection": "Openings",
+"min": [
+0.4,
+6.73,
+0.0
+],
+"max": [
+3.01,
+6.8,
+0.05
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "Glz_frame_L",
+"collection": "Openings",
+"min": [
+0.4,
+6.73,
+0.0
+],
+"max": [
+0.46,
+6.8,
+2.38
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "Glz_frame_R",
+"collection": "Openings",
+"min": [
+2.95,
+6.73,
+0.0
+],
+"max": [
+3.01,
+6.8,
+2.38
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "Glz_frame_top",
+"collection": "Openings",
+"min": [
+0.4,
+6.73,
+2.32
+],
+"max": [
+3.01,
+6.8,
+2.38
+],
+"material": "Aluminium anthracite",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Glz_handle",
+"collection": "Openings",
+"min": [
+1.08,
+6.69,
+1.0
+],
+"max": [
+1.1,
+6.73,
+1.14
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "Glz_mullion1",
+"collection": "Openings",
+"min": [
+1.12,
+6.73,
+0.0
+],
+"max": [
+1.18,
+6.8,
+2.38
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "Glz_mullion2",
+"collection": "Openings",
+"min": [
+2.05,
+6.73,
+0.0
+],
+"max": [
+2.11,
+6.8,
+2.38
+],
+"material": "Aluminium anthracite",
+"props": {}
+},
+{
+"name": "Glz_pane0",
+"collection": "Openings",
+"min": [
+0.46,
+6.76,
+0.05
+],
+"max": [
+1.12,
+6.77,
+2.32
+],
+"material": "Glass",
+"props": {}
+},
+{
+"name": "Glz_pane1",
+"collection": "Openings",
+"min": [
+1.18,
+6.76,
+0.05
+],
+"max": [
+2.05,
+6.77,
+2.32
+],
+"material": "Glass",
+"props": {}
+},
+{
+"name": "Glz_pane2",
+"collection": "Openings",
+"min": [
+2.11,
+6.76,
+0.05
+],
+"max": [
+2.95,
+6.77,
+2.32
+],
+"material": "Glass",
+"props": {}
+},
+{
+"name": "Hall_cl_iron",
+"collection": "Corridor",
+"min": [
+4.55,
+2.1,
+1.518
+],
+"max": [
+4.72,
+2.22,
+1.66
+],
+"material": "Switch plate white",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_cl_ironing",
+"collection": "Corridor",
+"min": [
+4.47,
+1.9,
+0.02
+],
+"max": [
+4.53,
+2.28,
+1.4
+],
+"material": "Linen oat",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_cl_mop",
+"collection": "Corridor",
+"min": [
+4.62,
+2.09,
+0.0
+],
+"max": [
+4.74,
+2.25,
+0.1
+],
+"material": "Linen white",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_cl_products",
+"collection": "Corridor",
+"min": [
+4.5,
+1.8,
+1.518
+],
+"max": [
+4.7,
+2.05,
+1.75
+],
+"material": "Ceramic matte",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_cl_shelf0",
+"collection": "Corridor",
+"min": [
+4.46,
+1.75,
+1.5
+],
+"max": [
+4.75,
+2.29,
+1.518
+],
+"material": "Carcass",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_cl_shelf1",
+"collection": "Corridor",
+"min": [
+4.46,
+1.75,
+1.9
+],
+"max": [
+4.75,
+2.29,
+1.918
+],
+"material": "Carcass",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_cl_shelf2",
+"collection": "Corridor",
+"min": [
+4.46,
+1.75,
+2.25
+],
+"max": [
+4.75,
+2.29,
+2.268
+],
+"material": "Carcass",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_cl_socket",
+"collection": "Corridor",
+"min": [
+4.743,
+1.95,
+1.2
+],
+"max": [
+4.75,
+2.03,
+1.28
+],
+"material": "Switch plate white",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_cl_stick0",
+"collection": "Corridor",
+"min": [
+4.688,
+2.108,
+0.1
+],
+"max": [
+4.712,
+2.132,
+1.42
+],
+"material": "Oak solid",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_cl_stick1",
+"collection": "Corridor",
+"min": [
+4.688,
+2.208,
+0.1
+],
+"max": [
+4.712,
+2.232,
+1.42
+],
+"material": "Oak solid",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_cl_vac_body",
+"collection": "Corridor",
+"min": [
+4.6,
+1.78,
+0.88
+],
+"max": [
+4.73,
+1.92,
+1.18
+],
+"material": "Black metal",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_cl_vac_dock",
+"collection": "Corridor",
+"min": [
+4.735,
+1.8,
+1.1
+],
+"max": [
+4.75,
+1.9,
+1.25
+],
+"material": "Switch plate white",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_cl_vac_head",
+"collection": "Corridor",
+"min": [
+4.56,
+1.76,
+0.0
+],
+"max": [
+4.74,
+2.0,
+0.07
+],
+"material": "Black matte",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_cl_vac_tube",
+"collection": "Corridor",
+"min": [
+4.642,
+1.832,
+0.07
+],
+"max": [
+4.678,
+1.868,
+0.88
+],
+"material": "Brushed steel",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_intercom",
+"collection": "Corridor",
+"min": [
+3.47,
+0.05,
+1.42
+],
+"max": [
+3.48,
+0.15,
+1.58
+],
+"material": "Switch plate white",
+"props": {}
+},
+{
+"name": "Hall_mirror",
+"collection": "Corridor",
+"min": [
+3.49,
+0.3,
+1.02
+],
+"max": [
+3.495,
+0.86,
+2.18
+],
+"material": "Mirror",
+"props": {}
+},
+{
+"name": "Hall_mirror_frame",
+"collection": "Corridor",
+"min": [
+3.47,
+0.28,
+1.0
+],
+"max": [
+3.49,
+0.88,
+2.2
+],
+"material": "Black metal",
+"props": {
+"spec": "IKEA LINDBYN mirror 60x120 black"
+}
+},
+{
+"name": "Hall_smoke_alarm",
+"collection": "Corridor",
+"min": [
+4.06,
+1.94,
+2.57
+],
+"max": [
+4.18,
+2.06,
+2.6
+],
+"material": "Switch plate white",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_socket_vac",
+"collection": "Corridor",
+"min": [
+3.47,
+1.16,
+0.26
+],
+"max": [
+3.477,
+1.24,
+0.34
+],
+"material": "Switch plate white",
+"props": {}
+},
+{
+"name": "Hall_switch_bath",
+"collection": "Corridor",
+"min": [
+4.763,
+0.04,
+1.01
+],
+"max": [
+4.77,
+0.12,
+1.09
+],
+"material": "Switch plate white",
+"props": {
+"function": "2-gang: bath spots + fan / mirror LEDs (latch side of the pocket door)"
+}
+},
+{
+"name": "Hall_switch_entry",
+"collection": "Corridor",
+"min": [
+3.51,
+0.0,
+1.01
+],
+"max": [
+3.59,
+0.007,
+1.09
+],
+"material": "Switch plate white",
+"props": {
+"function": "corridor light 2-way + bell/intercom"
+}
+},
+{
+"name": "Hall_switch_living",
+"collection": "Corridor",
+"min": [
+3.47,
+1.18,
+1.01
+],
+"max": [
+3.477,
+1.26,
+1.09
+],
+"material": "Switch plate white",
+"props": {
+"function": "corridor light 2-way (pair with Hall_switch_entry)"
+}
+},
+{
+"name": "Hall_unit_bench_back",
+"collection": "Corridor",
+"min": [
+4.75,
+1.13,
+0.42
+],
+"max": [
+4.77,
+1.73,
+1.98
+],
+"material": "Oak solid",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_unit_bench_seat",
+"collection": "Corridor",
+"min": [
+4.42,
+1.13,
+0.39
+],
+"max": [
+4.75,
+1.73,
+0.42
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Hall_unit_hatshelf",
+"collection": "Corridor",
+"min": [
+4.47,
+1.13,
+1.95
+],
+"max": [
+4.75,
+1.73,
+1.98
+],
+"material": "Oak solid",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_unit_hook0",
+"collection": "Corridor",
+"min": [
+4.7,
+1.242,
+1.7
+],
+"max": [
+4.75,
+1.258,
+1.72
+],
+"material": "Black matte",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_unit_hook1",
+"collection": "Corridor",
+"min": [
+4.7,
+1.392,
+1.7
+],
+"max": [
+4.75,
+1.408,
+1.72
+],
+"material": "Black matte",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_unit_hook2",
+"collection": "Corridor",
+"min": [
+4.7,
+1.542,
+1.7
+],
+"max": [
+4.75,
+1.558,
+1.72
+],
+"material": "Black matte",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_unit_hook3",
+"collection": "Corridor",
+"min": [
+4.7,
+1.692,
+1.7
+],
+"max": [
+4.75,
+1.708,
+1.72
+],
+"material": "Black matte",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_unit_led",
+"collection": "Corridor",
+"min": [
+4.46,
+1.15,
+1.975
+],
+"max": [
+4.75,
+1.71,
+1.98
+],
+"material": "LED shelf warm",
+"props": {}
+},
+{
+"name": "Hall_unit_plinth",
+"collection": "Corridor",
+"min": [
+4.45,
+1.14,
+0.0
+],
+"max": [
+4.75,
+1.72,
+0.08
+],
+"material": "Shadow gap",
+"props": {}
+},
+{
+"name": "Hall_unit_seat_pad",
+"collection": "Corridor",
+"min": [
+4.455,
+1.195,
+0.422
+],
+"max": [
+4.715,
+1.665,
+0.448
+],
+"material": "Linen oat",
+"props": {}
+},
+{
+"name": "Hall_unit_shoe_shelf",
+"collection": "Corridor",
+"min": [
+4.44,
+1.13,
+0.1
+],
+"max": [
+4.75,
+1.73,
+0.12
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Hall_unit_side",
+"collection": "Corridor",
+"min": [
+4.42,
+1.11,
+0.0
+],
+"max": [
+4.77,
+1.13,
+2.6
+],
+"material": "Oak solid",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_unit_tall",
+"collection": "Corridor",
+"min": [
+4.44,
+1.73,
+0.0
+],
+"max": [
+4.77,
+2.31,
+2.6
+],
+"material": "Carcass",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_unit_tall_door0",
+"collection": "Corridor",
+"min": [
+4.42,
+1.732,
+0.01
+],
+"max": [
+4.44,
+2.018,
+2.598
+],
+"material": "Furniture white matte",
+"props": {
+"cutaway_hide": true,
+"cab_pivot": "CAB_Hall_unit_tall_door0"
+}
+},
+{
+"name": "Hall_unit_tall_door1",
+"collection": "Corridor",
+"min": [
+4.42,
+2.022,
+0.01
+],
+"max": [
+4.44,
+2.308,
+2.598
+],
+"material": "Mirror",
+"props": {
+"cutaway_hide": true,
+"cab_pivot": "CAB_Hall_unit_tall_door1"
+}
+},
+{
+"name": "Hall_unit_upper",
+"collection": "Corridor",
+"min": [
+4.44,
+1.13,
+1.98
+],
+"max": [
+4.77,
+1.73,
+2.6
+],
+"material": "Carcass",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Hall_unit_upper_door",
+"collection": "Corridor",
+"min": [
+4.42,
+1.132,
+1.982
+],
+"max": [
+4.44,
+1.728,
+2.598
+],
+"material": "Furniture white matte",
+"props": {
+"cutaway_hide": true,
+"cab_pivot": "CAB_Hall_unit_upper_door",
+"spec": "side-hinged door, soft-close, 110 deg hinge"
+}
+},
+{
+"name": "HallDown0_trim",
+"collection": "Lighting",
+"min": [
+3.91,
+0.54,
+2.596
+],
+"max": [
+3.99,
+0.62,
+2.6
+],
+"material": "Spot trim",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "HallDown1_trim",
+"collection": "Lighting",
+"min": [
+3.91,
+1.39,
+2.596
+],
+"max": [
+3.99,
+1.47,
+2.6
+],
+"material": "Spot trim",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "K_board2",
+"collection": "Styling",
+"min": [
+0.78,
+0.002,
+0.901
+],
+"max": [
+1.13,
+0.078,
+1.299
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "K_carc_B",
+"collection": "Kitchen",
+"min": [
+0.6,
+0.0,
+0.1
+],
+"max": [
+2.703,
+0.56,
+0.86
+],
+"material": "Carcass",
+"props": {}
+},
+{
+"name": "K_carc_corner",
+"collection": "Kitchen",
+"min": [
+0.0,
+0.0,
+0.1
+],
+"max": [
+0.6,
+0.6,
+0.86
+],
+"material": "Carcass",
+"props": {}
+},
+{
+"name": "K_carc_L",
+"collection": "Kitchen",
+"min": [
+0.0,
+0.6,
+0.1
+],
+"max": [
+0.56,
+1.38,
+0.86
+],
+"material": "Carcass",
+"props": {}
+},
+{
+"name": "K_coffee",
+"collection": "Kitchen",
+"min": [
+2.443,
+0.03,
+0.9
+],
+"max": [
+2.683,
+0.4,
+1.26
+],
+"material": "Black matte",
+"props": {}
+},
+{
+"name": "K_coffee_tray",
+"collection": "Kitchen",
+"min": [
+2.483,
+0.38,
+0.905
+],
+"max": [
+2.643,
+0.42,
+0.92
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "K_conn_dw",
+"collection": "Kitchen",
+"min": [
+2.38,
+0.0,
+0.26
+],
+"max": [
+2.46,
+0.007,
+0.34
+],
+"material": "Switch plate white",
+"props": {
+"function": "dishwasher socket (behind the bottom drawer)"
+}
+},
+{
+"name": "K_conn_fridge",
+"collection": "Kitchen",
+"min": [
+2.99,
+0.0,
+2.26
+],
+"max": [
+3.09,
+0.007,
+2.34
+],
+"material": "Switch plate white",
+"props": {
+"function": "fridge socket (in the cabinet above)"
+}
+},
+{
+"name": "K_conn_hob",
+"collection": "Kitchen",
+"min": [
+0.0,
+1.25,
+0.51
+],
+"max": [
+0.007,
+1.33,
+0.59
+],
+"material": "Switch plate white",
+"props": {
+"function": "hob connection box 400 V / 32 A"
+}
+},
+{
+"name": "K_conn_hood",
+"collection": "Kitchen",
+"min": [
+0.0,
+0.75,
+1.86
+],
+"max": [
+0.007,
+0.83,
+1.94
+],
+"material": "Switch plate white",
+"props": {
+"function": "hood socket (inside the wall unit above)"
+}
+},
+{
+"name": "K_conn_oven",
+"collection": "Kitchen",
+"min": [
+0.0,
+1.25,
+0.26
+],
+"max": [
+0.007,
+1.33,
+0.34
+],
+"material": "Switch plate white",
+"props": {
+"function": "oven socket (back of the 18 pull-out)"
+}
+},
+{
+"name": "K_drawerL0",
+"collection": "Kitchen",
+"min": [
+0.56,
+1.203,
+0.103
+],
+"max": [
+0.58,
+1.377,
+0.857
+],
+"material": "Oak light",
+"props": {
+"cab_pivot": "CAB_K_drawerL0"
+}
+},
+{
+"name": "K_end_panel",
+"collection": "Kitchen",
+"min": [
+0.0,
+1.38,
+0.0
+],
+"max": [
+0.62,
+1.4,
+0.9
+],
+"material": "Oak light",
+"props": {}
+},
+{
+"name": "K_faucet",
+"collection": "Kitchen",
+"min": [
+1.382,
+0.042,
+0.9
+],
+"max": [
+1.418,
+0.078,
+1.24
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "K_faucet_spout",
+"collection": "Kitchen",
+"min": [
+1.386,
+0.047,
+1.251
+],
+"max": [
+1.414,
+0.273,
+1.354
+],
+"material": "Black metal",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "K_fridge",
+"collection": "Kitchen",
+"min": [
+2.738,
+0.03,
+0.02
+],
+"max": [
+3.333,
+0.688,
+2.05
+],
+"material": "Black metal matte fittings",
+"props": {
+"model": "freestanding Bosch 60 cm (e.g. Serie 4 KGN39VLCT), 203x60x66",
+"spec": "Samsung RB38C650EB1/EF, dark inox, 59.5x203x65.8, freestanding (stack + meter behind)",
+"note": "kitchen stack + water meter behind the fridge: freestanding on castors/levelling feet, 5 cm ventilation gap; radio-read meter; stopcock duplicated under the sink"
+}
+},
+{
+"name": "K_fridge_feet",
+"collection": "Kitchen",
+"min": [
+2.768,
+0.08,
+0.0
+],
+"max": [
+3.308,
+0.6,
+0.02
+],
+"material": "Black matte",
+"props": {}
+},
+{
+"name": "K_fridge_gap",
+"collection": "Kitchen",
+"min": [
+2.738,
+0.66,
+0.79
+],
+"max": [
+3.338,
+0.662,
+0.8
+],
+"material": "Shadow gap",
+"props": {}
+},
+{
+"name": "K_fridge_handle_b",
+"collection": "Kitchen",
+"min": [
+2.768,
+0.662,
+0.5
+],
+"max": [
+2.788,
+0.69,
+0.76
+],
+"material": "Black matte",
+"props": {}
+},
+{
+"name": "K_fridge_handle_t",
+"collection": "Kitchen",
+"min": [
+2.768,
+0.662,
+1.05
+],
+"max": [
+2.788,
+0.69,
+1.75
+],
+"material": "Black matte",
+"props": {}
+},
+{
+"name": "K_fridge_panel",
+"collection": "Kitchen",
+"min": [
+2.703,
+0.0,
+0.0
+],
+"max": [
+2.723,
+0.62,
+2.6
+],
+"material": "Oak light",
+"props": {}
+},
+{
+"name": "K_fridge_upper",
+"collection": "Kitchen",
+"min": [
+2.723,
+0.0,
+2.1
+],
+"max": [
+3.35,
+0.6,
+2.6
+],
+"material": "Carcass",
+"props": {}
+},
+{
+"name": "K_fridge_upper_front",
+"collection": "Kitchen",
+"min": [
+2.726,
+0.6,
+2.103
+],
+"max": [
+3.347,
+0.62,
+2.598
+],
+"material": "Kitchen upper warm white",
+"props": {
+"cab_pivot": "CAB_K_fridge_upper_front"
+}
+},
+{
+"name": "K_front_corner_door",
+"collection": "Kitchen",
+"min": [
+0.603,
+0.56,
+0.103
+],
+"max": [
+1.097,
+0.58,
+0.857
+],
+"material": "Oak light",
+"props": {
+"fitting": "Kesseboehmer LeMans II 450 (anthracite), on a 50 door",
+"cab_pivot": "CAB_K_front_corner_door"
+}
+},
+{
+"name": "K_front_drawer0",
+"collection": "Kitchen",
+"min": [
+2.153,
+0.56,
+0.703
+],
+"max": [
+2.7,
+0.58,
+0.857
+],
+"material": "Oak light",
+"props": {
+"use": "cutlery",
+"cab_pivot": "CAB_K_front_drawer0"
+}
+},
+{
+"name": "K_front_drawer1",
+"collection": "Kitchen",
+"min": [
+2.153,
+0.56,
+0.453
+],
+"max": [
+2.7,
+0.58,
+0.697
+],
+"material": "Oak light",
+"props": {
+"use": "utensils",
+"cab_pivot": "CAB_K_front_drawer1"
+}
+},
+{
+"name": "K_front_drawer2",
+"collection": "Kitchen",
+"min": [
+2.153,
+0.56,
+0.103
+],
+"max": [
+2.7,
+0.58,
+0.447
+],
+"material": "Oak light",
+"props": {
+"use": "plates",
+"cab_pivot": "CAB_K_front_drawer2"
+}
+},
+{
+"name": "K_front_dw",
+"collection": "Kitchen",
+"min": [
+1.703,
+0.56,
+0.103
+],
+"max": [
+2.147,
+0.58,
+0.857
+],
+"material": "Oak light",
+"props": {
+"cab_pivot": "CAB_K_front_dw"
+}
+},
+{
+"name": "K_front_sink_bins",
+"collection": "Kitchen",
+"min": [
+1.103,
+0.56,
+0.103
+],
+"max": [
+1.697,
+0.58,
+0.857
+],
+"material": "Oak light",
+"props": {
+"fitting": "pull-out waste sorting 2x18 L + 8 L organic",
+"cab_pivot": "CAB_K_front_sink_bins"
+}
+},
+{
+"name": "K_hob",
+"collection": "Kitchen",
+"min": [
+0.06,
+0.5,
+0.9
+],
+"max": [
+0.56,
+1.08,
+0.905
+],
+"material": "Hob glass",
+"props": {}
+},
+{
+"name": "K_hob_ring",
+"collection": "Kitchen",
+"min": [
+0.118,
+0.558,
+0.904
+],
+"max": [
+0.282,
+0.722,
+0.908
+],
+"material": "Hob rings",
+"props": {}
+},
+{
+"name": "K_hob_ring.001",
+"collection": "Kitchen",
+"min": [
+0.098,
+0.838,
+0.904
+],
+"max": [
+0.302,
+1.042,
+0.908
+],
+"material": "Hob rings",
+"props": {}
+},
+{
+"name": "K_hob_ring.002",
+"collection": "Kitchen",
+"min": [
+0.318,
+0.538,
+0.904
+],
+"max": [
+0.522,
+0.742,
+0.908
+],
+"material": "Hob rings",
+"props": {}
+},
+{
+"name": "K_hob_ring.003",
+"collection": "Kitchen",
+"min": [
+0.338,
+0.858,
+0.904
+],
+"max": [
+0.502,
+1.022,
+0.908
+],
+"material": "Hob rings",
+"props": {}
+},
+{
+"name": "K_hood",
+"collection": "Kitchen",
+"min": [
+0.02,
+0.49,
+1.55
+],
+"max": [
+0.5,
+1.09,
+1.6
+],
+"material": "Black metal matte fittings",
+"props": {
+"cutaway_hide": true,
+"spec": "Hansa OTP 6243 BGH telescopic hood 60, black, recirculation (carbon filter)"
+}
+},
+{
+"name": "K_led_B",
+"collection": "Kitchen",
+"min": [
+0.4,
+0.28,
+1.44
+],
+"max": [
+2.683,
+0.3,
+1.45
+],
+"material": "LED warm",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "K_led_L0",
+"collection": "Kitchen",
+"min": [
+0.28,
+0.4,
+1.44
+],
+"max": [
+0.3,
+0.48,
+1.45
+],
+"material": "LED warm",
+"props": {}
+},
+{
+"name": "K_led_L1",
+"collection": "Kitchen",
+"min": [
+0.28,
+1.1,
+1.44
+],
+"max": [
+0.3,
+1.37,
+1.45
+],
+"material": "LED warm",
+"props": {}
+},
+{
+"name": "K_oil",
+"collection": "Styling",
+"min": [
+0.402,
+0.142,
+0.91
+],
+"max": [
+0.458,
+0.198,
+1.13
+],
+"material": "Amber glass",
+"props": {}
+},
+{
+"name": "K_oven_door",
+"collection": "Kitchen",
+"min": [
+0.555,
+0.603,
+0.253
+],
+"max": [
+0.58,
+1.197,
+0.757
+],
+"material": "Hob glass",
+"props": {
+"cab_pivot": "CAB_K_oven_door",
+"spec": "Hansa BOES68465 built-in oven 60, black glass"
+}
+},
+{
+"name": "K_oven_drawer",
+"collection": "Kitchen",
+"min": [
+0.56,
+0.603,
+0.103
+],
+"max": [
+0.58,
+1.197,
+0.247
+],
+"material": "Oak light",
+"props": {
+"cab_pivot": "CAB_K_oven_drawer"
+}
+},
+{
+"name": "K_oven_handle",
+"collection": "Kitchen",
+"min": [
+0.53,
+0.64,
+0.72
+],
+"max": [
+0.545,
+1.16,
+0.735
+],
+"material": "Brushed steel",
+"props": {
+"cab_pivot": "CAB_K_oven_door"
+}
+},
+{
+"name": "K_oven_panel",
+"collection": "Kitchen",
+"min": [
+0.555,
+0.603,
+0.763
+],
+"max": [
+0.58,
+1.197,
+0.857
+],
+"material": "Black matte",
+"props": {}
+},
+{
+"name": "K_plinth_B",
+"collection": "Kitchen",
+"min": [
+0.6,
+0.0,
+0.0
+],
+"max": [
+2.703,
+0.5,
+0.1
+],
+"material": "Plinth",
+"props": {}
+},
+{
+"name": "K_plinth_corner",
+"collection": "Kitchen",
+"min": [
+0.0,
+0.0,
+0.0
+],
+"max": [
+0.5,
+0.5,
+0.1
+],
+"material": "Plinth",
+"props": {}
+},
+{
+"name": "K_plinth_L",
+"collection": "Kitchen",
+"min": [
+0.0,
+0.6,
+0.0
+],
+"max": [
+0.5,
+1.38,
+0.1
+],
+"material": "Plinth",
+"props": {}
+},
+{
+"name": "K_plinth_step",
+"collection": "Kitchen",
+"min": [
+2.153,
+0.495,
+0.005
+],
+"max": [
+2.7,
+0.512,
+0.095
+],
+"material": "Plinth",
+"props": {
+"spec": "fold-out step in the plinth (reach to the upper shelves)"
+}
+},
+{
+"name": "K_pull_B",
+"collection": "Kitchen",
+"min": [
+0.6,
+0.575,
+0.8
+],
+"max": [
+2.703,
+0.585,
+0.83
+],
+"material": "Shadow gap",
+"props": {}
+},
+{
+"name": "K_salt",
+"collection": "Styling",
+"min": [
+0.48,
+0.14,
+0.91
+],
+"max": [
+0.54,
+0.2,
+0.99
+],
+"material": "Ceramic matte",
+"props": {}
+},
+{
+"name": "K_sink_bottom",
+"collection": "Kitchen",
+"min": [
+1.21,
+0.1,
+0.69
+],
+"max": [
+1.59,
+0.51,
+0.7
+],
+"material": "Black metal matte fittings",
+"props": {
+"spec": "Teka Stone 50 B-TG black composite sink, bowl 38x41"
+}
+},
+{
+"name": "K_sink_drain",
+"collection": "Kitchen",
+"min": [
+1.367,
+0.264,
+0.7
+],
+"max": [
+1.433,
+0.346,
+0.703
+],
+"material": "Shadow gap",
+"props": {}
+},
+{
+"name": "K_sink_w1",
+"collection": "Kitchen",
+"min": [
+1.21,
+0.1,
+0.69
+],
+"max": [
+1.217,
+0.51,
+0.86
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "K_sink_w2",
+"collection": "Kitchen",
+"min": [
+1.583,
+0.1,
+0.69
+],
+"max": [
+1.59,
+0.51,
+0.86
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "K_sink_w3",
+"collection": "Kitchen",
+"min": [
+1.21,
+0.1,
+0.69
+],
+"max": [
+1.59,
+0.108,
+0.86
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "K_sink_w4",
+"collection": "Kitchen",
+"min": [
+1.21,
+0.502,
+0.69
+],
+"max": [
+1.59,
+0.51,
+0.86
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "K_soap",
+"collection": "Styling",
+"min": [
+1.24,
+0.02,
+0.9
+],
+"max": [
+1.3,
+0.08,
+1.07
+],
+"material": "Amber glass",
+"props": {}
+},
+{
+"name": "K_socket_coffee",
+"collection": "Kitchen",
+"min": [
+2.12,
+0.01,
+1.07
+],
+"max": [
+2.27,
+0.017,
+1.15
+],
+"material": "Black matte",
+"props": {}
+},
+{
+"name": "K_socket_prep",
+"collection": "Kitchen",
+"min": [
+0.6,
+0.01,
+1.07
+],
+"max": [
+0.75,
+0.017,
+1.15
+],
+"material": "Black matte",
+"props": {}
+},
+{
+"name": "K_splash_B",
+"collection": "Kitchen",
+"min": [
+0.0,
+0.0,
+0.9
+],
+"max": [
+2.703,
+0.01,
+1.45
+],
+"material": "Worktop light warm stone",
+"props": {}
+},
+{
+"name": "K_splash_L",
+"collection": "Kitchen",
+"min": [
+0.0,
+0.0,
+0.9
+],
+"max": [
+0.01,
+1.4,
+1.45
+],
+"material": "Worktop light warm stone",
+"props": {}
+},
+{
+"name": "K_switch_led",
+"collection": "Kitchen",
+"min": [
+0.8,
+0.01,
+1.07
+],
+"max": [
+0.88,
+0.017,
+1.15
+],
+"material": "Black matte",
+"props": {
+"function": "under-cabinet LEDs"
+}
+},
+{
+"name": "K_top_a",
+"collection": "Kitchen",
+"min": [
+0.0,
+0.0,
+0.86
+],
+"max": [
+1.21,
+0.62,
+0.9
+],
+"material": "Worktop light warm stone",
+"props": {}
+},
+{
+"name": "K_top_b",
+"collection": "Kitchen",
+"min": [
+1.59,
+0.0,
+0.86
+],
+"max": [
+2.703,
+0.62,
+0.9
+],
+"material": "Worktop light warm stone",
+"props": {}
+},
+{
+"name": "K_top_c",
+"collection": "Kitchen",
+"min": [
+1.21,
+0.0,
+0.86
+],
+"max": [
+1.59,
+0.1,
+0.9
+],
+"material": "Worktop light warm stone",
+"props": {}
+},
+{
+"name": "K_top_d",
+"collection": "Kitchen",
+"min": [
+1.21,
+0.51,
+0.86
+],
+"max": [
+1.59,
+0.62,
+0.9
+],
+"material": "Worktop light warm stone",
+"props": {}
+},
+{
+"name": "K_top_L",
+"collection": "Kitchen",
+"min": [
+0.0,
+0.62,
+0.86
+],
+"max": [
+0.62,
+1.38,
+0.9
+],
+"material": "Worktop light warm stone",
+"props": {}
+},
+{
+"name": "K_tray",
+"collection": "Styling",
+"min": [
+0.38,
+0.1,
+0.9
+],
+"max": [
+0.56,
+0.24,
+0.91
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "K_upper_carc_B",
+"collection": "Kitchen",
+"min": [
+0.35,
+0.0,
+1.45
+],
+"max": [
+2.703,
+0.33,
+2.598
+],
+"material": "Carcass",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "K_upper_carc_L0",
+"collection": "Kitchen",
+"min": [
+0.0,
+0.0,
+1.45
+],
+"max": [
+0.33,
+0.49,
+2.598
+],
+"material": "Carcass",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "K_upper_carc_L1",
+"collection": "Kitchen",
+"min": [
+0.0,
+0.49,
+1.603
+],
+"max": [
+0.33,
+1.09,
+2.598
+],
+"material": "Carcass",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "K_upper_carc_L2",
+"collection": "Kitchen",
+"min": [
+0.0,
+1.09,
+1.45
+],
+"max": [
+0.33,
+1.4,
+2.598
+],
+"material": "Carcass",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "K_upper_front_B0",
+"collection": "Kitchen",
+"min": [
+0.353,
+0.33,
+1.453
+],
+"max": [
+0.597,
+0.35,
+2.598
+],
+"material": "Kitchen upper warm white",
+"props": {
+"use": "spices/tea",
+"cab_pivot": "CAB_K_upper_front_B0"
+}
+},
+{
+"name": "K_upper_front_B1",
+"collection": "Kitchen",
+"min": [
+0.603,
+0.33,
+1.453
+],
+"max": [
+1.097,
+0.35,
+2.598
+],
+"material": "Kitchen upper warm white",
+"props": {
+"use": "corner side",
+"cab_pivot": "CAB_K_upper_front_B1"
+}
+},
+{
+"name": "K_upper_front_B2",
+"collection": "Kitchen",
+"min": [
+1.103,
+0.33,
+1.453
+],
+"max": [
+1.697,
+0.35,
+2.598
+],
+"material": "Kitchen upper warm white",
+"props": {
+"use": "dish drainer rack (over sink)",
+"cab_pivot": "CAB_K_upper_front_B2"
+}
+},
+{
+"name": "K_upper_front_B3",
+"collection": "Kitchen",
+"min": [
+1.703,
+0.33,
+1.453
+],
+"max": [
+2.147,
+0.35,
+2.598
+],
+"material": "Kitchen upper warm white",
+"props": {
+"use": "glasses (over DW)",
+"cab_pivot": "CAB_K_upper_front_B3"
+}
+},
+{
+"name": "K_upper_front_B4",
+"collection": "Kitchen",
+"min": [
+2.153,
+0.33,
+1.453
+],
+"max": [
+2.7,
+0.35,
+2.598
+],
+"material": "Kitchen upper warm white",
+"props": {
+"use": "everyday plates",
+"cab_pivot": "CAB_K_upper_front_B4"
+}
+},
+{
+"name": "K_upper_front_L0",
+"collection": "Kitchen",
+"min": [
+0.33,
+0.353,
+1.453
+],
+"max": [
+0.35,
+0.487,
+2.598
+],
+"material": "Kitchen upper warm white",
+"props": {
+"cutaway_hide": true,
+"cab_pivot": "CAB_K_upper_front_L0"
+}
+},
+{
+"name": "K_upper_front_L1",
+"collection": "Kitchen",
+"min": [
+0.33,
+0.493,
+1.603
+],
+"max": [
+0.35,
+1.087,
+2.598
+],
+"material": "Kitchen upper warm white",
+"props": {
+"cutaway_hide": true,
+"cab_pivot": "CAB_K_upper_front_L1"
+}
+},
+{
+"name": "K_upper_front_L2",
+"collection": "Kitchen",
+"min": [
+0.33,
+1.093,
+1.453
+],
+"max": [
+0.35,
+1.397,
+2.598
+],
+"material": "Kitchen upper warm white",
+"props": {
+"cutaway_hide": true,
+"cab_pivot": "CAB_K_upper_front_L2"
+}
+},
+{
+"name": "K_utensil0",
+"collection": "Styling",
+"min": [
+0.277,
+0.21,
+1.0
+],
+"max": [
+0.313,
+0.23,
+1.24
+],
+"material": "Oak solid",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "K_utensil1",
+"collection": "Styling",
+"min": [
+0.296,
+0.21,
+1.0
+],
+"max": [
+0.314,
+0.23,
+1.24
+],
+"material": "Oak solid",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "K_utensil2",
+"collection": "Styling",
+"min": [
+0.306,
+0.21,
+1.0
+],
+"max": [
+0.324,
+0.23,
+1.24
+],
+"material": "Oak solid",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "K_utensil3",
+"collection": "Styling",
+"min": [
+0.307,
+0.21,
+1.0
+],
+"max": [
+0.343,
+0.23,
+1.24
+],
+"material": "Oak solid",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "K_utensil_pot",
+"collection": "Styling",
+"min": [
+0.245,
+0.165,
+0.9
+],
+"max": [
+0.355,
+0.275,
+1.05
+],
+"material": "Ceramic matte",
+"props": {}
+},
+{
+"name": "Key_bowl",
+"collection": "Corridor",
+"min": [
+3.475,
+0.27,
+0.892
+],
+"max": [
+3.635,
+0.43,
+0.948
+],
+"material": "Ceramic matte",
+"props": {}
+},
+{
+"name": "KitchenDown0_trim",
+"collection": "Lighting",
+"min": [
+0.46,
+1.2,
+2.596
+],
+"max": [
+0.54,
+1.28,
+2.6
+],
+"material": "Spot trim",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "KitchenDown1_trim",
+"collection": "Lighting",
+"min": [
+0.81,
+0.46,
+2.596
+],
+"max": [
+0.89,
+0.54,
+2.6
+],
+"material": "Spot trim",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "KitchenDown2_trim",
+"collection": "Lighting",
+"min": [
+1.36,
+0.46,
+2.596
+],
+"max": [
+1.44,
+0.54,
+2.6
+],
+"material": "Spot trim",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "KitchenDown3_trim",
+"collection": "Lighting",
+"min": [
+1.91,
+0.46,
+2.596
+],
+"max": [
+1.99,
+0.54,
+2.6
+],
+"material": "Spot trim",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "KitchenDown4_trim",
+"collection": "Lighting",
+"min": [
+2.46,
+0.46,
+2.596
+],
+"max": [
+2.54,
+0.54,
+2.6
+],
+"material": "Spot trim",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Lamp_socket",
+"collection": "Living",
+"min": [
+3.343,
+5.59,
+0.26
+],
+"max": [
+3.35,
+5.67,
+0.34
+],
+"material": "Switch plate white",
+"props": {}
+},
+{
+"name": "Lamp_socket2",
+"collection": "Living",
+"min": [
+3.06,
+6.643,
+0.26
+],
+"max": [
+3.14,
+6.65,
+0.34
+],
+"material": "Switch plate white",
+"props": {
+"function": "floor lamp socket"
+}
+},
+{
+"name": "Laundry_basket",
+"collection": "Bedroom",
+"min": [
+3.489,
+4.859,
+0.0
+],
+"max": [
+3.841,
+5.211,
+0.5
+],
+"material": "Seagrass basket",
+"props": {}
+},
+{
+"name": "Living_socket_door",
+"collection": "Living",
+"min": [
+3.343,
+2.48,
+0.26
+],
+"max": [
+3.35,
+2.56,
+0.34
+],
+"material": "Switch plate white",
+"props": {}
+},
+{
+"name": "Living_switch",
+"collection": "Living",
+"min": [
+3.343,
+2.48,
+1.01
+],
+"max": [
+3.35,
+2.56,
+1.09
+],
+"material": "Switch plate white",
+"props": {
+"function": "general downlights (dimmer) + kitchen downlights"
+}
+},
+{
+"name": "Living_switch2",
+"collection": "Living",
+"min": [
+3.343,
+2.565,
+1.01
+],
+"max": [
+3.35,
+2.645,
+1.09
+],
+"material": "Switch plate white",
+"props": {
+"function": "dining pendants (dimmer) + ambient (sconces, picture lights, cove, bookcase, TV-unit LEDs)"
+}
+},
+{
+"name": "LivingDown0_trim",
+"collection": "Lighting",
+"min": [
+1.825,
+3.595,
+2.596
+],
+"max": [
+1.905,
+3.675,
+2.6
+],
+"material": "Spot trim",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "LivingDown1_trim",
+"collection": "Lighting",
+"min": [
+1.825,
+4.795,
+2.596
+],
+"max": [
+1.905,
+4.875,
+2.6
+],
+"material": "Spot trim",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "LivingDown2_trim",
+"collection": "Lighting",
+"min": [
+1.825,
+5.995,
+2.596
+],
+"max": [
+1.905,
+6.075,
+2.6
+],
+"material": "Spot trim",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Lounge_arm+0.3",
+"collection": "Living",
+"min": [
+2.101,
+5.698,
+0.55
+],
+"max": [
+2.314,
+6.345,
+0.58
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Lounge_arm-0.3",
+"collection": "Living",
+"min": [
+1.516,
+5.855,
+0.55
+],
+"max": [
+1.729,
+6.502,
+0.58
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Lounge_back",
+"collection": "Living",
+"min": [
+1.691,
+6.223,
+0.391
+],
+"max": [
+2.297,
+6.572,
+0.808
+],
+"material": "Kilanda light beige",
+"props": {}
+},
+{
+"name": "Lounge_frame",
+"collection": "Living",
+"min": [
+1.548,
+5.744,
+0.26
+],
+"max": [
+2.292,
+6.496,
+0.3
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Lounge_leg+0.3+0.3",
+"collection": "Living",
+"min": [
+2.267,
+6.298,
+0.0
+],
+"max": [
+2.307,
+6.342,
+0.58
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Lounge_leg+0.3-0.3",
+"collection": "Living",
+"min": [
+2.112,
+5.722,
+0.0
+],
+"max": [
+2.153,
+5.766,
+0.58
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Lounge_leg-0.3+0.3",
+"collection": "Living",
+"min": [
+1.682,
+6.454,
+0.0
+],
+"max": [
+1.722,
+6.498,
+0.58
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Lounge_leg-0.3-0.3",
+"collection": "Living",
+"min": [
+1.528,
+5.879,
+0.0
+],
+"max": [
+1.568,
+5.923,
+0.58
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Lounge_seat",
+"collection": "Living",
+"min": [
+1.564,
+5.748,
+0.299
+],
+"max": [
+2.276,
+6.493,
+0.421
+],
+"material": "Kilanda light beige",
+"props": {}
+},
+{
+"name": "LvChair_back",
+"collection": "Living",
+"min": [
+2.643,
+3.058,
+0.52
+],
+"max": [
+2.695,
+3.582,
+0.86
+],
+"material": "Gunnared medium grey",
+"props": {}
+},
+{
+"name": "LvChair_backpost",
+"collection": "Living",
+"min": [
+2.643,
+3.294,
+0.44
+],
+"max": [
+2.669,
+3.346,
+0.55
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "LvChair_leg0",
+"collection": "Living",
+"min": [
+-1.09,
+-1.035,
+-0.01
+],
+"max": [
+-0.737,
+-1.008,
+0.01
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "LvChair_leg1",
+"collection": "Living",
+"min": [
+-0.977,
+-1.19,
+-0.01
+],
+"max": [
+-0.85,
+-0.853,
+0.01
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "LvChair_leg2",
+"collection": "Living",
+"min": [
+-1.059,
+-1.131,
+-0.01
+],
+"max": [
+-0.769,
+-0.912,
+0.01
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "LvChair_leg3",
+"collection": "Living",
+"min": [
+-1.059,
+-1.131,
+-0.01
+],
+"max": [
+-0.769,
+-0.912,
+0.01
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "LvChair_leg4",
+"collection": "Living",
+"min": [
+-0.977,
+-1.19,
+-0.01
+],
+"max": [
+-0.85,
+-0.853,
+0.01
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "LvChair_pole",
+"collection": "Living",
+"min": [
+2.937,
+3.287,
+0.06
+],
+"max": [
+3.003,
+3.353,
+0.4
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "LvChair_seat",
+"collection": "Living",
+"min": [
+2.669,
+3.032,
+0.4
+],
+"max": [
+3.271,
+3.608,
+0.46
+],
+"material": "Gunnared medium grey",
+"props": {}
+},
+{
+"name": "Mattress",
+"collection": "Bedroom",
+"min": [
+4.58,
+3.147,
+0.31
+],
+"max": [
+6.58,
+4.727,
+0.53
+],
+"material": "Mattress white",
+"props": {
+"cab_pivot": "CAB_Bed_slats"
+}
+},
+{
+"name": "Media_router",
+"collection": "Living",
+"min": [
+2.95,
+5.05,
+0.15
+],
+"max": [
+3.25,
+5.4,
+0.19
+],
+"material": "Black matte",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Media_socket",
+"collection": "Living",
+"min": [
+3.293,
+5.02,
+0.24
+],
+"max": [
+3.3,
+5.38,
+0.32
+],
+"material": "Switch plate white",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Mirror_cab",
+"collection": "Bathroom",
+"min": [
+5.04,
+1.5,
+1.18
+],
+"max": [
+5.64,
+1.67,
+1.88
+],
+"material": "Furniture white matte",
+"props": {}
+},
+{
+"name": "Mirror_front0",
+"collection": "Bathroom",
+"min": [
+5.042,
+1.495,
+1.182
+],
+"max": [
+5.338,
+1.5,
+1.882
+],
+"material": "Mirror",
+"props": {
+"cab_pivot": "CAB_Mirror_front0"
+}
+},
+{
+"name": "Mirror_front1",
+"collection": "Bathroom",
+"min": [
+5.342,
+1.495,
+1.182
+],
+"max": [
+5.638,
+1.5,
+1.882
+],
+"material": "Mirror",
+"props": {
+"cab_pivot": "CAB_Mirror_front1"
+}
+},
+{
+"name": "Mirror_led",
+"collection": "Bathroom",
+"min": [
+5.06,
+1.5,
+1.175
+],
+"max": [
+5.62,
+1.6,
+1.18
+],
+"material": "LED warm",
+"props": {}
+},
+{
+"name": "Mirror_side_led0",
+"collection": "Bathroom",
+"min": [
+4.948,
+1.655,
+1.28
+],
+"max": [
+4.972,
+1.67,
+1.83
+],
+"material": "LED warm",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Mirror_side_led1",
+"collection": "Bathroom",
+"min": [
+5.708,
+1.655,
+1.28
+],
+"max": [
+5.732,
+1.67,
+1.83
+],
+"material": "LED warm",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "NS_book",
+"collection": "Styling",
+"min": [
+6.33,
+2.76,
+0.555
+],
+"max": [
+6.55,
+2.92,
+0.585
+],
+"material": "Book cover 1",
+"props": {}
+},
+{
+"name": "NS_carafe",
+"collection": "Styling",
+"min": [
+6.375,
+4.955,
+0.555
+],
+"max": [
+6.465,
+5.045,
+0.755
+],
+"material": "Glass",
+"props": {}
+},
+{
+"name": "NS_glass",
+"collection": "Styling",
+"min": [
+6.395,
+5.065,
+0.555
+],
+"max": [
+6.465,
+5.135,
+0.645
+],
+"material": "Glass",
+"props": {}
+},
+{
+"name": "Pendant_bedroom",
+"collection": "Lighting",
+"min": [
+4.61,
+3.7,
+2.382
+],
+"max": [
+5.09,
+4.18,
+2.598
+],
+"material": "Rice paper",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Pendant_dining0",
+"collection": "Lighting",
+"min": [
+0.18,
+2.42,
+1.35
+],
+"max": [
+0.46,
+2.7,
+1.462
+],
+"material": "Pendant shade",
+"props": {}
+},
+{
+"name": "Pendant_dining0_cord",
+"collection": "Lighting",
+"min": [
+0.317,
+2.557,
+1.462
+],
+"max": [
+0.323,
+2.563,
+2.6
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Pendant_dining1",
+"collection": "Lighting",
+"min": [
+0.78,
+2.42,
+1.35
+],
+"max": [
+1.06,
+2.7,
+1.462
+],
+"material": "Pendant shade",
+"props": {}
+},
+{
+"name": "Pendant_dining1_cord",
+"collection": "Lighting",
+"min": [
+0.917,
+2.557,
+1.462
+],
+"max": [
+0.923,
+2.563,
+2.6
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "PictureLight_arm0",
+"collection": "Lighting",
+"min": [
+0.0,
+4.405,
+2.04
+],
+"max": [
+0.1,
+4.435,
+2.1
+],
+"material": "Black metal matte fittings",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "PictureLight_arm1",
+"collection": "Lighting",
+"min": [
+0.0,
+5.235,
+2.04
+],
+"max": [
+0.1,
+5.265,
+2.1
+],
+"material": "Black metal matte fittings",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "PictureLight_bar0",
+"collection": "Lighting",
+"min": [
+0.0,
+4.195,
+2.01
+],
+"max": [
+0.1,
+4.645,
+2.04
+],
+"material": "Black metal matte fittings",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "PictureLight_bar1",
+"collection": "Lighting",
+"min": [
+0.0,
+5.025,
+2.01
+],
+"max": [
+0.1,
+5.475,
+2.04
+],
+"material": "Black metal matte fittings",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Pillow_euro0",
+"collection": "Bedroom",
+"min": [
+6.232,
+3.229,
+0.511
+],
+"max": [
+6.568,
+3.886,
+1.03
+],
+"material": "Linen oat",
+"props": {
+"cab_pivot": "CAB_Bed_slats"
+}
+},
+{
+"name": "Pillow_euro1",
+"collection": "Bedroom",
+"min": [
+6.232,
+3.989,
+0.511
+],
+"max": [
+6.568,
+4.646,
+1.03
+],
+"material": "Linen oat",
+"props": {
+"cab_pivot": "CAB_Bed_slats"
+}
+},
+{
+"name": "Pillow_lumbar",
+"collection": "Bedroom",
+"min": [
+6.017,
+3.637,
+0.509
+],
+"max": [
+6.224,
+4.236,
+0.831
+],
+"material": "Wool ochre",
+"props": {
+"cab_pivot": "CAB_Bed_slats"
+}
+},
+{
+"name": "Pillow_std0",
+"collection": "Bedroom",
+"min": [
+6.13,
+3.223,
+0.541
+],
+"max": [
+6.39,
+3.911,
+0.918
+],
+"material": "Linen white",
+"props": {
+"cab_pivot": "CAB_Bed_slats"
+}
+},
+{
+"name": "Pillow_std1",
+"collection": "Bedroom",
+"min": [
+6.13,
+3.963,
+0.541
+],
+"max": [
+6.39,
+4.651,
+0.918
+],
+"material": "Linen white",
+"props": {
+"cab_pivot": "CAB_Bed_slats"
+}
+},
+{
+"name": "potted_plant_02_dirt",
+"collection": "potted_plant_02",
+"min": [
+6.129,
+6.316,
+0.163
+],
+"max": [
+6.439,
+6.626,
+0.187
+],
+"material": "potted_plant_02_pot",
+"props": {
+"polyhaven_id": "potted_plant_02",
+"polyhaven_url": "https://polyhaven.com/a/potted_plant_02",
+"polyhaven_licence": "CC0",
+"polyhaven_resolution": "2k",
+"polyhaven_authors": "Rico Cilliers"
+}
+},
+{
+"name": "potted_plant_02_leaves",
+"collection": "potted_plant_02",
+"min": [
+5.98,
+6.255,
+0.115
+],
+"max": [
+6.491,
+6.754,
+0.463
+],
+"material": "potted_plant_02_leaves",
+"props": {
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_02_leaves\", name=\"cycles\", address=0x0000027E4D6A6A60>",
+"polyhaven_id": "potted_plant_02",
+"polyhaven_url": "https://polyhaven.com/a/potted_plant_02",
+"polyhaven_licence": "CC0",
+"polyhaven_resolution": "2k",
+"polyhaven_authors": "Rico Cilliers"
+}
+},
+{
+"name": "potted_plant_02_pot",
+"collection": "potted_plant_02",
+"min": [
+6.107,
+6.292,
+0.0
+],
+"max": [
+6.463,
+6.648,
+0.185
+],
+"material": "potted_plant_02_pot",
+"props": {
+"polyhaven_id": "potted_plant_02",
+"polyhaven_url": "https://polyhaven.com/a/potted_plant_02",
+"polyhaven_licence": "CC0",
+"polyhaven_resolution": "2k",
+"polyhaven_authors": "Rico Cilliers"
+}
+},
+{
+"name": "potted_plant_04_dirt.003",
+"collection": "Styling",
+"min": [
+3.5,
+0.919,
+0.985
+],
+"max": [
+3.63,
+1.05,
+0.997
+],
+"material": "potted_plant_04",
+"props": {
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_dirt.003\", name=\"cycles\", address=0x0000027E4D6A5F20>",
+"polyhaven_id": "potted_plant_04",
+"polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
+"polyhaven_licence": "CC0",
+"polyhaven_resolution": "1k",
+"polyhaven_authors": "James Ray Cock"
+}
+},
+{
+"name": "potted_plant_04_dirt.004",
+"collection": "Styling",
+"min": [
+5.561,
+1.472,
+1.027
+],
+"max": [
+5.737,
+1.648,
+1.043
+],
+"material": "potted_plant_04",
+"props": {
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_dirt.004\", name=\"cycles\", address=0x0000027E4D6A5860>",
+"polyhaven_id": "potted_plant_04",
+"polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
+"polyhaven_licence": "CC0",
+"polyhaven_resolution": "1k",
+"polyhaven_authors": "James Ray Cock"
+}
+},
+{
+"name": "potted_plant_04_dirt.005",
+"collection": "Styling",
+"min": [
+6.277,
+5.719,
+0.175
+],
+"max": [
+6.481,
+5.922,
+0.199
+],
+"material": "potted_plant_04",
+"props": {
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_dirt.005\", name=\"cycles\", address=0x0000027E4D6A51A0>",
+"polyhaven_id": "potted_plant_04",
+"polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
+"polyhaven_licence": "CC0",
+"polyhaven_resolution": "1k",
+"polyhaven_authors": "James Ray Cock"
+}
+},
+{
+"name": "potted_plant_04_ground.003",
+"collection": "Styling",
+"min": [
+3.503,
+0.923,
+0.984
+],
+"max": [
+3.627,
+1.046,
+0.997
+],
+"material": "potted_plant_04",
+"props": {
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_ground.003\", name=\"cycles\", address=0x0000027E4D6A4AE0>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_ground.003\", name=\"cycles_visibility\", address=0x0000027E4D6A4960>",
+"polyhaven_id": "potted_plant_04",
+"polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
+"polyhaven_licence": "CC0",
+"polyhaven_resolution": "1k",
+"polyhaven_authors": "James Ray Cock"
+}
+},
+{
+"name": "potted_plant_04_ground.004",
+"collection": "Styling",
+"min": [
+5.566,
+1.477,
+1.026
+],
+"max": [
+5.733,
+1.644,
+1.044
+],
+"material": "potted_plant_04",
+"props": {
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_ground.004\", name=\"cycles\", address=0x0000027E4D6A4120>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_ground.004\", name=\"cycles_visibility\", address=0x0000027E4D697EA0>",
+"polyhaven_id": "potted_plant_04",
+"polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
+"polyhaven_licence": "CC0",
+"polyhaven_resolution": "1k",
+"polyhaven_authors": "James Ray Cock"
+}
+},
+{
+"name": "potted_plant_04_ground.005",
+"collection": "Styling",
+"min": [
+6.283,
+5.725,
+0.173
+],
+"max": [
+6.475,
+5.918,
+0.201
+],
+"material": "potted_plant_04",
+"props": {
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_ground.005\", name=\"cycles\", address=0x0000027E4D697660>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_ground.005\", name=\"cycles_visibility\", address=0x0000027E4D6974E0>",
+"polyhaven_id": "potted_plant_04",
+"polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
+"polyhaven_licence": "CC0",
+"polyhaven_resolution": "1k",
+"polyhaven_authors": "James Ray Cock"
+}
+},
+{
+"name": "potted_plant_04_plant.003",
+"collection": "Styling",
+"min": [
+3.502,
+0.93,
+0.985
+],
+"max": [
+3.639,
+1.059,
+1.069
+],
+"material": "potted_plant_04",
+"props": {
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_plant.003\", name=\"cycles\", address=0x0000027E4D696CA0>",
+"polyhaven_id": "potted_plant_04",
+"polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
+"polyhaven_licence": "CC0",
+"polyhaven_resolution": "1k",
+"polyhaven_authors": "James Ray Cock"
+}
+},
+{
+"name": "potted_plant_04_plant.004",
+"collection": "Styling",
+"min": [
+5.575,
+1.466,
+1.028
+],
+"max": [
+5.753,
+1.647,
+1.134
+],
+"material": "potted_plant_04",
+"props": {
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_plant.004\", name=\"cycles\", address=0x0000027E4D695CE0>",
+"polyhaven_id": "potted_plant_04",
+"polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
+"polyhaven_licence": "CC0",
+"polyhaven_resolution": "1k",
+"polyhaven_authors": "James Ray Cock"
+}
+},
+{
+"name": "potted_plant_04_plant.005",
+"collection": "Styling",
+"min": [
+6.299,
+5.689,
+0.176
+],
+"max": [
+6.489,
+5.914,
+0.348
+],
+"material": "potted_plant_04",
+"props": {
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_plant.005\", name=\"cycles\", address=0x0000027E4D694F60>",
+"polyhaven_id": "potted_plant_04",
+"polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
+"polyhaven_licence": "CC0",
+"polyhaven_resolution": "1k",
+"polyhaven_authors": "James Ray Cock"
+}
+},
+{
+"name": "potted_plant_04_pot.003",
+"collection": "Styling",
+"min": [
+3.494,
+0.914,
+0.9
+],
+"max": [
+3.636,
+1.056,
+0.998
+],
+"material": "potted_plant_04",
+"props": {
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_pot.003\", name=\"cycles\", address=0x0000027E4D69BEA0>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_pot.003\", name=\"cycles_visibility\", address=0x0000027E4D69BD20>",
+"polyhaven_id": "potted_plant_04",
+"polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
+"polyhaven_licence": "CC0",
+"polyhaven_resolution": "1k",
+"polyhaven_authors": "James Ray Cock"
+}
+},
+{
+"name": "potted_plant_04_pot.004",
+"collection": "Styling",
+"min": [
+5.554,
+1.464,
+0.92
+],
+"max": [
+5.746,
+1.656,
+1.045
+],
+"material": "potted_plant_04",
+"props": {
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_pot.004\", name=\"cycles\", address=0x0000027E4D69ACA0>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_pot.004\", name=\"cycles_visibility\", address=0x0000027E4D69AD60>",
+"polyhaven_id": "potted_plant_04",
+"polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
+"polyhaven_licence": "CC0",
+"polyhaven_resolution": "1k",
+"polyhaven_authors": "James Ray Cock"
+}
+},
+{
+"name": "potted_plant_04_pot.005",
+"collection": "Styling",
+"min": [
+6.269,
+5.709,
+0.0
+],
+"max": [
+6.491,
+5.931,
+0.203
+],
+"material": "potted_plant_04",
+"props": {
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_pot.005\", name=\"cycles\", address=0x0000027E4D6999E0>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_pot.005\", name=\"cycles_visibility\", address=0x0000027E4D699920>",
+"polyhaven_id": "potted_plant_04",
+"polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
+"polyhaven_licence": "CC0",
+"polyhaven_resolution": "1k",
+"polyhaven_authors": "James Ray Cock"
+}
+},
+{
+"name": "Round_mirror",
+"collection": "Bedroom",
+"min": [
+3.475,
+3.6,
+1.1
+],
+"max": [
+3.495,
+4.2,
+1.7
+],
+"material": "Mirror",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Round_mirror_frame",
+"collection": "Bedroom",
+"min": [
+3.487,
+3.592,
+1.092
+],
+"max": [
+3.503,
+4.208,
+1.708
+],
+"material": "Black metal",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Rug_bedroom",
+"collection": "Bedroom",
+"min": [
+4.18,
+2.74,
+0.0
+],
+"max": [
+5.88,
+5.14,
+0.008
+],
+"material": "Flatweave oat",
+"props": {}
+},
+{
+"name": "Rug_living",
+"collection": "Living",
+"min": [
+0.55,
+3.571,
+0.0
+],
+"max": [
+2.55,
+6.369,
+0.012
+],
+"material": "Rug wool cream",
+"props": {}
+},
+{
+"name": "Sconce0",
+"collection": "Lighting",
+"min": [
+0.011,
+3.75,
+1.52
+],
+"max": [
+0.08,
+3.87,
+1.72
+],
+"material": "Limewash plaster",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Sconce1",
+"collection": "Lighting",
+"min": [
+0.011,
+5.8,
+1.52
+],
+"max": [
+0.08,
+5.92,
+1.72
+],
+"material": "Limewash plaster",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Sheepskin",
+"collection": "Living",
+"min": [
+1.615,
+5.802,
+0.417
+],
+"max": [
+2.237,
+6.474,
+0.451
+],
+"material": "Sheepskin",
+"props": {}
+},
+{
+"name": "Shoe_STALL_body",
+"collection": "Corridor",
+"min": [
+3.47,
+0.1,
+-0.0
+],
+"max": [
+3.64,
+1.06,
+0.9
+],
+"material": "Furniture white matte",
+"props": {}
+},
+{
+"name": "Shoe_STALL_door00",
+"collection": "Corridor",
+"min": [
+3.64,
+0.105,
+0.02
+],
+"max": [
+3.655,
+0.575,
+0.45
+],
+"material": "Furniture white matte",
+"props": {
+"cab_pivot": "CAB_Shoe_STALL_door00"
+}
+},
+{
+"name": "Shoe_STALL_door01",
+"collection": "Corridor",
+"min": [
+3.64,
+0.105,
+0.46
+],
+"max": [
+3.655,
+0.575,
+0.89
+],
+"material": "Furniture white matte",
+"props": {
+"cab_pivot": "CAB_Shoe_STALL_door01"
+}
+},
+{
+"name": "Shoe_STALL_door10",
+"collection": "Corridor",
+"min": [
+3.64,
+0.583,
+0.02
+],
+"max": [
+3.655,
+1.053,
+0.45
+],
+"material": "Furniture white matte",
+"props": {
+"cab_pivot": "CAB_Shoe_STALL_door10"
+}
+},
+{
+"name": "Shoe_STALL_door11",
+"collection": "Corridor",
+"min": [
+3.64,
+0.583,
+0.46
+],
+"max": [
+3.655,
+1.053,
+0.89
+],
+"material": "Furniture white matte",
+"props": {
+"cab_pivot": "CAB_Shoe_STALL_door11"
+}
+},
+{
+"name": "Shoe_STALL_handle00",
+"collection": "Corridor",
+"min": [
+3.655,
+0.275,
+0.42
+],
+"max": [
+3.665,
+0.405,
+0.43
+],
+"material": "Furniture white matte",
+"props": {}
+},
+{
+"name": "Shoe_STALL_handle01",
+"collection": "Corridor",
+"min": [
+3.655,
+0.275,
+0.86
+],
+"max": [
+3.665,
+0.405,
+0.87
+],
+"material": "Furniture white matte",
+"props": {}
+},
+{
+"name": "Shoe_STALL_handle10",
+"collection": "Corridor",
+"min": [
+3.655,
+0.753,
+0.42
+],
+"max": [
+3.665,
+0.883,
+0.43
+],
+"material": "Furniture white matte",
+"props": {}
+},
+{
+"name": "Shoe_STALL_handle11",
+"collection": "Corridor",
+"min": [
+3.655,
+0.753,
+0.86
+],
+"max": [
+3.665,
+0.883,
+0.87
+],
+"material": "Furniture white matte",
+"props": {}
+},
+{
+"name": "Shoe_top_tray",
+"collection": "Corridor",
+"min": [
+3.49,
+0.4,
+0.9
+],
+"max": [
+3.62,
+0.58,
+0.915
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Shower_arm",
+"collection": "Bathroom",
+"min": [
+6.19,
+1.24,
+2.16
+],
+"max": [
+6.21,
+1.66,
+2.18
+],
+"material": "Black metal matte fittings",
+"props": {
+"spec": "ceiling/wall arm from the partition"
+}
+},
+{
+"name": "Shower_bifold0",
+"collection": "Bathroom",
+"min": [
+5.76,
+0.805,
+0.02
+],
+"max": [
+6.06,
+0.815,
+1.9
+],
+"material": "Glass",
+"props": {}
+},
+{
+"name": "Shower_bifold1",
+"collection": "Bathroom",
+"min": [
+6.06,
+0.805,
+0.02
+],
+"max": [
+6.36,
+0.815,
+1.9
+],
+"material": "Glass",
+"props": {}
+},
+{
+"name": "Shower_bifold_hinge",
+"collection": "Bathroom",
+"min": [
+6.055,
+0.8,
+0.02
+],
+"max": [
+6.065,
+0.82,
+1.9
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Shower_drain",
+"collection": "Bathroom",
+"min": [
+5.85,
+1.58,
+0.0
+],
+"max": [
+6.55,
+1.62,
+0.002
+],
+"material": "Black metal matte fittings",
+"props": {
+"spec": "linear drain, outlet at x 6.45 to the stack, grate -1.6 cm, floor fall 2 %"
+}
+},
+{
+"name": "Shower_floor",
+"collection": "Bathroom",
+"min": [
+5.76,
+0.81,
+0.0
+],
+"max": [
+6.64,
+1.67,
+0.012
+],
+"material": "Tile floor Town Antracite 60x60",
+"props": {}
+},
+{
+"name": "Shower_frame_side",
+"collection": "Bathroom",
+"min": [
+5.74,
+0.8,
+1.92
+],
+"max": [
+5.76,
+1.67,
+1.99
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Shower_frame_top",
+"collection": "Bathroom",
+"min": [
+5.745,
+0.795,
+1.89
+],
+"max": [
+6.64,
+0.83,
+1.92
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Shower_glass_fixed",
+"collection": "Bathroom",
+"min": [
+6.36,
+0.795,
+0.02
+],
+"max": [
+6.64,
+0.805,
+1.9
+],
+"material": "Glass",
+"props": {}
+},
+{
+"name": "Shower_glass_side",
+"collection": "Bathroom",
+"min": [
+5.745,
+0.825,
+0.02
+],
+"max": [
+5.755,
+1.67,
+1.9
+],
+"material": "Glass",
+"props": {}
+},
+{
+"name": "Shower_hand",
+"collection": "Bathroom",
+"min": [
+6.53,
+1.6,
+1.55
+],
+"max": [
+6.59,
+1.66,
+1.75
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Shower_head",
+"collection": "Bathroom",
+"min": [
+6.075,
+1.115,
+2.146
+],
+"max": [
+6.325,
+1.365,
+2.154
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Shower_mixer",
+"collection": "Bathroom",
+"min": [
+6.25,
+1.65,
+1.06
+],
+"max": [
+6.45,
+1.68,
+1.14
+],
+"material": "Black metal matte fittings",
+"props": {
+"spec": "Grohe Tempesta System 250 matt black, thermostatic, diverter, hand shower"
+}
+},
+{
+"name": "Shower_niche_shelf",
+"collection": "Bathroom",
+"min": [
+6.52,
+1.4,
+1.2
+],
+"max": [
+6.64,
+1.64,
+1.22
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Shower_rail",
+"collection": "Bathroom",
+"min": [
+6.55,
+1.655,
+0.9
+],
+"max": [
+6.57,
+1.68,
+1.8
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Skirt_B",
+"collection": "Shell",
+"min": [
+0.0,
+0.0,
+0.0
+],
+"max": [
+3.35,
+0.012,
+0.07
+],
+"material": "Skirting",
+"props": {}
+},
+{
+"name": "Skirt_L",
+"collection": "Shell",
+"min": [
+0.0,
+0.0,
+0.0
+],
+"max": [
+0.012,
+6.65,
+0.07
+],
+"material": "Skirting",
+"props": {}
+},
+{
+"name": "Skirt_R1",
+"collection": "Shell",
+"min": [
+3.338,
+2.3,
+0.0
+],
+"max": [
+3.35,
+5.7,
+0.07
+],
+"material": "Skirting",
+"props": {}
+},
+{
+"name": "Skirt_T",
+"collection": "Shell",
+"min": [
+0.0,
+6.638,
+0.0
+],
+"max": [
+0.4,
+6.65,
+0.07
+],
+"material": "Skirting",
+"props": {}
+},
+{
+"name": "Sofa_armL",
+"collection": "Living",
+"min": [
+0.0,
+3.72,
+0.08
+],
+"max": [
+0.92,
+3.835,
+0.67
+],
+"material": "Gunnared medium grey",
+"props": {}
+},
+{
+"name": "Sofa_armR",
+"collection": "Living",
+"min": [
+0.0,
+5.835,
+0.08
+],
+"max": [
+0.92,
+5.95,
+0.67
+],
+"material": "Gunnared medium grey",
+"props": {}
+},
+{
+"name": "Sofa_back",
+"collection": "Living",
+"min": [
+0.0,
+3.835,
+0.08
+],
+"max": [
+0.28,
+5.835,
+0.84
+],
+"material": "Gunnared medium grey",
+"props": {
+"spec": "IKEA LANDSKRONA 3-seat sofa-bed, Gunnared grey/wood (OWNED) 223x92x84; bed 138x200, depth folded out 160"
+}
+},
+{
+"name": "Sofa_base",
+"collection": "Living",
+"min": [
+0.02,
+3.835,
+0.08
+],
+"max": [
+0.9,
+5.835,
+0.34
+],
+"material": "Gunnared medium grey",
+"props": {}
+},
+{
+"name": "Sofa_leg0",
+"collection": "Living",
+"min": [
+0.06,
+3.78,
+0.0
+],
+"max": [
+0.09,
+3.81,
+0.08
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Sofa_leg1",
+"collection": "Living",
+"min": [
+0.84,
+3.78,
+0.0
+],
+"max": [
+0.87,
+3.81,
+0.08
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Sofa_leg2",
+"collection": "Living",
+"min": [
+0.06,
+5.87,
+0.0
+],
+"max": [
+0.09,
+5.9,
+0.08
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Sofa_leg3",
+"collection": "Living",
+"min": [
+0.84,
+5.87,
+0.0
+],
+"max": [
+0.87,
+5.9,
+0.08
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Sofa_pillow0",
+"collection": "Living",
+"min": [
+0.314,
+3.889,
+0.456
+],
+"max": [
+0.606,
+4.451,
+1.024
+],
+"material": "Linen oat",
+"props": {}
+},
+{
+"name": "Sofa_pillow3",
+"collection": "Living",
+"min": [
+0.311,
+5.215,
+0.453
+],
+"max": [
+0.609,
+5.785,
+1.027
+],
+"material": "Linen oat",
+"props": {}
+},
+{
+"name": "Sofa_seat0",
+"collection": "Living",
+"min": [
+0.28,
+3.835,
+0.33
+],
+"max": [
+0.91,
+4.493,
+0.46
+],
+"material": "Gunnared medium grey",
+"props": {}
+},
+{
+"name": "Sofa_seat1",
+"collection": "Living",
+"min": [
+0.28,
+4.506,
+0.33
+],
+"max": [
+0.91,
+5.164,
+0.46
+],
+"material": "Gunnared medium grey",
+"props": {}
+},
+{
+"name": "Sofa_seat2",
+"collection": "Living",
+"min": [
+0.28,
+5.177,
+0.33
+],
+"max": [
+0.91,
+5.835,
+0.46
+],
+"material": "Gunnared medium grey",
+"props": {}
+},
+{
+"name": "Sofa_socket_L",
+"collection": "Living",
+"min": [
+0.0,
+3.6,
+0.26
+],
+"max": [
+0.007,
+3.68,
+0.34
+],
+"material": "Switch plate white",
+"props": {}
+},
+{
+"name": "Sofa_socket_R",
+"collection": "Living",
+"min": [
+0.0,
+5.85,
+0.71
+],
+"max": [
+0.007,
+5.93,
+0.79
+],
+"material": "Switch plate white",
+"props": {}
+},
+{
+"name": "Sofa_throw",
+"collection": "Living",
+"min": [
+0.175,
+5.758,
+0.649
+],
+"max": [
+0.925,
+5.95,
+0.676
+],
+"material": "Waffle oat",
+"props": {}
+},
+{
+"name": "Sofa_throw_drop",
+"collection": "Living",
+"min": [
+0.674,
+5.829,
+0.283
+],
+"max": [
+0.928,
+5.849,
+0.657
+],
+"material": "Waffle oat",
+"props": {}
+},
+{
+"name": "String_bulb0",
+"collection": "Balcony",
+"min": [
+3.728,
+6.778,
+2.478
+],
+"max": [
+3.772,
+6.822,
+2.522
+],
+"material": "String bulb",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "String_bulb1",
+"collection": "Balcony",
+"min": [
+4.018,
+6.778,
+2.421
+],
+"max": [
+4.062,
+6.822,
+2.465
+],
+"material": "String bulb",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "String_bulb2",
+"collection": "Balcony",
+"min": [
+4.308,
+6.778,
+2.398
+],
+"max": [
+4.352,
+6.822,
+2.442
+],
+"material": "String bulb",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "String_bulb3",
+"collection": "Balcony",
+"min": [
+4.598,
+6.778,
+2.421
+],
+"max": [
+4.642,
+6.822,
+2.465
+],
+"material": "String bulb",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "String_bulb4",
+"collection": "Balcony",
+"min": [
+4.888,
+6.778,
+2.478
+],
+"max": [
+4.932,
+6.822,
+2.522
+],
+"material": "String bulb",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "String_bulb5",
+"collection": "Balcony",
+"min": [
+5.178,
+6.778,
+2.478
+],
+"max": [
+5.222,
+6.822,
+2.522
+],
+"material": "String bulb",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "String_bulb6",
+"collection": "Balcony",
+"min": [
+5.468,
+6.778,
+2.421
+],
+"max": [
+5.512,
+6.822,
+2.465
+],
+"material": "String bulb",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "String_bulb7",
+"collection": "Balcony",
+"min": [
+5.758,
+6.778,
+2.398
+],
+"max": [
+5.802,
+6.822,
+2.442
+],
+"material": "String bulb",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "String_bulb8",
+"collection": "Balcony",
+"min": [
+6.048,
+6.778,
+2.421
+],
+"max": [
+6.092,
+6.822,
+2.465
+],
+"material": "String bulb",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "String_bulb9",
+"collection": "Balcony",
+"min": [
+6.338,
+6.778,
+2.478
+],
+"max": [
+6.382,
+6.822,
+2.522
+],
+"material": "String bulb",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Tarno_chair0_back0",
+"collection": "Balcony",
+"min": [
+4.685,
+5.73,
+0.56
+],
+"max": [
+5.075,
+5.75,
+0.61
+],
+"material": "Acacia stained",
+"props": {}
+},
+{
+"name": "Tarno_chair0_back1",
+"collection": "Balcony",
+"min": [
+4.685,
+5.73,
+0.63
+],
+"max": [
+5.075,
+5.75,
+0.68
+],
+"material": "Acacia stained",
+"props": {}
+},
+{
+"name": "Tarno_chair0_back2",
+"collection": "Balcony",
+"min": [
+4.685,
+5.73,
+0.7
+],
+"max": [
+5.075,
+5.75,
+0.75
+],
+"material": "Acacia stained",
+"props": {}
+},
+{
+"name": "Tarno_chair0_legB-0.19",
+"collection": "Balcony",
+"min": [
+5.06,
+5.72,
+0.0
+],
+"max": [
+5.08,
+5.74,
+0.79
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Tarno_chair0_legB0.19",
+"collection": "Balcony",
+"min": [
+4.68,
+5.72,
+0.0
+],
+"max": [
+4.7,
+5.74,
+0.79
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Tarno_chair0_legF-0.19",
+"collection": "Balcony",
+"min": [
+5.06,
+6.14,
+0.0
+],
+"max": [
+5.08,
+6.16,
+0.46
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Tarno_chair0_legF0.19",
+"collection": "Balcony",
+"min": [
+4.68,
+6.14,
+0.0
+],
+"max": [
+4.7,
+6.16,
+0.46
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Tarno_chair0_slat0",
+"collection": "Balcony",
+"min": [
+4.685,
+6.06,
+0.44
+],
+"max": [
+5.075,
+6.14,
+0.46
+],
+"material": "Acacia stained",
+"props": {}
+},
+{
+"name": "Tarno_chair0_slat1",
+"collection": "Balcony",
+"min": [
+4.685,
+5.96,
+0.44
+],
+"max": [
+5.075,
+6.04,
+0.46
+],
+"material": "Acacia stained",
+"props": {}
+},
+{
+"name": "Tarno_chair0_slat2",
+"collection": "Balcony",
+"min": [
+4.685,
+5.86,
+0.44
+],
+"max": [
+5.075,
+5.94,
+0.46
+],
+"material": "Acacia stained",
+"props": {}
+},
+{
+"name": "Tarno_chair0_slat3",
+"collection": "Balcony",
+"min": [
+4.685,
+5.76,
+0.44
+],
+"max": [
+5.075,
+5.84,
+0.46
+],
+"material": "Acacia stained",
+"props": {}
+},
+{
+"name": "Tarno_chair1_back0",
+"collection": "Balcony",
+"min": [
+5.675,
+5.73,
+0.56
+],
+"max": [
+6.065,
+5.75,
+0.61
+],
+"material": "Acacia stained",
+"props": {}
+},
+{
+"name": "Tarno_chair1_back1",
+"collection": "Balcony",
+"min": [
+5.675,
+5.73,
+0.63
+],
+"max": [
+6.065,
+5.75,
+0.68
+],
+"material": "Acacia stained",
+"props": {}
+},
+{
+"name": "Tarno_chair1_back2",
+"collection": "Balcony",
+"min": [
+5.675,
+5.73,
+0.7
+],
+"max": [
+6.065,
+5.75,
+0.75
+],
+"material": "Acacia stained",
+"props": {}
+},
+{
+"name": "Tarno_chair1_legB-0.19",
+"collection": "Balcony",
+"min": [
+6.05,
+5.72,
+0.0
+],
+"max": [
+6.07,
+5.74,
+0.79
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Tarno_chair1_legB0.19",
+"collection": "Balcony",
+"min": [
+5.67,
+5.72,
+0.0
+],
+"max": [
+5.69,
+5.74,
+0.79
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Tarno_chair1_legF-0.19",
+"collection": "Balcony",
+"min": [
+6.05,
+6.14,
+0.0
+],
+"max": [
+6.07,
+6.16,
+0.46
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Tarno_chair1_legF0.19",
+"collection": "Balcony",
+"min": [
+5.67,
+6.14,
+0.0
+],
+"max": [
+5.69,
+6.16,
+0.46
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Tarno_chair1_slat0",
+"collection": "Balcony",
+"min": [
+5.675,
+6.06,
+0.44
+],
+"max": [
+6.065,
+6.14,
+0.46
+],
+"material": "Acacia stained",
+"props": {}
+},
+{
+"name": "Tarno_chair1_slat1",
+"collection": "Balcony",
+"min": [
+5.675,
+5.96,
+0.44
+],
+"max": [
+6.065,
+6.04,
+0.46
+],
+"material": "Acacia stained",
+"props": {}
+},
+{
+"name": "Tarno_chair1_slat2",
+"collection": "Balcony",
+"min": [
+5.675,
+5.86,
+0.44
+],
+"max": [
+6.065,
+5.94,
+0.46
+],
+"material": "Acacia stained",
+"props": {}
+},
+{
+"name": "Tarno_chair1_slat3",
+"collection": "Balcony",
+"min": [
+5.675,
+5.76,
+0.44
+],
+"max": [
+6.065,
+5.84,
+0.46
+],
+"material": "Acacia stained",
+"props": {}
+},
+{
+"name": "Tarno_leg0",
+"collection": "Balcony",
+"min": [
+5.118,
+5.738,
+0.0
+],
+"max": [
+5.142,
+5.762,
+0.68
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Tarno_leg1",
+"collection": "Balcony",
+"min": [
+5.608,
+5.738,
+0.0
+],
+"max": [
+5.632,
+5.762,
+0.68
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Tarno_leg2",
+"collection": "Balcony",
+"min": [
+5.118,
+6.218,
+0.0
+],
+"max": [
+5.142,
+6.242,
+0.68
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Tarno_leg3",
+"collection": "Balcony",
+"min": [
+5.608,
+6.218,
+0.0
+],
+"max": [
+5.632,
+6.242,
+0.68
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "Tarno_pad0",
+"collection": "Balcony",
+"min": [
+4.699,
+5.764,
+0.46
+],
+"max": [
+5.06,
+6.115,
+0.491
+],
+"material": "Wool ochre",
+"props": {}
+},
+{
+"name": "Tarno_pad1",
+"collection": "Balcony",
+"min": [
+5.689,
+5.764,
+0.46
+],
+"max": [
+6.05,
+6.115,
+0.491
+],
+"material": "Wool ochre",
+"props": {}
+},
+{
+"name": "Tarno_top",
+"collection": "Balcony",
+"min": [
+5.1,
+5.72,
+0.68
+],
+"max": [
+5.65,
+6.26,
+0.7
+],
+"material": "Acacia stained",
+"props": {}
+},
+{
+"name": "Throw",
+"collection": "Bedroom",
+"min": [
+4.518,
+3.055,
+0.569
+],
+"max": [
+5.17,
+4.82,
+0.622
+],
+"material": "Knit throw rust",
+"props": {
+"cab_pivot": "CAB_Bed_slats"
+}
+},
+{
+"name": "Towel_hung",
+"collection": "Bathroom",
+"min": [
+5.14,
+0.055,
+0.7
+],
+"max": [
+5.56,
+0.075,
+1.3
+],
+"material": "Linen oat",
+"props": {}
+},
+{
+"name": "Towel_rail_bar0",
+"collection": "Bathroom",
+"min": [
+5.1,
+0.03,
+0.4
+],
+"max": [
+5.6,
+0.05,
+0.42
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Towel_rail_bar1",
+"collection": "Bathroom",
+"min": [
+5.1,
+0.03,
+0.52
+],
+"max": [
+5.6,
+0.05,
+0.54
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Towel_rail_bar2",
+"collection": "Bathroom",
+"min": [
+5.1,
+0.03,
+0.64
+],
+"max": [
+5.6,
+0.05,
+0.66
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Towel_rail_bar3",
+"collection": "Bathroom",
+"min": [
+5.1,
+0.03,
+0.76
+],
+"max": [
+5.6,
+0.05,
+0.78
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Towel_rail_bar4",
+"collection": "Bathroom",
+"min": [
+5.1,
+0.03,
+0.88
+],
+"max": [
+5.6,
+0.05,
+0.9
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Towel_rail_bar5",
+"collection": "Bathroom",
+"min": [
+5.1,
+0.03,
+1.0
+],
+"max": [
+5.6,
+0.05,
+1.02
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Towel_rail_bar6",
+"collection": "Bathroom",
+"min": [
+5.1,
+0.03,
+1.12
+],
+"max": [
+5.6,
+0.05,
+1.14
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Towel_rail_bar7",
+"collection": "Bathroom",
+"min": [
+5.1,
+0.03,
+1.24
+],
+"max": [
+5.6,
+0.05,
+1.26
+],
+"material": "Black metal matte fittings",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Towel_rail_bar8",
+"collection": "Bathroom",
+"min": [
+5.1,
+0.03,
+1.36
+],
+"max": [
+5.6,
+0.05,
+1.38
+],
+"material": "Black metal matte fittings",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Towel_rail_conn",
+"collection": "Bathroom",
+"min": [
+5.62,
+0.0,
+0.26
+],
+"max": [
+5.7,
+0.007,
+0.34
+],
+"material": "Switch plate white",
+"props": {
+"function": "towel rail connection box (fused spur) on B2, IP44"
+}
+},
+{
+"name": "Towel_rail_sideL",
+"collection": "Bathroom",
+"min": [
+5.09,
+0.03,
+0.38
+],
+"max": [
+5.11,
+0.06,
+1.4
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Towel_rail_sideR",
+"collection": "Bathroom",
+"min": [
+5.59,
+0.03,
+0.38
+],
+"max": [
+5.61,
+0.06,
+1.4
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Towel_roll0",
+"collection": "Bathroom",
+"min": [
+6.41,
+0.165,
+1.175
+],
+"max": [
+6.65,
+0.275,
+1.285
+],
+"material": "Linen white",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Towel_roll1",
+"collection": "Bathroom",
+"min": [
+6.41,
+0.285,
+1.175
+],
+"max": [
+6.65,
+0.395,
+1.285
+],
+"material": "Linen white",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "TV_body",
+"collection": "Living",
+"min": [
+3.26,
+4.0,
+0.635
+],
+"max": [
+3.3,
+5.45,
+1.465
+],
+"material": "Black metal",
+"props": {
+"cutaway_hide": "None"
+}
+},
+{
+"name": "TV_data",
+"collection": "Living",
+"min": [
+3.301,
+4.86,
+0.95
+],
+"max": [
+3.308,
+4.94,
+1.03
+],
+"material": "Switch plate white",
+"props": {
+"function": "RJ45 + TV outlet"
+}
+},
+{
+"name": "TV_screen",
+"collection": "Living",
+"min": [
+3.258,
+4.01,
+0.645
+],
+"max": [
+3.26,
+5.44,
+1.455
+],
+"material": "TV screen",
+"props": {
+"cutaway_hide": "None"
+}
+},
+{
+"name": "TV_socket",
+"collection": "Living",
+"min": [
+3.301,
+4.62,
+0.95
+],
+"max": [
+3.308,
+4.84,
+1.03
+],
+"material": "Switch plate white",
+"props": {}
+},
+{
+"name": "Vanity_bowl_b",
+"collection": "Bathroom",
+"min": [
+5.088,
+1.492,
+0.835
+],
+"max": [
+5.548,
+1.5,
+0.88
+],
+"material": "Ceramic white gloss",
+"props": {}
+},
+{
+"name": "Vanity_bowl_bottom",
+"collection": "Bathroom",
+"min": [
+5.088,
+1.12,
+0.835
+],
+"max": [
+5.548,
+1.5,
+0.845
+],
+"material": "Ceramic white gloss",
+"props": {}
+},
+{
+"name": "Vanity_bowl_f",
+"collection": "Bathroom",
+"min": [
+5.088,
+1.12,
+0.835
+],
+"max": [
+5.548,
+1.128,
+0.88
+],
+"material": "Ceramic white gloss",
+"props": {}
+},
+{
+"name": "Vanity_bowl_l",
+"collection": "Bathroom",
+"min": [
+5.087,
+1.12,
+0.835
+],
+"max": [
+5.095,
+1.5,
+0.88
+],
+"material": "Ceramic white gloss",
+"props": {}
+},
+{
+"name": "Vanity_bowl_r",
+"collection": "Bathroom",
+"min": [
+5.539,
+1.12,
+0.835
+],
+"max": [
+5.548,
+1.5,
+0.88
+],
+"material": "Ceramic white gloss",
+"props": {}
+},
+{
+"name": "Vanity_cab",
+"collection": "Bathroom",
+"min": [
+5.508,
+1.05,
+0.0
+],
+"max": [
+5.745,
+1.67,
+0.86
+],
+"material": "Carcass",
+"props": {
+"cutaway_hide": false
+}
+},
+{
+"name": "Vanity_drain",
+"collection": "Bathroom",
+"min": [
+5.51,
+1.45,
+0.845
+],
+"max": [
+5.55,
+1.49,
+0.847
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Vanity_pullout_front",
+"collection": "Bathroom",
+"min": [
+5.511,
+1.03,
+0.02
+],
+"max": [
+5.743,
+1.05,
+0.86
+],
+"material": "Oak light",
+"props": {
+"cab_pivot": "CAB_Vanity_pullout_front"
+}
+},
+{
+"name": "Vanity_pullout_handle",
+"collection": "Bathroom",
+"min": [
+5.59,
+1.01,
+0.8
+],
+"max": [
+5.68,
+1.03,
+0.815
+],
+"material": "Black metal",
+"props": {
+"cab_pivot": "CAB_Vanity_pullout_front"
+}
+},
+{
+"name": "Vanity_tap_body",
+"collection": "Bathroom",
+"min": [
+5.298,
+1.64,
+1.02
+],
+"max": [
+5.338,
+1.67,
+1.07
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Vanity_tap_lever",
+"collection": "Bathroom",
+"min": [
+5.31,
+1.62,
+1.07
+],
+"max": [
+5.326,
+1.64,
+1.12
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Vanity_tap_spout",
+"collection": "Bathroom",
+"min": [
+5.309,
+1.43,
+1.03
+],
+"max": [
+5.326,
+1.64,
+1.045
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "Vanity_top",
+"collection": "Bathroom",
+"min": [
+4.89,
+1.03,
+0.88
+],
+"max": [
+5.745,
+1.12,
+0.92
+],
+"material": "Ceramic white gloss",
+"props": {
+"spec": "custom solid-surface top 85.5x64, integrated bowl 46x38x8, slim 1 1/4in waste at the rear corner over the pull-out; combined basin+machine trap (HL) in the wall at h 0.62-0.80"
+}
+},
+{
+"name": "Vanity_top_back",
+"collection": "Bathroom",
+"min": [
+4.89,
+1.5,
+0.88
+],
+"max": [
+5.745,
+1.67,
+0.92
+],
+"material": "Ceramic white gloss",
+"props": {}
+},
+{
+"name": "Vanity_top_left",
+"collection": "Bathroom",
+"min": [
+4.89,
+1.12,
+0.88
+],
+"max": [
+5.088,
+1.5,
+0.92
+],
+"material": "Ceramic white gloss",
+"props": {}
+},
+{
+"name": "Vanity_top_right",
+"collection": "Bathroom",
+"min": [
+5.548,
+1.12,
+0.88
+],
+"max": [
+5.745,
+1.5,
+0.92
+],
+"material": "Ceramic white gloss",
+"props": {}
+},
+{
+"name": "W2_B_a",
+"collection": "Shell",
+"min": [
+3.47,
+-0.25,
+0.0
+],
+"max": [
+3.72,
+0.0,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "W2_B_b_0",
+"collection": "Shell",
+"min": [
+4.72,
+-0.25,
+0.0
+],
+"max": [
+4.83,
+0.0,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "W2_B_b_1",
+"collection": "Shell",
+"min": [
+4.83,
+-0.25,
+0.0
+],
+"max": [
+6.9,
+0.0,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "W2_B_lintel",
+"collection": "Shell",
+"min": [
+3.72,
+-0.25,
+2.1
+],
+"max": [
+4.72,
+0.0,
+2.6
+],
+"material": "Wall paint",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "W2_bath_T",
+"collection": "Shell",
+"min": [
+4.89,
+1.68,
+0.0
+],
+"max": [
+6.65,
+1.92,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "W2_BT_a",
+"collection": "Shell",
+"min": [
+3.47,
+5.34,
+0.0
+],
+"max": [
+3.87,
+5.69,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "W2_BT_b",
+"collection": "Shell",
+"min": [
+6.18,
+5.34,
+0.0
+],
+"max": [
+6.9,
+5.69,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "W2_BT_lintel",
+"collection": "Shell",
+"min": [
+3.87,
+5.34,
+2.38
+],
+"max": [
+6.18,
+5.69,
+2.6
+],
+"material": "Wall paint",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "W2_CB_a",
+"collection": "Shell",
+"min": [
+4.77,
+0.0,
+0.0
+],
+"max": [
+4.89,
+0.15,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "W2_CB_b",
+"collection": "Shell",
+"min": [
+4.77,
+0.97,
+0.0
+],
+"max": [
+4.89,
+2.44,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "W2_CB_lintel",
+"collection": "Shell",
+"min": [
+4.77,
+0.15,
+2.05
+],
+"max": [
+4.89,
+0.97,
+2.6
+],
+"material": "Wall paint",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "W2_CT_a",
+"collection": "Shell",
+"min": [
+3.47,
+2.33,
+0.0
+],
+"max": [
+3.6,
+2.44,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "W2_CT_b",
+"collection": "Shell",
+"min": [
+4.4,
+2.33,
+0.0
+],
+"max": [
+4.77,
+2.44,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "W2_CT_lintel",
+"collection": "Shell",
+"min": [
+3.6,
+2.33,
+2.0
+],
+"max": [
+4.4,
+2.44,
+2.6
+],
+"material": "Wall paint",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "W2_ext_R_0",
+"collection": "Shell",
+"min": [
+6.65,
+-0.25,
+0.0
+],
+"max": [
+6.9,
+1.8,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "W2_ext_R_1",
+"collection": "Shell",
+"min": [
+6.65,
+1.8,
+0.0
+],
+"max": [
+6.9,
+5.69,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "Wall_B",
+"collection": "Shell",
+"min": [
+-0.25,
+-0.25,
+0.0
+],
+"max": [
+3.47,
+0.0,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "Wall_L",
+"collection": "Shell",
+"min": [
+-0.25,
+-0.25,
+0.0
+],
+"max": [
+0.0,
+6.9,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "Wall_R_a",
+"collection": "Shell",
+"min": [
+3.35,
+-0.25,
+0.0
+],
+"max": [
+3.47,
+1.4,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "Wall_R_b_0",
+"collection": "Shell",
+"min": [
+3.35,
+2.3,
+0.0
+],
+"max": [
+3.47,
+2.4,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "Wall_R_b_1",
+"collection": "Shell",
+"min": [
+3.35,
+2.4,
+0.0
+],
+"max": [
+3.47,
+5.7,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "Wall_R_b_thick",
+"collection": "Shell",
+"min": [
+3.47,
+5.4,
+0.0
+],
+"max": [
+3.65,
+5.7,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "Wall_R_c",
+"collection": "Shell",
+"min": [
+3.35,
+6.5,
+0.0
+],
+"max": [
+3.65,
+6.9,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "Wall_R_door1_lintel",
+"collection": "Shell",
+"min": [
+3.35,
+1.4,
+2.0
+],
+"max": [
+3.47,
+2.3,
+2.6
+],
+"material": "Wall paint",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Wall_R_door2_lintel",
+"collection": "Shell",
+"min": [
+3.35,
+5.7,
+2.38
+],
+"max": [
+3.65,
+6.5,
+2.6
+],
+"material": "Wall paint",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Wall_T_a",
+"collection": "Shell",
+"min": [
+-0.25,
+6.65,
+0.0
+],
+"max": [
+0.4,
+6.9,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "Wall_T_b",
+"collection": "Shell",
+"min": [
+3.01,
+6.65,
+0.0
+],
+"max": [
+3.65,
+6.9,
+2.6
+],
+"material": "Wall paint",
+"props": {}
+},
+{
+"name": "Wall_T_lintel",
+"collection": "Shell",
+"min": [
+0.4,
+6.65,
+2.38
+],
+"max": [
+3.01,
+6.9,
+2.6
+],
+"material": "Wall paint",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "WallLamp0_arm",
+"collection": "Bedroom",
+"min": [
+6.45,
+2.815,
+1.258
+],
+"max": [
+6.61,
+2.827,
+1.27
+],
+"material": "Black metal",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "WallLamp0_plate",
+"collection": "Bedroom",
+"min": [
+6.61,
+2.781,
+1.18
+],
+"max": [
+6.625,
+2.861,
+1.28
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "WallLamp0_shade",
+"collection": "Bedroom",
+"min": [
+6.385,
+2.756,
+1.14
+],
+"max": [
+6.515,
+2.886,
+1.27
+],
+"material": "Pendant shade",
+"props": {}
+},
+{
+"name": "WallLamp1_arm",
+"collection": "Bedroom",
+"min": [
+6.45,
+5.048,
+1.258
+],
+"max": [
+6.61,
+5.06,
+1.27
+],
+"material": "Black metal",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "WallLamp1_plate",
+"collection": "Bedroom",
+"min": [
+6.61,
+5.014,
+1.18
+],
+"max": [
+6.625,
+5.094,
+1.28
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "WallLamp1_shade",
+"collection": "Bedroom",
+"min": [
+6.385,
+4.989,
+1.14
+],
+"max": [
+6.515,
+5.119,
+1.27
+],
+"material": "Pendant shade",
+"props": {}
+},
+{
+"name": "Wardrobe_carc",
+"collection": "Bedroom",
+"min": [
+4.89,
+1.92,
+0.0
+],
+"max": [
+6.65,
+2.48,
+2.6
+],
+"material": "Carcass",
+"props": {}
+},
+{
+"name": "Wardrobe_filler",
+"collection": "Bedroom",
+"min": [
+6.23,
+2.48,
+0.0
+],
+"max": [
+6.65,
+2.535,
+2.6
+],
+"material": "Wardrobe warm white",
+"props": {}
+},
+{
+"name": "Wardrobe_pull0",
+"collection": "Bedroom",
+"min": [
+4.93,
+2.504,
+0.9
+],
+"max": [
+4.95,
+2.508,
+1.3
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "Wardrobe_pull1",
+"collection": "Bedroom",
+"min": [
+6.19,
+2.529,
+0.9
+],
+"max": [
+6.21,
+2.533,
+1.3
+],
+"material": "Oak solid",
+"props": {
+"cab_pivot": "CAB_Wardrobe_slide_front"
+}
+},
+{
+"name": "Wardrobe_slide_back",
+"collection": "Bedroom",
+"min": [
+4.9,
+2.485,
+0.04
+],
+"max": [
+5.6,
+2.505,
+2.54
+],
+"material": "Mirror",
+"props": {
+"cab_pivot": "CAB_Wardrobe_slide_back"
+}
+},
+{
+"name": "Wardrobe_slide_front",
+"collection": "Bedroom",
+"min": [
+5.53,
+2.51,
+0.04
+],
+"max": [
+6.225,
+2.53,
+2.54
+],
+"material": "Wardrobe warm white",
+"props": {
+"cab_pivot": "CAB_Wardrobe_slide_front"
+}
+},
+{
+"name": "Wardrobe_track_bot",
+"collection": "Bedroom",
+"min": [
+4.89,
+2.48,
+0.0
+],
+"max": [
+6.23,
+2.535,
+0.04
+],
+"material": "Black matte",
+"props": {}
+},
+{
+"name": "Wardrobe_track_top",
+"collection": "Bedroom",
+"min": [
+4.89,
+2.48,
+2.54
+],
+"max": [
+6.23,
+2.535,
+2.6
+],
+"material": "Carcass",
+"props": {}
+},
+{
+"name": "Washer_body",
+"collection": "Bathroom",
+"min": [
+4.891,
+1.08,
+0.0
+],
+"max": [
+5.487,
+1.62,
+0.819
+],
+"material": "Furniture white matte",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Washer_divider",
+"collection": "Bathroom",
+"min": [
+5.49,
+1.05,
+0.0
+],
+"max": [
+5.508,
+1.67,
+0.86
+],
+"material": "Carcass",
+"props": {
+"cutaway_hide": false
+}
+},
+{
+"name": "Washer_front",
+"collection": "Bathroom",
+"min": [
+4.905,
+1.03,
+0.02
+],
+"max": [
+5.487,
+1.05,
+0.86
+],
+"material": "Oak light",
+"props": {
+"cutaway_hide": false,
+"cab_pivot": "CAB_Washer_front"
+}
+},
+{
+"name": "Washer_handle",
+"collection": "Bathroom",
+"min": [
+5.15,
+1.01,
+0.8
+],
+"max": [
+5.3,
+1.03,
+0.815
+],
+"material": "Black metal",
+"props": {
+"cutaway_hide": false,
+"cab_pivot": "CAB_Washer_front"
+}
+},
+{
+"name": "Washer_socket",
+"collection": "Bathroom",
+"min": [
+5.66,
+1.663,
+0.26
+],
+"max": [
+5.74,
+1.67,
+0.34
+],
+"material": "Switch plate white",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Washer_vent",
+"collection": "Bathroom",
+"min": [
+4.93,
+1.028,
+0.835
+],
+"max": [
+5.47,
+1.03,
+0.845
+],
+"material": "Black metal",
+"props": {
+"cutaway_hide": false
+}
+},
+{
+"name": "WC_body",
+"collection": "Bathroom",
+"min": [
+6.2,
+0.22,
+0.22
+],
+"max": [
+6.45,
+0.58,
+0.4
+],
+"material": "Ceramic white gloss",
+"props": {}
+},
+{
+"name": "WC_bowl",
+"collection": "Bathroom",
+"min": [
+5.93,
+0.22,
+0.21
+],
+"max": [
+6.47,
+0.58,
+0.45
+],
+"material": "Ceramic white gloss",
+"props": {}
+},
+{
+"name": "WC_boxing",
+"collection": "Bathroom",
+"min": [
+6.45,
+0.05,
+0.0
+],
+"max": [
+6.64,
+0.75,
+1.15
+],
+"material": "Tile wall YZ 60x120",
+"props": {}
+},
+{
+"name": "WC_boxing_top",
+"collection": "Bathroom",
+"min": [
+6.44,
+0.04,
+1.15
+],
+"max": [
+6.64,
+0.76,
+1.17
+],
+"material": "Ceramic white gloss",
+"props": {}
+},
+{
+"name": "WC_flush_plate",
+"collection": "Bathroom",
+"min": [
+6.443,
+0.3,
+0.95
+],
+"max": [
+6.45,
+0.5,
+1.1
+],
+"material": "Black metal",
+"props": {}
+},
+{
+"name": "WC_paper_holder",
+"collection": "Bathroom",
+"min": [
+5.66,
+0.0,
+0.66
+],
+"max": [
+5.7,
+0.08,
+0.68
+],
+"material": "Black metal matte fittings",
+"props": {}
+},
+{
+"name": "WC_paper_roll",
+"collection": "Bathroom",
+"min": [
+5.63,
+0.015,
+0.565
+],
+"max": [
+5.73,
+0.125,
+0.675
+],
+"material": "Linen white",
+"props": {}
+},
+{
+"name": "WC_seat",
+"collection": "Bathroom",
+"min": [
+5.9,
+0.215,
+0.4
+],
+"max": [
+6.44,
+0.585,
+0.43
+],
+"material": "Ceramic white gloss",
+"props": {}
+},
+{
+"name": "Wint_A_rail",
+"collection": "Wardrobe interior",
+"min": [
+4.91,
+2.188,
+1.738
+],
+"max": [
+5.55,
+2.212,
+1.762
+],
+"material": "Black metal matte fittings",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Wint_A_shelf",
+"collection": "Wardrobe interior",
+"min": [
+4.9,
+1.93,
+1.8
+],
+"max": [
+5.555,
+2.46,
+1.82
+],
+"material": "Carcass",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Wint_A_shoes",
+"collection": "Wardrobe interior",
+"min": [
+4.9,
+1.93,
+0.15
+],
+"max": [
+5.555,
+2.46,
+0.17
+],
+"material": "Carcass",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Wint_A_topbox",
+"collection": "Wardrobe interior",
+"min": [
+4.9,
+1.93,
+2.1
+],
+"max": [
+5.555,
+2.46,
+2.12
+],
+"material": "Carcass",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Wint_B_drawer0",
+"collection": "Wardrobe interior",
+"min": [
+5.622,
+2.44,
+0.065
+],
+"max": [
+6.198,
+2.458,
+0.237
+],
+"material": "Wardrobe warm white",
+"props": {
+"cab_pivot": "CAB_Wint_B_drawer0",
+"cutaway_hide": true
+}
+},
+{
+"name": "Wint_B_drawer1",
+"collection": "Wardrobe interior",
+"min": [
+5.622,
+2.44,
+0.243
+],
+"max": [
+6.198,
+2.458,
+0.415
+],
+"material": "Wardrobe warm white",
+"props": {
+"cab_pivot": "CAB_Wint_B_drawer1",
+"cutaway_hide": true
+}
+},
+{
+"name": "Wint_B_drawer_carc",
+"collection": "Wardrobe interior",
+"min": [
+5.62,
+1.95,
+0.06
+],
+"max": [
+6.2,
+2.44,
+0.42
+],
+"material": "Carcass",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Wint_B_rail0",
+"collection": "Wardrobe interior",
+"min": [
+5.585,
+2.188,
+1.988
+],
+"max": [
+6.63,
+2.212,
+2.012
+],
+"material": "Black metal matte fittings",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Wint_B_rail1",
+"collection": "Wardrobe interior",
+"min": [
+5.585,
+2.188,
+1.058
+],
+"max": [
+6.63,
+2.212,
+1.082
+],
+"material": "Black metal matte fittings",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Wint_B_shelf",
+"collection": "Wardrobe interior",
+"min": [
+5.575,
+1.93,
+2.05
+],
+"max": [
+6.63,
+2.46,
+2.07
+],
+"material": "Carcass",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Wint_divider",
+"collection": "Wardrobe interior",
+"min": [
+5.555,
+1.93,
+0.0
+],
+"max": [
+5.575,
+2.47,
+2.54
+],
+"material": "Carcass",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Wint_led_A",
+"collection": "Wardrobe interior",
+"min": [
+4.92,
+2.42,
+1.795
+],
+"max": [
+5.53,
+2.44,
+1.8
+],
+"material": "LED shelf warm",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "Wint_led_B",
+"collection": "Wardrobe interior",
+"min": [
+5.6,
+2.42,
+2.045
+],
+"max": [
+6.63,
+2.44,
+2.05
+],
+"material": "LED shelf warm",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "WU_back_back",
+"collection": "Living",
+"min": [
+3.318,
+2.72,
+0.5
+],
+"max": [
+3.35,
+5.52,
+1.85
+],
+"material": "Oak light",
+"props": {}
+},
+{
+"name": "WU_back_reeds",
+"collection": "Living",
+"min": [
+3.308,
+2.72,
+0.5
+],
+"max": [
+3.328,
+5.52,
+1.85
+],
+"material": "Oak light",
+"props": {}
+},
+{
+"name": "WU_book0",
+"collection": "Styling",
+"min": [
+3.12,
+2.8,
+1.175
+],
+"max": [
+3.3,
+2.827,
+1.385
+],
+"material": "Book cover 0",
+"props": {
+"cutaway_hide": "None"
+}
+},
+{
+"name": "WU_book1",
+"collection": "Styling",
+"min": [
+3.12,
+2.83,
+1.175
+],
+"max": [
+3.3,
+2.857,
+1.405
+],
+"material": "Book cover 1",
+"props": {
+"cutaway_hide": "None"
+}
+},
+{
+"name": "WU_book2",
+"collection": "Styling",
+"min": [
+3.12,
+2.86,
+1.175
+],
+"max": [
+3.3,
+2.887,
+1.385
+],
+"material": "Book cover 2",
+"props": {
+"cutaway_hide": "None"
+}
+},
+{
+"name": "WU_book3",
+"collection": "Styling",
+"min": [
+3.12,
+2.89,
+1.175
+],
+"max": [
+3.3,
+2.917,
+1.405
+],
+"material": "Book cover 3",
+"props": {
+"cutaway_hide": "None"
+}
+},
+{
+"name": "WU_console_body",
+"collection": "Living",
+"min": [
+2.83,
+3.92,
+0.14
+],
+"max": [
+3.31,
+5.52,
+0.47
+],
+"material": "Carcass",
+"props": {}
+},
+{
+"name": "WU_console_door0",
+"collection": "Living",
+"min": [
+2.81,
+3.922,
+0.142
+],
+"max": [
+2.83,
+4.451,
+0.468
+],
+"material": "Oak light",
+"props": {
+"cab_pivot": "CAB_WU_console_door0"
+}
+},
+{
+"name": "WU_console_door1",
+"collection": "Living",
+"min": [
+2.81,
+4.455,
+0.142
+],
+"max": [
+2.83,
+4.985,
+0.468
+],
+"material": "Oak light",
+"props": {
+"cab_pivot": "CAB_WU_console_door1"
+}
+},
+{
+"name": "WU_console_door2",
+"collection": "Living",
+"min": [
+2.81,
+4.989,
+0.142
+],
+"max": [
+2.83,
+5.518,
+0.468
+],
+"material": "Oak light",
+"props": {
+"cab_pivot": "CAB_WU_console_door2"
+}
+},
+{
+"name": "WU_console_led",
+"collection": "Living",
+"min": [
+2.95,
+3.96,
+0.135
+],
+"max": [
+2.98,
+5.48,
+0.14
+],
+"material": "LED shelf warm",
+"props": {}
+},
+{
+"name": "WU_console_pull",
+"collection": "Living",
+"min": [
+2.806,
+3.92,
+0.442
+],
+"max": [
+2.83,
+5.52,
+0.47
+],
+"material": "Black matte",
+"props": {}
+},
+{
+"name": "WU_console_top",
+"collection": "Living",
+"min": [
+2.81,
+3.92,
+0.47
+],
+"max": [
+3.31,
+5.52,
+0.5
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "WU_desk_laptop",
+"collection": "Styling",
+"min": [
+3.0,
+3.08,
+0.74
+],
+"max": [
+3.24,
+3.41,
+0.755
+],
+"material": "Aluminium laptop",
+"props": {
+"cutaway_hide": "None"
+}
+},
+{
+"name": "WU_desk_side",
+"collection": "Living",
+"min": [
+2.81,
+2.72,
+0.0
+],
+"max": [
+3.31,
+2.76,
+0.7
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "WU_desk_slab",
+"collection": "Living",
+"min": [
+2.81,
+2.72,
+0.7
+],
+"max": [
+3.31,
+3.92,
+0.74
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "WU_desk_vase",
+"collection": "Styling",
+"min": [
+3.153,
+2.773,
+0.74
+],
+"max": [
+3.247,
+2.867,
+0.94
+],
+"material": "Ceramic matte",
+"props": {
+"cutaway_hide": "None"
+}
+},
+{
+"name": "WU_desklamp_base",
+"collection": "Styling",
+"min": [
+3.1,
+3.66,
+0.74
+],
+"max": [
+3.22,
+3.78,
+0.755
+],
+"material": "Black matte",
+"props": {}
+},
+{
+"name": "WU_desklamp_pole",
+"collection": "Styling",
+"min": [
+3.154,
+3.714,
+0.74
+],
+"max": [
+3.166,
+3.726,
+1.12
+],
+"material": "Black matte",
+"props": {}
+},
+{
+"name": "WU_desklamp_shade",
+"collection": "Styling",
+"min": [
+2.999,
+3.551,
+0.998
+],
+"max": [
+3.201,
+3.729,
+1.202
+],
+"material": "Pendant shade",
+"props": {}
+},
+{
+"name": "WU_end_L",
+"collection": "Living",
+"min": [
+2.81,
+2.69,
+0.0
+],
+"max": [
+3.35,
+2.72,
+2.6
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "WU_end_R",
+"collection": "Living",
+"min": [
+2.81,
+5.52,
+0.0
+],
+"max": [
+3.35,
+5.55,
+2.6
+],
+"material": "Oak solid",
+"props": {}
+},
+{
+"name": "WU_led_upper",
+"collection": "Living",
+"min": [
+2.96,
+2.74,
+1.845
+],
+"max": [
+2.99,
+5.5,
+1.85
+],
+"material": "LED shelf warm",
+"props": {}
+},
+{
+"name": "WU_shelf0",
+"collection": "Living",
+"min": [
+3.08,
+2.72,
+1.14
+],
+"max": [
+3.33,
+3.4,
+1.175
+],
+"material": "Oak solid",
+"props": {
+"cutaway_hide": "None"
+}
+},
+{
+"name": "WU_shelf0_led",
+"collection": "Living",
+"min": [
+3.22,
+2.77,
+1.136
+],
+"max": [
+3.24,
+3.35,
+1.14
+],
+"material": "LED shelf warm",
+"props": {
+"cutaway_hide": "None"
+}
+},
+{
+"name": "WU_shelf1",
+"collection": "Living",
+"min": [
+3.08,
+2.72,
+1.42
+],
+"max": [
+3.33,
+3.4,
+1.455
+],
+"material": "Oak solid",
+"props": {
+"cutaway_hide": "None"
+}
+},
+{
+"name": "WU_shelf1_led",
+"collection": "Living",
+"min": [
+3.22,
+2.77,
+1.416
+],
+"max": [
+3.24,
+3.35,
+1.42
+],
+"material": "LED shelf warm",
+"props": {
+"cutaway_hide": "None"
+}
+},
+{
+"name": "WU_soundbar",
+"collection": "Styling",
+"min": [
+3.12,
+4.35,
+0.5
+],
+"max": [
+3.26,
+5.1,
+0.56
+],
+"material": "Black matte",
+"props": {}
+},
+{
+"name": "WU_step",
+"collection": "Living",
+"min": [
+2.81,
+3.88,
+0.0
+],
+"max": [
+3.31,
+3.92,
+0.7
+],
+"material": "Oak solid",
+"props": {
+"cutaway_hide": true
+}
+},
+{
+"name": "WU_upper_body",
+"collection": "Living",
+"min": [
+2.83,
+2.72,
+1.85
+],
+"max": [
+3.35,
+5.52,
+2.6
+],
+"material": "Carcass",
+"props": {}
+},
+{
+"name": "WU_upper_door0",
+"collection": "Living",
+"min": [
+2.81,
+2.722,
+1.852
+],
+"max": [
+2.83,
+3.318,
+2.598
+],
+"material": "Kitchen upper warm white",
+"props": {
+"cab_pivot": "CAB_WU_upper_door0",
+"spec": "side-hinged door, soft-close, 110 deg hinge"
+}
+},
+{
+"name": "WU_upper_door1",
+"collection": "Living",
+"min": [
+2.81,
+3.322,
+1.852
+],
+"max": [
+2.83,
+3.918,
+2.598
+],
+"material": "Kitchen upper warm white",
+"props": {
+"cab_pivot": "CAB_WU_upper_door1",
+"spec": "side-hinged door, soft-close, 110 deg hinge"
+}
+},
+{
+"name": "WU_upper_door2",
+"collection": "Living",
+"min": [
+2.81,
+3.922,
+1.852
+],
+"max": [
+2.83,
+4.451,
+2.598
+],
+"material": "Kitchen upper warm white",
+"props": {
+"cab_pivot": "CAB_WU_upper_door2",
+"spec": "side-hinged door, soft-close, 110 deg hinge"
+}
+},
+{
+"name": "WU_upper_door3",
+"collection": "Living",
+"min": [
+2.81,
+4.455,
+1.852
+],
+"max": [
+2.83,
+4.985,
+2.598
+],
+"material": "Kitchen upper warm white",
+"props": {
+"cab_pivot": "CAB_WU_upper_door3",
+"spec": "side-hinged door, soft-close, 110 deg hinge"
+}
+},
+{
+"name": "WU_upper_door4",
+"collection": "Living",
+"min": [
+2.81,
+4.989,
+1.852
+],
+"max": [
+2.83,
+5.518,
+2.598
+],
+"material": "Kitchen upper warm white",
+"props": {
+"cab_pivot": "CAB_WU_upper_door4",
+"spec": "side-hinged door, soft-close, 110 deg hinge"
+}
+},
+{
+"name": "WU_v2",
+"collection": "Styling",
+"min": [
+3.149,
+2.979,
+1.455
+],
+"max": [
+3.291,
+3.121,
+1.555
+],
+"material": "Ceramic sage",
+"props": {
+"cutaway_hide": "None"
+}
+},
+{
+"name": "WU_v3",
+"collection": "Styling",
+"min": [
+3.173,
+3.253,
+1.455
+],
+"max": [
+3.267,
+3.347,
+1.535
+],
+"material": "Ceramic sage",
+"props": {
+"cutaway_hide": "None"
+}
+},
+{
+"name": "WU_v4",
+"collection": "Styling",
+"min": [
+3.167,
+3.247,
+1.175
+],
+"max": [
+3.273,
+3.353,
+1.305
+],
+"material": "Ceramic matte",
+"props": {
+"cutaway_hide": "None"
+}
+},
+{
+"name": "WU_v5",
+"collection": "Styling",
+"min": [
+3.175,
+2.825,
+1.455
+],
+"max": [
+3.245,
+2.895,
+1.545
+],
+"material": "Ceramic sand",
+"props": {}
+}
+],
+"lights": [
+{
+"name": "AisleDown0",
+"type": "SPOT",
+"loc": [
+1.865,
+1.235,
+2.59
+],
+"energy": 26.0,
+"props": {
+"circuit": "open-space general (dimmable)"
+}
+},
+{
+"name": "AisleDown1",
+"type": "SPOT",
+"loc": [
+1.865,
+2.435,
+2.59
+],
+"energy": 26.0,
+"props": {
+"circuit": "open-space general (dimmable)"
+}
+},
+{
+"name": "Balcony_candle_light",
+"type": "POINT",
+"loc": [
+5.43,
+6.04,
+0.8
+],
+"energy": 2.0,
+"props": {}
+},
+{
+"name": "Balcony_wall_light_L",
+"type": "POINT",
+"loc": [
+6.34,
+5.76,
+1.92
+],
+"energy": 8.0,
+"props": {}
+},
+{
+"name": "BathSpot0",
+"type": "SPOT",
+"loc": [
+5.318,
+0.55,
+2.59
+],
+"energy": 45.0,
+"props": {
+"ip": "IP44"
+}
+},
+{
+"name": "BathSpot1",
+"type": "SPOT",
+"loc": [
+5.318,
+1.27,
+2.59
+],
+"energy": 45.0,
+"props": {
+"ip": "IP44"
+}
+},
+{
+"name": "BathSpot2",
+"type": "SPOT",
+"loc": [
+5.95,
+1.27,
+2.59
+],
+"energy": 45.0,
+"props": {
+"ip": "IP65"
+}
+},
+{
+"name": "Desk_lamp_light",
+"type": "SPOT",
+"loc": [
+3.59,
+3.48,
+1.08
+],
+"energy": 8.0,
+"props": {}
+},
+{
+"name": "FloorLamp_light",
+"type": "SPOT",
+"loc": [
+1.14,
+6.34,
+1.69
+],
+"energy": 30.0,
+"props": {}
+},
+{
+"name": "HallDown0",
+"type": "SPOT",
+"loc": [
+3.95,
+0.58,
+2.59
+],
+"energy": 18.0,
+"props": {}
+},
+{
+"name": "HallDown1",
+"type": "SPOT",
+"loc": [
+3.95,
+1.43,
+2.59
+],
+"energy": 18.0,
+"props": {}
+},
+{
+"name": "KitchenDown0",
+"type": "SPOT",
+"loc": [
+0.5,
+1.24,
+2.59
+],
+"energy": 22.0,
+"props": {}
+},
+{
+"name": "KitchenDown1",
+"type": "SPOT",
+"loc": [
+0.85,
+0.5,
+2.59
+],
+"energy": 22.0,
+"props": {}
+},
+{
+"name": "KitchenDown2",
+"type": "SPOT",
+"loc": [
+1.4,
+0.5,
+2.59
+],
+"energy": 22.0,
+"props": {}
+},
+{
+"name": "KitchenDown3",
+"type": "SPOT",
+"loc": [
+1.95,
+0.5,
+2.59
+],
+"energy": 22.0,
+"props": {}
+},
+{
+"name": "KitchenDown4",
+"type": "SPOT",
+"loc": [
+2.5,
+0.5,
+2.59
+],
+"energy": 22.0,
+"props": {}
+},
+{
+"name": "LivingDown0",
+"type": "SPOT",
+"loc": [
+1.865,
+3.635,
+2.59
+],
+"energy": 26.0,
+"props": {
+"circuit": "open-space general (dimmable)"
+}
+},
+{
+"name": "LivingDown1",
+"type": "SPOT",
+"loc": [
+1.865,
+4.835,
+2.59
+],
+"energy": 26.0,
+"props": {
+"circuit": "open-space general (dimmable)"
+}
+},
+{
+"name": "LivingDown2",
+"type": "SPOT",
+"loc": [
+1.865,
+6.035,
+2.59
+],
+"energy": 26.0,
+"props": {
+"circuit": "open-space general (dimmable)"
+}
+},
+{
+"name": "Mirror_side_light0",
+"type": "AREA",
+"loc": [
+4.96,
+1.64,
+1.56
+],
+"energy": 8.0,
+"props": {}
+},
+{
+"name": "Mirror_side_light1",
+"type": "AREA",
+"loc": [
+5.72,
+1.64,
+1.56
+],
+"energy": 8.0,
+"props": {}
+},
+{
+"name": "Pendant_bedroom_bulb",
+"type": "POINT",
+"loc": [
+4.85,
+3.94,
+2.45
+],
+"energy": 35.0,
+"props": {}
+},
+{
+"name": "Pendant_dining0_bulb",
+"type": "SPOT",
+"loc": [
+0.32,
+2.56,
+1.38
+],
+"energy": 25.0,
+"props": {}
+},
+{
+"name": "Pendant_dining1_bulb",
+"type": "SPOT",
+"loc": [
+0.92,
+2.56,
+1.38
+],
+"energy": 25.0,
+"props": {}
+},
+{
+"name": "PictureLight",
+"type": "AREA",
+"loc": [
+0.08,
+4.42,
+2.01
+],
+"energy": 12.0,
+"props": {}
+},
+{
+"name": "PictureLight2",
+"type": "AREA",
+"loc": [
+0.08,
+5.25,
+2.01
+],
+"energy": 12.0,
+"props": {}
+},
+{
+"name": "Sconce0_down",
+"type": "SPOT",
+"loc": [
+0.08,
+3.81,
+1.5
+],
+"energy": 14.0,
+"props": {}
+},
+{
+"name": "Sconce0_up",
+"type": "SPOT",
+"loc": [
+0.08,
+3.81,
+1.74
+],
+"energy": 14.0,
+"props": {}
+},
+{
+"name": "Sconce1_down",
+"type": "SPOT",
+"loc": [
+0.08,
+5.86,
+1.5
+],
+"energy": 14.0,
+"props": {}
+},
+{
+"name": "Sconce1_up",
+"type": "SPOT",
+"loc": [
+0.08,
+5.86,
+1.74
+],
+"energy": 14.0,
+"props": {}
+},
+{
+"name": "Sun",
+"type": "SUN",
+"loc": [
+1.7,
+9.0,
+6.0
+],
+"energy": 4.5,
+"props": {}
+},
+{
+"name": "WallLamp0_light",
+"type": "SPOT",
+"loc": [
+6.45,
+2.821,
+1.16
+],
+"energy": 12.0,
+"props": {}
+},
+{
+"name": "WallLamp1_light",
+"type": "SPOT",
+"loc": [
+6.45,
+5.054,
+1.16
+],
+"energy": 12.0,
+"props": {}
+},
+{
+"name": "WU_desklamp_light",
+"type": "SPOT",
+"loc": [
+3.08,
+3.62,
+1.06
+],
+"energy": 9.0,
+"props": {}
+},
+{
+"name": "WU_shelf0_light",
+"type": "AREA",
+"loc": [
+3.23,
+3.06,
+1.134
+],
+"energy": 14.0,
+"props": {}
+},
+{
+"name": "WU_shelf1_light",
+"type": "AREA",
+"loc": [
+3.23,
+3.06,
+1.414
+],
+"energy": 14.0,
+"props": {}
+},
+{
+"name": "WU_upper_light",
+"type": "AREA",
+"loc": [
+3.07,
+4.0,
+1.84
+],
+"energy": 45.0,
+"props": {}
+}
+]
+}

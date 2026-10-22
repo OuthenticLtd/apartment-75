@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Апартамент 75 – Младост 4</title>
+<style>
+  :root { --bg:#f6f3ee; --ink:#2b2724; --mute:#776f67; --card:#fff; --line:#e4ddd3; --acc:#a8633a; --ok:#4f7a4a; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#1c1a18; --ink:#eee7df; --mute:#a59c92; --card:#262320; --line:#3a3530; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  header { padding:20px 16px 8px; max-width:1100px; margin:auto; }
+  h1 { font-size:22px; margin:0 0 4px; } h2 { font-size:18px; margin:28px 0 10px; }
+  .sub { color:var(--mute); font-size:13.5px; }
+  nav { position:sticky; top:0; z-index:5; background:var(--bg); border-bottom:1px solid var(--line); display:flex; gap:4px; overflow-x:auto; padding:8px 12px; }
+  nav a { white-space:nowrap; padding:6px 10px; border-radius:8px; color:var(--ink); text-decoration:none; font-size:14px; }
+  nav a:hover { background:var(--line); }
+  main { max-width:1100px; margin:auto; padding:0 16px 60px; }
+  .hero { display:block; border-radius:14px; overflow:hidden; background:var(--card); border:1px solid var(--line); text-decoration:none; color:var(--ink); }
+  .hero img { width:100%; display:block; aspect-ratio:16/9; object-fit:cover; background:#ddd; }
+  .hero div { padding:12px 14px; font-weight:600; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:12px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+  .card img { width:100%; aspect-ratio:1.414; object-fit:cover; display:block; background:#eee; }
+  .card .t { padding:8px 10px; font-size:14px; }
+  .card .t a { margin-right:10px; }
+  a { color:var(--acc); }
+  .bar { display:flex; gap:8px; flex-wrap:wrap; margin:8px 0; }
+  select, input[type=search] { font:inherit; padding:6px 8px; border-radius:8px; border:1px solid var(--line); background:var(--card); color:var(--ink); }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th, td { text-align:left; padding:7px 6px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { position:sticky; top:44px; background:var(--bg); font-weight:600; }
+  td.n { text-align:right; white-space:nowrap; }
+  tr.done td { opacity:.45; text-decoration:line-through; }
+  .tot { font-weight:600; margin:8px 0; }
+  .pill { display:inline-block; font-size:11.5px; padding:1px 7px; border-radius:20px; background:var(--line); color:var(--ink); }
+  .pill.own { background:#d9e7d3; color:#2d4a29; } .pill.warn { background:#f3dfc9; color:#6a3d16; }
+  .scroll { overflow-x:auto; }
+  pre { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px; overflow:auto; font-size:12.5px; }
+  @media (max-width:640px) { .hide-sm { display:none; } th { top:44px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Апартамент 75 – Младост 4, София</h1>
+  <div class="sub">Интериорен проект: 3D модел, чертежи, спецификации, списък за пазаруване и изходни файлове за техническия екип. Обновено: <span id="upd"></span></div>
+</header>
+<nav>
+  <a href="#model">3D модел</a><a href="#plans">Чертежи</a><a href="#shop">Пазаруване</a><a href="#joinery">Мебели по поръчка</a>
+  <a href="#install">Ел. и ВиК</a><a href="#objects">Всички размери</a><a href="#audit">Одит</a><a href="#source">Файлове</a>
+</nav>
+<main>
+  <h2 id="model">3D модел</h2>
+  <a class="hero" href="viewer/"><img src="img/hero.jpg" alt="3D модел"><div>Отвори 3D модела → врати и чекмеджета се отварят с докосване, има измерване</div></a>
+
+  <h2 id="plans">Чертежи</h2>
+  <div class="bar"><a id="allpdf" href="plans/Апартамент 75 - Комплект чертежи.pdf">⬇ Целият комплект (PDF)</a></div>
+  <div class="grid" id="plangrid"></div>
+
+  <h2 id="shop">Списък за пазаруване</h2>
+  <div class="sub">Отметките се пазят на това устройство. Цените са ориентировъчни – провери в магазина.</div>
+  <div class="bar">
+    <select id="fRoom"><option value="">Всички помещения</option></select>
+    <select id="fShop"><option value="">Всички магазини</option></select>
+    <select id="fStat"><option value="">Всички</option><option value="todo">Некупени</option><option value="done">Купени</option></select>
+    <input type="search" id="fQ" placeholder="Търси…">
+    <a id="csv" href="data/shopping.csv">⬇ CSV</a><a href="data/shopping.xlsx">⬇ Excel</a>
+  </div>
+  <div class="tot" id="tot"></div>
+  <div class="scroll"><table id="shopT"><thead><tr><th></th><th>Помещение</th><th>Артикул</th><th class="hide-sm">Продукт</th><th>Магазин</th><th class="n">Бр.</th><th class="n">Цена €</th></tr></thead><tbody></tbody></table></div>
+
+  <h2 id="joinery">Мебели по поръчка (за дърводелеца)</h2>
+  <div class="sub">Размерите са от 3D модела, в см. Всички изделия да се премерят на място преди производство.</div>
+  <div class="scroll"><table id="joinT"><thead><tr><th>Изделие</th><th>Ш × Д × В (см)</th><th>Позиция</th><th>Описание</th></tr></thead><tbody></tbody></table></div>
+
+  <h2 id="install">Електро и ВиК</h2>
+  <div id="installDiv"></div>
+
+  <h2 id="objects">Всички обекти и размери</h2>
+  <div class="bar"><input type="search" id="oQ" placeholder="Търси обект (напр. K_front, Sofa, Wardrobe)…"></div>
+  <div class="scroll"><table id="objT"><thead><tr><th>Обект</th><th>Помещение</th><th>Ш × Д × В (см)</th><th class="hide-sm">Позиция мин. (x, y, z см)</th><th>Бележка</th></tr></thead><tbody></tbody></table></div>
+
+  <h2 id="audit">Одит по правилата</h2>
+  <div id="auditDiv"></div>
+
+  <h2 id="source">Изходни файлове</h2>
+  <ul id="srcList"></ul>
+</main>
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const cm = v => Math.round(v * 100);
+function store(k, v) { try { if (v === undefined) return JSON.parse(localStorage.getItem(k) || "{}"); localStorage.setItem(k, JSON.stringify(v)); } catch (e) { return {}; } }
+fetch("data/site.json").then(r => r.json()).then(S => {
+  $("#upd").textContent = S.updated;
+  $("#plangrid").innerHTML = S.plans.map(p => `<div class="card"><a href="plans/${encodeURIComponent(p.png)}"><img loading="lazy" src="plans/${encodeURIComponent(p.png)}" alt=""></a><div class="t"><b>${esc(p.title)}</b><br><a href="plans/${encodeURIComponent(p.pdf)}">PDF</a><a href="plans/${encodeURIComponent(p.png)}">PNG</a></div></div>`).join("");
+  // shopping
+  const done = store("apt75-done"); const items = S.shopping;
+  const rooms = [...new Set(items.map(i => i.room))], shops = [...new Set(items.map(i => i.shop))];
+  $("#fRoom").innerHTML += rooms.map(r => `<option>${esc(r)}</option>`).join(""); $("#fShop").innerHTML += shops.map(r => `<option>${esc(r)}</option>`).join("");
+  function draw() {
+    const R = $("#fRoom").value, Sh = $("#fShop").value, St = $("#fStat").value, Q = $("#fQ").value.toLowerCase();
+    let sum = 0, sumAll = 0, left = 0;
+    const rows = items.map((i, k) => {
+      const id = i.id || k, d = !!done[id], price = (+i.price_eur || 0) * (+i.qty || 1);
+      if (i.status !== "OWNED") { sumAll += price; if (!d) left += price; }
+      if ((R && i.room !== R) || (Sh && i.shop !== Sh) || (St === "todo" && d) || (St === "done" && !d)) return "";
+      if (Q && !(i.item + " " + i.product + " " + i.brand + " " + (i.note || "")).toLowerCase().includes(Q)) return "";
+      if (i.status !== "OWNED") sum += price;
+      return `<tr class="${d ? "done" : ""}"><td><input type="checkbox" data-id="${esc(id)}" ${d ? "checked" : ""} ${i.status === "OWNED" ? "disabled" : ""}></td><td>${esc(i.room)}</td><td>${esc(i.item)}${i.status === "OWNED" ? ' <span class="pill own">имаме го</span>' : ""}${i.size_match && /не|no|diff|разл/i.test(i.size_match) ? ' <span class="pill warn">размер</span>' : ""}<div class="sub">${esc(i.size || "")}</div></td><td class="hide-sm">${i.url ? `<a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.product)}</a>` : esc(i.product)}<div class="sub">${esc(i.note || "")}</div></td><td>${i.url ? `<a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.shop)}</a>` : esc(i.shop)}</td><td class="n">${esc(i.qty)}</td><td class="n">${i.status === "OWNED" ? "–" : price ? price.toFixed(0) : "?"}</td></tr>`;
+    }).join("");
+    $("#shopT tbody").innerHTML = rows;
+    $("#tot").textContent = `Показани: ${sum.toFixed(0)} € · Общо: ${sumAll.toFixed(0)} € · Остава: ${left.toFixed(0)} €`;
+  }
+  ["#fRoom", "#fShop", "#fStat"].forEach(s => $(s).onchange = draw); $("#fQ").oninput = draw;
+  $("#shopT").addEventListener("change", e => { if (e.target.dataset.id !== undefined) { done[e.target.dataset.id] = e.target.checked; store("apt75-done", done); draw(); } });
+  draw();
+  // joinery
+  $("#joinT tbody").innerHTML = S.joinery.map(j => `<tr><td><b>${esc(j.name)}</b></td><td class="n">${j.w} × ${j.d} × ${j.h}</td><td class="sub">${esc(j.pos)}</td><td>${esc(j.desc)}</td></tr>`).join("");
+  // install + audit (pre-rendered html)
+  $("#installDiv").innerHTML = S.install_html; $("#auditDiv").innerHTML = S.audit_html;
+  // objects
+  function drawObj() { const Q = $("#oQ").value.toLowerCase(); $("#objT tbody").innerHTML = S.objects.filter(o => !Q || (o.name + " " + o.room + " " + (o.note || "")).toLowerCase().includes(Q)).slice(0, 400).map(o => `<tr><td>${esc(o.name)}</td><td>${esc(o.room)}</td><td class="n">${o.w} × ${o.d} × ${o.h}</td><td class="hide-sm sub">${o.x}, ${o.y}, ${o.z}</td><td class="sub">${esc(o.note || "")}</td></tr>`).join(""); }
+  $("#oQ").oninput = drawObj; drawObj();
+  $("#srcList").innerHTML = S.sources.map(s => `<li><a href="${esc(s.href)}">${esc(s.name)}</a> – <span class="sub">${esc(s.desc)}</span></li>`).join("");
+});
+</script>
+</body>
+</html>
