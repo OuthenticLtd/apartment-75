@@ -55,13 +55,18 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import { Reflector } from "three/addons/objects/Reflector.js";
+import { MeshoptDecoder } from "three/addons/libs/meshopt_decoder.module.js";
 
 const canvas = document.getElementById("c");
-const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true });
-renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: "high-performance" });
+// pixel ratio capped: 1.5 looks the same at phone/laptop viewing distance and halves the pixels of a 2-3x screen
+const FULL_PR = Math.min(devicePixelRatio, 1.5), MOVE_PR = Math.max(1, FULL_PR * 0.67);   // lower resolution only while something keeps moving
+renderer.setPixelRatio(FULL_PR);
+// render on demand: nothing is drawn while nothing changes
+let needs = 2, lastActive = 0; function invalidate() { needs = 2; lastActive = performance.now(); }
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.0;
-renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap; renderer.localClippingEnabled = true;
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap; renderer.shadowMap.autoUpdate = false; renderer.localClippingEnabled = true;   // static sun: shadow map re-rendered only when something changes
 renderer.toneMappingExposure = 1.05;
 const scene = new THREE.Scene(); scene.background = new THREE.Color(getComputedStyle(document.body).backgroundColor);
 { const c = document.createElement("canvas"); c.width = 2; c.height = 256; const g = c.getContext("2d"); const gr = g.createLinearGradient(0, 0, 0, 256);
@@ -73,7 +78,7 @@ const sun = new THREE.DirectionalLight(0xfff0dc, 1.1); sun.position.set(-2.0, 8.
 sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048); sun.shadow.bias = -0.0005; sun.shadow.normalBias = 0.02;
 Object.assign(sun.shadow.camera, { left: -6, right: 6, top: 6, bottom: -6, near: 1, far: 30 }); scene.add(sun, sun.target);
 const camera = new THREE.PerspectiveCamera(50, 1, 0.03, 200);
-const controls = new OrbitControls(camera, canvas); controls.enableDamping = true;
+const controls = new OrbitControls(camera, canvas); controls.enableDamping = true; controls.addEventListener("change", invalidate);
 
 // Blender (x right, y facade, z up) -> glTF (x, z, -y). Views use Blender coords.
 const B = (x, y, z) => new THREE.Vector3(x, z, -y);
@@ -91,11 +96,11 @@ const VIEWS = {
   balcony: { eye: B(3.85, 5.85, 1.55), look: B(6.2, 6.5, 1.0), hfov: 105, walls: "full" },
 };
 let hfov = 60;
-function setFov(h) { hfov = h; const a = innerWidth / innerHeight; camera.fov = Math.min(150, THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(THREE.MathUtils.degToRad(h) / 2) / a))); camera.updateProjectionMatrix(); const s = document.getElementById("fov"); if (s) s.value = h; }
+function setFov(h) { hfov = h; const a = innerWidth / innerHeight; camera.fov = Math.min(150, THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(THREE.MathUtils.degToRad(h) / 2) / a))); camera.updateProjectionMatrix(); invalidate(); const s = document.getElementById("fov"); if (s) s.value = h; }
 controls.minDistance = 0.05;
 const ray = new THREE.Raycaster(), ndc = new THREE.Vector2();
 let lookMode = false, yaw = 0, pitch = 0;
-function applyLook() { camera.rotation.set(pitch, yaw, 0, "YXZ"); }
+function applyLook() { camera.rotation.set(pitch, yaw, 0, "YXZ"); invalidate(); }
 function go(v) {
   const V = VIEWS[v]; camera.position.copy(V.eye); setFov(V.hfov); setWalls(V.walls);
   ceilings.forEach(c => c.visible = !!V.look); document.getElementById("ceil").classList.toggle("on", !!V.look);
@@ -108,7 +113,7 @@ function go(v) {
 }
 // look-around: drag moves the picture with the finger (like Street View); pinch / wheel / two fingers = walk
 const ptrs = new Map(); let pinch0 = null;
-function walk(dist, side = 0) { const f = new THREE.Vector3(-Math.sin(yaw), 0, -Math.cos(yaw)), r = new THREE.Vector3(Math.cos(yaw), 0, -Math.sin(yaw)); camera.position.addScaledVector(f, dist).addScaledVector(r, side); }
+function walk(dist, side = 0) { const f = new THREE.Vector3(-Math.sin(yaw), 0, -Math.cos(yaw)), r = new THREE.Vector3(Math.cos(yaw), 0, -Math.sin(yaw)); camera.position.addScaledVector(f, dist).addScaledVector(r, side); invalidate(); }
 canvas.addEventListener("pointerdown", (e) => { if (!lookMode) return; ptrs.set(e.pointerId, [e.clientX, e.clientY]); try { canvas.setPointerCapture(e.pointerId); } catch (_) {} if (ptrs.size === 2) { const [a, b] = [...ptrs.values()]; pinch0 = { d: Math.hypot(a[0] - b[0], a[1] - b[1]), y: (a[1] + b[1]) / 2 }; } });
 canvas.addEventListener("pointermove", (e) => {
   if (!lookMode || !ptrs.has(e.pointerId)) return;
@@ -122,15 +127,15 @@ canvas.addEventListener("wheel", (e) => { if (!lookMode) return; e.preventDefaul
 addEventListener("keydown", (e) => { if (!lookMode) return; const s = 0.12; ({ w: () => walk(s), s: () => walk(-s), a: () => walk(0, -s), d: () => walk(0, s), ArrowUp: () => walk(s), ArrowDown: () => walk(-s), ArrowLeft: () => { yaw += 0.08; applyLook(); }, ArrowRight: () => { yaw -= 0.08; applyLook(); } }[e.key] || (() => {}))(); });
 canvas.addEventListener("dblclick", (e) => { if (!lookMode || !model) return; ndc.set(e.clientX / innerWidth * 2 - 1, -(e.clientY / innerHeight) * 2 + 1); ray.setFromCamera(ndc, camera);
   const h = ray.intersectObject(model, true).find(h => h.object.visible && h.face && Math.abs(h.face.normal.clone().transformDirection(h.object.matrixWorld).y) > 0.8 && h.point.y < 0.3);
-  if (h) { camera.position.set(h.point.x, 1.55, h.point.z); } });
+  if (h) { camera.position.set(h.point.x, 1.55, h.point.z); invalidate(); } });
 // walls: full / cut at 1.20 m (dollhouse) / hidden
 const walls = []; const cutPlane = new THREE.Plane(new THREE.Vector3(0, -1, 0), 1.2);
 let wallMode = "cut";
-function setWalls(m) { wallMode = m; walls.forEach(w => { w.visible = m !== "hide"; w.material.clippingPlanes = m === "cut" ? [cutPlane] : null; w.material.needsUpdate = true; });
+function setWalls(m) { wallMode = m; walls.forEach(w => { w.visible = m !== "hide"; w.material.clippingPlanes = m === "cut" ? [cutPlane] : null; w.material.needsUpdate = true; }); renderer.shadowMap.needsUpdate = true; invalidate();
   document.querySelectorAll("[data-walls]").forEach(b => b.classList.toggle("on", b.dataset.walls === m)); }
 // textures: world-space box UVs so procedural Blender materials get real surfaces
 const TL = new THREE.TextureLoader();
-function tex(name, rep) { const t = TL.load("tex/" + name); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.colorSpace = name.includes("_diff") ? THREE.SRGBColorSpace : THREE.NoColorSpace; t.anisotropy = 8; return t; }
+function tex(name, rep) { const t = TL.load("tex/" + name, invalidate); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.colorSpace = name.includes("_diff") ? THREE.SRGBColorSpace : THREE.NoColorSpace; t.anisotropy = 8; return t; }
 function tileTex(base, grout, cells) { const c = document.createElement("canvas"); c.width = c.height = 512; const g = c.getContext("2d"); g.fillStyle = grout; g.fillRect(0, 0, 512, 512);
   const s = 512 / cells; for (let i = 0; i < cells; i++) for (let j = 0; j < cells; j++) { const v = 0.94 + Math.random() * 0.1; g.fillStyle = base(v); g.fillRect(i * s + 2, j * s + 2, s - 4, s - 4); }
   const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.colorSpace = THREE.SRGBColorSpace; return t; }
@@ -153,11 +158,11 @@ function boxUV(mesh, scale) {
     uv[2 * i] = u * scale; uv[2 * i + 1] = w * scale; }
   g.setAttribute("uv", new THREE.BufferAttribute(uv, 2)); }
 
-const pivots = [], ceilings = [];
+const pivots = [], ceilings = [], reflectors = [], shared = {};
 let model;
 const draco = new DRACOLoader(); draco.setDecoderPath("https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/libs/draco/gltf/");
-const loader = new GLTFLoader(); loader.setDRACOLoader(draco);
-loader.load("model.glb?v=7", (g) => {
+const loader = new GLTFLoader(); loader.setDRACOLoader(draco); loader.setMeshoptDecoder(MeshoptDecoder);
+loader.load("model.glb?v=8", (g) => {
   model = g.scene; scene.add(model);
   model.traverse((o) => {
     const u = o.userData || {};
@@ -168,10 +173,10 @@ loader.load("model.glb?v=7", (g) => {
     if (/^(Ceiling|Bal_slab_ceiling)/.test(o.name)) ceilings.push(o);
     if (o.isMesh) {
       o.material.side = THREE.FrontSide; o.castShadow = true; o.receiveShadow = true;
-      if (/mirror/i.test(o.material.name || "")) { o.material = new THREE.MeshStandardMaterial({ name: o.material.name, color: 0xdfe5e8, metalness: 0.85, roughness: 0.12, envMapIntensity: 1.6, side: THREE.DoubleSide }); }
+      if (/mirror/i.test(o.material.name || "")) { o.material = shared["m:" + o.material.name] ||= new THREE.MeshStandardMaterial({ name: o.material.name, color: 0xdfe5e8, metalness: 0.85, roughness: 0.12, envMapIntensity: 1.6, side: THREE.DoubleSide }); }
       if (/glass|sheer/i.test(o.material.name || "")) {   // windows, shower glass, sheers: see-through
         const sheer = /sheer/i.test(o.material.name);
-        o.material = new THREE.MeshPhysicalMaterial({ name: o.material.name, color: sheer ? 0xf4efe6 : 0xdfe9ec, roughness: sheer ? 0.9 : 0.05, metalness: 0,
+        o.material = shared["g:" + o.material.name] ||= new THREE.MeshPhysicalMaterial({ name: o.material.name, color: sheer ? 0xf4efe6 : 0xdfe9ec, roughness: sheer ? 0.9 : 0.05, metalness: 0,
           transparent: true, opacity: sheer ? 0.55 : 0.12, depthWrite: false, side: THREE.DoubleSide });
         o.castShadow = false; o.renderOrder = 2;
       }
@@ -194,7 +199,7 @@ loader.load("model.glb?v=7", (g) => {
   model.traverse(o => { if (o.isMesh && /^(Wall_|W2_|Bath_tile_|Skirt|Glz_|BedWin_|BedBalDoor_|Bal_frame|Bal_pane|Bal_wall|Bal_door|Bal_handle|EntrDoor_|BedDoor_|BathDoor_|Door_casing|Door_leaf|Door_handle|Curtain|BedCurtain|Blind_)/.test(o.name)) { const k = o.material.uuid; o.material = wm[k] ||= o.material.clone(); walls.push(o); } });
 
   // real planar reflections on the mirrors (normal given in Blender axes)
-  const MIRRORS = { hall_mirror_lindbyn_lindbyn_glass: [1, 0, 0], round_mirror_ozze_ozze_glass: [1, 0, 0], Wardrobe_slide_back: [0, 1, 0], mirror_cabinet_monza_door_left_mirror: [0, -1, 0], mirror_cabinet_monza_door_right_mirror: [0, -1, 0], Hall_unit_tall_door1: [-1, 0, 0] };
+  const MIRRORS = { round_mirror_ozze_ozze_glass: [1, 0, 0], Wardrobe_slide_back: [0, 1, 0], mirror_cabinet_monza_door_left_mirror: [0, -1, 0], mirror_cabinet_monza_door_right_mirror: [0, -1, 0], BathDoor_mirror_out: [-1, 0, 0] };
   for (const [name, nb] of Object.entries(MIRRORS)) {
     let m = model.getObjectByName(name); if (m && !m.isMesh) { let mm = null; m.traverse(c => { if (!mm && c.isMesh) mm = c; }); m = mm; } if (!m) { console.warn('mirror missing', name); continue; }
     const n = new THREE.Vector3(nb[0], nb[2], -nb[1]);            // Blender -> three axes
@@ -209,10 +214,13 @@ loader.load("model.glb?v=7", (g) => {
     if (pr && !round) { const pb = new THREE.Box3().setFromObject(pr); r.position[ax] = (n[ax] > 0 ? pb.max[ax] + 0.001 : pb.min[ax] - 0.001); }
     if (pr && round) { const pb = new THREE.Box3().setFromObject(pr); r.position[ax] = (n[ax] > 0 ? pb.max[ax] + 0.001 : pb.min[ax] - 0.001); }
     scene.add(r); r.lookAt(r.position.clone().add(n)); r.updateMatrixWorld(true); m.attach(r);   // follows the door when it opens
+    // only the main camera updates a reflector (no mirror-in-mirror recursion), and only when draw() allows it
+    const upd = r.onBeforeRender; r.onBeforeRender = (rd, sc, cam) => { if (cam === camera && r.userData.allow) { r.userData.allow = false; r.userData.rendered = true; upd(rd, sc, cam); } };
+    reflectors.push(r);
     // the mirror body keeps its frame look; hide the flat grey face behind the reflector
   }
-  ceilings.forEach(c => c.visible = false);
-  window._dbg = { scene, camera, model, pivots, THREE, renderer, controls };
+  ceilings.forEach(c => c.visible = false); renderer.shadowMap.needsUpdate = true; invalidate();
+  window._dbg = { scene, camera, model, pivots, THREE, renderer, controls, reflectors, frame: (pr) => draw(false, pr || FULL_PR), settle: () => draw(true) };
   document.getElementById("load").remove(); go("all");
 }, (e) => { if (e.total) document.getElementById("pct").textContent = Math.round(e.loaded / e.total * 100) + "%"; },
    (err) => { document.getElementById("load").textContent = "Грешка при зареждане: " + err; });
@@ -234,17 +242,20 @@ function applyPivot(p) {
     p.position.copy(parent.worldToLocal(w1));
   }
 }
-function toggle(p, open) { p.userData.dir = (open === undefined ? (p.userData.dir > 0 || p.userData.t > 0.5 ? -1 : 1) : (open ? 1 : -1)); }
+function toggle(p, open) { invalidate(); p.userData.dir = (open === undefined ? (p.userData.dir > 0 || p.userData.t > 0.5 ? -1 : 1) : (open ? 1 : -1)); }
 document.getElementById("openall").onclick = () => pivots.forEach(p => toggle(p, true));
 document.getElementById("closeall").onclick = () => pivots.forEach(p => toggle(p, false));
 document.querySelectorAll("[data-view]").forEach(b => b.onclick = () => go(b.dataset.view));
 document.querySelectorAll("[data-walls]").forEach(b => b.onclick = () => setWalls(b.dataset.walls));
 document.getElementById("fov").oninput = (e) => setFov(+e.target.value);
-document.getElementById("ceil").onclick = (e) => { const v = !ceilings[0]?.visible; ceilings.forEach(c => c.visible = v); e.target.classList.toggle("on", v); };
+document.getElementById("ceil").onclick = (e) => { const v = !ceilings[0]?.visible; ceilings.forEach(c => c.visible = v); e.target.classList.toggle("on", v); renderer.shadowMap.needsUpdate = true; invalidate(); };
 
 // tap / click (ignore drags)
 let down = null, measuring = false, mPts = [], mLine = null, mLabel = null;
-document.getElementById("measure").onclick = (e) => { measuring = !measuring; e.target.classList.toggle("on", measuring); mPts = []; if (mLine) { scene.remove(mLine); mLine = null; } info(measuring ? "Измерване: докоснете две точки." : "Докоснете врата или чекмедже, за да се отвори/затвори."); };
+document.getElementById("measure").onclick = (e) => { measuring = !measuring; e.target.classList.toggle("on", measuring); mPts = []; if (mLine) { scene.remove(mLine); mLine = null; invalidate(); } info(measuring ? "Измерване: докоснете две точки." : "Докоснете врата или чекмедже, за да се отвори/затвори."); };
+// merged static meshes carry parts = [[name, firstTriangle], ...] (see optimize_glb.mjs)
+function partName(h) { const P = h.object.userData.parts; if (!P || h.faceIndex == null) return h.object.name; let lo = 0, hi = P.length - 1;
+  while (lo < hi) { const mid = (lo + hi + 1) >> 1; if (P[mid][1] <= h.faceIndex) lo = mid; else hi = mid - 1; } return P[lo][0]; }
 function info(t) { document.getElementById("info").innerHTML = t; }
 canvas.addEventListener("pointerdown", (e) => { down = [e.clientX, e.clientY]; });
 canvas.addEventListener("pointerup", (e) => {
@@ -257,7 +268,7 @@ canvas.addEventListener("pointerup", (e) => {
     if (mPts.length === 2) {
       if (mLine) scene.remove(mLine);
       mLine = new THREE.Line(new THREE.BufferGeometry().setFromPoints(mPts), new THREE.LineBasicMaterial({ color: 0xd04020, depthTest: false }));
-      mLine.renderOrder = 9; scene.add(mLine);
+      mLine.renderOrder = 9; scene.add(mLine); invalidate();
       const d = mPts[0].distanceTo(mPts[1]); const dx = Math.abs(mPts[0].x - mPts[1].x), dy = Math.abs(mPts[0].z - mPts[1].z), dz = Math.abs(mPts[0].y - mPts[1].y);
       info(`<b>${(d * 100).toFixed(1)} см</b> &nbsp; (по X ${(dx*100).toFixed(1)} · по Y ${(dy*100).toFixed(1)} · височина ${(dz*100).toFixed(1)} см)`); mPts = [];
     } else info("Измерване: втора точка…");
@@ -266,16 +277,35 @@ canvas.addEventListener("pointerup", (e) => {
   let o = hits[0].object;
   while (o && !o.userData.cab_kind) o = o.parent;
   if (o) { toggle(o); info(`<b>${o.userData.cab_label || o.name.replace("CAB_", "")}</b>`); }
-  else { let n = hits[0].object; info(`<b>${n.name}</b>`); }
+  else { info(`<b>${partName(hits[0])}</b>`); }
 });
 
-function resize() { const w = innerWidth, h = innerHeight; renderer.setSize(w, h, false); camera.aspect = w / h; setFov(hfov); }
+function resize() { const w = innerWidth, h = innerHeight; renderer.setSize(w, h, false); camera.aspect = w / h; setFov(hfov); invalidate(); }
 addEventListener("resize", resize); resize();
+// Mirrors: none in the overview (the mirror bodies keep their metallic look). In a room the LIVE nearest mirrors that
+// are in view and within NEAR m re-render every frame; the others refresh once the view has been still for SETTLE ms.
+const NEAR = 4.5, LIVE = 2, SETTLE = 200, _rp = new THREE.Vector3(), _fr = new THREE.Frustum(), _pm = new THREE.Matrix4(), _n = new THREE.Vector3(), _v = new THREE.Vector3();
+let dirty = true, movingFrames = 0;
+function draw(settled, pr = FULL_PR) {
+  if (renderer.getPixelRatio() !== pr) renderer.setPixelRatio(pr);
+  camera.updateMatrixWorld(); _fr.setFromProjectionMatrix(_pm.multiplyMatrices(camera.projectionMatrix, camera.matrixWorldInverse));
+  const cand = [];
+  for (const r of reflectors) { r.visible = lookMode; r.userData.allow = lookMode && settled;
+    if (lookMode && !settled) { r.updateWorldMatrix(true, false); const d = r.getWorldPosition(_rp).distanceTo(camera.position); const facing = _v.subVectors(_rp, camera.position).dot(_n.set(0, 0, 1).transformDirection(r.matrixWorld)) < 0;
+      if (d < NEAR && facing && _fr.intersectsObject(r)) cand.push([d, r]); } }
+  cand.sort((a, b) => a[0] - b[0]).slice(0, LIVE).forEach(([, r]) => r.userData.allow = true);
+  for (const r of reflectors) if (!r.userData.rendered && !r.userData.allow) r.visible = false;   // never show an empty (black) reflection
+  renderer.render(scene, camera); dirty = !settled || pr !== FULL_PR;
+}
 let last = performance.now();
 renderer.setAnimationLoop((now) => {
   const dt = Math.min(0.05, (now - last) / 1000); last = now;
-  for (const p of pivots) { const u = p.userData; if (u.dir) { u.t = Math.min(1, Math.max(0, u.t + u.dir * dt / 0.35)); applyPivot(p); if (u.t === 0 || u.t === 1) u.dir = 0; } }
-  if (!lookMode) controls.update(); renderer.render(scene, camera);
+  let moving = false;
+  for (const p of pivots) { const u = p.userData; if (u.dir) { u.t = Math.min(1, Math.max(0, u.t + u.dir * dt / 0.35)); applyPivot(p); if (u.t === 0 || u.t === 1) u.dir = 0; moving = true; } }
+  if (moving) { renderer.shadowMap.needsUpdate = true; invalidate(); }
+  if (!lookMode) controls.update();            // fires "change" (-> invalidate) while orbiting / damping
+  if (needs > 0) { needs--; movingFrames++; draw(false, movingFrames > 3 ? MOVE_PR : FULL_PR); }
+  else if (dirty && now - lastActive > SETTLE) { movingFrames = 0; draw(true); }
 });
 </script>
 </body>

@@ -326,13 +326,15 @@ class Sheet:
             (a, b) = self.P(x0, y0)
             self.ax.add_patch(FancyBboxPatch((a, b), self.L(x1 - x0), self.L(y1 - y0),
                                              boxstyle='round,pad=0,rounding_size=0.8', lw=lw, ec=c, fc='none', zorder=8.2))
-            self.circle((x0 + x1) / 2, (y0 + y1) / 2, 0.03, lw=lw * 0.7, ec=c, z=8.2)
-            self.circle((x0 + x1) / 2, y0 - 0.06, 0.02, lw=lw * 0.7, ec=c, z=8.2)
+            dx, dy = sh[2] if len(sh) > 2 else ((x0 + x1) / 2, (y0 + y1) / 2)
+            self.circle(dx, dy, 0.03, lw=lw * 0.7, ec=c, z=8.2)
+            self.circle(dx, y0 - 0.04, 0.02, lw=lw * 0.7, ec=c, z=8.2)
         elif k == 'hob':
             x0, y0, x1, y1 = sh[1]
             self.rect(x0, y0, x1, y1, lw=lw * 0.8, ec=c, z=8.2)
             w, h = x1 - x0, y1 - y0
-            for (u, v, r) in ((0.30, 0.27, 0.08), (0.30, 0.73, 0.10), (0.72, 0.27, 0.10), (0.72, 0.73, 0.08)):
+            zones = ((0.30, 0.50, 0.10), (0.72, 0.50, 0.085)) if min(w, h) < 0.4 else                     ((0.30, 0.27, 0.08), (0.30, 0.73, 0.10), (0.72, 0.27, 0.10), (0.72, 0.73, 0.08))
+            for (u, v, r) in zones:
                 self.circle(x0 + u * w, y0 + v * h, r, lw=lw * 0.6, ec=c, z=8.2)
         elif k == 'circ':
             cx, cy, r = sh[1]
@@ -442,8 +444,9 @@ class Sheet:
             fx0, fy0, fx1, fy1 = D['floor']
             self.rect(fx0, fy0, fx1, fy1, lw=lw * 0.5, ec=c, z=7.8)
             s = D['side']; self.line([((s[0] + s[2]) / 2, s[1]), ((s[0] + s[2]) / 2, s[3])], lw=lw * 1.8, color=c, z=8.3)
-            f = D['fixed']; self.line([(f[0], (f[1] + f[3]) / 2), (f[2], (f[1] + f[3]) / 2)], lw=lw * 1.8, color=c, z=8.3)
-            # bi-fold door 2 x 30, hinged at the side panel, folding inward: drawn half open
+            f = D.get('fixed')
+            if f: self.line([(f[0], (f[1] + f[3]) / 2), (f[2], (f[1] + f[3]) / 2)], lw=lw * 1.8, color=c, z=8.3)
+            # bi-fold door (2 leaves), hinged at the glass-panel side, folding inward: drawn half open
             b0, b1 = D['bf0'], D['bf1']
             hx, hy = b0[0], (b0[1] + b0[3]) / 2
             L1 = b0[2] - b0[0]

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Sheets 03.2 (kitchen) and 03.3 (TV/desk unit, wardrobe, arched bookcase) – elevations 1:25."""
+"""Sheets 03.2 (kitchen), 03.3 (TV/desk unit, hall) and 03.4 (wardrobe, bed wall, bookcase) – elevations."""
 from common import *
 import geom as G
 from shapely.geometry import box as sbox
@@ -97,7 +97,7 @@ def kitchen():
     S = Sheet('03.2', 'Кухня – план и изгледи', scale='1:25, 1:50')
     bb, bz = G.bb, G.bz
     sx0, sy0, sx1, sy1 = G.SINK
-    sxc = (sx0 + sx1) / 2
+    sxc = G.SINK_DRAIN[0]
     hx0, hy0, hx1, hy1 = G.HOB
     fr = G.FRIDGE; fp = bb('K_fridge_panel'); run_end = fp[0]
     ep = bb('K_end_panel')
@@ -118,7 +118,7 @@ def kitchen():
                                                     bbox=dict(boxstyle='square,pad=0.1', fc='white', ec='none'))
     S.text(0.86, (dl[1] + dl[3]) / 2, '← 18', fs=4.4)
     S.text(0.86, 0.80, '← фурна\nпод\nкотлона', fs=4.2, ha='left')
-    for nm in ('KitchenDown0', 'KitchenDown1', 'KitchenDown2', 'KitchenDown3', 'KitchenDown4'):
+    for nm in ('KitchenDown0', 'KitchenDown1'):
         x, y = G.lpos(nm)[:2]
         S.circle(x, y, 0.04, lw=0.4, ec='#7A4A00', z=12)
         S.circle(x, y, 0.015, lw=0.3, ec='#7A4A00', fc='#7A4A00', z=12)
@@ -145,9 +145,7 @@ def kitchen():
     A.l([(0, 0), (0, 2.60)], lw=0.8); A.l([(3.35, 0), (3.35, 2.60)], lw=0.8)
     fz = bz('K_fridge')
     rz(A, 'K_fridge', '#3C3C3C', U, lw=0.45)
-    gz = bz('K_fridge_gap'); A.l([(U(fr[2]), gz[0]), (U(fr[0]), gz[0])], lw=0.4, color='0.75')
-    for nm in ('K_fridge_handle_b', 'K_fridge_handle_t'):
-        rz(A, nm, '0.15', U, z=7, lw=0.2)
+    gz = (bz('K_fridge_doorF')[1] + bz('K_fridge_doorR')[0]) / 2; A.l([(U(fr[2]), gz), (U(fr[0]), gz)], lw=0.4, color='0.75')
     rz(A, 'K_fridge_feet', '0.2', U, lw=0.2)
     rz(A, 'K_fridge_panel', OAK, U, z=6.5, lw=0.45)
     rz(A, 'K_fridge_upper_front', WHITE, U)
@@ -164,7 +162,7 @@ def kitchen():
     A.r(U(ep[2]), 0.86, U(0.0), 0.90, fc=STONE, hatch='xxxx', lw=0.4, z=6.7)
     A.r(U(run_end), 0.86, U(ep[2]), 0.90, fc=STONE, lw=0.45)
     rz(A, 'K_splash_B', STONE, U, z=5, lw=0.25)
-    A.r(U(sx1), 0.69, U(sx0), 0.86, fc='none', ls=(0, (3, 1.5)), lw=0.3, z=7)
+    skz = bz('K_sink'); A.r(U(sx1), skz[0], U(sx0), 0.86, fc='none', ls=(0, (3, 1.5)), lw=0.3, z=7)
     rz(A, 'K_faucet', 'k', U, z=7.2, lw=0.2); rz(A, 'K_faucet_spout', 'k', U, z=7.2, lw=0.2)
     rz(A, 'K_coffee', '#3A3A3A', U, z=7, lw=0.3)
     for nm in ('K_socket_prep', 'K_socket_coffee', 'K_switch_led'):
@@ -187,7 +185,7 @@ def kitchen():
     A.call(uc(U, 'K_socket_prep', 0), 1.11, 2.60, 1.36, 'контакт 2× + ключ LED, h 111', fs=4.0)
     A.call(uc(U, 'K_socket_coffee', 0), 1.11, 1.30, 1.20, 'контакт 2×, h 111', fs=4.0)
     A.call(uc(U, 'K_coffee', 0), 1.20, 0.95, 1.37, 'кафемашина', fs=4.0)
-    A.call(U(sxc), 1.30, 2.02, 1.37, f'черна мивка, ос x {cm(sxc)}', fs=4.0)
+    A.call(U(sxc), 1.30, 1.85, 1.37, f'мивка Teka, черна\nос сифон x {cm(sxc)}', fs=4.0, ha='right')
     for i in range(5):
         n = f'K_upper_front_B{i}'
         A.t(uc(U, n, 0), 2.05, USE_BG.get(G.prop(n, 'use'), '').replace(' ', '\n', 1), fs=4.0, color='0.35', z=8)
@@ -228,11 +226,11 @@ def kitchen():
     hc = (hy0 + hy1) / 2
     CU = 1.60
     B.call(hc, 1.575, CU, 1.66, 'абсорбатор телескопичен 60\nHansa OTP 6243 BGH, черен;\nрециркулация (въгл. филтър)', fs=4.2)
-    B.call(hc, 0.905, CU, 1.06, f'индукционен котлон\ny {cm(hy0)}–{cm(hy1)}', fs=4.2)
+    B.call(hc, 0.905, CU, 1.06, f'домино котлон Hansa, 2 зони\ny {cm(hy0)}–{cm(hy1)}', fs=4.2)
     B.call(hc, 0.50, CU, 0.66, 'фурна Hansa BOES68465\nпод котлона', fs=4.2)
     B.call(hc, 0.17, CU, 0.40, 'чекмедже под фурната', fs=4.2)
     B.call(uc(None or (lambda v: v), 'K_drawerL0', 1), 0.30, CU, 0.18, 'изтеглящ се шкаф 18;\nзад него контакт фурна h 30', fs=4.2)
-    B.call(uc(lambda v: v, 'K_conn_hob', 1), 0.55, CU, -0.08, 'кутия котлон 400 V / 32 A, h 55', fs=4.2)
+    B.call(uc(lambda v: v, 'K_conn_hob', 1), 0.55, CU, -0.08, 'кутия котлон 230 V / 20 A (домино 3 kW), h 55', fs=4.2)
     B.call(uc(lambda v: v, 'K_conn_hood', 1), 1.90, CU, 2.05, 'контакт абсорбатор\nв горния шкаф, h 190', fs=4.2)
     B.call(hc, 2.30, CU, 2.40, 'шкаф над абсорбатора', fs=4.2)
     B.call(0.20, 0.45, -0.14, -0.30, 'разрез през ъгъла', fs=4.4, ha='left')
@@ -249,7 +247,8 @@ def kitchen():
             '• Долни фронтове светъл дъб, каналова дръжка под плота; горни – топло бяло мат, до тавана.\n'
             f'• Заден ред от ъгъла: ъгъл LeMans II 450 зад врата 50 | мивка 60 с кошове | СМ 45 | чекмеджета 55; край x {cm(run_end)}.\n'
             f'• Г-част: фурна Hansa BOES68465 под котлона (y {cm(od[1])}–{cm(od[3])}), изтеглящ се шкаф 18; краят е при y {cm(ep[3])} (линия на касата).\n'
-            f'• Мивка Teka Stone 50 B-TG, черна композитна, корито {cm(sx1 - sx0)}×{cm(sy1 - sy0)}, ос x = {cm(sxc)}. Котлон y {cm(hy0)}–{cm(hy1)}.\n'
+            f'• Мивка Teka Stone 50 B-TG, черна, {G.wdh("K_sink", z=False)} с отцедник (корито 38×41), ос сифон x = {cm(sxc)}; смесител Teka 934.\n'
+            f'  Котлон: домино Hansa BHC36177 (2 зони, 30 cm), центриран над фурната, y {cm(hy0)}–{cm(hy1)}.\n'
             '• Хладилник Samsung RB38C650EB1/EF (59,5×203×65,8), свободностоящ – зад него щранг и водомер (лист 05);\n'
             '  дъбов панел до тавана; шкаф горе с контакта на хладилника; 5 cm вентилация.\n'
             '• Плот и гръб: светъл топъл камък/кварц, плот 4 cm, гръб до h 145; черни контакти h 111 (лист 04).\n'
@@ -316,23 +315,22 @@ def others():
     T.l([(U(lp[1]), 0.755), (U(lp[1]), lsz[0] + 0.05)], lw=0.6, color='k', z=8)
     T.r(U(ls_[3]), lsz[0], U(ls_[1]), lsz[1], fc='#F1EBDD', lw=0.35, z=8)
     # task chair (dashed, in front)
-    cs = bb('LvChair_seat'); csz = bz('LvChair_seat'); cbk = bz('LvChair_back')
+    cs = bb('LvChair_shell'); csz = bz('LvChair_shell'); cbz_ = bz('LvChair_base'); cbb = bb('LvChair_base')
     T.r(U(cs[3]), csz[0], U(cs[1]), csz[1], fc='none', lw=0.3, ls=ds, z=8)
-    T.r(U(cs[3]) + 0.04, cbk[0], U(cs[1]) - 0.04, cbk[1], fc='none', lw=0.3, ls=ds, z=8)
     pc = U((cs[1] + cs[3]) / 2)
-    T.l([(pc, 0.06), (pc, csz[0])], lw=0.3, ls=ds, color='k', z=8)
-    T.l([(pc - 0.27, 0.03), (pc + 0.27, 0.03)], lw=0.3, ls=ds, color='k', z=8)
+    T.l([(pc, cbz_[1]), (pc, csz[0])], lw=0.3, ls=ds, color='k', z=8)
+    T.l([(U(cbb[3]), 0.06), (U(cbb[1]), 0.06)], lw=0.3, ls=ds, color='k', z=8)
     du = [U(d[1]) - U(d[3]) for d in doors]
     T.call(U(4.70), 2.30, 0.20, 2.45, f'5 горни врати на панти, soft-close 110°: 2×{cm(du[0])} + 3×{cm(du[2])}', fs=4.4)
     T.call(U(3.60), 1.70, 2.10, 1.95, 'рифелован дъбов гръб h 50–185', fs=4.4)
     T.call(U(3.05), 1.30, 2.30, 1.62, 'рафтове дъб + LED', fs=4.4)
-    T.call(uc(U, 'WU_desklamp_shade', 1), 1.10, 2.10, 1.30, 'настолна лампа', fs=4.4)
+    T.call(uc(U, 'WU_desklamp_shade', 1), 1.10, 2.10, 1.30, 'настолна лампа IKEA SKURUP', fs=4.4)
     T.call(U(3.50), 0.72, 2.05, 0.81, f'бюро {cm(dk[3] - dk[1])}×{cm(dk[2] - dk[0])}, плот 4 cm', fs=4.4, ha='right')
     T.call(uc(U, 'WU_step', 1), 0.35, 1.55, 0.58, 'крак-панел при стъпалото', fs=4.4)
     T.call(uc(U, 'WU_desk_side', 1), 0.20, 2.62, 0.30, 'страница бюро', fs=4.4)
     T.call(uc(U, 'Desk_socket', 1), 0.86, 2.36, 0.95, 'контакт 2× + USB-C, h 86', fs=4.2, ha='right')
-    T.call(uc(U, 'LvChair_seat', 1), 0.43, 2.62, 0.10, 'работен стол (пунктир)', fs=4.2)
-    T.call(U(4.70), 0.53, 1.20, 0.60, 'саундбар', fs=4.4)
+    T.call(uc(U, 'LvChair_shell', 1), 0.50, 2.62, 0.10, 'работен стол IKEA LÅNGFJÄLL (пунктир)', fs=4.2)
+    T.call(uc(U, 'WU_soundbar', 1), G.zc('WU_soundbar'), 0.55, -0.45, 'саундбар Samsung HW-B450F', fs=4.4)
     T.call(U(4.70), 0.30, 1.20, 0.33, 'конзола окачена, 3 врати', fs=4.4)
     T.call(uc(U, 'TV_socket', 1), 0.99, 0.20, 1.62, 'зад ТВ: контакт + RJ45/ТВ h 99', fs=4.4)
     T.call(uc(U, 'Media_socket', 1), 0.28, 0.20, -0.30, 'в конзолата: контакти h 28, рутер', fs=4.4)
@@ -420,7 +418,7 @@ def others():
     H.call(W_(1.85), 0.95, L_, 1.00, 'прахосмукачка (стик)', fs=4.2, ha='right')
     H.call(W_(2.09), 0.65, L_, 0.62, 'дъска за гладене', fs=4.2, ha='right')
     H.call(W_(2.17), 0.05, L_, 0.20, 'моп + метла', fs=4.2, ha='right')
-    H.call(W_(2.17), 2.50, L_, 2.75, f'2 врати {cm(d0[3] - d0[1])} (лявата огледална)', fs=4.2, ha='right')
+    H.call(W_(2.17), 2.50, L_, 2.75, f'2 врати {cm(d0[3] - d0[1])}', fs=4.2, ha='right')
     H.dimc([W_(y) for y in (2.33, tl[3], tl[1], sd[3], sd[1])], 'x', -0.35, ref=0, side=-1, fs=4.2,
            labels=[None, f'колона {cm(tl[3] - tl[1])}', f'пейка {cm(bs[3] - bs[1])}', None])
     H.dimc([0, W_(sd[1])], 'x', -0.60, ref=0, side=-1, fs=4.4)
@@ -437,7 +435,7 @@ def others():
             '  вътре контакти + данни h 28 (рутер / ТВ бокс). ТВ 65" на стенна стойка, зад него контакт + RJ45/ТВ h 99.\n'
             '• LED 24 V: под горните шкафове, под конзолата, под рафтовете; захранващите блокове – в горния шкаф (лист 04/06).\n'
             f'• Мебел за антре x {cm(bb("Hall_unit_side")[0])}–{cm(G.X_COR1)}: пейка с дъбов гръб, закачалки, рафт за шапки с LED, шкаф горе с врата на панти;\n'
-            '  колона за почистване с 2 врати (едната огледална): рафтове, стик прахосмукачка със зарядно (контакт вътре), дъска, моп и метла.',
+            '  колона за почистване с 2 врати: рафтове, стик прахосмукачка със зарядно (контакт вътре), дъска, моп и метла.',
             4.8, va='top', linespacing=1.5)
     S.S = 40.0; S.scale_bar(330, 60, n=2, label='М 1:25')
     S.title_block()
@@ -492,7 +490,7 @@ def others2():
     W.call(U(5.80), G.zc('Wint_B_rail0'), -0.20, 2.10, f'B: лост h {cm(G.zc("Wint_B_rail0"))}', fs=4.4, ha='right')
     W.call(U(5.80), G.zc('Wint_B_rail1'), -0.20, 1.10, f'B: лост h {cm(G.zc("Wint_B_rail1"))}', fs=4.4, ha='right')
     W.call(U(5.90), G.zc('Wint_B_drawer1'), -0.20, 0.30, f'B: 2 чекмеджета под долния лост\nh {cm(bz("Wint_B_drawer_carc")[0])}–{cm(bz("Wint_B_drawer_carc")[1])}', fs=4.4, ha='right')
-    W.call(U(6.44), 1.60, -0.20, 1.60, 'запълващ панел (отпред,\nпред дъбовата колона)', fs=4.2, ha='right')
+    W.call(U(6.44), 1.60, -0.20, 1.60, 'запълващ панел (отпред,\nпред колоната)', fs=4.2, ha='right')
     W.dimc([0, U(fl[0]), U(dvx[2]), U(dvx[0]), Wd], 'x', 2.82, ref=2.60, fs=4.4)
     W.dimc([0, U(bb('Wardrobe_track_bot')[2]), Wd], 'x', -0.42, ref=0, side=-1, fs=4.6,
            labels=[None, 'плъзгащи врати 2×~70 (общо 176)'])
@@ -518,7 +516,7 @@ def others2():
     rz(A, f'BW_{t}_door0', OAK, V, lw=0.4, z=6.2)
     rz(A, f'BW_{t}_door1', OAK, V, lw=0.4, z=6.2)
     nb = bb(f'BW_{t}_niche_back')
-    A.r(V(nb[2]), bz('Bed_ns_wardrobe')[1], V(nb[0]), 1.40, fc='#F3E8D3', lw=0.25, z=5.8)
+    A.r(V(nb[2]), bz('Bed_ns_wardrobe')[1], V(nb[0]), 1.40, fc=OAK, lw=0.25, z=5.8)
     rz(A, f'BW_{t}_niche_led', '#E0A030', V, lw=0.3, z=6.4, ec='#E0A030')
     rz(A, 'WallLamp0_plate', 'k', V, lw=0.2, z=6.5)
     rz(A, 'WallLamp0_arm', 'k', V, lw=0.2, z=6.5)
@@ -538,7 +536,8 @@ def others2():
     A.call(V(6.62), 0.66, CU, 0.85, 'контакт h 66 (до него ключ)', fs=4.2)
     A.call(V(6.40), 1.397, CU, 1.70, 'LED под шкафа', fs=4.2)
     A.call(V(6.40), 2.0, CU, 2.20, 'мост над леглото (зад разреза)', fs=4.2)
-    A.call(V(6.636), 1.00, CU, 0.60, f'дъбов панел-табла h {cm(bz("Bed_wall_panel")[1])}', fs=4.2)
+    _pw = bb('Bed_wall_panel'); _pz = bz('Bed_wall_panel')
+    A.call(V((_pw[0] + _pw[2]) / 2), 1.00, CU, 0.60, f'ламелна табла (зад разреза)\nh {cm(_pz[0])}–{cm(_pz[1])}', fs=4.2)
     A.call(V(5.80), 0.42, CU, 0.18, 'легло (пунктир)', fs=4.2)
     t0 = bb(prefix='BW_t0')
     A.dimc([0, V(nb[0]), V(t0[0])], 'x', -0.42, ref=0, side=-1, fs=4.4)
@@ -547,16 +546,20 @@ def others2():
 
     # ---------------- bed wall elevation (looking +x at wall x = 6.65), u = 5.34 - y, 1:30
     S30 = 1000 / 30
-    K = E(S, 58, 26, 'СТЕНА ЗАД ЛЕГЛОТО – изглед', 'М 1:30; 2 еднакви дъбови колони 55×42, мост с 3 врати, дъбов панел-табла h 155',
+    _pw = bb('Bed_wall_panel'); _pz = bz('Bed_wall_panel')
+    K = E(S, 58, 26, 'СТЕНА ЗАД ЛЕГЛОТО – изглед', f'М 1:30; 2 еднакви дъбови колони, мост с 3 врати, ламелна дъбова табла {cm(_pw[3] - _pw[1])}×{cm(_pz[1] - _pz[0])} между тях',
           sc=S30)
     R = lambda y: G.Y_BED1 - y
-    span = R(bb('Bed_wall_panel')[1])
+    span = R(bb(prefix='BW_t0')[1])
     K.floor_ceiling(0, span)
     K.l([(0, 0), (0, 2.60)], lw=0.8); K.l([(span, 0), (span, 2.60)], lw=0.8)
     rz(K, 'Bed_wall_panel', OAK, R, axis=1, lw=0.4, z=5)
+    for _k in range(0):         # plain panel, no channels
+        _y = _pw[1] + (_pw[3] - _pw[1]) * _k / 6
+        K.l([(R(_y), _pz[0] + 0.02), (R(_y), _pz[1] - 0.02)], lw=0.25, color='#9C8B70', z=5.05)
     for t in ('t0', 't1'):
         tb = bb(prefix=f'BW_{t}')
-        K.r(R(tb[3]), 0, R(tb[1]), 2.60, fc='#F3E8D3', lw=0.45, z=5.5)
+        K.r(R(tb[3]), 0, R(tb[1]), 2.60, fc=WHITE, lw=0.45, z=5.5)
         rz(K, f'BW_{t}_plinth', '0.35', R, axis=1, lw=0.2, z=5.6)
         rz(K, f'BW_{t}_drawer', OAK, R, axis=1, lw=0.4, z=5.7)
         K.l([(R(tb[3]) + 0.02, bz(f'BW_{t}_drawer_gap')[0]), (R(tb[1]) - 0.02, bz(f'BW_{t}_drawer_gap')[0])], lw=0.2, color='0.4', z=5.8)
@@ -568,7 +571,6 @@ def others2():
         n = f'BW_bridge_door{i}'
         door(K, R(bb(n)[3]), R(bb(n)[1]), bz(n)[0], bz(n)[1], WHITE, hinge='L' if i < 2 else 'R')
     bl = bb('BW_bridge_led'); K.l([(R(bl[3]), 1.546), (R(bl[1]), 1.546)], lw=1.2, color='#E0A030', z=6)
-    rz(K, 'Bed_headboard', '#D9C29E', R, axis=1, lw=0.45, z=6)
     rz(K, 'Bed_platform', OAK, R, axis=1, lw=0.45, z=6.5)
     pl = bb('Bed_platform_plinth'); K.r(R(pl[3]), 0, R(pl[1]), 0.03, fc='0.35', lw=0.3, z=6.4)
     rz(K, 'Mattress', 'white', R, axis=1, lw=0.4, z=6.6)
@@ -584,50 +586,51 @@ def others2():
     K.call(R(t0[1] + 0.25), 1.00, CR, 1.30, 'ниша h 55,5–140 + лампа', fs=4.2)
     K.call(R(t0[1] + 0.25), 0.28, CR, 0.40, 'чекмедже h 8–47', fs=4.2)
     K.call(R(3.90), 2.10, CR, 1.95, 'мост над леглото: 3 врати + LED отдолу', fs=4.2)
-    K.call(R(3.40), 1.30, CR, 1.62, f'дъбов панел-табла h {cm(bz("Bed_wall_panel")[1])}', fs=4.2)
+    K.call(R(3.40), 1.30, CR, 1.62, f'ламелна дъбова табла {cm(_pw[3] - _pw[1])}×{cm(_pz[1] - _pz[0])}, h {cm(_pz[0])}–{cm(_pz[1])},\nламели 20 mm през 10 mm, като в нишите и ТВ стената', fs=4.2)
     K.call(R(3.60), 0.40, CR, 0.75, 'легло с повдигащ се матрак, ракла', fs=4.2)
     K.call(R(G.ctr('Bed_switch1')[1]), 0.66, -0.45, 0.30, 'ключ: лампа + кръстат\n/ девиаторен (таван), h 66', fs=4.2, ha='right')
     K.call(R(G.ctr('Bed_socket1')[1]), 0.66, -0.45, 0.75, 'контакт 2×, h 66', fs=4.2, ha='right')
     K.call(R(G.ctr('WallLamp1_shade')[1]), 1.20, -0.45, 1.25, 'лампа за четене', fs=4.2, ha='right')
     ys = [G.Y_BED1, t1[1], bb('Bed_platform')[3], bb('Bed_platform')[1], t0[3], t0[1]]
     K.dimc([R(y) for y in ys], 'x', -0.40, ref=0, side=-1, fs=4.0)
-    K.dimc([0, 0.08, 0.47, 0.555, 1.40, bz('Bed_wall_panel')[1], 2.60], 'y', -0.12, ref=0, fs=4.0)
+    K.dimc([0, 0.08, 0.47, 0.555, 1.40, 2.60], 'y', -0.12, ref=0, fs=4.0)
+    K.dimc([0, _pz[0], _pz[1], 2.60], 'y', span + 0.06, ref=span, side=-1, fs=4.0)
     K.dimc([0, bz('Bed_platform')[1], bz('Mattress')[1], 2.60], 'y', span + 1.60, ref=span, side=-1, fs=4.0)
     K.head(0, span, 2.75)
 
-    # ---------------- bookcase: wall x = 0, looking -x, u = y - y0
-    bc = bb('BC_back', 'BC_sideL', 'BC_sideR'); y0b = bc[1]
-    B = E(S, 318, 152, 'БИБЛИОТЕКА С АРКА – изглед', 'М 1:25; гипс + дъб; база с 2 чекмеджета')
+    # ---------------- bookcase: wall x = 0, looking -x, u = y - y0 (all BC_* parts read generically)
+    bc = bb(prefix='BC_'); y0b = bc[1]; bcz = bz(prefix='BC_')
+    B = E(S, 318, 152, 'БИБЛИОТЕКА – изглед', 'М 1:25; масивен дъб; база с 2 чекмеджета')
     Wb = bc[3] - bc[1]
     Vb = lambda y: y - y0b
     B.floor_ceiling(0, Wb)
-    B.on()
-    B.r(0, 0, Wb, 2.60, fc='#EFEAE2', lw=0.45, z=5)
+    parts = sorted(o['name'] for o in G.OBJS if o['name'].startswith('BC_'))
+    for n in parts:
+        if n.startswith(('BC_book', 'BC_vase')):
+            col = '#C9B48F' if n.startswith('BC_book') else '#BFC7C2'
+            rz(B, n, col, Vb, axis=1, lw=0.15, z=6.3)
+        elif n == 'BC_back':
+            rz(B, n, '#EFE6D6', Vb, axis=1, lw=0.3, z=5)
+        elif 'led' in n.lower():
+            b_ = bb(n); z_ = bz(n)
+            B.l([(Vb((b_[1] + b_[3]) / 2), z_[0]), (Vb((b_[1] + b_[3]) / 2), z_[1])], lw=1.0, color='#E0A030', z=7)
+        else:
+            rz(B, n, OAK, Vb, axis=1, lw=0.4 if n.startswith(('BC_side', 'BC_top', 'BC_drawer')) else 0.35,
+               z=6.1 if n.startswith('BC_drawer') else 6)
+    shelves = sorted((n for n in parts if n.startswith('BC_shelf')), key=lambda n: bz(n)[0])
     i0, i1 = Vb(bb('BC_sideL')[3]), Vb(bb('BC_sideR')[1])
-    rr = (i1 - i0) / 2; ztop = bz('BC_top')[0]
-    pts = [(i0, 0.0), (i0, ztop - rr)]
-    for k in range(0, 181, 6):
-        a = math.radians(180 - k)
-        pts.append(((i0 + i1) / 2 + rr * math.cos(a), ztop - rr + rr * math.sin(a)))
-    pts += [(i1, ztop - rr), (i1, 0.0)]
-    S.poly(pts, lw=0.35, ec='k', fc='#F8F5EF', z=5.2, closed=False)
-    rz(B, 'BC_base', OAK, Vb, axis=1, lw=0.35, z=6)
-    for n in ('BC_drawer0', 'BC_drawer1'):
-        rz(B, n, OAK, Vb, axis=1, lw=0.4, z=6.1)
-    for n in ('BC_shelf0.8', 'BC_shelf1.18', 'BC_shelf1.56'):
-        rz(B, n, OAK, Vb, axis=1, lw=0.35, z=6)
-    for n in ('BC_led_L', 'BC_led_R'):
-        b_ = bb(n); z_ = bz(n); B.l([(Vb((b_[1] + b_[3]) / 2), z_[0]), (Vb((b_[1] + b_[3]) / 2), z_[1])], lw=1.0, color='#E0A030', z=7)
     CB = Wb + 0.15
-    B.call(Wb / 2, 2.30, CB, 2.35, 'гипсова рамка, варова мазилка', fs=4.4)
-    B.call(Wb / 2, 0.30, CB, 0.30, 'дъбова база, 2 чекмеджета', fs=4.4)
-    B.call(i1 - 0.01, 1.30, CB, 1.30, 'LED профил вертикален', fs=4.4)
-    B.call(Wb / 2, 0.815, CB, 0.82, 'рафтове дъб 3 cm', fs=4.4)
-    B.call(Wb / 2, ztop - 0.05, CB, 2.0, f'арка R ≈ {cm(rr)}, връх h {cm(ztop)}', fs=4.4)
+    B.call(Wb / 2, (bcz[1] + bz('BC_top')[0]) / 2, CB, bcz[1] + 0.12, f'дъбов плот, h {cm(bcz[1])}', fs=4.4)
+    B.call(Wb / 2, 0.30, CB, 0.30, f'база h {cm(bz("BC_base")[1])}, 2 чекмеджета', fs=4.4)
+    if shelves:
+        B.call(i0 + 0.03, G.zc(shelves[0]), CB, 0.95, f'{len(shelves)} рафта дъб {cm(bz(shelves[0])[1] - bz(shelves[0])[0])} cm', fs=4.4)
+    B.call(i1 + 0.005, 1.80, CB, 1.75, f'страници дъб {cm(bb("BC_sideR")[3] - bb("BC_sideR")[1])} cm', fs=4.4)
+    B.call(Wb / 2, 2.30, CB, 2.35, 'стена над библиотеката – боя', fs=4.4)
     B.dimc([0, i0, i1, Wb], 'x', -0.55, ref=0, side=-1, fs=4.4)
-    B.dimc([0, bz('BC_drawer0')[1], bz('BC_base')[1], bz('BC_shelf0.8')[0], bz('BC_shelf1.18')[0], bz('BC_shelf1.56')[0],
-            ztop - rr, ztop, 2.60], 'y', -0.25, ref=0, fs=4.0)
-    B.t(Wb / 2, -0.85, f'y {cm(bc[1])}–{cm(bc[3])}; дълбочина {cm(bb("BC_frame")[2])} cm', fs=4.6, color='0.2')
+    zl = sorted(set(round(v, 3) for v in [0, bz('BC_drawer0')[1], bz('BC_base')[1]] + [bz(n)[0] for n in shelves]
+                    + [bz('BC_top')[0], bcz[1], 2.60]))
+    B.dimc(zl, 'y', -0.25, ref=0, fs=4.0)
+    B.t(Wb / 2, -0.85, f'y {cm(bc[1])}–{cm(bc[3])}; дълбочина {cm(bc[2] - bc[0])} cm', fs=4.6, color='0.2')
     B.head(0, Wb, 2.75)
 
     S.ptext(240, 120, 'Изпълнение / материали:', 6, weight='bold', va='top')
@@ -636,13 +639,14 @@ def others2():
             f'  релса до x {cm(bb("Wardrobe_track_bot")[2])} (задната огледална), запълващ панел x {cm(fl[0])}–{cm(fl[2])} пред колоната.\n'
             '• A: лост, рафт с LED, рафт за кутии, рафт за обувки. B: 2 лоста, рафт с LED,\n'
             '  2 чекмеджета под долния лост; LED с контакт на вратата.\n'
-            '• Стена зад леглото: 2 еднакви дъбови колони 55×42 – чекмедже h 8–47, плот h 47–55,5,\n'
+            '• Стена зад леглото: 2 еднакви колони 55×42 (изцяло дъб като нощните шкафчета: врати, ламелна ниша, чекмедже с черна дръжка; мостът – бял) – чекмедже h 8–47, плот h 47–55,5,\n'
             '  отворена ниша h 55,5–140 с лампа за четене на гърба и LED отгоре, шкаф h 140–260 с 2 врати.\n'
-            '• Мост над леглото h 155–260 с 3 врати (топло бяло), LED отдолу; дъбов панел-табла h 155\n'
-            '  по цялата стена; контакт и ключ h 66 във всяка ниша (кръстат и девиаторен – лист 04/06).\n'
+            f'• Мост над леглото h {cm(bz("BW_bridge_carc")[0])}–260 с 3 врати (топло бяло), LED отдолу. Тапицирана табла\n'
+            f'  {cm(_pw[3] - _pw[1])}×{cm(_pz[1] - _pz[0])} (h {cm(_pz[0])}–{cm(_pz[1])},) между колоните, ламели 20/10 mm като в нишите;\n'
+            '  леглото е без табла. Черни контакт и ключ h 66 върху ламелите във всяка ниша (кръстат и девиаторен – лист 04/06).\n'
             '• Легло с повдигащ се матрак (газови амортисьори) и ракла ~0,7 m³; матрак 160×200.\n'
-            f'• Библиотека y {cm(bc[1])}–{cm(bc[3])}: ГК/дървена конструкция, варова мазилка; рафтове масивен дъб 3 cm;\n'
-            '  база h 40 с 2 чекмеджета; вертикален LED профил 2700 K в бордовете. Формата на арката – по детайл.\n'
+            f'• Библиотека y {cm(bc[1])}–{cm(bc[3])}: {cm(bc[3] - bc[1])}×{cm(bc[2] - bc[0])}, h {cm(bcz[1])}, масивен дъб (като ТВ модула), {len(shelves)} рафта,\n'
+            f'  база h {cm(bz("BC_base")[1])} с 2 чекмеджета; стената зад и над нея – боя.\n'
             '• Всички размери да се проверят на място след шпакловка.',
             4.8, va='top', linespacing=1.5)
     S.S = 40.0; S.scale_bar(300, 64, n=2, label='М 1:25'); S.S = 1000 / 30; S.scale_bar(240, 64, n=1, label='М 1:30')

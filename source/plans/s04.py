@@ -28,7 +28,7 @@ SOCKETS = [
     ('K_conn_dw', 'box', 90, '{h}/К3 СМ', (1.0, -12.0), 'center', 0, 'СМ'),
     ('K_conn_fridge', 'box', 90, '{h}/К2 ХЛ (в шкафа)', (0, -8.0), 'center', 0, 'ХЛ'),
     ('K_conn_hood', 's1', 0, '{h}/К1 абсорб.', (4.6, 0), 'left', 0),
-    ('K_conn_hob', 'box', 0, '{h}/К5 котлон 400 V', (4.6, 2.2), 'left', 0.04, 'К'),
+    ('K_conn_hob', 'box', 0, '{h}/К5 котлон 230 V / 20 A', (4.6, 2.2), 'left', 0.04, 'К'),
     ('K_conn_oven', 's1', 0, '{h}/К4 фурна', (4.6, -1.2), 'left', -0.10),
     ('Dining_socket', 's1', 0, '{h}/S1', (4.2, 0), 'left', 0),
     ('Sofa_socket_L', 's1', 0, '{h}/S1', (4.2, -1.0), 'left', 0),
@@ -45,9 +45,10 @@ SOCKETS = [
     ('Bedroom_socket_door', 's1', 90, '{h}/S2', (5.0, 10.0), 'left', 0.10),
     ('Bed_socket0', 's2', 180, '{h}/S2', (-4.4, -2.0), 'right', 0),
     ('Bed_socket1', 's2', 180, '{h}/S2', (-4.4, 2.0), 'right', 0),
-    ('Dresser_socket', 's2', 0, '{h}/S2 тоалетка', (4.4, 0), 'left', 0),
+    ('Dresser_socket', 's2', 0, '{h}/S2 тоалетка', (4.4, -1.2), 'left', 0),
+    ('Vanity_mirror_feed', 'box', 0, '{h}/S2 LED огледало\n(кутия зад огледалото)', (5.6, 1.6), 'left', 0, 'О'),
     ('Bath_socket_ip44', 's1ip', 0, '{h}/B2 IP44', (3.8, 2.4), 'left', 0),
-    ('Towel_rail_conn', 'box', 90, '{h}/B2 сушилник IP44', (-1.0, -9.5), 'center', 0, 'ЛК'),
+    ('Towel_rail_conn', 'box', 90, '{h}/B2 лира IP44 (изход, без контакт)', (-1.0, -9.5), 'center', 0, 'ЛК'),
     ('Washer_socket', 's1ip', 270, '{h}/B1 IP44\nпералня', (0, -11.0), 'center', 0),
     ('Bal_socket_ip44', 's1ip', 180, '{h}/S3 IP44,\nс ключ', (-4.4, 0), 'right', 0),
     ('AC_isolator', 'box', 180, '{h} прекъсвач КЛ-Н IP65', (9.0, -1.0), 'left', 0, 'П'),
@@ -69,7 +70,7 @@ SWITCHES = [
 # lights: group letter -> list of (light name or object, kind)
 GROUPS = {
     'a': ([('AisleDown0', 'down'), ('AisleDown1', 'down'), ('LivingDown0', 'down'), ('LivingDown1', 'down'), ('LivingDown2', 'down')], 'L1'),
-    'b': ([(f'KitchenDown{i}', 'down') for i in range(5)], 'L1'),
+    'b': ([(f'KitchenDown{i}', 'down') for i in range(2)], 'L1'),
     'c': ([('Pendant_dining0_bulb', 'ceil'), ('Pendant_dining1_bulb', 'ceil')], 'L1'),
     'd': ([('Sconce0_up', 'wall0'), ('Sconce1_up', 'wall0'), ('PictureLight', 'pic0'), ('PictureLight2', 'pic0')], 'L1'),
     'f': ([('Balcony_wall_light_L', 'wall90')], 'L1'),
@@ -81,10 +82,10 @@ GROUPS = {
 }
 # LED strips: object -> group
 LEDS = [('K_led_B', 'e'), ('K_led_L0', 'e'), ('K_led_L1', 'e'), ('WU_led_upper', 'd'), ('WU_console_led', 'd'),
-        ('WU_shelf0_led', 'd'), ('Curtain_cove_led', 'd'), ('BC_led_L', 'd'), ('BC_led_R', 'd'),
+        ('WU_shelf0_led', 'd'), ('Curtain_cove_led', 'd'),
         ('Hall_unit_led', 'g'), ('BW_t0_niche_led', 'i'), ('BW_t1_niche_led', 'i'), ('BW_bridge_led', 'i'),
-        ('Wint_led_A', 'm'), ('Wint_led_B', 'm'), ('Mirror_led', 'p')]
-DRIVERS = [('K_upper_carc_B', 'e', 0.5), ('WU_upper_body', 'd', 0.5), ('BC_base', 'd', 0.5), ('Hall_unit_upper', 'g', 0.5),
+        ('Wint_led_A', 'm'), ('Wint_led_B', 'm'), ('Mirror_side_led0', 'p'), ('Mirror_side_led1', 'p')]
+DRIVERS = [('K_upper_carc_B', 'e', 0.5), ('WU_upper_body', 'd', 0.5), ('Hall_unit_upper', 'g', 0.5),
            ('BW_bridge_carc', 'i', 0.5), ('Wardrobe_carc', 'm', 0.75)]
 
 
@@ -118,9 +119,9 @@ def draw_light(ax, S, n, kind):
 
 
 def zones(S):
-    """Bathroom zones per HD 60364-7-701 (shower without tray, fixed glass + bi-fold door)."""
+    """Bathroom zones per HD 60364-7-701 (shower without tray, fixed side glass + bi-fold door)."""
     SH = G.SHOWER
-    fx0, fy0, fx1, fy1 = SH['side'][0], SH['fixed'][1], G.X_E, G.Y_BATH1
+    fx0, fy0, fx1, fy1 = SH['side'][0], SH['door'][1], G.X_E, G.Y_BATH1
     z0 = sbox(fx0, fy0, fx1, fy1)
     head = SH['head']
     circ = Point(head).buffer(1.20, 64)
@@ -203,8 +204,9 @@ def main():
             bbox=dict(boxstyle='square,pad=0.05', fc='white', ec='none', alpha=0.85))
     # boiler outlet (B3) at the boiler, on the wall x = 6.65
     bo = G.bb('Boiler')
+    H_ = lambda _b: f"{int(round(G.bz('Boiler')[0] * 100))}–{int(round(G.bz('Boiler')[1] * 100))}"
     px, py = S.P(G.X_E, bo[3] - 0.12); EL.outlet_box(ax, px, py, 180, 'Б')
-    lab(ax, px, py, 9.0, 0, 'B3 бойлер (над WC, h 205–256)', 'left', 'k')
+    lab(ax, px, py, 9.0, 0, f'B3 бойлер\n(верт., h {H_(bo)})', 'left', 'k')
 
     for row in SOCKETS:
         n, k, ang, t, (dx, dy), ha, sh = row[:7]
@@ -221,7 +223,7 @@ def main():
         for (n, kind) in items:
             px, py = draw_light(ax, S, n, kind)
         # group letter next to the first fixture
-        i0 = {'b': 4}.get(g, 0)
+        i0 = {'b': 1}.get(g, 0)
         px, py = draw_light(ax, S, items[i0][0], items[i0][1])
         off = {'a': (2.6, 2.2), 'b': (2.6, 2.6), 'c': (0, 3.6), 'd': (5.6, 2.4), 'f': (-5.5, 1.8), 'g': (2.6, 1.8),
                'h': (2.8, 2.0), 'k': (-7.0, 2.4), 'l': (-7.0, -2.4), 'n': (2.4, 2.4)}[g]
@@ -247,7 +249,7 @@ def legend(S):
     S.legend_box(X, Y, W, H_, 'Легенда (БДС EN 60617)')
     items = [
         ('s1', 'Контакт със ЗК, 16 A (единичен)'), ('s2', 'Контакт двоен / троен'), ('s1ip', 'Контакт IP44 с капак'),
-        ('box', 'Изход за директно свързване (уред)'), ('tp', 'Розетка RJ45 cat. 6 / ТВ'),
+        ('box', 'Изход за директно свързване (уред, LED огледало)'), ('tp', 'Розетка RJ45 cat. 6 / ТВ'),
         ('sw1', 'Ключ еднополюсен / сериен'), ('sww', 'Ключ девиаторен (↔)'), ('swx', 'Ключ кръстат (✕)'),
         ('brd', 'Ел. табло (ЕТ), вградено'), ('ceil', 'Таванно тяло / пендел'), ('down', 'Луна LED (с пръстен – IP44/65)'),
         ('wall', 'Аплик / лампа за четене'), ('pic', 'Картинна лампа'), ('led', 'LED лента 24 V, 2700 K'),
@@ -288,16 +290,16 @@ CIRC = [
     ('L2', 'Осветление коридор, спалня, гардероб (g–m)', 'B10', '3×1,5', 'ДТЗ2'),
     ('L3', 'Осветление баня + вентилатор (n, p)', 'B10', '3×1,5', 'ДТЗ3'),
     ('S1', 'Контакти дневна: трапезария, диван, ТВ, конзола, лампион', 'B16', '3×2,5', 'ДТЗ1'),
-    ('S2', 'Контакти бюро + спалня (ниши, тоалетка, врата)', 'B16', '3×2,5', 'ДТЗ2'),
+    ('S2', 'Контакти бюро + спалня (ниши, тоалетка, LED огледало, врата)', 'B16', '3×2,5', 'ДТЗ2'),
     ('S3', 'Контакти коридор (прахосм., зарядно) + балкон IP44', 'B16', '3×2,5', 'ДТЗ2'),
     ('К1', 'Кухня: контакти над плота + абсорбатор', 'B16', '3×2,5', 'ДТЗ1'),
     ('К2', 'Хладилник', 'B16', '3×2,5', 'собств. RCBO'),
     ('К3', 'Съдомиялна', 'B16', '3×2,5', 'ДТЗ2'),
     ('К4', 'Фурна', 'B16', '3×2,5', 'ДТЗ3'),
-    ('К5', 'Котлон индукционен', '3×B16 (3ф) / B32', '5×2,5 / 3×6', 'ДТЗ 4-пол.'),
+    ('К5', 'Котлон индукционен домино 3 kW', 'B20', '3×2,5', 'ДТЗ 25 A'),
     ('B1', 'Пералня-сушилня', 'B16', '3×2,5', 'ДТЗ3'),
     ('B2', 'Контакт баня IP44 + сушилник за кърпи (изход IP44)', 'B16', '3×2,5', 'ДТЗ3'),
-    ('B3', 'Бойлер Ariston Velis Pro 50', 'B16', '3×2,5', 'ДТЗ3'),
+    ('B3', 'Бойлер Eldom Galant DU060W 60 л', 'B16', '3×2,5', 'ДТЗ3'),
     ('AC', 'Климатик multi-split (КЛ-Н + КЛ-В1, КЛ-В2)', 'C20', '3×2,5', 'собств. RCBO'),
 ]
 
@@ -325,7 +327,7 @@ def circuits(S):
     ax.plot([X, X + W], [Y + 14, Y + 14], 'k', lw=0.35, zorder=31)
     ax.text(X + 2, Y + 12,
             'ЕТ (вграден, 2×12 модула): главен прекъсвач 3×25 A; катодна защита (SPD) тип 2; ДТЗ1–ДТЗ3: 40 A / 30 mA, тип A;\n'
-            'К5 – 4-полюсна ДТЗ 40 A / 30 mA (при 3-фазно захранване на котлона); К2 и AC – собствени RCBO 30 mA.\n'
+            'К5 – ДТЗ 25 A / 30 mA + автомат 20 A, 3×2,5 mm² (домино котлон 3,6 kW, монофазно); К2 и AC – собствени RCBO 30 mA.\n'
             'Кабели NYM/СВТ (Cu) в гофрирани тръби; система TN-S, PE във всеки кръг. Слаботокови: UTP cat. 6, RG6.',
             fontsize=4.2, va='top', zorder=31, linespacing=1.4)
 
@@ -337,9 +339,10 @@ def notes(S):
     hk = lambda n: fmt(G.zc(n))
     ax.text(X, Y - 4.2,
             f'• Контакти общо {hk("Dining_socket")} m; кухня над плота {hk("K_socket_prep")} m (черни); СМ {hk("K_conn_dw")} m зад долното чекмедже;\n'
-            f'  фурна {hk("K_conn_oven")} m зад изтеглящия се шкаф 18; котлон {hk("K_conn_hob")} m (400 V / 32 A); абсорбатор {hk("K_conn_hood")} m и\n'
+            f'  фурна {hk("K_conn_oven")} m зад изтеглящия се шкаф 18; котлон {hk("K_conn_hob")} m (230 V / 20 A, домино 3 kW); абсорбатор {hk("K_conn_hood")} m и\n'
             f'  хладилник {hk("K_conn_fridge")} m – в горните шкафове. Бюро {hk("Desk_socket")} m; ТВ {hk("TV_socket")} m; конзола {hk("Media_socket")} m;\n'
-            f'  ниши до леглото {hk("Bed_socket0")} m; тоалетка {hk("Dresser_socket")} m; баня IP44 {hk("Bath_socket_ip44")} m; пералня {hk("Washer_socket")} m.\n'
+            f'  ниши до леглото {hk("Bed_socket0")} m; тоалетка {hk("Dresser_socket")} m; кутия LED огледало {hk("Vanity_mirror_feed")} m (зад огледалото);\n'
+            f'  баня IP44 {hk("Bath_socket_ip44")} m; пералня {hk("Washer_socket")} m.\n'
             f'• Ключове {hk("Living_switch")} m (в нишите до леглото {hk("Bed_switch0")} m); ключът на банята – в коридора откъм\n'
             '  бравата на плъзгащата врата. Спалня таван (h): девиатор при вратата + кръстат и девиатор в нишите = 3 места.\n'
             f'• ЕТ {fmt(G.bz("Elec_board")[0])}–{fmt(G.bz("Elec_board")[1])} m, вграден в стената на коридора; домофон {hk("Hall_intercom")} m;\n'

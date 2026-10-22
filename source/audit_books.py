@@ -7,9 +7,9 @@ for o in _O:   # the dollhouse cutaway (GN "Cutaway") may be live in a GUI-saved
 bpy.context.view_layer.update(); dg = bpy.context.evaluated_depsgraph_get()
 # placeholders were replaced by real-product models (PROD_<instance> empties); map the old names onto them
 ALIAS = {"AC_outdoor": "PROD_ac_outdoor", "WallLamp0_plate": ("PROD_readlamp0", "plate"), "WallLamp1_plate": ("PROD_readlamp1", "plate"), "Sconce0": "PROD_sconce0", "Sconce1": "PROD_sconce1", "ArtSofa1_frame": "PROD_art0", "ArtSofa2_frame": "PROD_art1", "DChair_S1": "PROD_chair_s1", "DChair_S2": "PROD_chair_s2", "DChair_N1": "PROD_chair_n1", "DChair_N2": "PROD_chair_n2",
- "Desk_chair": "PROD_deskchair", "FloorLamp_shade": ("PROD_floorlamp", "shade"), "Hall_mirror": "PROD_hall_mirror_lindbyn", "K_coffee": "PROD_coffeemachine", "K_fridge": "PROD_fridge",
+ "Desk_chair": "PROD_deskchair", "FloorLamp_shade": ("PROD_floorlamp", "shade"), "Hall_mirror": "BathDoor_mirror_out", "K_coffee": "PROD_coffeemachine", "K_fridge": "PROD_fridge",
  "K_hob": "PROD_hob", "K_hood": "PROD_hood", "K_oven_door": "PROD_oven", "K_sink_bottom": ("PROD_sink", "strainer"), "Laundry_basket": "PROD_laundry_basket", "Lounge_chair": "PROD_armchair",
- "LvChair_seat": ("PROD_deskchair", "seat"), "Mirror_cab": "PROD_mirror_cabinet", "Pendant_dining0": "PROD_pendant0", "Pendant_dining1": "PROD_pendant1", "Round_mirror": "PROD_round_mirror_ozze",
+ "LvChair_seat": ("PROD_deskchair", "seat"), "Mirror_cab": "PROD_mirror_cabinet", "Pendant_dining0": "PROD_pendant0", "Pendant_dining1": "PROD_pendant1", "Round_mirror": "PROD_round_mirror_ozze", "Washer_body": "PROD_washer",
  "Sofa_leg1": ("PROD_sofa", "leg"), "TV_body": "PROD_tv", "Tarno_chair0": "PROD_tarno_chair0", "Tarno_chair1": "PROD_tarno_chair1", "WU_desklamp_base": "PROD_desklamp",
  "WallLamp0_shade": ("PROD_readlamp0", "shade"), "WallLamp1_shade": ("PROD_readlamp1", "shade"), "Dining_apron_S": ("PROD_dining_table", "rail")}
 PREFIX = {"Sofa_": ["PROD_sofa"], "Coffee_": ["PROD_coffee"], "FloorLamp_": ["PROD_floorlamp"], "Dining_top": ["PROD_dining_table"], "Dining_leg": [], "Shoe_": ["PROD_shoe_cabinet"],
@@ -61,13 +61,13 @@ units = {
  "Sofa": P("Sofa_base", "Sofa_back", "Sofa_arm", "Sofa_seat", "Sofa_leg"), "Coffee table": P("Coffee_top", "Coffee_leg"),
  "TV/desk unit": P("WU_end", "WU_desk_slab", "WU_console_body", "WU_upper_body", "WU_step"),
  "Lounge chair": tree(O["Lounge_chair"]), "Floor lamp": P("FloorLamp_base", "FloorLamp_pole"),
- "Bookcase": P("BC_frame", "BC_side", "BC_base", "BC_top", "BC_back"),
+ "Bookcase": P("BC_side", "BC_base", "BC_top", "BC_back"),
  "Dining table": P("Dining_top", "Dining_leg"), 
  **{f"Dining chair {c}": tree(O[f"DChair_{c}"]) for c in ("S1","S2","N1","N2")}, "Desk stool": tree(O["Desk_chair"]),
  "Kitchen": P("K_carc", "K_plinth", "K_front", "K_top", "K_fridge", "K_end_panel"),
- "Bed": P("Bed_headboard", "Bed_platform", "Mattress"), "Bedside wardrobe": P("Bed_ns_wardrobe"), "Bedside window": P("Bed_ns_window"),
+ "Bed": P("Bed_platform", "Mattress"), "Bedside wardrobe": P("Bed_ns_wardrobe"), "Bedside window": P("Bed_ns_window"),
  "Wardrobe": P("Wardrobe_carc", "Wardrobe_slide", "Wardrobe_track", "Bedside_col_top", "Bedside_col_shelf", "Bedside_col_side", "Bedside_drawer", "Bedside_plinth"),
- "Vanity desk": P("Desk_top", "Desk_drawer"), "Laundry basket": [O["Laundry_basket"]],
+ "Vanity desk": P("Desk_top", "Desk_drawer", "Vanity_ped_"), "Laundry basket": [O["Laundry_basket"]],
  "Shoe cabinet": P("Shoe_"), "Hall unit": P("Hall_unit_side", "Hall_unit_bench_seat", "Hall_unit_upper", "Hall_unit_tall"),
  "Vanity": P("Vanity_cab", "Vanity_top"), "WC": P("WC_bowl", "WC_body", "WC_boxing"), "Shower": P("Shower_glass", "Shower_bifold"),
  "Balcony table": P("Tarno_top", "Tarno_leg"), "Balcony chair 0": tree(O["Tarno_chair0"]), "Balcony chair 1": tree(O["Tarno_chair1"]),
@@ -151,7 +151,15 @@ chk("Oven under hob (offset <=12, hob shifted for the end landing; joiner notche
 for n in ("Bed_socket0", "Bed_socket1"):
     s_ = obb(O[n]); chk(f"{n}: above the bedside top (<=30)", s_[0][2] - 0.555, 0, 30)
 chk("Desk socket above desktop", obb(O["Desk_socket"])[0][2] - 0.74, 3, 20)
-chk("Dresser socket above dressing top", obb(O["Dresser_socket"])[0][2] - 0.76, 5, 25)
+chk("Dresser socket above dressing top", obb(O["Dresser_socket"])[0][2] - obb(O["Desk_top"])[1][2], 5, 25)
+chk("Dresser socket beside the mirror (not behind it)", obb(O["Round_mirror"])[0][1] - obb(O["Dresser_socket"])[1][1], 5)
+chk("Dressing table storage: pedestal drawers", len([o for o in O if o.name.startswith("Vanity_ped_drawer")]), 3)
+chk("Dressing table knee clearance under the drawer (stool 45 + thigh)", obb(O["Vanity_knee_bottom"])[0][2] - 0.45, 15)
+chk("Dressing table height", obb(O["Desk_top"])[1][2], 72, 78)
+chk("Vanity mirror diameter", obb(O["Round_mirror"])[1][1] - obb(O["Round_mirror"])[0][1], 75)
+chk("Vanity mirror has its own face light (front-lit ring)", int("Vanity_mirror_light" in O and "Vanity_mirror_led" in O), 1)
+chk("Stool centred on the mirror", abs((obb(O["Round_mirror"])[0][1]+obb(O["Round_mirror"])[1][1])/2 - O["PROD_vanity_stool"].location.y), None, 5)
+chk("Vanity clear of the open bedroom door leaf", obb(O["Vanity_ped_carc"])[0][1] - obb(O["BedDoor_leaf"])[1][1], 2)
 chk("Desk left leg reaches the floor", obb(O["WU_step"])[0][2], None, 0)
 chk("Cleaning cupboard: vacuum charger socket inside", obb(O["Hall_cl_socket"])[0][2], 100, 140)
 chk("WC centre -> side wall", 0.40, 40, 45); chk("WC centre -> shower glass", min(obb(c)[0][1] for c in _O["PROD_shower_door"].children_recursive if c.type == "MESH" and "glass" in c.name.lower()) - 0.40, 40)
@@ -210,7 +218,7 @@ chk("Window bedside near edge to mattress (<=10)", obb(O["Bed_ns_window"])[0][1]
 for n in ("Sconce0", "Sconce1"):
     sc_ = obb(O[n]); chk(f"{n} clear of sofa art", max(s1[0][1] - sc_[1][1], sc_[0][1] - s2[1][1]), 5)
 rm = obb(O["Round_mirror"]); chk("Bedroom round mirror centre (seated at vanity)", (rm[0][2]+rm[1][2])/2, 120, 145)
-hm = obb(O["Hall_mirror"]); chk("Hall mirror top", hm[1][2], 173)
+hm = obb(O["Hall_mirror"]); chk("Hall mirror (bath mirror door) top", hm[1][2], 173)
 # --- LIVING furniture, lamps, rugs, curtains, desk (rulebook 03, 04, 09, 12, 15)
 So = U(units["Sofa"]); sofa_len = So[1][1] - So[0][1]
 chk("Sofa width per seat (2 seats)", sofa_len / 2 - 0.17, 0.66 - 0.0, unit="m") if False else chk("Sofa seat width per person", (sofa_len - 0.34) / 2, 60)
@@ -245,7 +253,7 @@ chk("Shelves start at end panel (gap)", abs(obb(O["WU_shelf0"])[0][1] - obb(O["W
 chk("End panels flush with fronts", abs(obb(O["WU_end_L"])[0][0] - obb(O["WU_desk_slab"])[0][0]), None, 0)
 for i in (0, 1):
     pl = obb(O[f"WallLamp{i}_plate"]); pn = obb(O["Bed_wall_panel"])
-    chk(f"Bed lamp {i} plate on the headboard panel, below its top", (pn[1][2] - pl[1][2]), 5)
+    chk(f"Bed lamp {i} plate clear of the upholstered headboard (side gap)", max(pn[0][1] - pl[1][1], pl[0][1] - pn[1][1]), 0)
     sh = obb(O[f"WallLamp{i}_shade"]); chk(f"Bed lamp {i} centre above mattress (60-75)", ((sh[0][2]+sh[1][2])/2 - obb(O["Mattress"])[1][2]), 60, 75)
 
 # --- LIVING-ROOM SWITCH beside the door (rulebook: latch side 10-30 from frame, h 105, never blocked)

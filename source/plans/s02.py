@@ -18,49 +18,50 @@ def legend_rows():
         (2, 'Хладилник свободностоящ + дъбов панел + шкаф', 'Samsung RB38C650EB1/EF, тъмен инокс', wdh('K_fridge', 'K_fridge_feet')),
         (3, 'Горни шкафове до тавана + абсорбатор телескопичен', 'по поръчка; Hansa OTP 6243 BGH', up),
         (4, 'Маса трапезна', 'JYSK AABENRAA, дъб/черни крака', wdh('Dining_top', 'Dining_leg0')),
-        (5, 'Стол трапезен (×4)', 'дъб, с вретена', wdh('DChair_S_seat', 'DChair_S_backrail', 'DChair_S_leg')),
+        (5, 'Стол трапезен (×4)', 'IKEA HÖGVED, бреза, с вретена', wdh('DChair_S1')),
         (6, f'ТВ модул + бюро {C(dk[3] - dk[1])}×{C(dk[2] - dk[0])}', 'по поръчка (лист 03.3)', wu_s),
         (7, 'Телевизор 65" + саундбар', 'на стената', wdh('TV_body', along='y')),
-        (8, 'Работен стол с облегалка (бюро)', 'IKEA LÅNGFJÄLL', '68×68'),
-        (9, 'Диван-легло 3-местен', 'IKEA LANDSKRONA – НАЛИЧЕН', wdh('Sofa_back', 'Sofa_armL', 'Sofa_armR', 'Sofa_base', 'Sofa_leg0', along='y')),
-        (10, 'Холна маса', 'IKEA LISTERBY, дъбов фурнир', wdh('Coffee_top', 'Coffee_leg0', along='y')),
+        (8, 'Работен стол (бюро)', 'IKEA LÅNGFJÄLL', wdh('LvChair')),
+        (9, 'Диван-легло 3-местен', 'IKEA LANDSKRONA – НАЛИЧЕН', wdh('Sofa', along='y')),
+        (10, 'Холна маса', 'IKEA LISTERBY, дъбов фурнир', wdh('Coffee', along='y')),
         (11, 'Килим дневна', 'вълна, кремав', wdh('Rug_living', z=False)),
-        (12, 'Кресло, завъртяно на 15°', 'IKEA EKENÄSET', '65×74'),
-        (13, 'Лампион', 'IKEA HEKTAR, тъмносив', 'h 181'),
-        (14, 'Библиотека с арка, 2 чекмеджета в базата', 'по поръчка (лист 03.4)', wdh('BC_back', 'BC_sideL', 'BC_sideR', 'BC_frame', along='y')),
+        (12, f'Кресло, завъртяно на {abs(round(G.LOUNGE_ANG))}°', 'IKEA EKENÄSET', '65×74×' + R(bz('Lounge')[1])),
+        (13, 'Лампион', 'IKEA HEKTAR, тъмносив', 'h ' + R(bz(prefix='floorlamp_')[1])),
+        (14, 'Библиотека дъб, 3 рафта, 2 чекмеджета в базата', 'по поръчка (лист 03.4)', wdh(prefix='BC_', along='y')),
         (15, 'Воал + релса (LED ниша); щора ПП1', 'IKEA TERESIA / RÄCKA', f'{C(bb("Curtain_track")[2] - bb("Curtain_track")[0])} релса'),
-        (16, 'Климатик вътр. тяло, над Д2', 'Gree Pular GWH12AGCXB/I (12k)', wdh('AC_indoor', along='y')),
-        (17, 'Легло с повдигащ се матрак, ракла ~0,7 m³', 'по поръчка + матрак 160×200', wdh('Bed_platform', 'Bed_headboard', along='y')),
-        (18, 'Стена зад леглото: 2 колони, мост, панел', 'по поръчка, дъб (лист 03.4)', f'{R(G.Y_BED1 - tw[1])}×{R(tw[2] - tw[0])}×{R(G.CEIL)}'),
+        (16, 'Климатик вътр. тяло, над Д2', 'Gree Pular II GWH12AGCXB/I (12k)', wdh('AC_indoor', along='y')),
+        (17, 'Легло с повдигащ се матрак, ракла ~0,7 m³', 'по поръчка + матрак 160×200 (без табла)', wdh('Bed_platform', along='y')),
+        (18, 'Стена зад леглото: 2 колони, мост, табла', 'дъб, ламели в нишите и зад леглото + бял мост (03.4)', f'{R(G.Y_BED1 - tw[1])}×{R(tw[2] - tw[0])}×{R(G.CEIL)}'),
         (19, 'Гардероб, 2 плъзгащи врати + панел', 'по поръчка (лист 03.4)', wdh('Wardrobe_carc', 'Wardrobe_track_bot', 'Wardrobe_filler')),
-        (20, 'Тоалетка окачена + огледало Ø60', 'дъб, чекмедже', wdh('Desk_top', along='y', z=False) + f', h {R(bz("Desk_top")[1])}'),
-        (21, 'Табуретка (под тоалетката)', 'букле', wdh('Desk_stool_seat', 'Desk_stool_leg0')),
+        (20, 'Тоалетка окачена + LED огледало Ø80', 'дъб, 3 чекм. + чекм. над коленете', wdh('Desk_top', along='y', z=False) + f', h {C(bz("Desk_top")[1])}'),
+        (21, 'Табуретка (под тоалетката)', 'IKEA KYRRE, бреза', wdh('Desk_stool')),
         (22, 'Килим спалня, плоскотъкан', 'овес', wdh('Rug_bedroom', z=False)),
-        (23, 'Кош за пране', 'морска трева', f'Ø{R(bb("Laundry_basket")[2] - bb("Laundry_basket")[0])}×{R(bz("Laundry_basket")[1])}'),
+        (23, 'Кош за пране', 'JYSK DAN, морска трева', f'Ø{R(bb("Laundry_basket")[2] - bb("Laundry_basket")[0])}×{R(bz("Laundry_basket")[1])}'),
         (24, 'Щори blackout + воал (балк. врата / прозорец)', 'по размер', f'{R(bb("Blind_door_fabric")[2] - bb("Blind_door_fabric")[0])} / {R(bb("Blind_window_fabric")[2] - bb("Blind_window_fabric")[0])}'),
         (25, 'Климатик вътр. тяло, над Д3', 'Gree Pular GWH09AGBXB/I (9k)', wdh('AC_bed_indoor')),
         (26, 'Шкаф за обувки', 'IKEA STÄLL', wdh('Shoe_STALL_body', along='y')),
-        (27, 'Огледало (над 26)', 'IKEA LINDBYN, черно', f'{C(bb("Hall_mirror_frame")[3] - bb("Hall_mirror_frame")[1])}×{C(bz("Hall_mirror_frame")[1] - bz("Hall_mirror_frame")[0])}'),
+        (27, 'Огледало в цял ръст = вратата на банята (Д4)', 'алум. черна рамка + огледало', f'{C(bb("Hall_mirror_frame")[3] - bb("Hall_mirror_frame")[1])}×{C(bz("Hall_mirror_frame")[1] - bz("Hall_mirror_frame")[0])}'),
         (28, 'Мебел за антре: пейка, закачалки, колона', 'по поръчка (лист 03.3)', wdh(prefix='Hall_unit_', along='y')),
         (29, 'Изтривалка', 'кокос', wdh('Doormat', z=False)),
-        (30, 'Плот с интегриран умивалник + шкаф препарати', 'по поръчка, solid surface', wdh('Vanity_top', 'Vanity_top_back', 'Vanity_cab')),
-        (31, 'Пералня-сушилня под плота', 'Electrolux EW7W368SI', '60×57×82'),
-        (32, 'Огледален шкаф (над 30)', 'огледален шкаф 60×70×17 с LED (по спецификация)', '60×70×17'),
-        (33, 'Душ без праг, стъкла + сгъваема врата', 'по поръчка, черен профил', wdh('Shower_floor', 'Shower_glass_fixed', 'Shower_frame_top')),
-        (34, 'Окачена тоалетна + вградено казанче', 'рамка тип Geberit Duofix', wdh('WC_bowl', z=False)),
-        (35, 'Сушилник за кърпи, електрически', 'Atlantic Doris, черен', '50×105'),
-        (36, 'Бойлер 50 л, хоризонтален, над WC', 'Ariston Velis Pro 50 EU', '77×28×51'),
-        (37, 'Кош за отпадъци + четка WC', 'черен / бял', wdh('Bath_bin')),
+        (30, 'Плот с интегриран умивалник + шкаф препарати', 'по поръчка, solid surface', wdh('Vanity_top', 'Vanity_cab')),
+        (31, 'Пералня-сушилня под плота (зад врата)', 'Electrolux EW7W368SI', wdh('Washer_body')),
+        (32, 'Огледален шкаф с LED (над 30)', 'Inter Ceramic Монца', wdh('Mirror_cab')),
+        (33, 'Душ без праг: страничен панел + сгъваема врата', 'REA Bler 90 + REA Rapid Fold 90, черно', wdh('Shower_floor', 'Shower_panel', 'Shower_door')),
+        (34, 'Окачена тоалетна + вградено казанче', 'Cersanit Moduo; Geberit Duofix + Delta50', wdh('WC_bowl', z=False)),
+        (35, 'Сушилник за кърпи, електрически', 'Atlantic Doris, черен', wdh(prefix='Towel_rail_')),
+        (36, 'Бойлер 60 л, вертикален, над WC', 'Eldom Galant DU060W', wdh('Boiler', along='y')),
+        (37, 'Кош за отпадъци + четка WC', 'Vinoks 5 л педал + IKEA GANSJÖN', wdh('Bath_bin')),
         (38, 'Маса + 2 сгъваеми стола', 'IKEA TÄRNÖ', wdh('Tarno_top', 'Tarno_leg0')),
-        (39, 'Климатик външно тяло multi-split, на конзоли', 'Gree GWHD(18)NK6LOO', '90×38×60'),
+        (39, 'Климатик външно тяло multi-split, на конзоли', 'Gree GWHD(18)NK6LOO', wdh('AC_outdoor', along='y')),
         (40, 'Растения в саксии', '—', '—'),
+        (41, 'Сушилник за дрехи, сгъваем (зад Д3)', 'Leifheit Pegasus 150 Solid', wdh('Drying_rack', along='y')),
     ]
 
 
 def clearances(S):
     d = lambda p, q, **k: S.dim_free(p, q, fs=4.8, color='#B03A2E', **k)
     tb = G.TOP_B; dn = G.DINING; sofa = G.SOFA; cof = G.COFFEE; cons = G.WU['cons']; tv = bb('TV_body')
-    ch = bb('DChair_E_seat.001')
+    ch = bb('DChair_S2')
     d((ch[0] + 0.12, tb[3]), (ch[0] + 0.12, ch[1]))                      # worktop -> chair
     d((0.62, dn[3]), (0.62, sofa[1]), tside=-1)                         # table -> sofa arm
     d((sofa[2], 4.62), (cof[0], 4.62))                                  # sofa -> coffee
@@ -73,7 +74,7 @@ def clearances(S):
     d((van[2], 3.70), (bed[0], 3.70))
     d((5.20, bb('Wardrobe_filler')[3]), (5.20, bed[1]), tside=-1)
     d((5.60, bed[3]), (5.60, G.Y_BED1))
-    d((bb('Shoe_STALL_door00')[2], 1.60), (G.HALL['bench'][0], 1.60))
+    d((bb('Shoe_STALL_body')[2], 1.60), (G.HALL['bench'][0], 1.60))
     d((G.X_COR0, 2.12), (G.HALL['d0'][0], 2.12))
     wc = bb('WC_bowl')
     d((G.X_BATH0, 0.52), (wc[0], 0.52))

@@ -11,7 +11,7 @@ from matplotlib.path import Path
 L = lambda n: G.lpos(n)[:2]
 # code, light/object, kind, group
 FIX = ([('О1', f'{n}', 'down', 'a') for n in ('AisleDown0', 'AisleDown1', 'LivingDown0', 'LivingDown1', 'LivingDown2')] +
-       [('О2', f'KitchenDown{i}', 'down', 'b') for i in range(5)] +
+       [('О2', f'KitchenDown{i}', 'down', 'b') for i in range(2)] +
        [('О3', 'Pendant_dining0_bulb', 'ceil', 'c'), ('О3', 'Pendant_dining1_bulb', 'ceil', 'c')] +
        [('О4', 'Sconce0_up', 'wall0', 'd'), ('О4', 'Sconce1_up', 'wall0', 'd')] +
        [('О5', 'PictureLight', 'pic0', 'd'), ('О5', 'PictureLight2', 'pic0', 'd')] +
@@ -37,23 +37,23 @@ CIRC = {'a': 'L1', 'b': 'L1', 'c': 'L1', 'd': 'L1', 'e': 'L1', 'f': 'L1', 'g': '
 zc = lambda n: fmt(G.zc(n))
 SCHED = [
     ('О1', 'Луна LED вградена, насочваема Ø8, 7 W, CRI ≥ 90', '5', 'дневна – ос x 186,5, през 120', 'таван', '2700', 'IP20', 'a ◐'),
-    ('О2', 'Луна LED вградена, 7 W', '5', 'кухня – ред y 50 + 1 над Г-частта', 'таван', '2700', 'IP20', 'b'),
-    ('О3', 'Висяща лампа над масата, E27 LED', '2', 'x 32 / 92, y 256', f'ръб {fmt(G.bz("Pendant_dining0")[0])}', '2700', 'IP20', 'c ◐'),
-    ('О4', 'Аплик стенен up/down, 2×5 W', '2', 'до дивана', zc('Sconce0'), '2700', 'IP20', 'd'),
-    ('О5', 'Картинна лампа LED ~45 cm', '2', 'над картините RÖDALM', zc('PictureLight_bar0'), '2700', 'IP20', 'd'),
+    ('О2', 'Луна LED вградена, 7 W', '2', 'кухня – на ос мивка и на ос фурна/котлон, на 50 от стената (LED под шкафовете = работна)', 'таван', '2700', 'IP20', 'b'),
+    ('О3', 'Пендел Sollux ZUMA Ø30, E27 LED', '2', 'x 32 / 92, y 256', f'ръб {fmt(G.bz("Pendant_dining0")[0])}', '2700', 'IP20', 'c ◐'),
+    ('О4', 'Аплик up/down Sollux LAGOS 2, 2×GU10', '2', 'до дивана', zc('Sconce0'), '2700', 'IP20', 'd'),
+    ('О5', 'Картинна лампа Zuma Line ARVI LED 40 cm', '2', 'над картините RÖDALM', zc('PictureLight_bar0'), '2700', 'IP20', 'd'),
     ('О6', 'LED лента в нишата на воала', f'{fmt(G.bb("Curtain_cove_led")[2] - G.bb("Curtain_cove_led")[0], 1)} m', 'фасада дневна', 'таван', '2700', 'IP20', 'd'),
     ('О7', 'LED ТВ модул: горни шкафове, конзола, рафтове', '~6 m', 'ТВ модул', '0,14–1,85', '2700', 'IP20', 'd'),
-    ('О8', 'LED профил вертикален, библиотека', '2×1,6 m', 'библиотека', '0,42–2,04', '2700', 'IP20', 'd'),
     ('О9', 'LED лента под горните шкафове', '~3,3 m', 'кухня', zc('K_led_B'), '2700', 'IP20', 'e'),
     ('О10', 'Аплик фасаден LED (+ гирлянд в контакт IP44)', '1', 'балкон', zc('Balcony_wall_light'), '3000', 'IP54', 'f'),
     ('О11', 'Луна LED вградена 7 W + LED в мебелта', '2', 'коридор – ос x 395', 'таван', '3000', 'IP20', 'g ↔'),
-    ('О12', 'Пендел (оризова хартия), E27 LED', '1', 'спалня', f'ръб {fmt(G.bz("Pendant_bedroom")[0])}', '2700', 'IP20', 'h ↔✕↔'),
+    ('О12', 'Пендел Ideal Lux ORACLE SLIM LED Ø50, 29 W', '1', 'спалня', f'ръб {fmt(G.bz("Pendant_bedroom")[0])}', '2700', 'IP20', 'h ↔✕↔'),
     ('О13', 'LED в нишите на колоните и под моста', '3', 'стена зад леглото', '1,40 / 1,55', '2700', 'IP20', 'i'),
-    ('О14', 'Лампа за четене на гърба на нишата', '2', 'двете колони', '~1,20', '2700', 'IP20', 'k, l'),
+    ('О14', 'Лампа за четене IKEA RANARP, на гърба на нишата', '2', 'двете колони', '~1,20', '2700', 'IP20', 'k, l'),
     ('О15', 'LED в гардероба, датчици на вратите', '2', 'гардероб A / B', '1,80 / 2,05', '3000', 'IP20', 'm'),
     ('О16', 'Луна LED 7 W (над душа IP65)', '3', 'баня – x 531,8 / 595', 'таван', '3000', 'IP44/65', 'n + ВН'),
-    ('О17', 'LED огледален шкаф 60×70×17 + 2 странични', '1+2', 'баня', '1,18 / 1,56', '3000', 'IP44', 'p'),
-    ('—', 'Лампион HEKTAR, настолни лампи – в контакт', '3', 'дневна, бюро, тоалетка', '—', '2700', '—', 'контакт'),
+    ('О17', 'Огледален шкаф Монца с LED + 2 странични LED профила', '1+2', 'баня', f'{fmt(G.bz("Mirror_cab")[0])} / {zc("Mirror_side_led0")}', '3000', 'IP44', 'p'),
+    ('О18', 'Кръгло LED огледало Ø80 (тоалетка), сензорен ключ + диммер', '1', 'спалня, кутия h ' + zc('Vanity_mirror_feed'), f'ос {zc("Round_mirror")}', '3000–6000', 'IP20', 'S2'),
+    ('—', 'Лампион HEKTAR, настолна лампа SKURUP – в контакт', '2', 'дневна, бюро', '—', '2700', '—', 'контакт'),
 ]
 
 
@@ -134,12 +134,12 @@ def main():
         dx, dy = offs[code]
         ax.text(px + dx, py + dy, code, fontsize=4.3, ha='center', va='center', zorder=32, color='k', weight='bold',
                 bbox=dict(boxstyle='square,pad=0.05', fc='white', ec='none', alpha=0.85))
-    for (x, y, t) in ((1.70, 0.36, 'О9'), (2.62, 4.20, 'О7'), (2.00, 6.42, 'О6'), (0.62, 6.20, 'О8'), (5.20, 2.12, 'О15'),
+    for (x, y, t) in ((1.70, 0.36, 'О9'), (2.62, 4.20, 'О7'), (2.00, 6.42, 'О6'), (3.62, G.ctr('Round_mirror')[1], 'О18'), (5.20, 2.12, 'О15'),
                       (6.10, 4.05, 'О13'), (5.34, 1.42, 'О17')):
         S.text(x, y, t, fs=4.4, color='#8A5A00', weight='bold', z=28,
                bbox=dict(boxstyle='square,pad=0.08', fc='white', ec='none', alpha=0.9))
     # aligned grids – dimension chains
-    kx = sorted(L(f'KitchenDown{i}')[0] for i in range(1, 5))
+    kx = sorted(L(f'KitchenDown{i}')[0] for i in range(1, 2))
     S.dim_chain([0] + kx + [G.X_LIV1], 'x', -0.55, ref=-0.25, side=-1, fs=4.6, color='#7A4A00')
     ly = sorted([L('AisleDown0')[1], L('AisleDown1')[1], L('LivingDown0')[1], L('LivingDown1')[1], L('LivingDown2')[1]])
     S.dim_chain([0, L('KitchenDown1')[1]] + ly + [G.Y_N], 'y', -0.55, ref=-0.25, fs=4.4, color='#7A4A00')
@@ -150,7 +150,7 @@ def main():
     S.dim_chain([G.X_BATH0, L('BathSpot0')[0], L('BathSpot2')[0], G.X_E], 'x', -0.55, ref=-0.25, side=-1, fs=4.4, color='#7A4A00')
     S.dim_chain([0, L('BathSpot0')[1], L('BathSpot1')[1], G.Y_BATH1], 'y', 7.15, ref=6.90, side=-1, fs=4.4, color='#7A4A00')
     S.dim_chain([0, L('KitchenDown0')[0], G.TOP_L[2]], 'x', 1.62, fs=4.0, color='#7A4A00')
-    S.text(2.00, 0.75, f'ред луни y = {cm(L("KitchenDown1")[1])}', fs=4.2, color='#7A4A00', z=27,
+    S.text(2.00, 0.75, f'луна над мивката y = {cm(L("KitchenDown1")[1])}', fs=4.2, color='#7A4A00', z=27,
            bbox=dict(boxstyle='square,pad=0.08', fc='white', ec='none'))
     S.text(1.20, 6.30, f'ос x = {cm(L("LivingDown0")[0])}, през {cm(ly[1] - ly[0])}', fs=4.2, color='#7A4A00', z=27,
            bbox=dict(boxstyle='square,pad=0.08', fc='white', ec='none'))
@@ -208,7 +208,7 @@ def legend(S):
     ax.text(X + 74, y0 - 3,
             'L1 (B10, ДТЗ1) – дневна, кухня, балкон:\n'
             '  a◐ общи луни дневна + b луни кухня – ключ 2× при вратата;\n'
-            '  c◐ пендели + d амбиент (аплици, картини, воал, библиотека,\n'
+            '  c◐ пендели + d амбиент (аплици, картини, воал в нишата,\n'
             '  ТВ модул) – втори ключ 2× при вратата; e LED кухня – ключ\n'
             '  в гърба на плота; f аплик балкон – ключ 2× при ПП1.\n'
             'L2 (B10, ДТЗ2) – коридор, спалня:\n'
