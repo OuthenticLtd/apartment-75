@@ -9,7 +9,8 @@
   @media (prefers-color-scheme: dark) { :root { --bg:#1d1b19; --ink:#efe9e2; --mute:#a79f96; --card:#2a2724ee; } }
   html, body { margin:0; height:100%; background:var(--bg); color:var(--ink); font:14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; overflow:hidden; }
   #c { position:fixed; inset:0; width:100%; height:100%; touch-action:none; display:block; }
-  .bar { position:fixed; left:8px; right:8px; top:8px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; pointer-events:none; }
+  .bar { position:fixed; left:0; right:0; top:0; padding:8px; display:flex; gap:6px; flex-wrap:nowrap; overflow-x:auto; align-items:center; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+  .bar > * { flex:0 0 auto; }
   .bar > * { pointer-events:auto; }
   button, a.btn { background:var(--card); color:var(--ink); border:1px solid #0002; border-radius:10px; padding:7px 10px; font:inherit; cursor:pointer; text-decoration:none; backdrop-filter:blur(6px); }
   button.on { background:var(--acc); color:#fff; }
@@ -31,11 +32,17 @@
   <a class="btn" href="../">← Начало</a>
   <button data-view="all">Общ изглед</button>
   <button data-view="kitchen">Кухня</button>
+  <button data-view="dining">Трапезария</button>
   <button data-view="living">Дневна</button>
+  <button data-view="living2">Дневна 2</button>
   <button data-view="bedroom">Спалня</button>
+  <button data-view="bed2">Спалня 2</button>
   <button data-view="bath">Баня</button>
   <button data-view="hall">Антре</button>
+  <button data-view="balcony">Балкон</button>
+  <button data-walls="full">Стени</button><button data-walls="cut">Срязани</button><button data-walls="hide">Без стени</button>
   <button id="ceil">Таван</button>
+  <label style="pointer-events:auto;background:var(--card);border-radius:10px;padding:4px 8px;border:1px solid #0002">Ъгъл <input id="fov" type="range" min="40" max="120" value="60" style="width:90px;vertical-align:middle"></label>
   <button id="openall">Отвори всички</button>
   <button id="closeall">Затвори всички</button>
   <button id="measure">📏 Измерване</button>
@@ -53,30 +60,71 @@ const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDraw
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.0;
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap; renderer.localClippingEnabled = true;
+renderer.toneMappingExposure = 1.05;
 const scene = new THREE.Scene(); scene.background = new THREE.Color(getComputedStyle(document.body).backgroundColor);
 const pmrem = new THREE.PMREMGenerator(renderer); scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
-scene.add(new THREE.HemisphereLight(0xffffff, 0x8a7f73, 0.6));
-const sun = new THREE.DirectionalLight(0xfff2e0, 1.2); sun.position.set(2, 9, 6); scene.add(sun);
-const camera = new THREE.PerspectiveCamera(50, 1, 0.05, 200);
+scene.add(new THREE.HemisphereLight(0xfff6ea, 0x8a7f73, 0.45));
+const sun = new THREE.DirectionalLight(0xfff0dc, 1.6); sun.position.set(-2.0, 8.0, -12.0); sun.target.position.set(3.3, 0, -3.3);
+sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048); sun.shadow.bias = -0.0005; sun.shadow.normalBias = 0.02;
+Object.assign(sun.shadow.camera, { left: -6, right: 6, top: 6, bottom: -6, near: 1, far: 30 }); scene.add(sun, sun.target);
+const camera = new THREE.PerspectiveCamera(50, 1, 0.03, 200);
 const controls = new OrbitControls(camera, canvas); controls.enableDamping = true;
 
 // Blender (x right, y facade, z up) -> glTF (x, z, -y). Views use Blender coords.
 const B = (x, y, z) => new THREE.Vector3(x, z, -y);
+// "inside" views: eye at 1.55 m in a corner, wide angle (GoPro-like), orbit around a point just in front of the eye
 const VIEWS = {
-  all:     { eye: B(3.3, 0.6, 13.5), at: B(3.3, 3.3, 0) },
-  kitchen: { eye: B(2.6, 1.95, 1.75), at: B(0.7, 0.45, 0.95) },
-  living:  { eye: B(2.6, 3.0, 1.6),  at: B(0.6, 5.6, 0.8) },
-  bedroom: { eye: B(3.9, 2.7, 1.6),  at: B(6.4, 4.2, 0.9) },
-  bath:    { eye: B(4.95, 0.35, 1.6), at: B(6.2, 1.3, 0.9) },
-  hall:    { eye: B(4.1, 2.2, 1.6),  at: B(4.1, 0.0, 1.0) },
+  all:     { eye: B(3.3, 0.6, 13.5), at: B(3.3, 3.3, 0), hfov: 60, walls: "cut" },
+  kitchen: { eye: B(2.95, 2.25, 1.55), look: B(0.9, 0.5, 0.9), hfov: 105, walls: "full" },
+  dining:  { eye: B(2.6, 1.55, 1.55),  look: B(0.6, 2.7, 0.9), hfov: 105, walls: "full" },
+  living:  { eye: B(2.55, 2.45, 1.55), look: B(0.9, 5.2, 0.9), hfov: 105, walls: "full" },
+  living2: { eye: B(1.7, 6.45, 1.55),  look: B(2.6, 3.5, 1.0), hfov: 105, walls: "full" },
+  bedroom: { eye: B(3.75, 2.62, 1.55), look: B(6.3, 4.4, 1.0), hfov: 105, walls: "full" },
+  bed2:    { eye: B(5.6, 5.15, 1.6),   look: B(4.5, 2.5, 1.2), hfov: 105, walls: "full" },
+  bath:    { eye: B(4.98, 0.22, 1.6),  look: B(6.2, 1.4, 0.9), hfov: 110, walls: "full" },
+  hall:    { eye: B(4.15, 2.25, 1.6),  look: B(4.1, 0.0, 1.1), hfov: 105, walls: "full" },
+  balcony: { eye: B(3.85, 5.85, 1.55), look: B(6.2, 6.5, 1.0), hfov: 105, walls: "full" },
 };
-function go(v) { const V = VIEWS[v]; camera.position.copy(V.eye); controls.target.copy(V.at); controls.update(); }
+let hfov = 60;
+function setFov(h) { hfov = h; const a = innerWidth / innerHeight; camera.fov = Math.min(150, THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(THREE.MathUtils.degToRad(h) / 2) / a))); camera.updateProjectionMatrix(); const s = document.getElementById("fov"); if (s) s.value = h; }
+controls.minDistance = 0.05;
+function go(v) { const V = VIEWS[v]; camera.position.copy(V.eye); controls.target.copy(V.at || V.eye.clone().add(V.look.clone().sub(V.eye).normalize().multiplyScalar(0.4))); setFov(V.hfov); setWalls(V.walls); controls.update(); }
+// walls: full / cut at 1.20 m (dollhouse) / hidden
+const walls = []; const cutPlane = new THREE.Plane(new THREE.Vector3(0, -1, 0), 1.2);
+let wallMode = "cut";
+function setWalls(m) { wallMode = m; walls.forEach(w => { w.visible = m !== "hide"; w.material.clippingPlanes = m === "cut" ? [cutPlane] : null; w.material.needsUpdate = true; });
+  document.querySelectorAll("[data-walls]").forEach(b => b.classList.toggle("on", b.dataset.walls === m)); }
+// textures: world-space box UVs so procedural Blender materials get real surfaces
+const TL = new THREE.TextureLoader();
+function tex(name, rep) { const t = TL.load("tex/" + name); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.colorSpace = name.includes("_diff") ? THREE.SRGBColorSpace : THREE.NoColorSpace; t.anisotropy = 8; return t; }
+function tileTex(base, grout, cells) { const c = document.createElement("canvas"); c.width = c.height = 512; const g = c.getContext("2d"); g.fillStyle = grout; g.fillRect(0, 0, 512, 512);
+  const s = 512 / cells; for (let i = 0; i < cells; i++) for (let j = 0; j < cells; j++) { const v = 0.94 + Math.random() * 0.1; g.fillStyle = base(v); g.fillRect(i * s + 2, j * s + 2, s - 4, s - 4); }
+  const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.colorSpace = THREE.SRGBColorSpace; return t; }
+const SURF = [
+  { re: /vinyl|laminate|oak floor/i, map: "floor_diff.jpg", nor: "floor_nor.jpg", m: 0.5, rough: 0.55 },
+  { re: /^oak|oak solid|oak light|wood/i, map: "oak_diff.jpg", nor: "oak_nor.jpg", m: 0.9, rough: 0.6 },
+  { re: /wall paint|ceiling paint|facade/i, nor: "wall_nor.jpg", m: 0.6, rough: 0.95, keep: true },
+  { re: /worktop|stone|marble/i, map: "stone_diff.jpg", m: 1.5, rough: 0.35 },
+  { re: /tile floor/i, canvas: () => tileTex(v => `rgb(${94 * v | 0},${91 * v | 0},${86 * v | 0})`, "#6f6b65", 2), m: 0.6 / 1.2 * 2, rough: 0.6, tile: 1.2 },
+  { re: /tile wall/i, canvas: () => tileTex(v => `rgb(${222 * v | 0},${217 * v | 0},${208 * v | 0})`, "#cfc8bd", 2), m: 1, rough: 0.3, tile: 1.2 },
+];
+const texCache = {};
+function boxUV(mesh, scale) {
+  const g = mesh.geometry; if (!g.attributes.normal) g.computeVertexNormals();
+  const p = g.attributes.position, n = g.attributes.normal, uv = new Float32Array(p.count * 2);
+  mesh.updateWorldMatrix(true, false); const M = mesh.matrixWorld, N = new THREE.Matrix3().getNormalMatrix(M), v = new THREE.Vector3(), nn = new THREE.Vector3();
+  for (let i = 0; i < p.count; i++) { v.fromBufferAttribute(p, i).applyMatrix4(M); nn.fromBufferAttribute(n, i).applyMatrix3(N);
+    const ax = Math.abs(nn.x), ay = Math.abs(nn.y), az = Math.abs(nn.z);
+    let u, w; if (ay >= ax && ay >= az) { u = v.x; w = v.z; } else if (ax >= az) { u = v.z; w = v.y; } else { u = v.x; w = v.y; }
+    uv[2 * i] = u * scale; uv[2 * i + 1] = w * scale; }
+  g.setAttribute("uv", new THREE.BufferAttribute(uv, 2)); }
 
 const pivots = [], ceilings = [];
 let model;
 const draco = new DRACOLoader(); draco.setDecoderPath("https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/libs/draco/gltf/");
 const loader = new GLTFLoader(); loader.setDRACOLoader(draco);
-loader.load("model.glb?v=" + (window.MODEL_V || "2"), (g) => {
+loader.load("model.glb?v=3", (g) => {
   model = g.scene; scene.add(model);
   model.traverse((o) => {
     const u = o.userData || {};
@@ -85,8 +133,25 @@ loader.load("model.glb?v=" + (window.MODEL_V || "2"), (g) => {
       o.userData.t = 0; o.userData.dir = 0; pivots.push(o);
     }
     if (/^(Ceiling|Bal_slab_ceiling)/.test(o.name)) ceilings.push(o);
-    if (o.isMesh) { o.material.side = THREE.FrontSide; }
+    if (o.isMesh) {
+      o.material.side = THREE.FrontSide; o.castShadow = true; o.receiveShadow = true;
+      const mn = o.material.name || "";
+      const s = SURF.find(s => s.re.test(mn));
+      if (s) {
+        boxUV(o, s.m);
+        if (!o.material.userData.done) {
+          const m = o.material; m.userData.done = true;
+          const map = s.canvas ? (texCache[s.re] ||= s.canvas()) : s.map ? (texCache[s.map] ||= tex(s.map)) : null;
+          if (map) m.map = map; if (s.nor) { m.normalMap = texCache[s.nor] ||= tex(s.nor); m.normalScale = new THREE.Vector2(0.6, 0.6); }
+          if (!s.keep) m.color.set(0xffffff); else m.color.set(0xefe9df);
+          m.roughness = s.rough; m.metalness = 0; m.needsUpdate = true;
+        }
+      }
+    }
   });
+  // walls get their own material copies so only they are cut / hidden
+  const wm = {};
+  model.traverse(o => { if (o.isMesh && /^(Wall_|W2_|Bal_wall|Skirt|Wall_R|Glz_frame_top|BedWin_fT|BedBalDoor_fT|Bal_frame_t)/.test(o.name)) { const k = o.material.uuid; o.material = wm[k] ||= o.material.clone(); walls.push(o); } });
   ceilings.forEach(c => c.visible = false);
   window._dbg = { scene, camera, model, pivots, THREE, renderer, controls };
   document.getElementById("load").remove(); go("all");
@@ -114,6 +179,8 @@ function toggle(p, open) { p.userData.dir = (open === undefined ? (p.userData.di
 document.getElementById("openall").onclick = () => pivots.forEach(p => toggle(p, true));
 document.getElementById("closeall").onclick = () => pivots.forEach(p => toggle(p, false));
 document.querySelectorAll("[data-view]").forEach(b => b.onclick = () => go(b.dataset.view));
+document.querySelectorAll("[data-walls]").forEach(b => b.onclick = () => setWalls(b.dataset.walls));
+document.getElementById("fov").oninput = (e) => setFov(+e.target.value);
 document.getElementById("ceil").onclick = (e) => { const v = !ceilings[0]?.visible; ceilings.forEach(c => c.visible = v); e.target.classList.toggle("on", v); };
 
 // tap / click (ignore drags)
@@ -143,7 +210,7 @@ canvas.addEventListener("pointerup", (e) => {
   else { let n = hits[0].object; info(`<b>${n.name}</b>`); }
 });
 
-function resize() { const w = innerWidth, h = innerHeight; renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix(); }
+function resize() { const w = innerWidth, h = innerHeight; renderer.setSize(w, h, false); camera.aspect = w / h; setFov(hfov); }
 addEventListener("resize", resize); resize();
 let last = performance.now();
 renderer.setAnimationLoop((now) => {

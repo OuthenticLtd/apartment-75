@@ -5,7 +5,10 @@ for o in O:
         if m.type == 'NODES' and m.node_group and m.node_group.name == "Cutaway": m.show_viewport = False; m.show_render = False
     if o.type in ('LIGHT', 'CAMERA'): o.hide_set(True)
 for o in O:
-    o.hide_viewport = False if o.type not in ('LIGHT', 'CAMERA') else True
+    show = o.type not in ('LIGHT', 'CAMERA') and not o.hide_render
+    o.hide_viewport = not show
+    try: o.hide_set(not show)
+    except RuntimeError: pass
 # objects that only exist for renders
 for o in O:
     if o.name.startswith(("Sun", "Bath_fill")): o.hide_viewport = True
