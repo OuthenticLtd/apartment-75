@@ -114,7 +114,7 @@ Mc = obb(O["Mirror_cab"]); chk("Mirror cabinet centre height", (Mc[0][2]+Mc[1][2
 chk("Balcony chair legroom to railing", 6.86 - U(units["Balcony chair 0"])[1][1], 45)
 # --- heights
 Tv = obb(O["TV_body"]); chk("TV centre height", (Tv[0][2]+Tv[1][2])/2, 100, 110)
-a1 = obb(O["ArtSofa1_frame"]); chk("Art bottom above sofa back (above furniture: 15-25 governs)", a1[0][2] - obb(O["Sofa_back"])[1][2], 15, 25); chk("Art group width / sofa width", (obb(O["ArtSofa2_frame"])[1][1]-a1[0][1])/(S[1][1]-S[0][1]), 0.60, 0.80, unit="ratio")
+a1 = obb(O["ArtSofa1_frame"]); chk("Art bottom above sofa back (above furniture: 15-25 governs)", a1[0][2] - max(obb(o)[1][2] for o in P("Sofa_back")), 15, 25); chk("Art group width / sofa width", (obb(O["ArtSofa2_frame"])[1][1]-a1[0][1])/(S[1][1]-S[0][1]), 0.60, 0.80, unit="ratio")
 chk("Desk height", obb(O["WU_desk_slab"])[1][2], 72, 76); chk("Desk depth", 3.31 - 2.75, 50, sev="WARN")
 chk("Kitchen wall units above worktop", 1.45 - 0.90, 50, 60)
 # --- REACH (the use test)
@@ -127,7 +127,7 @@ for side, n in (("wardrobe", "Bed_ns_wardrobe"), ("window", "Bed_ns_window")):
 sh_w = Vector((6.30, M_[0][1] + 0.35, 0.65)); sh_n = Vector((6.30, M_[1][1] - 0.35, 0.65))
 chk("Bedside switch -> sleeper shoulder (wardrobe side)", (O["Bed_switch0"].matrix_world.translation - sh_w).length, None, 60)
 chk("Bedside switch -> sleeper shoulder (window side)", (O["Bed_switch1"].matrix_world.translation - sh_n).length, None, 60)
-seats = [Vector((0.80, O[n].location.y)) for n in ("Sofa_seat0", "Sofa_seat1", "Sofa_seat2")]
+seats = [Vector((0.80, y)) for y in (S[0][1] + 0.45, (S[0][1] + S[1][1]) / 2, S[1][1] - 0.45)]
 for i, s in enumerate(seats):
     d = max(C[0][0] - s.x, 0) + max(C[0][1] - s.y, 0, s.y - C[1][1])
     chk(f"Sofa seat {i+1} -> coffee table reach", d - 0.16, None, 45)

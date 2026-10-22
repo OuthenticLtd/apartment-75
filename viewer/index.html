@@ -124,7 +124,7 @@ const pivots = [], ceilings = [];
 let model;
 const draco = new DRACOLoader(); draco.setDecoderPath("https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/libs/draco/gltf/");
 const loader = new GLTFLoader(); loader.setDRACOLoader(draco);
-loader.load("model.glb?v=3", (g) => {
+loader.load("model.glb?v=4", (g) => {
   model = g.scene; scene.add(model);
   model.traverse((o) => {
     const u = o.userData || {};
