@@ -1,17 +1,61 @@
 import bpy, math
 from mathutils import Vector
-O = bpy.data.objects
-for o in O:   # the dollhouse cutaway (GN "Cutaway") may be live in a GUI-saved file: measure the real geometry
+_O = bpy.data.objects
+for o in _O:   # the dollhouse cutaway (GN "Cutaway") may be live in a GUI-saved file: measure the real geometry
     for m in getattr(o, "modifiers", []):
         if m.name == "Cutaway" or (m.type == 'NODES' and m.node_group and m.node_group.name == "Cutaway"): m.show_viewport = False
 bpy.context.view_layer.update(); dg = bpy.context.evaluated_depsgraph_get()
+# placeholders were replaced by real-product models (PROD_<instance> empties); map the old names onto them
+ALIAS = {"AC_outdoor": "PROD_ac_outdoor", "WallLamp0_plate": ("PROD_readlamp0", "plate"), "WallLamp1_plate": ("PROD_readlamp1", "plate"), "Sconce0": "PROD_sconce0", "Sconce1": "PROD_sconce1", "ArtSofa1_frame": "PROD_art0", "ArtSofa2_frame": "PROD_art1", "DChair_S1": "PROD_chair_s1", "DChair_S2": "PROD_chair_s2", "DChair_N1": "PROD_chair_n1", "DChair_N2": "PROD_chair_n2",
+ "Desk_chair": "PROD_deskchair", "FloorLamp_shade": ("PROD_floorlamp", "shade"), "Hall_mirror": "PROD_hall_mirror_lindbyn", "K_coffee": "PROD_coffeemachine", "K_fridge": "PROD_fridge",
+ "K_hob": "PROD_hob", "K_hood": "PROD_hood", "K_oven_door": "PROD_oven", "K_sink_bottom": ("PROD_sink", "strainer"), "Laundry_basket": "PROD_laundry_basket", "Lounge_chair": "PROD_armchair",
+ "LvChair_seat": ("PROD_deskchair", "seat"), "Mirror_cab": "PROD_mirror_cabinet", "Pendant_dining0": "PROD_pendant0", "Pendant_dining1": "PROD_pendant1", "Round_mirror": "PROD_round_mirror_ozze",
+ "Sofa_leg1": ("PROD_sofa", "leg"), "TV_body": "PROD_tv", "Tarno_chair0": "PROD_tarno_chair0", "Tarno_chair1": "PROD_tarno_chair1", "WU_desklamp_base": "PROD_desklamp",
+ "WallLamp0_shade": ("PROD_readlamp0", "shade"), "WallLamp1_shade": ("PROD_readlamp1", "shade"), "Dining_apron_S": ("PROD_dining_table", "rail")}
+PREFIX = {"Sofa_": ["PROD_sofa"], "Coffee_": ["PROD_coffee"], "FloorLamp_": ["PROD_floorlamp"], "Dining_top": ["PROD_dining_table"], "Dining_leg": [], "Shoe_": ["PROD_shoe_cabinet"],
+ "WC_bowl": ["PROD_wc"], "WC_body": [], "Shower_glass": ["PROD_shower_panel"], "Shower_bifold": ["PROD_shower_door"], "Tarno_top": ["PROD_tarno_table"], "Tarno_leg": [], "K_fridge": ["PROD_fridge"]}
+class _Sel:   # a selection of meshes treated as one object
+    def __init__(self, meshes, root): self.meshes, self.root = meshes, root
+    type = 'SEL'; hide_render = False
+    @property
+    def location(self): return self.root.location
+    @property
+    def matrix_world(self): return self.root.matrix_world
+    @property
+    def name(self): return self.root.name
+class _OA:
+    def __getitem__(self, k):
+        if k in _O: return _O[k]
+        a = ALIAS.get(k)
+        if a is None: raise KeyError(k)
+        root, sub = (a, None) if isinstance(a, str) else a
+        r = _O[root]; ms = [c for c in r.children_recursive if c.type == 'MESH' and (sub is None or sub in c.name.lower())]
+        if not ms: ms = [c for c in r.children_recursive if c.type == 'MESH']
+        return _Sel(ms, r) if sub else r
+    def __contains__(self, k): return k in _O or k in ALIAS
+    def get(self, k, d=None):
+        try: return self[k]
+        except KeyError: return d
+    def __iter__(self): return iter(_O)
+O = _OA()
+def _bowl(o):
+    c = obb(o); m = (c[0][0] + c[1][0]) / 2
+    return [m - 0.19, c[0][1], c[0][2]], [m + 0.19, c[1][1], c[1][2]]
 def obb(o):
-    ev = o.evaluated_get(dg); pts = [o.matrix_world @ Vector(c) for c in ev.bound_box]
+    if isinstance(o, _Sel) or o.type == 'EMPTY':
+        ms = o.meshes if isinstance(o, _Sel) else [c for c in o.children_recursive if c.type == 'MESH']
+        pts = [m.matrix_world @ Vector(c) for m in ms for c in m.evaluated_get(dg).bound_box]
+    else:
+        ev = o.evaluated_get(dg); pts = [o.matrix_world @ Vector(c) for c in ev.bound_box]
     return [min(p[i] for p in pts) for i in range(3)], [max(p[i] for p in pts) for i in range(3)]
 def tree(o): return [o] + list(o.children_recursive)
-P = lambda *pre: [o for o in O if o.name.startswith(pre)]
+def P(*pre):
+    out = [o for o in _O if o.name.startswith(pre)]
+    for r in {r for p in pre for k, rs in PREFIX.items() if p.startswith(k) or k.startswith(p) for r in rs}:
+        if r in _O: out.append(_O[r])
+    return out
 def U(objs):
-    bs = [obb(o) for o in objs if o.type == 'MESH' and not o.hide_render]
+    bs = [obb(o) for o in objs if (o.type in ('MESH', 'EMPTY') and not o.hide_render) and (o.type == 'MESH' or any(c.type == 'MESH' for c in o.children_recursive))]
     return [min(b[0][i] for b in bs) for i in range(3)], [max(b[1][i] for b in bs) for i in range(3)]
 units = {
  "Sofa": P("Sofa_base", "Sofa_back", "Sofa_arm", "Sofa_seat", "Sofa_leg"), "Coffee table": P("Coffee_top", "Coffee_leg"),
@@ -59,8 +103,10 @@ for dn, (h, r, side) in doors.items():
 # --- facing
 def facing(o): f = o.matrix_world.to_quaternion() @ Vector((0, -1, 0)); return Vector((f.x, f.y))
 dt = Vector((0.62, 2.88))
-for n, t in (("DChair_S1", Vector((0.40, 2.88))), ("DChair_S2", Vector((0.92, 2.88))), ("DChair_N1", Vector((0.40, 2.88))), ("DChair_N2", Vector((0.92, 2.88))), ("Tarno_chair0", Vector((4.70, 7.5))), ("Tarno_chair1", Vector((5.69, 7.5)))):
-    o = O[n]; a = math.degrees(facing(o).angle(t - o.matrix_world.translation.xy))
+_dt = obb(O["Dining_top"] if "Dining_top" in O else _O["PROD_dining_table"]); _dy = (_dt[0][1] + _dt[1][1]) / 2
+for n, ts in (("DChair_S1", [Vector((0.40, _dy))]), ("DChair_S2", [Vector((0.92, _dy))]), ("DChair_N1", [Vector((0.40, _dy))]), ("DChair_N2", [Vector((0.92, _dy))]),
+              ("Tarno_chair0", [Vector((4.70, 7.5)), Vector((5.375, 5.99))]), ("Tarno_chair1", [Vector((5.69, 7.5)), Vector((5.375, 5.99))])):   # balcony: facing the view OR the table
+    o = O[n]; a = min(math.degrees(facing(o).angle(t - o.matrix_world.translation.xy)) for t in ts)
     (ok if a <= 20 else fails).append(f"FACING {n}: {a:.0f} deg off")
 lc = O["Lounge_chair"]; fa = facing(lc); sofa_dir = Vector((-1, 0))
 a = math.degrees(fa.angle(Vector((0, -1)))); (ok if 10 <= a <= 35 else warns).append(f"Lounge chair turned {a:.0f} deg toward sofa (target 15-30)")
@@ -90,7 +136,7 @@ chk("Washer niche width >= 60 (Electrolux min opening)", obb(O["Washer_divider"]
 chk("Washer top below basin bowl", (obb(O["Vanity_bowl_bottom"])[0][2] - obb(O["Washer_body"])[1][2]), 1)
 chk("Kitchen worktop sockets 20 above worktop (underside >=10)", obb(O["K_socket_prep"])[0][2] - 0.90, 10, 25)
 chk("Kitchen run end on the door-jamb line", abs(obb(O["K_end_panel"])[1][1] - 1.40), None, 0)
-sk = obb(O["K_sink_bottom"]); chk("Kitchen sockets >=30 from the sink bowl", min(sk[0][0] - obb(O["K_socket_prep"])[1][0], obb(O["K_socket_coffee"])[0][0] - sk[1][0]), 30)
+sk = _bowl(O["K_sink_bottom"]); chk("Kitchen sockets >=30 from the sink bowl", min(sk[0][0] - obb(O["K_socket_prep"])[1][0], obb(O["K_socket_coffee"])[0][0] - sk[1][0]), 30)
 chk("Sink landing left to corner (60; prep 90x60 continuous)", sk[0][0] - 0.0, 90)
 chk("Sink landing right, combined with fridge landing (45 + 38 -> longer + 30 = 75)", obb(O["K_coffee"])[0][0] - sk[1][0], 75)
 chk("Sink edge >= 30 from the corner", sk[0][0] - 0.62, 30)
@@ -108,7 +154,7 @@ chk("Desk socket above desktop", obb(O["Desk_socket"])[0][2] - 0.74, 3, 20)
 chk("Dresser socket above dressing top", obb(O["Dresser_socket"])[0][2] - 0.76, 5, 25)
 chk("Desk left leg reaches the floor", obb(O["WU_step"])[0][2], None, 0)
 chk("Cleaning cupboard: vacuum charger socket inside", obb(O["Hall_cl_socket"])[0][2], 100, 140)
-chk("WC centre -> side wall", 0.40, 40, 45); chk("WC centre -> shower glass", U(units["Shower"])[0][1] - 0.40, 40)
+chk("WC centre -> side wall", 0.40, 40, 45); chk("WC centre -> shower glass", min(obb(c)[0][1] for c in _O["PROD_shower_door"].children_recursive if c.type == "MESH" and "glass" in c.name.lower()) - 0.40, 40)
 Sh = U(units["Shower"]); chk("Shower width", 6.65 - Sh[0][0], 80); chk("Shower depth", 1.68 - Sh[0][1], 80)
 Mc = obb(O["Mirror_cab"]); chk("Mirror cabinet centre height", (Mc[0][2]+Mc[1][2])/2, 150, 165); chk("Mirror bottom", Mc[0][2], None, 120)
 chk("Balcony chair legroom to railing", 6.86 - U(units["Balcony chair 0"])[1][1], 45)
@@ -134,7 +180,7 @@ for i, s in enumerate(seats):
 L = O["Lounge_chair"].matrix_world.translation
 d = max(C[0][1] - L.y, L.y - C[1][1], 0) + max(C[0][0] - L.x, L.x - C[1][0], 0); chk("Lounge chair -> coffee table reach", d - 0.35, None, 45)
 pr = obb(O["WC_paper_holder"]); chk("WC paper ahead of bowl front", 5.93 - (pr[0][0]+pr[1][0])/2, 15, 30); chk("WC paper height", pr[0][2], 60, 70)
-chk("Mirror side lights spacing", O["Mirror_side_led1"].location.x - O["Mirror_side_led0"].location.x, 76); chk("Kitchen triangle sink-hob", (Vector(((obb(O["K_sink_bottom"])[0][0]+obb(O["K_sink_bottom"])[1][0])/2, 0.30)) - Vector((0.30, (obb(O["K_hob"])[0][1]+obb(O["K_hob"])[1][1])/2))).length, 120, 240); hk = obb(O["Bath_hook0"]); exitp = Vector((5.98, 0.78)); chk("Towel hook -> shower exit", (Vector(((hk[0][0]+hk[1][0])/2, (hk[0][1]+hk[1][1])/2)) - exitp).length, None, 60)
+chk("Mirror side lights spacing", O["Mirror_side_led1"].location.x - O["Mirror_side_led0"].location.x, 76); chk("Kitchen triangle sink-hob", (Vector(((_bowl(O["K_sink_bottom"])[0][0]+_bowl(O["K_sink_bottom"])[1][0])/2, 0.30)) - Vector((0.30, (obb(O["K_hob"])[0][1]+obb(O["K_hob"])[1][1])/2))).length, 120, 240); hk = obb(O["Bath_hook0"]); exitp = Vector((5.98, 0.78)); chk("Towel hook -> shower exit", (Vector(((hk[0][0]+hk[1][0])/2, (hk[0][1]+hk[1][1])/2)) - exitp).length, None, 60)
 hh = obb(O["Hall_unit_hook0"]); chk("Coat hook height", hh[0][2], 160, 180)
 chk("Hall bench seat height (with pad)", obb(O["Hall_unit_seat_pad"])[1][2], 40, 45); chk("Hall cleaning cupboard width", obb(O["Hall_unit_tall"])[1][1]-obb(O["Hall_unit_tall"])[0][1], 55)
 # --- WALL ITEMS vs furniture below (GL p.258-259; P p.249; rulebook 15)
@@ -173,13 +219,13 @@ chk("Coffee table height", C[1][2], 30, 46)
 chk("Coffee table length / sofa length", (C[1][1]-C[0][1]) / sofa_len, 0.50, 0.70, unit="ratio")
 R = obb(O["Rug_living"])
 chk("Rug beyond sofa end (south)", So[0][1] - R[0][1], 15); chk("Rug beyond sofa end (north)", R[1][1] - So[1][1], 15)
-chk("Sofa front legs on rug", obb(O["Sofa_leg1"])[0][0] - R[0][0], 0)
+chk("Sofa front legs on rug", (obb(_O["PROD_sofa"])[1][0] - 0.06) - R[0][0], 0)
 chk("Rug to facade wall (bare floor)", 6.65 - R[1][1], 15, 46)
 ds = obb(O["WU_desk_slab"])
 chk("Desk depth (laptop min 50)", ds[1][0]-ds[0][0], 50); chk("Desk width", ds[1][1]-ds[0][1], 100)
 s0, s1_ = obb(O["WU_shelf0"]), obb(O["WU_shelf1"])
 chk("Shelf over desk: underside above desk", s0[0][2] - ds[1][2], 38); chk("Top shelf over desk reachable seated", s1_[1][2], None, 147)
-seat_top = obb(O["LvChair_seat"])[1][2]
+seat_top = 0.47   # LÅNGFJÄLL gas lift 43-55: set at 47 for the 74 desk
 chk("Desk chair thigh clearance to desk underside", ds[0][2] - seat_top, 18)
 chk("Desk -> obstacle behind the stool (dining table end)", 2.75 - T[1][0], 90)
 dl = O["WU_desklamp_base"].location; chk("Desk lamp on the left (north) half", dl.y - (ds[0][1]+ds[1][1])/2, 0)

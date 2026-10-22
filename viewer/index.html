@@ -157,7 +157,7 @@ const pivots = [], ceilings = [];
 let model;
 const draco = new DRACOLoader(); draco.setDecoderPath("https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/libs/draco/gltf/");
 const loader = new GLTFLoader(); loader.setDRACOLoader(draco);
-loader.load("model.glb?v=6", (g) => {
+loader.load("model.glb?v=7", (g) => {
   model = g.scene; scene.add(model);
   model.traverse((o) => {
     const u = o.userData || {};
@@ -194,17 +194,20 @@ loader.load("model.glb?v=6", (g) => {
   model.traverse(o => { if (o.isMesh && /^(Wall_|W2_|Bath_tile_|Skirt|Glz_|BedWin_|BedBalDoor_|Bal_frame|Bal_pane|Bal_wall|Bal_door|Bal_handle|EntrDoor_|BedDoor_|BathDoor_|Door_casing|Door_leaf|Door_handle|Curtain|BedCurtain|Blind_)/.test(o.name)) { const k = o.material.uuid; o.material = wm[k] ||= o.material.clone(); walls.push(o); } });
 
   // real planar reflections on the mirrors (normal given in Blender axes)
-  const MIRRORS = { Hall_mirror: [1, 0, 0], Round_mirror: [1, 0, 0], Wardrobe_slide_back: [0, 1, 0], Mirror_front0: [0, -1, 0], Mirror_front1: [0, -1, 0], Hall_unit_tall_door1: [-1, 0, 0] };
+  const MIRRORS = { hall_mirror_lindbyn_lindbyn_glass: [1, 0, 0], round_mirror_ozze_ozze_glass: [1, 0, 0], Wardrobe_slide_back: [0, 1, 0], mirror_cabinet_monza_door_left_mirror: [0, -1, 0], mirror_cabinet_monza_door_right_mirror: [0, -1, 0], Hall_unit_tall_door1: [-1, 0, 0] };
   for (const [name, nb] of Object.entries(MIRRORS)) {
-    const m = model.getObjectByName(name); if (!m || !m.isMesh) continue;
+    let m = model.getObjectByName(name); if (m && !m.isMesh) { let mm = null; m.traverse(c => { if (!mm && c.isMesh) mm = c; }); m = mm; } if (!m) { console.warn('mirror missing', name); continue; }
     const n = new THREE.Vector3(nb[0], nb[2], -nb[1]);            // Blender -> three axes
     m.updateWorldMatrix(true, true); const wb = new THREE.Box3().setFromObject(m), size = wb.getSize(new THREE.Vector3()), c = wb.getCenter(new THREE.Vector3());
     const ax = Math.abs(n.x) > 0.5 ? "x" : Math.abs(n.y) > 0.5 ? "y" : "z";
     const w = ax === "x" ? size.z : size.x, h = ax === "y" ? size.z : size.y;
-    const round = name === "Round_mirror";
+    const round = name.startsWith("round_mirror");
     const geo = round ? new THREE.CircleGeometry(Math.min(w, h) / 2 * 0.96, 48) : new THREE.PlaneGeometry(w * 0.98, h * 0.98);
     const r = new Reflector(geo, { textureWidth: 512, textureHeight: 512, color: 0xb9c0c4, clipBias: 0.003 });
     r.position.copy(c); r.position[ax] += (size[ax] / 2 + 0.002) * Math.sign(n[ax]);
+    let pr = m; while (pr && !/^PROD_/.test(pr.name)) pr = pr.parent;      // product frames sit proud of the glass: put the reflector just inside the frame face
+    if (pr && !round) { const pb = new THREE.Box3().setFromObject(pr); r.position[ax] = (n[ax] > 0 ? pb.max[ax] + 0.001 : pb.min[ax] - 0.001); }
+    if (pr && round) { const pb = new THREE.Box3().setFromObject(pr); r.position[ax] = (n[ax] > 0 ? pb.max[ax] + 0.001 : pb.min[ax] - 0.001); }
     scene.add(r); r.lookAt(r.position.clone().add(n)); r.updateMatrixWorld(true); m.attach(r);   // follows the door when it opens
     // the mirror body keeps its frame look; hide the flat grey face behind the reflector
   }
