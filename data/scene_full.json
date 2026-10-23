@@ -812,12 +812,12 @@
 "min": [
 1.54,
 5.866,
-0.0
+-0.001
 ],
 "max": [
 1.592,
 5.949,
-0.555
+0.554
 ],
 "material": "armchair_ekenaset oak.002",
 "props": {}
@@ -828,12 +828,12 @@
 "min": [
 2.116,
 5.722,
-0.0
+-0.001
 ],
 "max": [
 2.168,
 5.806,
-0.555
+0.554
 ],
 "material": "armchair_ekenaset oak.002",
 "props": {}
@@ -860,12 +860,12 @@
 "min": [
 2.248,
 6.252,
-0.0
+-0.001
 ],
 "max": [
 2.313,
 6.385,
-0.309
+0.308
 ],
 "material": "armchair_ekenaset oak.002",
 "props": {}
@@ -908,12 +908,12 @@
 "min": [
 1.556,
 5.916,
-0.245
+0.246
 ],
 "max": [
 1.707,
 6.427,
-0.305
+0.306
 ],
 "material": "armchair_ekenaset oak.002",
 "props": {}
@@ -924,12 +924,12 @@
 "min": [
 2.133,
 5.773,
-0.245
+0.246
 ],
 "max": [
 2.284,
 6.284,
-0.305
+0.306
 ],
 "material": "armchair_ekenaset oak.002",
 "props": {}
@@ -986,12 +986,12 @@
 "name": "art0_rodalm_moulding_bottom",
 "collection": "Products",
 "min": [
-0.0,
+-0.001,
 4.105,
 1.06
 ],
 "max": [
-0.03,
+0.029,
 4.735,
 1.078
 ],
@@ -1034,12 +1034,12 @@
 "name": "art0_rodalm_moulding_top",
 "collection": "Products",
 "min": [
-0.0,
+-0.001,
 4.105,
 1.972
 ],
 "max": [
-0.03,
+0.029,
 4.735,
 1.99
 ],
@@ -1098,12 +1098,12 @@
 "name": "art1_rodalm_moulding_bottom",
 "collection": "Products",
 "min": [
-0.0,
+-0.001,
 4.935,
 1.06
 ],
 "max": [
-0.03,
+0.029,
 5.565,
 1.078
 ],
@@ -1146,12 +1146,12 @@
 "name": "art1_rodalm_moulding_top",
 "collection": "Products",
 "min": [
-0.0,
+-0.001,
 4.935,
 1.972
 ],
 "max": [
-0.03,
+0.029,
 5.565,
 1.99
 ],
@@ -1179,12 +1179,12 @@
 "collection": "Openings",
 "min": [
 3.47,
-5.7,
+5.699,
 0.0
 ],
 "max": [
 3.54,
-5.76,
+5.759,
 2.38
 ],
 "material": "Aluminium anthracite",
@@ -1195,12 +1195,12 @@
 "collection": "Openings",
 "min": [
 3.47,
-6.44,
+6.441,
 0.0
 ],
 "max": [
 3.54,
-6.5,
+6.501,
 2.38
 ],
 "material": "Aluminium anthracite",
@@ -1309,13 +1309,13 @@
 "collection": "Openings",
 "min": [
 3.65,
-6.85,
-0.0
+6.851,
+0.001
 ],
 "max": [
 3.69,
-6.89,
-1.05
+6.891,
+1.051
 ],
 "material": "Aluminium anthracite",
 "props": {}
@@ -1325,13 +1325,13 @@
 "collection": "Openings",
 "min": [
 4.6,
-6.85,
-0.0
+6.851,
+0.001
 ],
 "max": [
 4.64,
-6.89,
-1.05
+6.891,
+1.051
 ],
 "material": "Aluminium anthracite",
 "props": {}
@@ -1341,13 +1341,13 @@
 "collection": "Openings",
 "min": [
 5.55,
-6.85,
-0.0
+6.851,
+0.001
 ],
 "max": [
 5.59,
-6.89,
-1.05
+6.891,
+1.051
 ],
 "material": "Aluminium anthracite",
 "props": {}
@@ -1357,13 +1357,13 @@
 "collection": "Openings",
 "min": [
 6.46,
-6.85,
-0.0
+6.851,
+0.001
 ],
 "max": [
 6.5,
-6.89,
-1.05
+6.891,
+1.051
 ],
 "material": "Aluminium anthracite",
 "props": {}
@@ -1685,12 +1685,12 @@
 "collection": "Products",
 "min": [
 5.244,
-1.648,
+1.649,
 1.062
 ],
 "max": [
 5.271,
-1.664,
+1.665,
 1.09
 ],
 "material": "basintap_imex body",
@@ -1783,12 +1783,12 @@
 "collection": "Bathroom",
 "min": [
 4.77,
-0.15,
+0.149,
 -0.02
 ],
 "max": [
 4.89,
-0.97,
+0.969,
 0.0
 ],
 "material": "Tile floor Town Antracite 60x60",
@@ -1814,28 +1814,30 @@
 "name": "Bath_mat",
 "collection": "Bathroom",
 "min": [
-5.8,
-0.85,
-0.0
+5.62,
+0.32,
+0.001
 ],
 "max": [
-6.4,
-1.25,
-0.012
+6.07,
+0.74,
+0.013
 ],
 "material": "Linen sage",
-"props": {}
+"props": {
+"spec": "Bath mat 45x42, outside the shower door"
+}
 },
 {
 "name": "Bath_socket_ip44",
 "collection": "Bathroom",
 "min": [
-4.89,
+4.889,
 1.41,
 1.26
 ],
 "max": [
-4.897,
+4.896,
 1.49,
 1.34
 ],
@@ -2087,12 +2089,12 @@
 "name": "BC_back",
 "collection": "Living",
 "min": [
-0.0,
+-0.001,
 5.98,
 0.0
 ],
 "max": [
-0.02,
+0.019,
 6.63,
 1.97
 ],
@@ -3157,12 +3159,12 @@
 "name": "BC_drawer0",
 "collection": "Living",
 "min": [
-0.33,
+0.331,
 5.982,
 0.012
 ],
 "max": [
-0.35,
+0.351,
 6.628,
 0.198
 ],
@@ -3175,12 +3177,12 @@
 "name": "BC_drawer1",
 "collection": "Living",
 "min": [
-0.33,
+0.331,
 5.982,
 0.207
 ],
 "max": [
-0.35,
+0.351,
 6.628,
 0.398
 ],
@@ -3245,12 +3247,12 @@
 "name": "BC_sideL",
 "collection": "Living",
 "min": [
-0.0,
+-0.001,
 5.96,
 0.0
 ],
 "max": [
-0.35,
+0.349,
 5.98,
 2.0
 ],
@@ -3264,12 +3266,12 @@
 "collection": "Living",
 "min": [
 0.0,
-6.63,
+6.631,
 0.0
 ],
 "max": [
 0.35,
-6.65,
+6.651,
 2.0
 ],
 "material": "Oak solid",
@@ -3746,12 +3748,12 @@
 "collection": "Openings",
 "min": [
 3.87,
-5.5,
+5.499,
 0.0
 ],
 "max": [
 3.93,
-5.57,
+5.569,
 2.38
 ],
 "material": "Aluminium anthracite",
@@ -3762,12 +3764,12 @@
 "collection": "Openings",
 "min": [
 4.61,
-5.5,
+5.499,
 0.0
 ],
 "max": [
 4.67,
-5.57,
+5.569,
 2.38
 ],
 "material": "Aluminium anthracite",
@@ -4071,12 +4073,12 @@
 "name": "BedWin_fL",
 "collection": "Openings",
 "min": [
-4.67,
+4.669,
 5.5,
 0.0
 ],
 "max": [
-4.73,
+4.729,
 5.57,
 2.38
 ],
@@ -4087,12 +4089,12 @@
 "name": "BedWin_fR",
 "collection": "Openings",
 "min": [
-6.12,
+6.121,
 5.5,
 0.0
 ],
 "max": [
-6.18,
+6.181,
 5.57,
 2.38
 ],
@@ -4122,12 +4124,12 @@
 "collection": "Openings",
 "min": [
 5.4,
-5.5,
+5.499,
 0.0
 ],
 "max": [
 5.46,
-5.57,
+5.569,
 2.38
 ],
 "material": "Aluminium anthracite",
@@ -4257,12 +4259,12 @@
 "name": "boiler_galant_body",
 "collection": "Products",
 "min": [
-6.362,
+6.363,
 0.145,
 1.84
 ],
 "max": [
-6.65,
+6.651,
 0.655,
 2.522
 ],
@@ -4273,12 +4275,12 @@
 "name": "boiler_galant_bottom_cap",
 "collection": "Products",
 "min": [
-6.362,
+6.363,
 0.145,
 1.757
 ],
 "max": [
-6.65,
+6.651,
 0.655,
 1.84
 ],
@@ -4575,12 +4577,12 @@
 "min": [
 6.6,
 3.117,
-1.546
+1.547
 ],
 "max": [
 6.62,
 4.757,
-1.55
+1.551
 ],
 "material": "LED shelf warm",
 "props": {}
@@ -4995,12 +4997,12 @@
 "min": [
 3.35,
 -0.25,
-2.6
+2.599
 ],
 "max": [
 6.9,
 5.69,
-2.65
+2.649
 ],
 "material": "Ceiling paint",
 "props": {}
@@ -5395,12 +5397,12 @@
 "min": [
 1.349,
 4.249,
-0.0
+-0.001
 ],
 "max": [
 1.381,
 4.281,
-0.004
+0.003
 ],
 "material": "coffee_listerby glide.002",
 "props": {}
@@ -5411,12 +5413,12 @@
 "min": [
 1.859,
 4.249,
-0.0
+-0.001
 ],
 "max": [
 1.891,
 4.281,
-0.004
+0.003
 ],
 "material": "coffee_listerby glide.002",
 "props": {}
@@ -5427,12 +5429,12 @@
 "min": [
 1.349,
 5.389,
-0.0
+-0.001
 ],
 "max": [
 1.381,
 5.421,
-0.004
+0.003
 ],
 "material": "coffee_listerby glide.002",
 "props": {}
@@ -5443,12 +5445,12 @@
 "min": [
 1.859,
 5.389,
-0.0
+-0.001
 ],
 "max": [
 1.891,
 5.421,
-0.004
+0.003
 ],
 "material": "coffee_listerby glide.002",
 "props": {}
@@ -6034,12 +6036,12 @@
 "collection": "Products",
 "min": [
 2.546,
-0.457,
+0.458,
 1.127
 ],
 "max": [
 2.583,
-0.457,
+0.458,
 1.164
 ],
 "material": "coffee_delonghi dial_face.002",
@@ -6113,12 +6115,12 @@
 "name": "coffeemachine_delonghi_head",
 "collection": "Products",
 "min": [
-2.444,
+2.443,
 0.345,
 1.109
 ],
 "max": [
-2.682,
+2.681,
 0.444,
 1.216
 ],
@@ -6163,12 +6165,12 @@
 "min": [
 2.513,
 0.305,
-1.25
+1.251
 ],
 "max": [
 2.613,
 0.335,
-1.251
+1.252
 ],
 "material": "coffee_delonghi black gloss.002",
 "props": {}
@@ -6339,12 +6341,12 @@
 "min": [
 2.452,
 0.381,
-0.93
+0.929
 ],
 "max": [
 2.674,
 0.451,
-0.933
+0.932
 ],
 "material": "coffee_delonghi tray grille.002",
 "props": {}
@@ -7036,12 +7038,12 @@
 "collection": "Products",
 "min": [
 0.098,
-2.9,
+2.901,
 0.67
 ],
 "max": [
 1.142,
-2.915,
+2.916,
 0.72
 ],
 "material": "table_aabenraa steel.002",
@@ -7052,12 +7054,12 @@
 "collection": "Products",
 "min": [
 0.098,
-2.205,
+2.204,
 0.67
 ],
 "max": [
 1.142,
-2.22,
+2.219,
 0.72
 ],
 "material": "table_aabenraa steel.002",
@@ -8143,12 +8145,12 @@
 "min": [
 3.72,
 -0.12,
-2.08
+2.081
 ],
 "max": [
 4.72,
 -0.02,
-2.1
+2.101
 ],
 "material": "Aluminium anthracite",
 "props": {
@@ -8340,13 +8342,13 @@
 "collection": "Shell",
 "min": [
 0.0,
-0.0,
--0.02
+-0.001,
+-0.019
 ],
 "max": [
 3.35,
-1.4,
-0.001
+1.399,
+0.002
 ],
 "material": "Vinyl SPC oak (floor)",
 "props": {}
@@ -8357,12 +8359,12 @@
 "min": [
 1.066,
 6.161,
-0.0
+0.001
 ],
 "max": [
 1.534,
 6.629,
-0.036
+0.037
 ],
 "material": "floorlamp_hektar dark grey metal.002",
 "props": {}
@@ -8691,13 +8693,13 @@
 "name": "fridge_samsung_disp_bottom",
 "collection": "Products",
 "min": [
-2.947,
-0.64,
+2.946,
+0.641,
 1.086
 ],
 "max": [
-3.125,
-0.678,
+3.124,
+0.679,
 1.088
 ],
 "material": "fridge_samsung dispenser recess.002",
@@ -8740,12 +8742,12 @@
 "collection": "Products",
 "min": [
 3.122,
-0.64,
+0.639,
 1.086
 ],
 "max": [
 3.125,
-0.678,
+0.677,
 1.33
 ],
 "material": "fridge_samsung dispenser recess.002",
@@ -8771,12 +8773,12 @@
 "name": "fridge_samsung_disp_right",
 "collection": "Products",
 "min": [
-2.947,
+2.946,
 0.64,
 1.086
 ],
 "max": [
-2.948,
+2.947,
 0.678,
 1.33
 ],
@@ -8787,14 +8789,14 @@
 "name": "fridge_samsung_disp_top",
 "collection": "Products",
 "min": [
-2.947,
-0.64,
-1.328
+2.946,
+0.641,
+1.329
 ],
 "max": [
-3.125,
-0.678,
-1.33
+3.124,
+0.679,
+1.331
 ],
 "material": "fridge_samsung dispenser recess.002",
 "props": {}
@@ -8949,7 +8951,7 @@
 "min": [
 2.742,
 0.622,
-0.79
+0.789
 ],
 "max": [
 3.329,
@@ -8997,12 +8999,12 @@
 "min": [
 2.748,
 0.588,
-2.028
+2.029
 ],
 "max": [
 2.808,
 0.668,
-2.03
+2.031
 ],
 "material": "fridge_samsung black plastic.002",
 "props": {}
@@ -9124,12 +9126,12 @@
 "collection": "Openings",
 "min": [
 0.4,
-6.73,
+6.729,
 0.0
 ],
 "max": [
 0.46,
-6.8,
+6.799,
 2.38
 ],
 "material": "Aluminium anthracite",
@@ -9140,12 +9142,12 @@
 "collection": "Openings",
 "min": [
 2.95,
-6.73,
+6.729,
 0.0
 ],
 "max": [
 3.01,
-6.8,
+6.799,
 2.38
 ],
 "material": "Aluminium anthracite",
@@ -9192,12 +9194,12 @@
 "collection": "Openings",
 "min": [
 1.12,
-6.73,
+6.729,
 0.0
 ],
 "max": [
 1.18,
-6.8,
+6.799,
 2.38
 ],
 "material": "Aluminium anthracite",
@@ -9208,12 +9210,12 @@
 "collection": "Openings",
 "min": [
 2.05,
-6.73,
+6.729,
 0.0
 ],
 "max": [
 2.11,
-6.8,
+6.799,
 2.38
 ],
 "material": "Aluminium anthracite",
@@ -9311,12 +9313,12 @@
 "min": [
 4.62,
 2.09,
-0.0
+-0.001
 ],
 "max": [
 4.74,
 2.25,
-0.1
+0.099
 ],
 "material": "Linen white",
 "props": {
@@ -9491,12 +9493,12 @@
 "min": [
 4.56,
 1.76,
-0.0
+-0.001
 ],
 "max": [
 4.74,
 2.0,
-0.07
+0.069
 ],
 "material": "Black matte",
 "props": {
@@ -9755,12 +9757,12 @@
 "min": [
 4.46,
 1.15,
-1.975
+1.976
 ],
 "max": [
 4.75,
 1.71,
-1.98
+1.981
 ],
 "material": "LED shelf warm",
 "props": {}
@@ -9968,12 +9970,12 @@
 "min": [
 0.52,
 0.8,
-0.905
+0.906
 ],
 "max": [
 0.55,
 1.0,
-0.905
+0.906
 ],
 "material": "hob_domino print",
 "props": {}
@@ -10000,12 +10002,12 @@
 "min": [
 0.065,
 0.765,
-0.85
+0.851
 ],
 "max": [
 0.555,
 1.035,
-0.9
+0.901
 ],
 "material": "hob_domino housing",
 "props": {}
@@ -10016,12 +10018,12 @@
 "min": [
 0.09,
 0.795,
-0.905
+0.907
 ],
 "max": [
 0.3,
 1.005,
-0.905
+0.907
 ],
 "material": "hob_domino print",
 "props": {}
@@ -10032,12 +10034,12 @@
 "min": [
 0.31,
 0.815,
-0.905
+0.907
 ],
 "max": [
 0.48,
 0.985,
-0.905
+0.907
 ],
 "material": "hob_domino print",
 "props": {}
@@ -10094,14 +10096,14 @@
 "name": "hood_hansa_filter_frame_l",
 "collection": "Products",
 "min": [
-0.014,
+0.015,
 0.632,
-1.561
+1.56
 ],
 "max": [
-0.211,
+0.212,
 0.638,
-1.564
+1.562
 ],
 "material": "hood_hansa filter frame.002",
 "props": {}
@@ -10110,14 +10112,14 @@
 "name": "hood_hansa_filter_frame_r",
 "collection": "Products",
 "min": [
-0.014,
+0.015,
 1.162,
-1.561
+1.56
 ],
 "max": [
-0.211,
+0.212,
 1.168,
-1.564
+1.562
 ],
 "material": "hood_hansa filter frame.002",
 "props": {}
@@ -10238,12 +10240,12 @@
 "name": "hood_hansa_switch_l",
 "collection": "Products",
 "min": [
-0.284,
+0.283,
 0.621,
 1.573
 ],
 "max": [
-0.287,
+0.286,
 0.641,
 1.591
 ],
@@ -10254,12 +10256,12 @@
 "name": "hood_hansa_switch_r",
 "collection": "Products",
 "min": [
-0.284,
+0.283,
 1.159,
 1.573
 ],
 "max": [
-0.287,
+0.286,
 1.179,
 1.591
 ],
@@ -10351,12 +10353,12 @@
 "collection": "Kitchen",
 "min": [
 2.38,
-0.0,
+-0.001,
 0.26
 ],
 "max": [
 2.46,
-0.007,
+0.006,
 0.34
 ],
 "material": "Switch plate black",
@@ -10369,12 +10371,12 @@
 "collection": "Kitchen",
 "min": [
 2.99,
-0.0,
+-0.001,
 2.26
 ],
 "max": [
 3.09,
-0.007,
+0.006,
 2.34
 ],
 "material": "Switch plate black",
@@ -10386,12 +10388,12 @@
 "name": "K_conn_hob",
 "collection": "Kitchen",
 "min": [
-0.0,
+-0.001,
 1.25,
 0.51
 ],
 "max": [
-0.007,
+0.006,
 1.33,
 0.59
 ],
@@ -10404,12 +10406,12 @@
 "name": "K_conn_hood",
 "collection": "Kitchen",
 "min": [
-0.0,
+-0.001,
 0.86,
 1.86
 ],
 "max": [
-0.007,
+0.006,
 0.94,
 1.94
 ],
@@ -10422,12 +10424,12 @@
 "name": "K_conn_oven",
 "collection": "Kitchen",
 "min": [
-0.0,
+-0.001,
 1.25,
 0.26
 ],
 "max": [
-0.007,
+0.006,
 1.33,
 0.34
 ],
@@ -10458,12 +10460,12 @@
 "name": "K_end_panel",
 "collection": "Kitchen",
 "min": [
-0.0,
+-0.001,
 1.38,
 0.0
 ],
 "max": [
-0.62,
+0.619,
 1.4,
 0.9
 ],
@@ -10475,12 +10477,12 @@
 "collection": "Kitchen",
 "min": [
 2.703,
-0.0,
+-0.001,
 0.0
 ],
 "max": [
 2.723,
-0.62,
+0.619,
 2.6
 ],
 "material": "Oak light.001",
@@ -10722,12 +10724,12 @@
 "collection": "Kitchen",
 "min": [
 0.6,
-0.0,
+-0.001,
 0.0
 ],
 "max": [
 2.703,
-0.5,
+0.499,
 0.1
 ],
 "material": "Plinth",
@@ -10738,12 +10740,12 @@
 "collection": "Kitchen",
 "min": [
 0.0,
-0.0,
+-0.001,
 0.0
 ],
 "max": [
 0.5,
-0.5,
+0.499,
 0.1
 ],
 "material": "Plinth",
@@ -10753,12 +10755,12 @@
 "name": "K_plinth_L",
 "collection": "Kitchen",
 "min": [
-0.0,
+-0.001,
 0.6,
 0.0
 ],
 "max": [
-0.5,
+0.499,
 1.38,
 0.1
 ],
@@ -10821,12 +10823,12 @@
 "min": [
 1.24,
 0.02,
-0.9
+0.899
 ],
 "max": [
 1.3,
 0.08,
-1.07
+1.069
 ],
 "material": "Amber glass",
 "props": {}
@@ -11238,12 +11240,12 @@
 "collection": "Styling",
 "min": [
 0.277,
-0.21,
+0.209,
 1.0
 ],
 "max": [
 0.313,
-0.23,
+0.229,
 1.24
 ],
 "material": "Oak solid",
@@ -11256,12 +11258,12 @@
 "collection": "Styling",
 "min": [
 0.296,
-0.21,
+0.209,
 1.0
 ],
 "max": [
 0.314,
-0.23,
+0.229,
 1.24
 ],
 "material": "Oak solid",
@@ -11274,12 +11276,12 @@
 "collection": "Styling",
 "min": [
 0.306,
-0.21,
+0.209,
 1.0
 ],
 "max": [
 0.324,
-0.23,
+0.229,
 1.24
 ],
 "material": "Oak solid",
@@ -12095,12 +12097,12 @@
 "name": "oven_hansa_door_glass",
 "collection": "Products",
 "min": [
-0.536,
+0.537,
 0.604,
 0.253
 ],
 "max": [
-0.54,
+0.541,
 1.196,
 0.724
 ],
@@ -12271,12 +12273,12 @@
 "name": "oven_hansa_panel_glass",
 "collection": "Products",
 "min": [
-0.536,
+0.537,
 0.604,
 0.727
 ],
 "max": [
-0.54,
+0.541,
 1.196,
 0.847
 ],
@@ -12513,12 +12515,12 @@
 "min": [
 0.075,
 4.22,
-2.045
+2.046
 ],
 "max": [
 0.09,
 4.62,
-2.06
+2.061
 ],
 "material": "picturelight_arvi body.004",
 "props": {}
@@ -12577,12 +12579,12 @@
 "min": [
 0.075,
 5.05,
-2.045
+2.046
 ],
 "max": [
 0.09,
 5.45,
-2.06
+2.061
 ],
 "material": "picturelight_arvi body.005",
 "props": {}
@@ -12746,7 +12748,7 @@
 ],
 "material": "potted_plant_02_leaves",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_02_leaves\", name=\"cycles\", address=0x000001B0FD6201E0>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_02_leaves\", name=\"cycles\", address=0x0000023B89E6C1E0>",
 "polyhaven_id": "potted_plant_02",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_02",
 "polyhaven_licence": "CC0",
@@ -12791,7 +12793,7 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_dirt.003\", name=\"cycles\", address=0x000001B0FD5CB5A0>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_dirt.003\", name=\"cycles\", address=0x0000023B89E175A0>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -12814,7 +12816,7 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_dirt.004\", name=\"cycles\", address=0x000001B0FD5CAEE0>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_dirt.004\", name=\"cycles\", address=0x0000023B89E16EE0>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -12837,7 +12839,7 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_dirt.005\", name=\"cycles\", address=0x000001B0FD5CA820>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_dirt.005\", name=\"cycles\", address=0x0000023B89E16820>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -12860,8 +12862,8 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_ground.003\", name=\"cycles\", address=0x000001B0FD5CA160>",
-"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_ground.003\", name=\"cycles_visibility\", address=0x000001B0FD5C9FE0>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_ground.003\", name=\"cycles\", address=0x0000023B89E16160>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_ground.003\", name=\"cycles_visibility\", address=0x0000023B89E15FE0>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -12884,8 +12886,8 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_ground.004\", name=\"cycles\", address=0x000001B0FD5C97A0>",
-"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_ground.004\", name=\"cycles_visibility\", address=0x000001B0FD5C9620>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_ground.004\", name=\"cycles\", address=0x0000023B89E157A0>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_ground.004\", name=\"cycles_visibility\", address=0x0000023B89E15620>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -12908,8 +12910,8 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_ground.005\", name=\"cycles\", address=0x000001B0FD5C8DE0>",
-"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_ground.005\", name=\"cycles_visibility\", address=0x000001B0FD5C8C60>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_ground.005\", name=\"cycles\", address=0x0000023B89E14DE0>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_ground.005\", name=\"cycles_visibility\", address=0x0000023B89E14C60>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -12932,7 +12934,7 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_plant.003\", name=\"cycles\", address=0x000001B0FD5C8420>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_plant.003\", name=\"cycles\", address=0x0000023B89E14420>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -12955,7 +12957,7 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_plant.004\", name=\"cycles\", address=0x000001B0FD5B7360>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_plant.004\", name=\"cycles\", address=0x0000023B89E13360>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -12978,7 +12980,7 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_plant.005\", name=\"cycles\", address=0x000001B0FD5B65E0>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_plant.005\", name=\"cycles\", address=0x0000023B89E125E0>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -13001,8 +13003,8 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_pot.003\", name=\"cycles\", address=0x000001B0FD5B56E0>",
-"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_pot.003\", name=\"cycles_visibility\", address=0x000001B0FD5B5620>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_pot.003\", name=\"cycles\", address=0x0000023B89E116E0>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_pot.003\", name=\"cycles_visibility\", address=0x0000023B89E11620>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -13025,8 +13027,8 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_pot.004\", name=\"cycles\", address=0x000001B0FD5B4660>",
-"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_pot.004\", name=\"cycles_visibility\", address=0x000001B0FD5B4720>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_pot.004\", name=\"cycles\", address=0x0000023B89E10660>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_pot.004\", name=\"cycles_visibility\", address=0x0000023B89E10720>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -13049,8 +13051,8 @@
 ],
 "material": "potted_plant_04",
 "props": {
-"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_pot.005\", name=\"cycles\", address=0x000001B0FD5BB2A0>",
-"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_pot.005\", name=\"cycles_visibility\", address=0x000001B0FD5BB1E0>",
+"cycles": "<bpy id prop: owner=\"OBpotted_plant_04_pot.005\", name=\"cycles\", address=0x0000023B89E0B2A0>",
+"cycles_visibility": "<bpy id prop: owner=\"OBpotted_plant_04_pot.005\", name=\"cycles_visibility\", address=0x0000023B89E0B1E0>",
 "polyhaven_id": "potted_plant_04",
 "polyhaven_url": "https://polyhaven.com/a/potted_plant_04",
 "polyhaven_licence": "CC0",
@@ -13096,12 +13098,12 @@
 "min": [
 6.308,
 2.817,
-1.277
+1.276
 ],
 "max": [
 6.372,
 2.826,
-1.298
+1.297
 ],
 "material": "walllamp_ranarp brass.004",
 "props": {}
@@ -13496,12 +13498,12 @@
 "min": [
 6.308,
 5.049,
-1.277
+1.276
 ],
 "max": [
 6.372,
 5.058,
-1.298
+1.297
 ],
 "material": "walllamp_ranarp brass.005",
 "props": {}
@@ -13928,12 +13930,12 @@
 "min": [
 4.18,
 2.74,
-0.0
+-0.001
 ],
 "max": [
 5.88,
 5.14,
-0.008
+0.007
 ],
 "material": "Flatweave oat",
 "props": {}
@@ -14168,12 +14170,12 @@
 "min": [
 3.47,
 0.116,
-0.105
+0.104
 ],
 "max": [
 3.638,
 1.044,
-0.121
+0.12
 ],
 "material": "shoecab_stall body white.002",
 "props": {}
@@ -14184,12 +14186,12 @@
 "min": [
 3.47,
 0.572,
-0.121
+0.122
 ],
 "max": [
 3.636,
 0.588,
-0.882
+0.883
 ],
 "material": "shoecab_stall body white.002",
 "props": {}
@@ -14408,12 +14410,12 @@
 "min": [
 3.495,
 0.145,
-0.0
+0.001
 ],
 "max": [
 3.53,
 0.18,
-0.105
+0.106
 ],
 "material": "shoecab_stall body white.002",
 "props": {}
@@ -14424,12 +14426,12 @@
 "min": [
 3.495,
 0.98,
-0.0
+0.001
 ],
 "max": [
 3.53,
 1.015,
-0.105
+0.106
 ],
 "material": "shoecab_stall body white.002",
 "props": {}
@@ -14438,12 +14440,12 @@
 "name": "shoe_cabinet_stall_leg_fl",
 "collection": "Products",
 "min": [
-3.58,
+3.581,
 0.145,
 0.0
 ],
 "max": [
-3.615,
+3.616,
 0.18,
 0.105
 ],
@@ -14454,12 +14456,12 @@
 "name": "shoe_cabinet_stall_leg_fr",
 "collection": "Products",
 "min": [
-3.58,
+3.581,
 0.98,
 0.0
 ],
 "max": [
-3.615,
+3.616,
 1.015,
 0.105
 ],
@@ -14504,12 +14506,12 @@
 "min": [
 3.513,
 0.145,
-0.079
+0.08
 ],
 "max": [
 3.598,
 0.163,
-0.105
+0.106
 ],
 "material": "shoecab_stall body white.002",
 "props": {}
@@ -14519,12 +14521,12 @@
 "collection": "Products",
 "min": [
 3.513,
-0.997,
+0.998,
 0.079
 ],
 "max": [
 3.598,
-1.015,
+1.016,
 0.105
 ],
 "material": "shoecab_stall body white.002",
@@ -14536,12 +14538,12 @@
 "min": [
 3.47,
 0.1,
-0.105
+0.106
 ],
 "max": [
 3.639,
 0.116,
-0.882
+0.883
 ],
 "material": "shoecab_stall body white.002",
 "props": {}
@@ -14552,12 +14554,12 @@
 "min": [
 3.47,
 1.044,
-0.105
+0.106
 ],
 "max": [
 3.639,
 1.06,
-0.882
+0.883
 ],
 "material": "shoecab_stall body white.002",
 "props": {}
@@ -14598,13 +14600,13 @@
 "name": "shower_door_rea_handle_in_b",
 "collection": "Products",
 "min": [
-6.255,
-0.813,
+6.256,
+0.814,
 0.93
 ],
 "max": [
-6.295,
-0.837,
+6.296,
+0.838,
 0.938
 ],
 "material": "showerdoor_rea profiles.001",
@@ -14646,13 +14648,13 @@
 "name": "shower_door_rea_handle_in_t",
 "collection": "Products",
 "min": [
-6.255,
-0.813,
+6.256,
+0.814,
 1.202
 ],
 "max": [
-6.295,
-0.837,
+6.296,
+0.838,
 1.21
 ],
 "material": "showerdoor_rea profiles.001",
@@ -14663,12 +14665,12 @@
 "collection": "Products",
 "min": [
 6.255,
-0.783,
+0.784,
 0.93
 ],
 "max": [
 6.295,
-0.807,
+0.808,
 0.938
 ],
 "material": "showerdoor_rea profiles.001",
@@ -14711,12 +14713,12 @@
 "collection": "Products",
 "min": [
 6.255,
-0.783,
+0.784,
 1.202
 ],
 "max": [
 6.295,
-0.807,
+0.808,
 1.21
 ],
 "material": "showerdoor_rea profiles.001",
@@ -14904,12 +14906,12 @@
 "min": [
 5.75,
 0.793,
-0.0
+-0.001
 ],
 "max": [
 5.772,
 0.827,
-1.9
+1.899
 ],
 "material": "showerdoor_rea profiles.001",
 "props": {}
@@ -14918,14 +14920,14 @@
 "name": "shower_door_rea_wall_profile_r",
 "collection": "Products",
 "min": [
-6.628,
+6.629,
 0.793,
-0.0
+-0.001
 ],
 "max": [
-6.65,
+6.651,
 0.827,
-1.9
+1.899
 ],
 "material": "showerdoor_rea profiles.001",
 "props": {}
@@ -14936,12 +14938,12 @@
 "min": [
 5.85,
 1.58,
-0.0
+-0.001
 ],
 "max": [
 6.55,
 1.62,
-0.002
+0.001
 ],
 "material": "Black metal matte fittings",
 "props": {
@@ -14984,12 +14986,12 @@
 "name": "shower_panel_rea_frame_b_bottom",
 "collection": "Products",
 "min": [
-5.746,
+5.745,
 0.799,
 0.002
 ],
 "max": [
-5.746,
+5.745,
 1.679,
 0.022
 ],
@@ -15016,12 +15018,12 @@
 "name": "shower_panel_rea_frame_b_top",
 "collection": "Products",
 "min": [
-5.746,
+5.745,
 0.799,
 1.928
 ],
 "max": [
-5.746,
+5.745,
 1.679,
 1.948
 ],
@@ -15032,12 +15034,12 @@
 "name": "shower_panel_rea_frame_f_bottom",
 "collection": "Products",
 "min": [
-5.754,
+5.755,
 0.799,
 0.002
 ],
 "max": [
-5.754,
+5.755,
 1.679,
 0.022
 ],
@@ -15064,12 +15066,12 @@
 "name": "shower_panel_rea_frame_f_top",
 "collection": "Products",
 "min": [
-5.754,
+5.755,
 0.799,
 1.928
 ],
 "max": [
-5.754,
+5.755,
 1.679,
 1.948
 ],
@@ -15098,12 +15100,12 @@
 "min": [
 5.735,
 0.785,
-0.0
+-0.001
 ],
 "max": [
 5.765,
 0.807,
-1.95
+1.949
 ],
 "material": "showerpanel_rea profiles.001",
 "props": {}
@@ -15145,12 +15147,12 @@
 "collection": "Products",
 "min": [
 6.324,
-1.668,
+1.669,
 2.085
 ],
 "max": [
 6.376,
-1.68,
+1.681,
 2.137
 ],
 "material": "shower_tempesta matt black.001",
@@ -15161,12 +15163,12 @@
 "collection": "Products",
 "min": [
 6.24,
-1.668,
+1.669,
 1.066
 ],
 "max": [
 6.31,
-1.68,
+1.681,
 1.136
 ],
 "material": "shower_tempesta matt black.001",
@@ -15177,12 +15179,12 @@
 "collection": "Products",
 "min": [
 6.39,
-1.668,
+1.669,
 1.066
 ],
 "max": [
 6.46,
-1.68,
+1.681,
 1.136
 ],
 "material": "shower_tempesta matt black.001",
@@ -15594,12 +15596,12 @@
 "min": [
 0.855,
 0.105,
-0.911
+0.912
 ],
 "max": [
 1.247,
 0.108,
-0.912
+0.913
 ],
 "material": "sink_teka drainer rib.002",
 "props": {}
@@ -15610,12 +15612,12 @@
 "min": [
 0.855,
 0.552,
-0.911
+0.912
 ],
 "max": [
 1.247,
 0.555,
-0.912
+0.913
 ],
 "material": "sink_teka drainer rib.002",
 "props": {}
@@ -15786,12 +15788,12 @@
 "min": [
 1.376,
 0.314,
-0.719
+0.718
 ],
 "max": [
 1.388,
 0.322,
-0.719
+0.718
 ],
 "material": "sink_teka slot.002",
 "props": {}
@@ -15802,12 +15804,12 @@
 "min": [
 1.385,
 0.341,
-0.719
+0.718
 ],
 "max": [
 1.394,
 0.353,
-0.719
+0.718
 ],
 "material": "sink_teka slot.002",
 "props": {}
@@ -15866,12 +15868,12 @@
 "min": [
 1.406,
 0.304,
-0.719
+0.718
 ],
 "max": [
 1.415,
 0.316,
-0.719
+0.718
 ],
 "material": "sink_teka slot.002",
 "props": {}
@@ -15914,12 +15916,12 @@
 "min": [
 1.412,
 0.335,
-0.719
+0.718
 ],
 "max": [
 1.424,
 0.343,
-0.719
+0.718
 ],
 "material": "sink_teka slot.002",
 "props": {}
@@ -16218,12 +16220,12 @@
 "min": [
 0.82,
 3.765,
-0.0
+-0.001
 ],
 "max": [
 0.86,
 3.805,
-0.072
+0.071
 ],
 "material": "sofa_landskrona oak.002",
 "props": {}
@@ -16282,12 +16284,12 @@
 "min": [
 0.82,
 5.865,
-0.0
+-0.001
 ],
 "max": [
 0.86,
 5.905,
-0.072
+0.071
 ],
 "material": "sofa_landskrona oak.002",
 "props": {}
@@ -16378,12 +16380,12 @@
 "min": [
 3.052,
 4.682,
-0.559
+0.56
 ],
 "max": [
 3.064,
 4.767,
-0.559
+0.56
 ],
 "material": "soundbar_hwb450 buttons.002",
 "props": {}
@@ -16442,12 +16444,12 @@
 "min": [
 3.021,
 5.09,
-0.559
+0.56
 ],
 "max": [
 3.024,
 5.118,
-0.559
+0.56
 ],
 "material": "soundbar_hwb450 logo.002",
 "props": {}
@@ -16654,12 +16656,12 @@
 "min": [
 1.375,
 0.04,
-0.9
+0.899
 ],
 "max": [
 1.425,
 0.09,
-1.031
+1.03
 ],
 "material": "tap_teka matt black.002",
 "props": {}
@@ -17343,12 +17345,12 @@
 "collection": "Bathroom",
 "min": [
 4.98,
-0.0,
+-0.001,
 0.26
 ],
 "max": [
 5.06,
-0.007,
+0.006,
 0.34
 ],
 "material": "Switch plate black",
@@ -17650,12 +17652,12 @@
 "collection": "Products",
 "min": [
 5.546,
-0.0,
+-0.001,
 0.546
 ],
 "max": [
 5.562,
-0.069,
+0.068,
 0.562
 ],
 "material": "towelrail_doris frame.001",
@@ -17666,12 +17668,12 @@
 "collection": "Products",
 "min": [
 5.546,
-0.0,
+-0.001,
 1.278
 ],
 "max": [
 5.562,
-0.069,
+0.068,
 1.294
 ],
 "material": "towelrail_doris frame.001",
@@ -17682,12 +17684,12 @@
 "collection": "Products",
 "min": [
 5.138,
-0.0,
+-0.001,
 0.546
 ],
 "max": [
 5.154,
-0.069,
+0.068,
 0.562
 ],
 "material": "towelrail_doris frame.001",
@@ -17698,12 +17700,12 @@
 "collection": "Products",
 "min": [
 5.138,
-0.0,
+-0.001,
 1.278
 ],
 "max": [
 5.154,
-0.069,
+0.068,
 1.294
 ],
 "material": "towelrail_doris frame.001",
@@ -17890,12 +17892,12 @@
 "collection": "Products",
 "min": [
 5.537,
-0.0,
+-0.001,
 0.537
 ],
 "max": [
 5.571,
-0.006,
+0.005,
 0.571
 ],
 "material": "towelrail_doris frame.001",
@@ -17906,12 +17908,12 @@
 "collection": "Products",
 "min": [
 5.537,
-0.0,
+-0.001,
 1.269
 ],
 "max": [
 5.571,
-0.006,
+0.005,
 1.303
 ],
 "material": "towelrail_doris frame.001",
@@ -17922,12 +17924,12 @@
 "collection": "Products",
 "min": [
 5.129,
-0.0,
+-0.001,
 0.537
 ],
 "max": [
 5.163,
-0.006,
+0.005,
 0.571
 ],
 "material": "towelrail_doris frame.001",
@@ -17938,12 +17940,12 @@
 "collection": "Products",
 "min": [
 5.129,
--0.0,
+-0.001,
 1.269
 ],
 "max": [
 5.163,
-0.006,
+0.005,
 1.303
 ],
 "material": "towelrail_doris frame.001",
@@ -17953,12 +17955,12 @@
 "name": "Towel_roll0",
 "collection": "Bathroom",
 "min": [
-6.41,
+6.411,
 0.165,
 1.175
 ],
 "max": [
-6.65,
+6.651,
 0.275,
 1.285
 ],
@@ -17971,12 +17973,12 @@
 "name": "Towel_roll1",
 "collection": "Bathroom",
 "min": [
-6.41,
+6.411,
 0.285,
 1.175
 ],
 "max": [
-6.65,
+6.651,
 0.395,
 1.285
 ],
@@ -17989,12 +17991,12 @@
 "name": "TV_data",
 "collection": "Living",
 "min": [
-3.301,
+3.302,
 4.86,
 0.95
 ],
 "max": [
-3.308,
+3.309,
 4.94,
 1.03
 ],
@@ -18039,12 +18041,12 @@
 "name": "tv_samsung65_ir",
 "collection": "Products",
 "min": [
-3.231,
+3.23,
 4.705,
 0.637
 ],
 "max": [
-3.232,
+3.231,
 4.745,
 0.642
 ],
@@ -18087,12 +18089,12 @@
 "name": "TV_socket",
 "collection": "Living",
 "min": [
-3.301,
+3.302,
 4.62,
 0.95
 ],
 "max": [
-3.308,
+3.309,
 4.84,
 1.03
 ],
@@ -18171,12 +18173,12 @@
 "min": [
 3.47,
 4.602,
-0.61
+0.609
 ],
 "max": [
 3.812,
 4.62,
-0.725
+0.724
 ],
 "material": "Oak light",
 "props": {}
@@ -18390,12 +18392,12 @@
 "name": "Vanity_top",
 "collection": "Bathroom",
 "min": [
-4.89,
+4.889,
 1.03,
 0.832
 ],
 "max": [
-5.745,
+5.744,
 1.67,
 0.92
 ],
@@ -19023,12 +19025,12 @@
 "collection": "Bathroom",
 "min": [
 4.896,
-1.617,
+1.618,
 0.15
 ],
 "max": [
 5.484,
-1.62,
+1.621,
 0.813
 ],
 "material": "washer_electrolux back panel",
@@ -19749,12 +19751,12 @@
 "collection": "Bathroom",
 "min": [
 5.66,
-1.663,
+1.664,
 0.26
 ],
 "max": [
 5.74,
-1.67,
+1.671,
 0.34
 ],
 "material": "Switch plate black",
@@ -19929,12 +19931,12 @@
 "collection": "Bathroom",
 "min": [
 5.66,
-0.0,
+-0.001,
 0.66
 ],
 "max": [
 5.7,
-0.08,
+0.079,
 0.68
 ],
 "material": "Black metal matte fittings",
@@ -20144,12 +20146,12 @@
 "min": [
 5.555,
 1.93,
-0.0
+-0.001
 ],
 "max": [
 5.575,
 2.47,
-2.54
+2.539
 ],
 "material": "Carcass",
 "props": {
@@ -20214,12 +20216,12 @@
 "min": [
 3.308,
 2.72,
-0.5
+0.501
 ],
 "max": [
 3.328,
 5.52,
-1.85
+1.851
 ],
 "material": "Oak light",
 "props": {}
@@ -20386,12 +20388,12 @@
 "name": "WU_console_pull",
 "collection": "Living",
 "min": [
-2.806,
+2.807,
 3.92,
 0.442
 ],
 "max": [
-2.83,
+2.831,
 5.52,
 0.47
 ],
@@ -20488,12 +20490,12 @@
 "min": [
 2.81,
 2.69,
-0.0
+-0.001
 ],
 "max": [
 3.35,
 2.72,
-2.6
+2.599
 ],
 "material": "Oak solid",
 "props": {}
@@ -20504,12 +20506,12 @@
 "min": [
 2.81,
 5.52,
-0.0
+-0.001
 ],
 "max": [
 3.35,
 5.55,
-2.6
+2.599
 ],
 "material": "Oak solid",
 "props": {}
