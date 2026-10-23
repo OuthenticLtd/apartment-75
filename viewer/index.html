@@ -162,7 +162,7 @@ const pivots = [], ceilings = [], reflectors = [], shared = {};
 let model;
 const draco = new DRACOLoader(); draco.setDecoderPath("https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/libs/draco/gltf/");
 const loader = new GLTFLoader(); loader.setDRACOLoader(draco); loader.setMeshoptDecoder(MeshoptDecoder);
-loader.load("model.glb?v=9", (g) => {
+loader.load("model.glb?v=10", (g) => {
   model = g.scene; scene.add(model);
   model.traverse((o) => {
     const u = o.userData || {};
@@ -173,7 +173,7 @@ loader.load("model.glb?v=9", (g) => {
     if (/^(Ceiling|Bal_slab_ceiling)/.test(o.name)) ceilings.push(o);
     if (o.isMesh) {
       o.material.side = THREE.FrontSide; o.castShadow = true; o.receiveShadow = true;
-      if (/mirror/i.test(o.material.name || "")) { o.material = shared["m:" + o.material.name] ||= new THREE.MeshStandardMaterial({ name: o.material.name, color: 0xdfe5e8, metalness: 0.85, roughness: 0.12, envMapIntensity: 1.6, side: THREE.DoubleSide }); }
+      if (/(^|\s)mirror(\.\d+)?$/i.test(o.material.name || "")) { o.material = shared["m:" + o.material.name] ||= new THREE.MeshStandardMaterial({ name: o.material.name, color: 0xdfe5e8, metalness: 0.85, roughness: 0.12, envMapIntensity: 1.6, side: THREE.DoubleSide }); }
       if (/glass|sheer/i.test(o.material.name || "")) {   // windows, shower glass, sheers: see-through
         const sheer = /sheer/i.test(o.material.name);
         o.material = shared["g:" + o.material.name] ||= new THREE.MeshPhysicalMaterial({ name: o.material.name, color: sheer ? 0xf4efe6 : 0xdfe9ec, roughness: sheer ? 0.9 : 0.05, metalness: 0,
